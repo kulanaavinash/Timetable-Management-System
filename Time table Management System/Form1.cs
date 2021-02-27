@@ -33,6 +33,11 @@ namespace Time_table_Management_System
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
         }
 
+        
+
+
+          
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             //dashboard panel main
@@ -174,11 +179,14 @@ namespace Time_table_Management_System
         private void button14_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+             this.WindowState = FormWindowState.Maximized;
+          
+            
         }
 
         private void button12_Click(object sender, EventArgs e)
