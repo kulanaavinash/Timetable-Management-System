@@ -170,5 +170,20 @@ namespace Time_table_Management_System
         {
             //panel dashboard
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

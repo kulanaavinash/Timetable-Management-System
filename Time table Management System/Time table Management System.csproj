@@ -149,5 +149,29 @@
   <ItemGroup>
     <None Include="Resources\pngaaa.com-2341531.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ne %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_minus-remove-delete-minimize_2931142 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ne %282%29 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

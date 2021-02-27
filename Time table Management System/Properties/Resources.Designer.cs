@@ -113,6 +113,66 @@ namespace Time_table_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_minus_remove_delete_minimize_2931142__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_minus-remove-delete-minimize_2931142 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_window_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-window-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ne {
+            get {
+                object obj = ResourceManager.GetObject("ne", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ne__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ne (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ne__2___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ne (2) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oo {
+            get {
+                object obj = ResourceManager.GetObject("oo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap open_book__1_ {
             get {
                 object obj = ResourceManager.GetObject("open-book (1)", resourceCulture);
@@ -286,6 +346,26 @@ namespace Time_table_Management_System.Properties {
         internal static System.Drawing.Bitmap teacher__1_ {
             get {
                 object obj = ResourceManager.GetObject("teacher (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uu {
+            get {
+                object obj = ResourceManager.GetObject("uu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uu__1_ {
+            get {
+                object obj = ResourceManager.GetObject("uu (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
