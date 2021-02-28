@@ -43,15 +43,12 @@ namespace Time_table_Management_System
             //dashboard panel main
         }
 
+
         private void label1_Click(object sender, EventArgs e)
         {
             //label home
         }
 
-
-
-
-        
 
        
 
@@ -60,138 +57,145 @@ namespace Time_table_Management_System
             //form
         }
 
-       // private void button2_Click(object sender, EventArgs e)
-       // {
-
-       // }
+      
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             //picturebox panel
         }
 
-       // private void button1_Click_1(object sender, EventArgs e)
-       // {
-
-        //}
-
-
-
-
-
-
-
-
-        //Header icons
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
-
-
-
-
-        //Slide navbar icons
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-       
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            //nav
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // private void button12_Click(object sender, EventArgs e)
-        // {
-
-        // }
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             //panel dashboard
         }
 
+
+
+
+
+
+
+
+
+
+        //--------------Header icons------------------//
+        private void btn_home_header(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_sessions_header(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_rooms_header(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_advanced_header(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_genarate_header(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+        //------------------Slide navbar icons....................//
+        private void btn_days_nav(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_lectures_nav(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_subjects_nav(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_students_nav(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_tags_nav(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_locations_nav(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_statics_nav(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        //------------closed,minimized,maximized,buttons---------------//
+
         private void button14_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-            
+
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-             this.WindowState = FormWindowState.Maximized;
-          
-            
+            this.WindowState = FormWindowState.Maximized;
+
+
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+        
     }
 }

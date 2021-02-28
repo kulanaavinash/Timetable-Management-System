@@ -32,6 +32,7 @@ namespace Time_table_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,17 @@ namespace Time_table_Management_System
             this.label1.Text = "HomePage";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_2341531;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -94,7 +105,7 @@ namespace Time_table_Management_System
             this.button8.TabIndex = 3;
             this.button8.Text = "Home";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.btn_home_header);
             // 
             // button2
             // 
@@ -107,7 +118,7 @@ namespace Time_table_Management_System
             this.button2.TabIndex = 5;
             this.button2.Text = "Rooms";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.btn_rooms_header);
             // 
             // button3
             // 
@@ -120,7 +131,7 @@ namespace Time_table_Management_System
             this.button3.TabIndex = 6;
             this.button3.Text = "Advanced";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btn_advanced_header);
             // 
             // button4
             // 
@@ -133,7 +144,7 @@ namespace Time_table_Management_System
             this.button4.TabIndex = 7;
             this.button4.Text = "Genarate";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.btn_genarate_header);
             // 
             // button1
             // 
@@ -146,7 +157,7 @@ namespace Time_table_Management_System
             this.button1.TabIndex = 10;
             this.button1.Text = "Sessions";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.button1.Click += new System.EventHandler(this.btn_sessions_header);
             // 
             // button14
             // 
@@ -201,7 +212,7 @@ namespace Time_table_Management_System
             this.button11.Text = "Locations";
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.btn_locations_nav);
             // 
             // button10
             // 
@@ -218,7 +229,7 @@ namespace Time_table_Management_System
             this.button10.Text = "Statics";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.btn_statics_nav);
             // 
             // button9
             // 
@@ -234,7 +245,7 @@ namespace Time_table_Management_System
             this.button9.Text = "Tags";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.btn_tags_nav);
             // 
             // button7
             // 
@@ -250,7 +261,7 @@ namespace Time_table_Management_System
             this.button7.Text = "Students";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.btn_students_nav);
             // 
             // button6
             // 
@@ -266,7 +277,7 @@ namespace Time_table_Management_System
             this.button6.Text = "Subjects";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.btn_subjects_nav);
             // 
             // button5
             // 
@@ -282,7 +293,7 @@ namespace Time_table_Management_System
             this.button5.Text = "Lectures";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.btn_lectures_nav);
             // 
             // Hwbtn
             // 
@@ -299,18 +310,7 @@ namespace Time_table_Management_System
             this.Hwbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Hwbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Hwbtn.UseVisualStyleBackColor = true;
-            this.Hwbtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_2341531;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
             // Form1
             // 
