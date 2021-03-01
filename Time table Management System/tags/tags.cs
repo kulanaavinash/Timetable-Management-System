@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 namespace Time_table_Management_System
 {
 
-    public partial class Form1 : Form
+    public partial class tags : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -26,17 +26,17 @@ namespace Time_table_Management_System
         );
 
 
-        public Form1()
+        public tags()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
         }
 
-        
 
 
-          
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -50,14 +50,14 @@ namespace Time_table_Management_System
         }
 
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //form
         }
 
-      
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -135,14 +135,12 @@ namespace Time_table_Management_System
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
-            tags f2 = new tags();
-            f2.Show();
+
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
-            Location f2 = new Location();
-            f2.Show();
+
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
@@ -174,30 +172,54 @@ namespace Time_table_Management_System
             this.Close();
         }
 
+        private void btn_addtagname(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btn_clear(object sender, EventArgs e)
+        {
 
+        }
 
+        private void txtbox_tagname(object sender, EventArgs e)
+        {
 
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
 
+        private void btn_tag_editdetails(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btn_tag_delete(object sender, EventArgs e)
+        {
 
+        }
 
+        private void searchby_select(object sender, EventArgs e)
+        {
 
+        }
 
+        private void tag_searchbox(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-
-
-
-
-       
-
-
-        
+        }
     }
 }
