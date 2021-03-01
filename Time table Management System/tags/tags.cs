@@ -172,54 +172,62 @@ namespace Time_table_Management_System
             this.Close();
         }
 
+
+
+
+
+
+        //--------  tag Dashboard-------//
+
         private void btn_addtagname(object sender, EventArgs e)
         {
-
+            //add tag name btn
         }
 
         private void btn_clear(object sender, EventArgs e)
         {
-
+            //clear btn
         }
 
-        private void txtbox_tagname(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //data grid
         }
 
         private void btn_tag_editdetails(object sender, EventArgs e)
         {
-
+            //edit details btn
         }
 
         private void btn_tag_delete(object sender, EventArgs e)
         {
-
+            //delete btn
         }
 
-        private void searchby_select(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void tag_searchbox(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            //search by combo box
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //tagname
+        }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //label
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            //search
         }
     }
 }

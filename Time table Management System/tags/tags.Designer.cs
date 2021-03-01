@@ -30,6 +30,8 @@ namespace Time_table_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,13 +82,37 @@ namespace Time_table_Management_System
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(374, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 43);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Tags";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tag Name",
+            "ID"});
+            this.comboBox1.Location = new System.Drawing.Point(497, 166);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(132, 28);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(699, 168);
+            this.textBox2.Location = new System.Drawing.Point(737, 168);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 26);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Click += new System.EventHandler(this.tag_searchbox);
+            this.textBox2.Size = new System.Drawing.Size(107, 26);
+            this.textBox2.TabIndex = 10;
             // 
             // button18
             // 
@@ -123,12 +147,9 @@ namespace Time_table_Management_System
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(154, 242);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 36);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Click += new System.EventHandler(this.txtbox_tagname);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Size = new System.Drawing.Size(186, 26);
+            this.textBox1.TabIndex = 11;
             // 
             // button16
             // 
@@ -399,30 +420,6 @@ namespace Time_table_Management_System
             this.Hwbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tag Name",
-            "ID"});
-            this.comboBox1.Location = new System.Drawing.Point(497, 166);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 28);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(374, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 43);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tags";
             // 
             // tags
             // 
