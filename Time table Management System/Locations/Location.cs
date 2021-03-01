@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 namespace Time_table_Management_System
 {
 
-    public partial class Form1 : Form
+    public partial class Location : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -26,17 +26,17 @@ namespace Time_table_Management_System
         );
 
 
-        public Form1()
+        public Location()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
         }
 
-        
 
 
-          
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -50,14 +50,17 @@ namespace Time_table_Management_System
         }
 
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //form
+           view_Location1.Hide();
+            add_location1.Hide();
+            edit_Delete_Location1.Hide();
         }
 
-      
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -140,8 +143,7 @@ namespace Time_table_Management_System
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
-            Location f2 = new Location();
-            f2.Show();
+
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
@@ -173,30 +175,91 @@ namespace Time_table_Management_System
             this.Close();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void label2_Click_1(object sender, EventArgs e)
+        {
 
+        }
 
+        private void button15_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void button16_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void button18_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            view_Location1.Hide();
+            edit_Delete_Location1.Hide();
 
+            add_location1.Show();
+           add_location1.BringToFront();
+        }
 
+        private void button17_Click(object sender, EventArgs e)
+        {
+           add_location1.Hide();
+           view_Location1.Hide();
 
+           edit_Delete_Location1.Show();
+           edit_Delete_Location1.BringToFront();
+        }
 
+        private void label2_Click_2(object sender, EventArgs e)
+        {
 
+        }
 
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
 
+        }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void label2_Click_3(object sender, EventArgs e)
+        {
 
-       
+        }
 
+        private void loc_dgridv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-        
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void loc_tabcontrol_Click(object sender, EventArgs e)
+        {
+            add_location1.Hide();
+            edit_Delete_Location1.Hide();
+
+            view_Location1.Show();
+            view_Location1.BringToFront();
+        }
+
+        private void edit_Delete_Location1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

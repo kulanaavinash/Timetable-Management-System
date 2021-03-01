@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +53,46 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Locations\Add_location.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Locations\Add_location.Designer.cs">
+      <DependentUpon>Add_location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locations\Edit_Delete Location.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Locations\Edit_Delete Location.Designer.cs">
+      <DependentUpon>Edit_Delete Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locations\Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locations\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locations\View Location.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Locations\View Location.Designer.cs">
+      <DependentUpon>View Location.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locations\Add_location.resx">
+      <DependentUpon>Add_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locations\Edit_Delete Location.resx">
+      <DependentUpon>Edit_Delete Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locations\Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locations\View Location.resx">
+      <DependentUpon>View Location.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ne %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
