@@ -389,7 +389,7 @@ namespace Time_table_Management_System
 
 
 
-        //sub hroup dashboard//
+        //sub group dashboard//
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //sub group grid view
@@ -428,6 +428,99 @@ namespace Time_table_Management_System
         private void metroButton16_Click(object sender, EventArgs e)
         {
             //btn delete sub group
+        }
+
+
+
+
+
+
+
+        //generate group ID s dashboard//
+
+        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           //dtata grid view left
+        }
+
+        private void metroComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //serach by 
+        }
+
+        private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //data grid view right
+        }
+
+        private void metroButton17_Click(object sender, EventArgs e)
+        {
+            //generate group id btn
+        }
+
+        private void metroButton18_Click(object sender, EventArgs e)
+        {
+            //confirm and add btn
+        }
+
+        private void metroTextBox11_Click(object sender, EventArgs e)
+        {
+            //search 
+        }
+
+        private void metroButton19_Click(object sender, EventArgs e)
+        {
+            //delete
+        }
+
+
+
+
+
+        //Generate sub group ID------dashboard//
+        private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //left grid view
+        }
+
+        private void dataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //right grid view
+        }
+
+        private void metroButton21_Click(object sender, EventArgs e)
+        {
+            //delete btn
+        }
+
+        private void metroButton20_Click(object sender, EventArgs e)
+        {
+            //confirm and add btn
+        }
+
+        private void metroButton17_Click_1(object sender, EventArgs e)
+        {
+            //gen sub group id btn
+        }
+
+
+
+
+
+        //-----view details dahsboard---//
+        private void metroComboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //search by
+        }
+
+        private void metroTextBox12_Click(object sender, EventArgs e)
+        {
+            //search
+        }
+
+        private void dataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //data grid view
         }
     }
 }
