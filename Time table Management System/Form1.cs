@@ -115,7 +115,8 @@ namespace Time_table_Management_System
         //------------------Slide navbar icons....................//
         private void btn_days_nav(object sender, EventArgs e)
         {
-
+            DaysHours f2 = new DaysHours();
+            f2.Show();
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
