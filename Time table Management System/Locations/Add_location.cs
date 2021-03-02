@@ -36,5 +36,10 @@ namespace Time_table_Management_System.Locations
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

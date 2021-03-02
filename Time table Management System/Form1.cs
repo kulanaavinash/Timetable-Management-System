@@ -130,7 +130,8 @@ namespace Time_table_Management_System
 
         private void btn_students_nav(object sender, EventArgs e)
         {
-
+            students f2 = new students();
+            f2.Show();
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
