@@ -112,6 +112,9 @@
     <Compile Include="tags\tags.Designer.cs">
       <DependentUpon>tags.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DaysHours\DaysHours.resx">
+      <DependentUpon>DaysHours.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
