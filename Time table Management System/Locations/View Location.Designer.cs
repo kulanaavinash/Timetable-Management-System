@@ -32,14 +32,17 @@ namespace Time_table_Management_System.Locations
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.loc_dgridv = new System.Windows.Forms.DataGridView();
+            this.Building = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Room_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.loc_dgridv)).BeginInit();
             this.SuspendLayout();
             // 
             // loc_dgridv
             // 
-            this.loc_dgridv.AllowUserToAddRows = false;
             this.loc_dgridv.AllowUserToResizeColumns = false;
             this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -53,8 +56,13 @@ namespace Time_table_Management_System.Locations
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.loc_dgridv.ColumnHeadersHeight = 29;
-            this.loc_dgridv.Location = new System.Drawing.Point(47, 90);
-            this.loc_dgridv.Margin = new System.Windows.Forms.Padding(4);
+            this.loc_dgridv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Building,
+            this.Room,
+            this.Capacity,
+            this.Room_type});
+            this.loc_dgridv.Location = new System.Drawing.Point(63, 113);
+            this.loc_dgridv.Margin = new System.Windows.Forms.Padding(5);
             this.loc_dgridv.MultiSelect = false;
             this.loc_dgridv.Name = "loc_dgridv";
             this.loc_dgridv.ReadOnly = true;
@@ -67,34 +75,69 @@ namespace Time_table_Management_System.Locations
             this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.loc_dgridv.Size = new System.Drawing.Size(553, 270);
+            this.loc_dgridv.Size = new System.Drawing.Size(737, 330);
             this.loc_dgridv.TabIndex = 20;
+            // 
+            // Building
+            // 
+            this.Building.HeaderText = "Building ";
+            this.Building.MinimumWidth = 6;
+            this.Building.Name = "Building";
+            this.Building.ReadOnly = true;
+            // 
+            // Room
+            // 
+            this.Room.HeaderText = "Room";
+            this.Room.MinimumWidth = 6;
+            this.Room.Name = "Room";
+            this.Room.ReadOnly = true;
+            // 
+            // Capacity
+            // 
+            this.Capacity.HeaderText = "Capacity";
+            this.Capacity.MinimumWidth = 6;
+            this.Capacity.Name = "Capacity";
+            this.Capacity.ReadOnly = true;
+            // 
+            // Room_type
+            // 
+            this.Room_type.HeaderText = "Room Type ";
+            this.Room_type.MinimumWidth = 6;
+            this.Room_type.Name = "Room_type";
+            this.Room_type.ReadOnly = true;
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 24;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Building",
+            "Room",
+            "Capacity ",
+            "Room Type "});
+            this.metroComboBox2.Location = new System.Drawing.Point(63, 47);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(204, 30);
+            this.metroComboBox2.TabIndex = 24;
+            this.metroComboBox2.UseSelectable = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 43);
+            this.textBox1.Location = new System.Drawing.Point(628, 55);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 21;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(326, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 21);
-            this.comboBox1.TabIndex = 22;
+            this.textBox1.Size = new System.Drawing.Size(172, 22);
+            this.textBox1.TabIndex = 25;
             // 
             // View_Location
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.metroComboBox2);
             this.Controls.Add(this.loc_dgridv);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "View_Location";
-            this.Size = new System.Drawing.Size(644, 403);
+            this.Size = new System.Drawing.Size(859, 496);
             ((System.ComponentModel.ISupportInitialize)(this.loc_dgridv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,7 +147,11 @@ namespace Time_table_Management_System.Locations
         #endregion
 
         private System.Windows.Forms.DataGridView loc_dgridv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Building;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Room_type;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

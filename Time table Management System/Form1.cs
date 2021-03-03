@@ -36,7 +36,8 @@ namespace Time_table_Management_System
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
 
         
@@ -155,7 +156,8 @@ namespace Time_table_Management_System
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
-
+            Statistics f2 = new Statistics();
+            f2.Show();
         }
 
 

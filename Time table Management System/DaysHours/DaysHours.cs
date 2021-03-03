@@ -36,8 +36,9 @@ namespace Time_table_Management_System
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            
-           
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+
         }
 
 

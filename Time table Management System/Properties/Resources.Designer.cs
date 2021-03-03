@@ -313,6 +313,16 @@ namespace Time_table_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Splash_Screen {
+            get {
+                object obj = ResourceManager.GetObject("Splash Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap statics {
             get {
                 object obj = ResourceManager.GetObject("statics", resourceCulture);
