@@ -31,6 +31,11 @@ namespace Time_table_Management_System
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
+            //Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            
         }
 
 

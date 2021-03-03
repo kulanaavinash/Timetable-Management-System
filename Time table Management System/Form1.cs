@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
+using System.Runtime.InteropServices; 
 
 namespace Time_table_Management_System
 {
@@ -22,7 +22,8 @@ namespace Time_table_Management_System
             int nRightRect,    // x-coordinate of lower-right corner
             int nBottomRect,   // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
+            int nHeightEllipse // width of ellipse 
+
         );
 
 
@@ -31,6 +32,11 @@ namespace Time_table_Management_System
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
+            //Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            
         }
 
         
