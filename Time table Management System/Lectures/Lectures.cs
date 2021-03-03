@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices; 
+using System.Runtime.InteropServices;
 
 namespace Time_table_Management_System
 {
 
-    public partial class Form1 : Form
+    public partial class Lectures : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -22,28 +22,21 @@ namespace Time_table_Management_System
             int nRightRect,    // x-coordinate of lower-right corner
             int nBottomRect,   // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse 
-
+            int nHeightEllipse // width of ellipse
         );
 
 
-        public Form1()
+        public Lectures()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
-            //Form
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
         }
 
-        
 
 
-          
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -57,14 +50,14 @@ namespace Time_table_Management_System
         }
 
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //form
         }
 
-      
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -122,14 +115,13 @@ namespace Time_table_Management_System
         //------------------Slide navbar icons....................//
         private void btn_days_nav(object sender, EventArgs e)
         {
-            DaysHours f2 = new DaysHours();
-            f2.Show();
+
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
         {
-            Lectures f2 = new Lectures();
-            f2.Show();
+
+
         }
 
         private void btn_subjects_nav(object sender, EventArgs e)
@@ -139,26 +131,22 @@ namespace Time_table_Management_System
 
         private void btn_students_nav(object sender, EventArgs e)
         {
-            students f2 = new students();
-            f2.Show();
+
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
-            tags f2 = new tags();
-            f2.Show();
+
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
-            Location f2 = new Location();
-            f2.Show();
+
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
-            Statistics f2 = new Statistics();
-            f2.Show();
+
         }
 
 
@@ -185,21 +173,54 @@ namespace Time_table_Management_System
             this.Close();
         }
 
-        //Drag Form 
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
-        
-        
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
 
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void metroBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

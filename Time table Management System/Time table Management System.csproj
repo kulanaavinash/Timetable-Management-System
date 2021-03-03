@@ -69,6 +69,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lectures\Lectures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lectures\Lectures.Designer.cs">
+      <DependentUpon>Lectures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locations\Add_location.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lectures\Lectures.resx">
+      <DependentUpon>Lectures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Locations\Add_location.resx">
       <DependentUpon>Add_location.cs</DependentUpon>
@@ -269,5 +278,6 @@
   <ItemGroup>
     <None Include="Resources\Splash Screen.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
