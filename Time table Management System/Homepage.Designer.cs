@@ -1,7 +1,7 @@
 ﻿
 namespace Time_table_Management_System
 {
-    partial class Form1
+    partial class Homepage
     {
         /// <summary>
         /// Required designer variable.
@@ -353,6 +353,7 @@ namespace Time_table_Management_System
             this.button18.Text = "SUBJECTS";
             this.button18.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click_1);
             // 
             // button26
             // 

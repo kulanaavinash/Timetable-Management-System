@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 namespace Time_table_Management_System
 {
 
-    public partial class Form1 : Form
+    public partial class Homepage : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -28,7 +28,7 @@ namespace Time_table_Management_System
         );
 
 
-        public Form1()
+        public Homepage()
         {
             InitializeComponent();
 
@@ -143,7 +143,8 @@ namespace Time_table_Management_System
         //--------------Header icons------------------//
         private void btn_home_header(object sender, EventArgs e)
         {
-
+            Homepage f2 = new Homepage();
+            f2.Show();
         }
 
         private void btn_sessions_header(object sender, EventArgs e)
@@ -272,7 +273,9 @@ namespace Time_table_Management_System
 
         private void button20_Click(object sender, EventArgs e)
         {
-            
+            tags f2 = new tags();
+            f2.Show();
+
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -282,17 +285,20 @@ namespace Time_table_Management_System
 
         private void button22_Click(object sender, EventArgs e)
         {
-
+            Statistics f2 = new Statistics();
+            f2.Show();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-
+            DaysHours f2 = new DaysHours();
+            f2.Show();
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-
+            Lectures f2 = new Lectures();
+            f2.Show();
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -302,11 +308,14 @@ namespace Time_table_Management_System
 
         private void button19_Click(object sender, EventArgs e)
         {
-
+            students f2 = new students();
+            f2.Show();
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
+            Location f2 = new Location();
+            f2.Show();
 
         }
 
@@ -323,6 +332,12 @@ namespace Time_table_Management_System
         private void button26_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button18_Click_1(object sender, EventArgs e)
+        {
+            Subjects.Subjects f2 = new Subjects.Subjects();
+            f2.Show();
         }
     }
 }
