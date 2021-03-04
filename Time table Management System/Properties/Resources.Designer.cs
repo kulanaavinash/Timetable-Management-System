@@ -263,6 +263,16 @@ namespace Time_table_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngaaa_com_1742201__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pngaaa.com-1742201 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngaaa_com_176187 {
             get {
                 object obj = ResourceManager.GetObject("pngaaa.com-176187", resourceCulture);
@@ -303,6 +313,16 @@ namespace Time_table_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngaaa_com_266425__2_ {
+            get {
+                object obj = ResourceManager.GetObject("pngaaa.com-266425 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngaaa_com_266447 {
             get {
                 object obj = ResourceManager.GetObject("pngaaa.com-266447", resourceCulture);
@@ -326,6 +346,26 @@ namespace Time_table_Management_System.Properties {
         internal static System.Drawing.Bitmap pngaaa_com_2957229__1_ {
             get {
                 object obj = ResourceManager.GetObject("pngaaa.com-2957229 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngaaa_com_371692__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pngaaa.com-371692 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngaaa_com_4224302__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pngaaa.com-4224302 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

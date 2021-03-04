@@ -63,37 +63,40 @@ namespace Time_table_Management_System
 
 
             button16.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button16.Height, 30, 30));
+                (0, 0, button16.Width, button16.Height, 30, 30));
 
 
             button17.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button17.Height, 30, 30));
+                (0, 0, button17.Width, button17.Height, 30, 30));
 
 
             button18.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button18.Height, 30, 30));
+                (0, 0, button18.Width, button18.Height, 30, 30));
 
             button19.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button19.Height, 30, 30));
+                (0, 0, button19.Width, button19.Height, 30, 30));
 
             button20.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button20.Height, 30, 30));
+                (0, 0, button20.Width, button20.Height, 30, 30));
 
             button21.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button22.Height, 30, 30));
+                (0, 0, button21.Width, button21.Height, 30, 30));
+
+            button22.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button22.Width, button22.Height, 30, 30));
+
 
             button23.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button23.Height, 30, 30));
-
+                (0, 0, button23.Width, button23.Height, 30, 30));
 
             button24.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button24.Height, 30, 30));
+                (0, 0, button24.Width, button24.Height, 30, 30));
 
             button25.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button25.Height, 30, 30));
+                (0, 0, button25.Width, button25.Height, 30, 30));
 
             button26.Region = Region.FromHrgn(CreateRoundRectRgn
-                (0, 0, button15.Width, button26.Height, 30, 30));
+                (0, 0, button26.Width, button26.Height, 30, 30));
 
 
 
