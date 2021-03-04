@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices; 
+using System.Runtime.InteropServices;
+
 
 namespace Time_table_Management_System
 {
@@ -30,6 +31,8 @@ namespace Time_table_Management_System
         public Form1()
         {
             InitializeComponent();
+
+            //---form border-----//
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
@@ -38,16 +41,65 @@ namespace Time_table_Management_System
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
+
+
+            
+            
+            
+
         }
 
-        
 
 
-          
 
+
+        //dashboard panel main
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            //dashboard panel main
+
+            //----rounded buttons---//
+            button15.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button15.Height, 30, 30));
+
+
+            button16.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button16.Height, 30, 30));
+
+
+            button17.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button17.Height, 30, 30));
+
+
+            button18.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button18.Height, 30, 30));
+
+            button19.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button19.Height, 30, 30));
+
+            button20.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button20.Height, 30, 30));
+
+            button21.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button22.Height, 30, 30));
+
+            button23.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button23.Height, 30, 30));
+
+
+            button24.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button24.Height, 30, 30));
+
+            button25.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button25.Height, 30, 30));
+
+            button26.Region = Region.FromHrgn(CreateRoundRectRgn
+                (0, 0, button15.Width, button26.Height, 30, 30));
+
+
+
+
+
+
         }
 
 
@@ -134,7 +186,7 @@ namespace Time_table_Management_System
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_students_nav(object sender, EventArgs e)
@@ -201,5 +253,74 @@ namespace Time_table_Management_System
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+
+
+
+
+
+        //---------Homepage Dashboard buttons------//
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
