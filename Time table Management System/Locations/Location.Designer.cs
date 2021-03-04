@@ -30,6 +30,9 @@ namespace Time_table_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.edit_Delete_Location1 = new Time_table_Management_System.Locations.Edit_Delete_Location();
+            this.add_location1 = new Time_table_Management_System.Locations.Add_location();
+            this.view_Location1 = new Time_table_Management_System.Locations.View_Location();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Locations = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,9 +57,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.add_location1 = new Time_table_Management_System.Locations.Add_location();
-            this.view_Location1 = new Time_table_Management_System.Locations.View_Location();
-            this.edit_Delete_Location1 = new Time_table_Management_System.Locations.Edit_Delete_Location();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,6 +80,30 @@ namespace Time_table_Management_System
             this.panel1.Size = new System.Drawing.Size(1252, 729);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // edit_Delete_Location1
+            // 
+            this.edit_Delete_Location1.Location = new System.Drawing.Point(86, 87);
+            this.edit_Delete_Location1.Margin = new System.Windows.Forms.Padding(6);
+            this.edit_Delete_Location1.Name = "edit_Delete_Location1";
+            this.edit_Delete_Location1.Size = new System.Drawing.Size(1030, 636);
+            this.edit_Delete_Location1.TabIndex = 6;
+            // 
+            // add_location1
+            // 
+            this.add_location1.Location = new System.Drawing.Point(100, 90);
+            this.add_location1.Margin = new System.Windows.Forms.Padding(6);
+            this.add_location1.Name = "add_location1";
+            this.add_location1.Size = new System.Drawing.Size(937, 619);
+            this.add_location1.TabIndex = 5;
+            // 
+            // view_Location1
+            // 
+            this.view_Location1.Location = new System.Drawing.Point(-18, 139);
+            this.view_Location1.Margin = new System.Windows.Forms.Padding(6);
+            this.view_Location1.Name = "view_Location1";
+            this.view_Location1.Size = new System.Drawing.Size(1258, 459);
+            this.view_Location1.TabIndex = 4;
             // 
             // panel3
             // 
@@ -128,6 +152,7 @@ namespace Time_table_Management_System
             // 
             // button17
             // 
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button17.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button17.Location = new System.Drawing.Point(641, 43);
             this.button17.Margin = new System.Windows.Forms.Padding(4);
@@ -140,6 +165,7 @@ namespace Time_table_Management_System
             // 
             // oc_tabcontrol
             // 
+            this.oc_tabcontrol.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.oc_tabcontrol.ForeColor = System.Drawing.SystemColors.Desktop;
             this.oc_tabcontrol.Location = new System.Drawing.Point(368, 43);
             this.oc_tabcontrol.Margin = new System.Windows.Forms.Padding(4);
@@ -417,30 +443,6 @@ namespace Time_table_Management_System
             this.Hwbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
-            // 
-            // add_location1
-            // 
-            this.add_location1.Location = new System.Drawing.Point(100, 90);
-            this.add_location1.Margin = new System.Windows.Forms.Padding(6);
-            this.add_location1.Name = "add_location1";
-            this.add_location1.Size = new System.Drawing.Size(937, 619);
-            this.add_location1.TabIndex = 5;
-            // 
-            // view_Location1
-            // 
-            this.view_Location1.Location = new System.Drawing.Point(-18, 139);
-            this.view_Location1.Margin = new System.Windows.Forms.Padding(6);
-            this.view_Location1.Name = "view_Location1";
-            this.view_Location1.Size = new System.Drawing.Size(1258, 459);
-            this.view_Location1.TabIndex = 4;
-            // 
-            // edit_Delete_Location1
-            // 
-            this.edit_Delete_Location1.Location = new System.Drawing.Point(86, 87);
-            this.edit_Delete_Location1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.edit_Delete_Location1.Name = "edit_Delete_Location1";
-            this.edit_Delete_Location1.Size = new System.Drawing.Size(1030, 636);
-            this.edit_Delete_Location1.TabIndex = 6;
             // 
             // Location
             // 
