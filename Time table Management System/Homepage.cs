@@ -178,18 +178,21 @@ namespace Time_table_Management_System
         //------------------Slide navbar icons....................//
         private void btn_days_nav(object sender, EventArgs e)
         {
+            this.Hide();
             DaysHours f2 = new DaysHours();
             f2.Show();
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
         {
+            this.Hide();
             Lectures f2 = new Lectures();
             f2.Show();
         }
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
+            this.Hide();
             Subjects.Subjects f2 = new Subjects.Subjects();
             f2.Show();
             
@@ -197,24 +200,28 @@ namespace Time_table_Management_System
 
         private void btn_students_nav(object sender, EventArgs e)
         {
+            this.Hide();
             students f2 = new students();
             f2.Show();
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
+            this.Hide();
             tags f2 = new tags();
             f2.Show();
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
+            this.Hide();
             Location f2 = new Location();
             f2.Show();
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
+            this.Hide();
             Statistics f2 = new Statistics();
             f2.Show();
         }
@@ -273,8 +280,10 @@ namespace Time_table_Management_System
 
         private void button20_Click(object sender, EventArgs e)
         {
+            this.Hide();
             tags f2 = new tags();
             f2.Show();
+
 
         }
 
@@ -285,18 +294,21 @@ namespace Time_table_Management_System
 
         private void button22_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Statistics f2 = new Statistics();
             f2.Show();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
+            this.Hide();
             DaysHours f2 = new DaysHours();
             f2.Show();
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Lectures f2 = new Lectures();
             f2.Show();
         }
@@ -308,12 +320,15 @@ namespace Time_table_Management_System
 
         private void button19_Click(object sender, EventArgs e)
         {
-            students f2 = new students();
+
+            this.Hide();
+            this.Hide(); students f2 = new students();
             f2.Show();
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Location f2 = new Location();
             f2.Show();
 
@@ -336,6 +351,7 @@ namespace Time_table_Management_System
 
         private void button18_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
             Subjects.Subjects f2 = new Subjects.Subjects();
             f2.Show();
         }
