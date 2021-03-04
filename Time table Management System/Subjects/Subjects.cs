@@ -115,37 +115,53 @@ namespace Time_table_Management_System.Subjects
         //------------------Slide navbar icons....................//
         private void btn_days_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            DaysHours f2 = new DaysHours();
+            f2.Show();
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
         {
 
+            this.Hide();
+            Lectures f2 = new Lectures();
+            f2.Show();
         }
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Subjects f2 = new Subjects ();
+            f2.Show();
         }
 
         private void btn_students_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            students f2 = new students();
+            f2.Show();
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            tags f2 = new tags();
+            f2.Show();
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
 
+            this.Hide();
+            Location f2 = new Location();
+            f2.Show();
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Statistics f2 = new Statistics();
+            f2.Show();
         }
 
 
@@ -180,6 +196,18 @@ namespace Time_table_Management_System.Subjects
         private void label22_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void Subjects_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

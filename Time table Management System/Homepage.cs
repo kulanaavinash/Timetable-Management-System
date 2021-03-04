@@ -282,7 +282,7 @@ namespace Time_table_Management_System
         {
             this.Hide();
             tags f2 = new tags();
-            f2.Show();
+            f2.Show(); 
 
 
         }
@@ -296,21 +296,21 @@ namespace Time_table_Management_System
         {
             this.Hide();
             Statistics f2 = new Statistics();
-            f2.Show();
+            f2.Show(); 
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
             this.Hide();
             DaysHours f2 = new DaysHours();
-            f2.Show();
+            f2.Show(); 
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
             this.Hide();
             Lectures f2 = new Lectures();
-            f2.Show();
+            f2.Show(); 
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -323,14 +323,14 @@ namespace Time_table_Management_System
 
             this.Hide();
             this.Hide(); students f2 = new students();
-            f2.Show();
+            f2.Show(); 
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
             this.Hide();
             Location f2 = new Location();
-            f2.Show();
+            f2.Show(); 
 
         }
 

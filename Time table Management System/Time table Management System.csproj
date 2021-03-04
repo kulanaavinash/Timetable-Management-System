@@ -171,6 +171,9 @@
     <EmbeddedResource Include="students\students.resx">
       <DependentUpon>students.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Subjects\Subjects.resx">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tags\tags.resx">
       <DependentUpon>tags.cs</DependentUpon>
     </EmbeddedResource>
