@@ -186,6 +186,8 @@ namespace Time_table_Management_System
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
+            Subjects.Subjects f2 = new Subjects.Subjects();
+            f2.Show();
             
         }
 

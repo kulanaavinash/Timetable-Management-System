@@ -119,6 +119,12 @@
     <Compile Include="students\students.Designer.cs">
       <DependentUpon>students.cs</DependentUpon>
     </Compile>
+    <Compile Include="Subjects\Subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects\Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="tags\tags.cs">
       <SubType>Form</SubType>
     </Compile>
