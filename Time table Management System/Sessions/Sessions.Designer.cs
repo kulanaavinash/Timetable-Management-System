@@ -68,6 +68,24 @@ namespace Time_table_Management_System
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -86,24 +104,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.b.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -112,10 +112,10 @@ namespace Time_table_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.nmudSessionDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmudSessionNoStudents)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -135,7 +135,7 @@ namespace Time_table_Management_System
             this.b.Controls.Add(this.tabPage1);
             this.b.Controls.Add(this.tabPage2);
             this.b.Controls.Add(this.tabPage3);
-            this.b.Location = new System.Drawing.Point(27, 52);
+            this.b.Location = new System.Drawing.Point(27, 79);
             this.b.Name = "b";
             this.b.SelectedIndex = 0;
             this.b.Size = new System.Drawing.Size(1208, 595);
@@ -161,7 +161,7 @@ namespace Time_table_Management_System
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -172,11 +172,12 @@ namespace Time_table_Management_System
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(60, 147);
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dataGridView1.Location = new System.Drawing.Point(70, 167);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1052, 348);
+            this.dataGridView1.Size = new System.Drawing.Size(1088, 404);
             this.dataGridView1.TabIndex = 77;
             // 
             // Column1
@@ -405,6 +406,7 @@ namespace Time_table_Management_System
             this.nmudSessionDuration.Size = new System.Drawing.Size(149, 30);
             this.nmudSessionDuration.TabIndex = 80;
             this.nmudSessionDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmudSessionDuration.ValueChanged += new System.EventHandler(this.nmudSessionDuration_ValueChanged);
             // 
             // nmudSessionNoStudents
             // 
@@ -419,6 +421,7 @@ namespace Time_table_Management_System
             this.nmudSessionNoStudents.Size = new System.Drawing.Size(149, 30);
             this.nmudSessionNoStudents.TabIndex = 79;
             this.nmudSessionNoStudents.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmudSessionNoStudents.ValueChanged += new System.EventHandler(this.nmudSessionNoStudents_ValueChanged);
             // 
             // cmbSessionTag
             // 
@@ -433,6 +436,7 @@ namespace Time_table_Management_System
             this.cmbSessionTag.Size = new System.Drawing.Size(286, 30);
             this.cmbSessionTag.TabIndex = 77;
             this.cmbSessionTag.UseSelectable = true;
+            this.cmbSessionTag.SelectedIndexChanged += new System.EventHandler(this.cmbSessionTag_SelectedIndexChanged);
             // 
             // btnClear
             // 
@@ -544,6 +548,7 @@ namespace Time_table_Management_System
             this.cmbSessionSubject.Size = new System.Drawing.Size(286, 30);
             this.cmbSessionSubject.TabIndex = 75;
             this.cmbSessionSubject.UseSelectable = true;
+            this.cmbSessionSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSessionSubject_SelectedIndexChanged);
             // 
             // cmbSessionGroup
             // 
@@ -558,6 +563,7 @@ namespace Time_table_Management_System
             this.cmbSessionGroup.Size = new System.Drawing.Size(286, 30);
             this.cmbSessionGroup.TabIndex = 78;
             this.cmbSessionGroup.UseSelectable = true;
+            this.cmbSessionGroup.SelectedIndexChanged += new System.EventHandler(this.cmbSessionGroup_SelectedIndexChanged);
             // 
             // cmbSessionLecturer
             // 
@@ -572,6 +578,7 @@ namespace Time_table_Management_System
             this.cmbSessionLecturer.Size = new System.Drawing.Size(286, 30);
             this.cmbSessionLecturer.TabIndex = 48;
             this.cmbSessionLecturer.UseSelectable = true;
+            this.cmbSessionLecturer.SelectedIndexChanged += new System.EventHandler(this.cmbSessionLecturer_SelectedIndexChanged);
             // 
             // metroLabel1
             // 
@@ -629,6 +636,231 @@ namespace Time_table_Management_System
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Manage Session";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(435, 414);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(129, 30);
+            this.numericUpDown2.TabIndex = 99;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(435, 357);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(129, 30);
+            this.numericUpDown1.TabIndex = 98;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // metroComboBox4
+            // 
+            this.metroComboBox4.FormattingEnabled = true;
+            this.metroComboBox4.ItemHeight = 24;
+            this.metroComboBox4.Location = new System.Drawing.Point(435, 308);
+            this.metroComboBox4.Name = "metroComboBox4";
+            this.metroComboBox4.Size = new System.Drawing.Size(194, 30);
+            this.metroComboBox4.TabIndex = 97;
+            this.metroComboBox4.UseSelectable = true;
+            this.metroComboBox4.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 24;
+            this.metroComboBox3.Location = new System.Drawing.Point(435, 246);
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.Size = new System.Drawing.Size(194, 30);
+            this.metroComboBox3.TabIndex = 96;
+            this.metroComboBox3.UseSelectable = true;
+            this.metroComboBox3.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 24;
+            this.metroComboBox2.Location = new System.Drawing.Point(435, 186);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(194, 30);
+            this.metroComboBox2.TabIndex = 95;
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.Location = new System.Drawing.Point(435, 132);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(194, 30);
+            this.metroComboBox1.TabIndex = 94;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel15.Location = new System.Drawing.Point(121, 414);
+            this.metroLabel15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(199, 36);
+            this.metroLabel15.TabIndex = 93;
+            this.metroLabel15.Text = "Durations-hrs";
+            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel15.Click += new System.EventHandler(this.metroLabel15_Click);
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel14.Location = new System.Drawing.Point(121, 359);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(199, 36);
+            this.metroLabel14.TabIndex = 92;
+            this.metroLabel14.Text = "No of Group";
+            this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel14.Click += new System.EventHandler(this.metroLabel14_Click);
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel13.Location = new System.Drawing.Point(121, 298);
+            this.metroLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(199, 36);
+            this.metroLabel13.TabIndex = 91;
+            this.metroLabel13.Text = "Subject";
+            this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel13.Click += new System.EventHandler(this.metroLabel13_Click);
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel12.Location = new System.Drawing.Point(121, 240);
+            this.metroLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(199, 36);
+            this.metroLabel12.TabIndex = 90;
+            this.metroLabel12.Text = "Student Group";
+            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel12.Click += new System.EventHandler(this.metroLabel12_Click);
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel11.Location = new System.Drawing.Point(121, 180);
+            this.metroLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(199, 36);
+            this.metroLabel11.TabIndex = 89;
+            this.metroLabel11.Text = "Tag";
+            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel11.Click += new System.EventHandler(this.metroLabel11_Click);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel10.Location = new System.Drawing.Point(121, 122);
+            this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(199, 36);
+            this.metroLabel10.TabIndex = 88;
+            this.metroLabel10.Text = "Lecturer";
+            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel10.Click += new System.EventHandler(this.metroLabel10_Click);
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.BackColor = System.Drawing.Color.White;
+            this.metroLabel9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel9.Location = new System.Drawing.Point(373, 54);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(155, 25);
+            this.metroLabel9.TabIndex = 87;
+            this.metroLabel9.Text = "Manage Session";
+            this.metroLabel9.UseCustomBackColor = true;
+            this.metroLabel9.Click += new System.EventHandler(this.metroLabel9_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton2.Location = new System.Drawing.Point(508, 477);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(200, 49);
+            this.metroButton2.TabIndex = 86;
+            this.metroButton2.Text = "delete";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseCustomForeColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton1.Location = new System.Drawing.Point(221, 477);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(200, 49);
+            this.metroButton1.TabIndex = 85;
+            this.metroButton1.Text = "update";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseCustomForeColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel7.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel7.Location = new System.Drawing.Point(936, 240);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(58, 17);
+            this.metroLabel7.TabIndex = 84;
+            this.metroLabel7.Text = "Clear list";
+            this.metroLabel7.UseCustomForeColor = true;
+            this.metroLabel7.Click += new System.EventHandler(this.metroLabel7_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(774, 283);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(220, 39);
+            this.textBox2.TabIndex = 83;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(755, 125);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(239, 102);
+            this.textBox1.TabIndex = 82;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel2
             // 
@@ -898,213 +1130,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(755, 125);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(239, 102);
-            this.textBox1.TabIndex = 82;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(774, 283);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 39);
-            this.textBox2.TabIndex = 83;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel7.Location = new System.Drawing.Point(936, 240);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(58, 17);
-            this.metroLabel7.TabIndex = 84;
-            this.metroLabel7.Text = "Clear list";
-            this.metroLabel7.UseCustomForeColor = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton1.Location = new System.Drawing.Point(221, 477);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(200, 49);
-            this.metroButton1.TabIndex = 85;
-            this.metroButton1.Text = "update";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton2.Location = new System.Drawing.Point(508, 477);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(200, 49);
-            this.metroButton2.TabIndex = 86;
-            this.metroButton2.Text = "delete";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseCustomForeColor = true;
-            this.metroButton2.UseSelectable = true;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.BackColor = System.Drawing.Color.White;
-            this.metroLabel9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(373, 54);
-            this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(155, 25);
-            this.metroLabel9.TabIndex = 87;
-            this.metroLabel9.Text = "Manage Session";
-            this.metroLabel9.UseCustomBackColor = true;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(121, 122);
-            this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(199, 36);
-            this.metroLabel10.TabIndex = 88;
-            this.metroLabel10.Text = "Lecturer";
-            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel11.Location = new System.Drawing.Point(121, 180);
-            this.metroLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(199, 36);
-            this.metroLabel11.TabIndex = 89;
-            this.metroLabel11.Text = "Tag";
-            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel12.Location = new System.Drawing.Point(121, 240);
-            this.metroLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(199, 36);
-            this.metroLabel12.TabIndex = 90;
-            this.metroLabel12.Text = "Student Group";
-            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel13.Location = new System.Drawing.Point(121, 298);
-            this.metroLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(199, 36);
-            this.metroLabel13.TabIndex = 91;
-            this.metroLabel13.Text = "Subject";
-            this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(121, 359);
-            this.metroLabel14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(199, 36);
-            this.metroLabel14.TabIndex = 92;
-            this.metroLabel14.Text = "No of Group";
-            this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel15.Location = new System.Drawing.Point(121, 414);
-            this.metroLabel15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(199, 36);
-            this.metroLabel15.TabIndex = 93;
-            this.metroLabel15.Text = "Durations-hrs";
-            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(435, 132);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(194, 30);
-            this.metroComboBox1.TabIndex = 94;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 24;
-            this.metroComboBox2.Location = new System.Drawing.Point(435, 186);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(194, 30);
-            this.metroComboBox2.TabIndex = 95;
-            this.metroComboBox2.UseSelectable = true;
-            // 
-            // metroComboBox3
-            // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 24;
-            this.metroComboBox3.Location = new System.Drawing.Point(435, 246);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(194, 30);
-            this.metroComboBox3.TabIndex = 96;
-            this.metroComboBox3.UseSelectable = true;
-            // 
-            // metroComboBox4
-            // 
-            this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 24;
-            this.metroComboBox4.Location = new System.Drawing.Point(435, 308);
-            this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(194, 30);
-            this.metroComboBox4.TabIndex = 97;
-            this.metroComboBox4.UseSelectable = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(435, 357);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(129, 30);
-            this.numericUpDown1.TabIndex = 98;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(435, 414);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(129, 30);
-            this.numericUpDown2.TabIndex = 99;
-            // 
             // Sessions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1145,11 +1170,11 @@ namespace Time_table_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.nmudSessionNoStudents)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }

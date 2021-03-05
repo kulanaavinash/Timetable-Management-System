@@ -233,5 +233,125 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void cmbSessionTag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSessionLecturer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSessionGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSessionSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nmudSessionNoStudents_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nmudSessionDuration_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
