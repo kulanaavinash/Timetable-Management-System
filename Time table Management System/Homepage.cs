@@ -293,6 +293,9 @@ namespace Time_table_Management_System
         private void button25_Click(object sender, EventArgs e)
         {
 
+            this.Hide();
+            Advanced f2 = new Advanced();
+            f2.Show();
         }
 
         private void button22_Click(object sender, EventArgs e)
