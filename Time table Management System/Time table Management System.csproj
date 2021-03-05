@@ -113,6 +113,12 @@
     <Compile Include="Rooms\Rooms.Designer.cs">
       <DependentUpon>Rooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sessions\Sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sessions\Sessions.Designer.cs">
+      <DependentUpon>Sessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </Compile>
     <EmbeddedResource Include="Rooms\Rooms.resx">
       <DependentUpon>Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sessions\Sessions.resx">
+      <DependentUpon>Sessions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
