@@ -145,7 +145,9 @@ namespace Time_table_Management_System
         //--------------Header icons------------------//
         private void btn_home_header(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Homepage f2 = new Homepage ();
+            f2.Show();
         }
 
         private void btn_sessions_header(object sender, EventArgs e)
@@ -348,7 +350,9 @@ namespace Time_table_Management_System
 
         private void button23_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Sessions f2 = new Sessions(); 
+            f2.Show();
         }
 
         private void button24_Click(object sender, EventArgs e)

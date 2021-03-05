@@ -61,7 +61,9 @@ namespace Time_table_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //picturebox panel
+            this.Hide();
+            Homepage f2 = new Homepage ();
+            f2.Show();  //picturebox panel
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -81,29 +83,37 @@ namespace Time_table_Management_System
         //--------------Header icons------------------//
         private void btn_home_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Homepage f2 = new Homepage ();
+            f2.Show();
         }
 
         private void btn_sessions_header(object sender, EventArgs e)
         {
             this.Hide();
-            Homepage f2 = new Homepage();
+            Sessions f2 = new Sessions();
             f2.Show(); 
         }
 
         private void btn_rooms_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
         }
 
         private void btn_advanced_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Advanced f2 = new Advanced();
+            f2.Show();
         }
 
         private void btn_genarate_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Generate f2 = new Generate ();
+            f2.Show();
         }
 
 
@@ -117,37 +127,55 @@ namespace Time_table_Management_System
         //------------------Slide navbar icons....................//
         private void btn_days_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            DaysHours f2 = new DaysHours();
+            f2.Show();
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Lectures f2 = new Lectures();
+            f2.Show();
         }
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
+
+
+            this.Hide();
+            Subjects.Subjects f2 = new Subjects.Subjects();
+            f2.Show();
 
         }
 
         private void btn_students_nav(object sender, EventArgs e)
         {
 
+            this.Hide();
+            students f2 = new students();
+            f2.Show();
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            tags f2 = new tags();
+            f2.Show();
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Location f2 = new Location();
+            f2.Show();
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Statistics f2 = new Statistics();
+            f2.Show();
         }
 
 
