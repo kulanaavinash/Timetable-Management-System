@@ -145,8 +145,7 @@ namespace Time_table_Management_System
         //--------------Header icons------------------//
         private void btn_home_header(object sender, EventArgs e)
         {
-            Homepage f2 = new Homepage();
-            f2.Show();
+            
         }
 
         private void btn_sessions_header(object sender, EventArgs e)
