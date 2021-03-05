@@ -638,5 +638,35 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sessionheading_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
