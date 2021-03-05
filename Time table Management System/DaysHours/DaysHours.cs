@@ -69,7 +69,9 @@ namespace Time_table_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //picturebox panel
+            this.Hide();
+            Homepage f2 = new Homepage();
+            f2.Show();   //picturebox panel
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -126,7 +128,7 @@ namespace Time_table_Management_System
         private void btn_days_nav(object sender, EventArgs e)
         {
             this.Hide();
-            DaysHours f2 = new DaysHours();
+            Homepage f2 = new Homepage ();
             f2.Show();
         }
 

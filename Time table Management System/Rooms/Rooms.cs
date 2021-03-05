@@ -61,7 +61,9 @@ namespace Time_table_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //picturebox panel
+            this.Hide();
+            Homepage f2 = new Homepage ();
+            f2.Show();  //picturebox panel
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -118,51 +120,51 @@ namespace Time_table_Management_System
         private void btn_days_nav(object sender, EventArgs e)
         {
             this.Hide();
-            Room f2 = new Room ();
+            DaysHours f2 = new DaysHours ();
             f2.Show();
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
         {
             this.Hide();
-            Room f2 = new Room();
+            Lectures f2 = new Lectures ();
             f2.Show();
         }
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
             this.Hide();     // Connected 
-            Room f2 = new Room();
+            Subjects.Subjects f2 = new Subjects.Subjects();
             f2.Show();
         }
 
         private void btn_students_nav(object sender, EventArgs e)
         {
             this.Hide();
-            Room f2 = new Room();
+            students f2 = new students();
             f2.Show();
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
             this.Hide();
-            Room f2 = new Room();
+            tags f2 = new tags();
             f2.Show();
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
             this.Hide();
-            Room f2 = new Room();
-            f2.Show();
+            Location f2 = new Location();
+            f2.Show(); 
 
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
             this.Hide();
-            Room f2 = new Room();
-            f2.Show();
+            Statistics f2 = new Statistics();
+            f2.Show(); 
         }
 
 
