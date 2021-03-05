@@ -151,7 +151,7 @@ namespace Time_table_Management_System
         private void btn_sessions_header(object sender, EventArgs e)
         {
             this.Hide();
-            Sessions f2 = new Sessions ();
+            Sessions f2 = new Sessions (); 
             f2.Show(); 
         }
 
