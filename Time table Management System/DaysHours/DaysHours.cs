@@ -99,7 +99,9 @@ namespace Time_table_Management_System
 
         private void btn_rooms_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
         }
 
         private void btn_advanced_header(object sender, EventArgs e)

@@ -91,7 +91,9 @@ namespace Time_table_Management_System
 
         private void btn_rooms_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show(); 
         }
 
         private void btn_advanced_header(object sender, EventArgs e)
@@ -115,37 +117,52 @@ namespace Time_table_Management_System
         //------------------Slide navbar icons....................//
         private void btn_days_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room ();
+            f2.Show();
         }
 
         private void btn_lectures_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
         }
 
         private void btn_subjects_nav(object sender, EventArgs e)
         {
-
+            this.Hide();     // Connected 
+            Room f2 = new Room();
+            f2.Show();
         }
 
         private void btn_students_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
         }
 
         private void btn_tags_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
         }
 
         private void btn_locations_nav(object sender, EventArgs e)
         {
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
 
         }
 
         private void btn_statics_nav(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Room f2 = new Room();
+            f2.Show();
         }
 
 
