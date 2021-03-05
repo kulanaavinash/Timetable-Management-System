@@ -61,7 +61,9 @@ namespace Time_table_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //picturebox panel
+            this.Hide();
+            Homepage f2 = new Homepage();
+            f2.Show();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -192,10 +194,16 @@ namespace Time_table_Management_System
             //consective sessions
         }
 
-        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //consective sessions
+            //consective sessions select session 01                    
         }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //consective sessions select session 02
+        }
+
 
         private void button16_Click(object sender, EventArgs e)
         {
@@ -217,10 +225,7 @@ namespace Time_table_Management_System
             //consective sessions
         }
 
-        private void metroComboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //consective sessions
-        }
+       
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -396,6 +401,76 @@ namespace Time_table_Management_System
             // not overlap Sessions-
         }
 
-     
+
+
+
+
+
+
+
+
+
+        //not avialble time tab
+        private void metroComboBox21_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void metroComboBox16_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void metroComboBox17_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            //not avialble time
+        }
+
+        
     }
 }

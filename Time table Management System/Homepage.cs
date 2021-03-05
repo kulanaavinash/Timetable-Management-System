@@ -162,12 +162,16 @@ namespace Time_table_Management_System
 
         private void btn_advanced_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Advanced f2 = new Advanced();
+            f2.Show(); 
         }
 
         private void btn_genarate_header(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Generate f2 = new Generate();
+            f2.Show();
         }
 
 
@@ -355,7 +359,9 @@ namespace Time_table_Management_System
 
         private void button26_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Generate f2 = new Generate();
+            f2.Show();
         }
 
         private void button18_Click_1(object sender, EventArgs e)
