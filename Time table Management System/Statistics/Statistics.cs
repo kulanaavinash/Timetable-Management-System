@@ -262,5 +262,30 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void chart1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

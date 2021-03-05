@@ -633,5 +633,10 @@ namespace Time_table_Management_System
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void metroPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,8 +30,61 @@ namespace Time_table_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.metroTextBox51 = new MetroFramework.Controls.MetroTextBox();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox10 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox11 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox12 = new MetroFramework.Controls.MetroComboBox();
+            this.metroTextBox52 = new MetroFramework.Controls.MetroTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,69 +100,16 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.metroTextBox52 = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox12 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox11 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox10 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.metroTextBox51 = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,6 +123,737 @@ namespace Time_table_Management_System
             this.panel1.Size = new System.Drawing.Size(1246, 729);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(71, 82);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1081, 602);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.metroComboBox2);
+            this.tabPage2.Controls.Add(this.metroComboBox1);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1073, 573);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "View Lectures";
+            this.tabPage2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabPage2_MouseDown);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dataGridView1.Location = new System.Drawing.Point(106, 204);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(891, 269);
+            this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Faculty";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Department";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Center";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Level";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Building ";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Rank";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(604, 87);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Filter by Level";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(25, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Filter by Faculty";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label9.Location = new System.Drawing.Point(431, 17);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(211, 29);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "LECTURES LIST";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 24;
+            this.metroComboBox2.Location = new System.Drawing.Point(776, 82);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(207, 30);
+            this.metroComboBox2.TabIndex = 4;
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "Faculty of Computing",
+            "Faculty of Business",
+            "Faculty of Engineering",
+            "Faculty of Humanities & Sciences",
+            "School of Architecture",
+            "Faculty of Graduate Studies and Research",
+            "SLIIT Academy",
+            "SLIIT International"});
+            this.metroComboBox1.Location = new System.Drawing.Point(206, 81);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(247, 30);
+            this.metroComboBox1.TabIndex = 3;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.panel4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1073, 573);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Add lectures";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.Location = new System.Drawing.Point(475, 33);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 29);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "ADD LECTURES";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.metroComboBox7);
+            this.panel4.Controls.Add(this.metroComboBox6);
+            this.panel4.Controls.Add(this.metroComboBox5);
+            this.panel4.Controls.Add(this.metroComboBox4);
+            this.panel4.Controls.Add(this.metroComboBox3);
+            this.panel4.Controls.Add(this.metroTextBox51);
+            this.panel4.Controls.Add(this.button16);
+            this.panel4.Controls.Add(this.button15);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.ForeColor = System.Drawing.Color.Transparent;
+            this.panel4.Location = new System.Drawing.Point(6, 75);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1191, 617);
+            this.panel4.TabIndex = 8;
+            // 
+            // metroComboBox7
+            // 
+            this.metroComboBox7.FormattingEnabled = true;
+            this.metroComboBox7.ItemHeight = 24;
+            this.metroComboBox7.Location = new System.Drawing.Point(560, 314);
+            this.metroComboBox7.Name = "metroComboBox7";
+            this.metroComboBox7.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox7.TabIndex = 31;
+            this.metroComboBox7.UseSelectable = true;
+            // 
+            // metroComboBox6
+            // 
+            this.metroComboBox6.FormattingEnabled = true;
+            this.metroComboBox6.ItemHeight = 24;
+            this.metroComboBox6.Items.AddRange(new object[] {
+            "A12",
+            "A45",
+            "B01",
+            "B22",
+            "N22"});
+            this.metroComboBox6.Location = new System.Drawing.Point(560, 258);
+            this.metroComboBox6.Name = "metroComboBox6";
+            this.metroComboBox6.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox6.TabIndex = 30;
+            this.metroComboBox6.UseSelectable = true;
+            this.metroComboBox6.SelectedIndexChanged += new System.EventHandler(this.metroComboBox6_SelectedIndexChanged);
+            // 
+            // metroComboBox5
+            // 
+            this.metroComboBox5.FormattingEnabled = true;
+            this.metroComboBox5.ItemHeight = 24;
+            this.metroComboBox5.Items.AddRange(new object[] {
+            "Malabe",
+            "Kurunegala",
+            "Kandy",
+            "Matara",
+            "Kollupitiya"});
+            this.metroComboBox5.Location = new System.Drawing.Point(560, 204);
+            this.metroComboBox5.Name = "metroComboBox5";
+            this.metroComboBox5.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox5.TabIndex = 29;
+            this.metroComboBox5.UseSelectable = true;
+            this.metroComboBox5.SelectedIndexChanged += new System.EventHandler(this.metroComboBox5_SelectedIndexChanged);
+            // 
+            // metroComboBox4
+            // 
+            this.metroComboBox4.FormattingEnabled = true;
+            this.metroComboBox4.ItemHeight = 24;
+            this.metroComboBox4.Items.AddRange(new object[] {
+            "Mathamatic department",
+            "Computing department",
+            "Business department",
+            "Architecture department"});
+            this.metroComboBox4.Location = new System.Drawing.Point(560, 144);
+            this.metroComboBox4.Name = "metroComboBox4";
+            this.metroComboBox4.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox4.TabIndex = 28;
+            this.metroComboBox4.UseSelectable = true;
+            this.metroComboBox4.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 24;
+            this.metroComboBox3.Items.AddRange(new object[] {
+            "Faculty of Computing",
+            "Faculty of Business",
+            "Faculty of Engineering",
+            "Faculty of Humanities & Sciences",
+            "School of Architecture",
+            "Faculty of Graduate Studies and Research",
+            "SLIIT Academy",
+            "SLIIT International"});
+            this.metroComboBox3.Location = new System.Drawing.Point(560, 98);
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox3.TabIndex = 27;
+            this.metroComboBox3.UseSelectable = true;
+            this.metroComboBox3.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
+            // 
+            // metroTextBox51
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox51.CustomButton.Image = null;
+            this.metroTextBox51.CustomButton.Location = new System.Drawing.Point(198, 1);
+            this.metroTextBox51.CustomButton.Name = "";
+            this.metroTextBox51.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox51.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox51.CustomButton.TabIndex = 1;
+            this.metroTextBox51.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox51.CustomButton.UseSelectable = true;
+            this.metroTextBox51.CustomButton.Visible = false;
+            this.metroTextBox51.Lines = new string[0];
+            this.metroTextBox51.Location = new System.Drawing.Point(560, 56);
+            this.metroTextBox51.MaxLength = 32767;
+            this.metroTextBox51.Name = "metroTextBox51";
+            this.metroTextBox51.PasswordChar = '\0';
+            this.metroTextBox51.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox51.SelectedText = "";
+            this.metroTextBox51.SelectionLength = 0;
+            this.metroTextBox51.SelectionStart = 0;
+            this.metroTextBox51.ShortcutsEnabled = true;
+            this.metroTextBox51.Size = new System.Drawing.Size(220, 23);
+            this.metroTextBox51.TabIndex = 21;
+            this.metroTextBox51.UseSelectable = true;
+            this.metroTextBox51.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox51.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox51.Click += new System.EventHandler(this.metroTextBox51_Click);
+            // 
+            // button16
+            // 
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button16.Location = new System.Drawing.Point(592, 406);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(103, 47);
+            this.button16.TabIndex = 14;
+            this.button16.Text = "CLEAR";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button15
+            // 
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button15.Location = new System.Drawing.Point(369, 406);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(110, 47);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "ADD";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label11.Location = new System.Drawing.Point(289, 310);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(165, 25);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Enter The Level";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label10.Location = new System.Drawing.Point(289, 258);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(190, 25);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Enter The Building";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label8.Location = new System.Drawing.Point(289, 200);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(178, 25);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Enter The Center";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label7.Location = new System.Drawing.Point(289, 149);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(224, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Enter The Department";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.Location = new System.Drawing.Point(289, 98);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(183, 25);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Enter The Faculty";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(289, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(169, 25);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Enter The Name";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage4.Controls.Add(this.panel5);
+            this.tabPage4.Controls.Add(this.label12);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1073, 573);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Edit And Delete";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button20);
+            this.panel5.Controls.Add(this.button19);
+            this.panel5.Controls.Add(this.button18);
+            this.panel5.Controls.Add(this.button17);
+            this.panel5.Controls.Add(this.metroComboBox8);
+            this.panel5.Controls.Add(this.metroComboBox9);
+            this.panel5.Controls.Add(this.metroComboBox10);
+            this.panel5.Controls.Add(this.metroComboBox11);
+            this.panel5.Controls.Add(this.metroComboBox12);
+            this.panel5.Controls.Add(this.metroTextBox52);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Location = new System.Drawing.Point(6, 100);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1020, 467);
+            this.panel5.TabIndex = 16;
+            // 
+            // button20
+            // 
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button20.Location = new System.Drawing.Point(628, 404);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(110, 47);
+            this.button20.TabIndex = 47;
+            this.button20.Text = "Delete ";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button19.Location = new System.Drawing.Point(397, 404);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(110, 47);
+            this.button19.TabIndex = 46;
+            this.button19.Text = "Update";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button18.Location = new System.Drawing.Point(694, 514);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(110, 47);
+            this.button18.TabIndex = 45;
+            this.button18.Text = "DELETE";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button17.Location = new System.Drawing.Point(463, 514);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(110, 47);
+            this.button17.TabIndex = 44;
+            this.button17.Text = "UPDATE";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // metroComboBox8
+            // 
+            this.metroComboBox8.FormattingEnabled = true;
+            this.metroComboBox8.ItemHeight = 24;
+            this.metroComboBox8.Location = new System.Drawing.Point(592, 342);
+            this.metroComboBox8.Name = "metroComboBox8";
+            this.metroComboBox8.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox8.TabIndex = 43;
+            this.metroComboBox8.UseSelectable = true;
+            // 
+            // metroComboBox9
+            // 
+            this.metroComboBox9.FormattingEnabled = true;
+            this.metroComboBox9.ItemHeight = 24;
+            this.metroComboBox9.Items.AddRange(new object[] {
+            "A12",
+            "A45",
+            "B01",
+            "B22",
+            "N22"});
+            this.metroComboBox9.Location = new System.Drawing.Point(592, 286);
+            this.metroComboBox9.Name = "metroComboBox9";
+            this.metroComboBox9.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox9.TabIndex = 42;
+            this.metroComboBox9.UseSelectable = true;
+            // 
+            // metroComboBox10
+            // 
+            this.metroComboBox10.FormattingEnabled = true;
+            this.metroComboBox10.ItemHeight = 24;
+            this.metroComboBox10.Items.AddRange(new object[] {
+            "Malabe",
+            "Kurunegala",
+            "Kandy",
+            "Matara",
+            "Kollupitiya"});
+            this.metroComboBox10.Location = new System.Drawing.Point(592, 229);
+            this.metroComboBox10.Name = "metroComboBox10";
+            this.metroComboBox10.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox10.TabIndex = 41;
+            this.metroComboBox10.UseSelectable = true;
+            // 
+            // metroComboBox11
+            // 
+            this.metroComboBox11.FormattingEnabled = true;
+            this.metroComboBox11.ItemHeight = 24;
+            this.metroComboBox11.Items.AddRange(new object[] {
+            "Mathamatic department",
+            "Computing department",
+            "Business department",
+            "Architecture department"});
+            this.metroComboBox11.Location = new System.Drawing.Point(592, 164);
+            this.metroComboBox11.Name = "metroComboBox11";
+            this.metroComboBox11.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox11.TabIndex = 40;
+            this.metroComboBox11.UseSelectable = true;
+            // 
+            // metroComboBox12
+            // 
+            this.metroComboBox12.FormattingEnabled = true;
+            this.metroComboBox12.ItemHeight = 24;
+            this.metroComboBox12.Items.AddRange(new object[] {
+            "Faculty of Computing",
+            "Faculty of Business",
+            "Faculty of Engineering",
+            "Faculty of Humanities & Sciences",
+            "School of Architecture",
+            "Faculty of Graduate Studies and Research",
+            "l"});
+            this.metroComboBox12.Location = new System.Drawing.Point(592, 93);
+            this.metroComboBox12.Name = "metroComboBox12";
+            this.metroComboBox12.Size = new System.Drawing.Size(220, 30);
+            this.metroComboBox12.TabIndex = 39;
+            this.metroComboBox12.UseSelectable = true;
+            // 
+            // metroTextBox52
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox52.CustomButton.Image = null;
+            this.metroTextBox52.CustomButton.Location = new System.Drawing.Point(198, 1);
+            this.metroTextBox52.CustomButton.Name = "";
+            this.metroTextBox52.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox52.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox52.CustomButton.TabIndex = 1;
+            this.metroTextBox52.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox52.CustomButton.UseSelectable = true;
+            this.metroTextBox52.CustomButton.Visible = false;
+            this.metroTextBox52.ForeColor = System.Drawing.Color.Transparent;
+            this.metroTextBox52.Lines = new string[0];
+            this.metroTextBox52.Location = new System.Drawing.Point(592, 37);
+            this.metroTextBox52.MaxLength = 32767;
+            this.metroTextBox52.Name = "metroTextBox52";
+            this.metroTextBox52.PasswordChar = '\0';
+            this.metroTextBox52.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox52.SelectedText = "";
+            this.metroTextBox52.SelectionLength = 0;
+            this.metroTextBox52.SelectionStart = 0;
+            this.metroTextBox52.ShortcutsEnabled = true;
+            this.metroTextBox52.Size = new System.Drawing.Size(220, 23);
+            this.metroTextBox52.TabIndex = 38;
+            this.metroTextBox52.UseSelectable = true;
+            this.metroTextBox52.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox52.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label13.Location = new System.Drawing.Point(307, 338);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(165, 25);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Enter The Level";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label14.Location = new System.Drawing.Point(307, 286);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(190, 25);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Enter The Building";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label15.Location = new System.Drawing.Point(307, 229);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(178, 25);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "Enter The Center";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label16.Location = new System.Drawing.Point(302, 169);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(224, 25);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Enter The Department";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label17.Location = new System.Drawing.Point(302, 98);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(183, 25);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "Enter The Faculty";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label18.Location = new System.Drawing.Point(302, 37);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(169, 25);
+            this.label18.TabIndex = 32;
+            this.label18.Text = "Enter The Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label12.Location = new System.Drawing.Point(464, 39);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(185, 29);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "EDIT DETAILS";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel2
             // 
@@ -146,6 +877,18 @@ namespace Time_table_Management_System
             this.label1.TabIndex = 1;
             this.label1.Text = "HomePage";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_2341531;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button8
             // 
@@ -380,732 +1123,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_2341531;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.tabPage4.Controls.Add(this.panel5);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1073, 573);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Edit And Delete";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label12.Location = new System.Drawing.Point(464, 39);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(185, 29);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "EDIT DETAILS";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button20);
-            this.panel5.Controls.Add(this.button19);
-            this.panel5.Controls.Add(this.button18);
-            this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.metroComboBox8);
-            this.panel5.Controls.Add(this.metroComboBox9);
-            this.panel5.Controls.Add(this.metroComboBox10);
-            this.panel5.Controls.Add(this.metroComboBox11);
-            this.panel5.Controls.Add(this.metroComboBox12);
-            this.panel5.Controls.Add(this.metroTextBox52);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Location = new System.Drawing.Point(6, 100);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1020, 467);
-            this.panel5.TabIndex = 16;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label18.Location = new System.Drawing.Point(302, 37);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(169, 25);
-            this.label18.TabIndex = 32;
-            this.label18.Text = "Enter The Name";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label17.Location = new System.Drawing.Point(302, 98);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(183, 25);
-            this.label17.TabIndex = 33;
-            this.label17.Text = "Enter The Faculty";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label16.Location = new System.Drawing.Point(302, 169);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(224, 25);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Enter The Department";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label15.Location = new System.Drawing.Point(307, 229);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(178, 25);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "Enter The Center";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label14.Location = new System.Drawing.Point(307, 286);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(190, 25);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Enter The Building";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label13.Location = new System.Drawing.Point(307, 338);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(165, 25);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Enter The Level";
-            // 
-            // metroTextBox52
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox52.CustomButton.Image = null;
-            this.metroTextBox52.CustomButton.Location = new System.Drawing.Point(198, 1);
-            this.metroTextBox52.CustomButton.Name = "";
-            this.metroTextBox52.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox52.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox52.CustomButton.TabIndex = 1;
-            this.metroTextBox52.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox52.CustomButton.UseSelectable = true;
-            this.metroTextBox52.CustomButton.Visible = false;
-            this.metroTextBox52.ForeColor = System.Drawing.Color.Transparent;
-            this.metroTextBox52.Lines = new string[0];
-            this.metroTextBox52.Location = new System.Drawing.Point(592, 37);
-            this.metroTextBox52.MaxLength = 32767;
-            this.metroTextBox52.Name = "metroTextBox52";
-            this.metroTextBox52.PasswordChar = '\0';
-            this.metroTextBox52.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox52.SelectedText = "";
-            this.metroTextBox52.SelectionLength = 0;
-            this.metroTextBox52.SelectionStart = 0;
-            this.metroTextBox52.ShortcutsEnabled = true;
-            this.metroTextBox52.Size = new System.Drawing.Size(220, 23);
-            this.metroTextBox52.TabIndex = 38;
-            this.metroTextBox52.UseSelectable = true;
-            this.metroTextBox52.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox52.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroComboBox12
-            // 
-            this.metroComboBox12.FormattingEnabled = true;
-            this.metroComboBox12.ItemHeight = 24;
-            this.metroComboBox12.Items.AddRange(new object[] {
-            "Faculty of Computing",
-            "Faculty of Business",
-            "Faculty of Engineering",
-            "Faculty of Humanities & Sciences",
-            "School of Architecture",
-            "Faculty of Graduate Studies and Research",
-            "l"});
-            this.metroComboBox12.Location = new System.Drawing.Point(592, 93);
-            this.metroComboBox12.Name = "metroComboBox12";
-            this.metroComboBox12.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox12.TabIndex = 39;
-            this.metroComboBox12.UseSelectable = true;
-            // 
-            // metroComboBox11
-            // 
-            this.metroComboBox11.FormattingEnabled = true;
-            this.metroComboBox11.ItemHeight = 24;
-            this.metroComboBox11.Items.AddRange(new object[] {
-            "Mathamatic department",
-            "Computing department",
-            "Business department",
-            "Architecture department"});
-            this.metroComboBox11.Location = new System.Drawing.Point(592, 164);
-            this.metroComboBox11.Name = "metroComboBox11";
-            this.metroComboBox11.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox11.TabIndex = 40;
-            this.metroComboBox11.UseSelectable = true;
-            // 
-            // metroComboBox10
-            // 
-            this.metroComboBox10.FormattingEnabled = true;
-            this.metroComboBox10.ItemHeight = 24;
-            this.metroComboBox10.Items.AddRange(new object[] {
-            "Malabe",
-            "Kurunegala",
-            "Kandy",
-            "Matara",
-            "Kollupitiya"});
-            this.metroComboBox10.Location = new System.Drawing.Point(592, 229);
-            this.metroComboBox10.Name = "metroComboBox10";
-            this.metroComboBox10.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox10.TabIndex = 41;
-            this.metroComboBox10.UseSelectable = true;
-            // 
-            // metroComboBox9
-            // 
-            this.metroComboBox9.FormattingEnabled = true;
-            this.metroComboBox9.ItemHeight = 24;
-            this.metroComboBox9.Items.AddRange(new object[] {
-            "A12",
-            "A45",
-            "B01",
-            "B22",
-            "N22"});
-            this.metroComboBox9.Location = new System.Drawing.Point(592, 286);
-            this.metroComboBox9.Name = "metroComboBox9";
-            this.metroComboBox9.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox9.TabIndex = 42;
-            this.metroComboBox9.UseSelectable = true;
-            // 
-            // metroComboBox8
-            // 
-            this.metroComboBox8.FormattingEnabled = true;
-            this.metroComboBox8.ItemHeight = 24;
-            this.metroComboBox8.Location = new System.Drawing.Point(592, 342);
-            this.metroComboBox8.Name = "metroComboBox8";
-            this.metroComboBox8.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox8.TabIndex = 43;
-            this.metroComboBox8.UseSelectable = true;
-            // 
-            // button17
-            // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button17.Location = new System.Drawing.Point(463, 514);
-            this.button17.Margin = new System.Windows.Forms.Padding(4);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(110, 47);
-            this.button17.TabIndex = 44;
-            this.button17.Text = "UPDATE";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button18.Location = new System.Drawing.Point(694, 514);
-            this.button18.Margin = new System.Windows.Forms.Padding(4);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(110, 47);
-            this.button18.TabIndex = 45;
-            this.button18.Text = "DELETE";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.panel4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1073, 573);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Add lectures";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.metroComboBox7);
-            this.panel4.Controls.Add(this.metroComboBox6);
-            this.panel4.Controls.Add(this.metroComboBox5);
-            this.panel4.Controls.Add(this.metroComboBox4);
-            this.panel4.Controls.Add(this.metroComboBox3);
-            this.panel4.Controls.Add(this.metroTextBox51);
-            this.panel4.Controls.Add(this.button16);
-            this.panel4.Controls.Add(this.button15);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.ForeColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(6, 75);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1191, 617);
-            this.panel4.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(289, 54);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Enter The Name";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label6.Location = new System.Drawing.Point(289, 98);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 25);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Enter The Faculty";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(289, 149);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(224, 25);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Enter The Department";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label8.Location = new System.Drawing.Point(289, 200);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 25);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Enter The Center";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label10.Location = new System.Drawing.Point(289, 258);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(190, 25);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Enter The Building";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label11.Location = new System.Drawing.Point(289, 310);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(165, 25);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Enter The Level";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // button15
-            // 
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button15.Location = new System.Drawing.Point(369, 406);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(110, 47);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "ADD";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button16.Location = new System.Drawing.Point(592, 406);
-            this.button16.Margin = new System.Windows.Forms.Padding(4);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(103, 47);
-            this.button16.TabIndex = 14;
-            this.button16.Text = "CLEAR";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // metroTextBox51
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox51.CustomButton.Image = null;
-            this.metroTextBox51.CustomButton.Location = new System.Drawing.Point(198, 1);
-            this.metroTextBox51.CustomButton.Name = "";
-            this.metroTextBox51.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox51.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox51.CustomButton.TabIndex = 1;
-            this.metroTextBox51.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox51.CustomButton.UseSelectable = true;
-            this.metroTextBox51.CustomButton.Visible = false;
-            this.metroTextBox51.Lines = new string[0];
-            this.metroTextBox51.Location = new System.Drawing.Point(560, 56);
-            this.metroTextBox51.MaxLength = 32767;
-            this.metroTextBox51.Name = "metroTextBox51";
-            this.metroTextBox51.PasswordChar = '\0';
-            this.metroTextBox51.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox51.SelectedText = "";
-            this.metroTextBox51.SelectionLength = 0;
-            this.metroTextBox51.SelectionStart = 0;
-            this.metroTextBox51.ShortcutsEnabled = true;
-            this.metroTextBox51.Size = new System.Drawing.Size(220, 23);
-            this.metroTextBox51.TabIndex = 21;
-            this.metroTextBox51.UseSelectable = true;
-            this.metroTextBox51.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox51.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroComboBox3
-            // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 24;
-            this.metroComboBox3.Items.AddRange(new object[] {
-            "Faculty of Computing",
-            "Faculty of Business",
-            "Faculty of Engineering",
-            "Faculty of Humanities & Sciences",
-            "School of Architecture",
-            "Faculty of Graduate Studies and Research",
-            "SLIIT Academy",
-            "SLIIT International"});
-            this.metroComboBox3.Location = new System.Drawing.Point(560, 98);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox3.TabIndex = 27;
-            this.metroComboBox3.UseSelectable = true;
-            // 
-            // metroComboBox4
-            // 
-            this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 24;
-            this.metroComboBox4.Items.AddRange(new object[] {
-            "Mathamatic department",
-            "Computing department",
-            "Business department",
-            "Architecture department"});
-            this.metroComboBox4.Location = new System.Drawing.Point(560, 144);
-            this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox4.TabIndex = 28;
-            this.metroComboBox4.UseSelectable = true;
-            // 
-            // metroComboBox5
-            // 
-            this.metroComboBox5.FormattingEnabled = true;
-            this.metroComboBox5.ItemHeight = 24;
-            this.metroComboBox5.Items.AddRange(new object[] {
-            "Malabe",
-            "Kurunegala",
-            "Kandy",
-            "Matara",
-            "Kollupitiya"});
-            this.metroComboBox5.Location = new System.Drawing.Point(560, 204);
-            this.metroComboBox5.Name = "metroComboBox5";
-            this.metroComboBox5.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox5.TabIndex = 29;
-            this.metroComboBox5.UseSelectable = true;
-            // 
-            // metroComboBox6
-            // 
-            this.metroComboBox6.FormattingEnabled = true;
-            this.metroComboBox6.ItemHeight = 24;
-            this.metroComboBox6.Items.AddRange(new object[] {
-            "A12",
-            "A45",
-            "B01",
-            "B22",
-            "N22"});
-            this.metroComboBox6.Location = new System.Drawing.Point(560, 258);
-            this.metroComboBox6.Name = "metroComboBox6";
-            this.metroComboBox6.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox6.TabIndex = 30;
-            this.metroComboBox6.UseSelectable = true;
-            // 
-            // metroComboBox7
-            // 
-            this.metroComboBox7.FormattingEnabled = true;
-            this.metroComboBox7.ItemHeight = 24;
-            this.metroComboBox7.Location = new System.Drawing.Point(560, 314);
-            this.metroComboBox7.Name = "metroComboBox7";
-            this.metroComboBox7.Size = new System.Drawing.Size(220, 30);
-            this.metroComboBox7.TabIndex = 31;
-            this.metroComboBox7.UseSelectable = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(475, 33);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 29);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "ADD LECTURES";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.metroComboBox2);
-            this.tabPage2.Controls.Add(this.metroComboBox1);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1073, 573);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "View Lectures";
-            this.tabPage2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabPage2_MouseDown);
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Faculty of Computing",
-            "Faculty of Business",
-            "Faculty of Engineering",
-            "Faculty of Humanities & Sciences",
-            "School of Architecture",
-            "Faculty of Graduate Studies and Research",
-            "SLIIT Academy",
-            "SLIIT International"});
-            this.metroComboBox1.Location = new System.Drawing.Point(206, 81);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(247, 30);
-            this.metroComboBox1.TabIndex = 3;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 24;
-            this.metroComboBox2.Location = new System.Drawing.Point(776, 82);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(207, 30);
-            this.metroComboBox2.TabIndex = 4;
-            this.metroComboBox2.UseSelectable = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label9.Location = new System.Drawing.Point(431, 17);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 29);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "LECTURES LIST";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(25, 82);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Filter by Faculty";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(604, 87);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Filter by Level";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(106, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(891, 269);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Center";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Department";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Faculty";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(71, 82);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1081, 602);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // button19
-            // 
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button19.Location = new System.Drawing.Point(397, 404);
-            this.button19.Margin = new System.Windows.Forms.Padding(4);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(110, 47);
-            this.button19.TabIndex = 46;
-            this.button19.Text = "Update";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button20.Location = new System.Drawing.Point(628, 404);
-            this.button20.Margin = new System.Windows.Forms.Padding(4);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(110, 47);
-            this.button20.TabIndex = 47;
-            this.button20.Text = "Delete ";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Level";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Building ";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Rank";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
             // Lectures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1137,21 +1154,21 @@ namespace Time_table_Management_System
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Lectures_MouseDown);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
