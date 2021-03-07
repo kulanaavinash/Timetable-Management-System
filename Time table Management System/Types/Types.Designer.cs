@@ -855,7 +855,7 @@ namespace Time_table_Management_System
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 50);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Advanced";
+            this.button3.Text = "Types";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.btn_advanced_header);
             // 
@@ -952,7 +952,7 @@ namespace Time_table_Management_System
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 78);
             this.button10.TabIndex = 0;
-            this.button10.Text = "Statics";
+            this.button10.Text = "Statistics";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.btn_statics_nav);

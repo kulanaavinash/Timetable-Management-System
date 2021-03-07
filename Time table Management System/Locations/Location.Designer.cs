@@ -75,7 +75,7 @@ namespace Time_table_Management_System
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Location = new System.Drawing.Point(156, 127);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1252, 729);
             this.panel1.TabIndex = 0;
@@ -83,33 +83,33 @@ namespace Time_table_Management_System
             // 
             // edit_Delete_Location1
             // 
-            this.edit_Delete_Location1.Location = new System.Drawing.Point(86, 87);
-            this.edit_Delete_Location1.Margin = new System.Windows.Forms.Padding(6);
+            this.edit_Delete_Location1.Location = new System.Drawing.Point(85, 87);
+            this.edit_Delete_Location1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.edit_Delete_Location1.Name = "edit_Delete_Location1";
-            this.edit_Delete_Location1.Size = new System.Drawing.Size(1030, 636);
+            this.edit_Delete_Location1.Size = new System.Drawing.Size(1029, 636);
             this.edit_Delete_Location1.TabIndex = 6;
             // 
             // add_location1
             // 
             this.add_location1.Location = new System.Drawing.Point(100, 90);
-            this.add_location1.Margin = new System.Windows.Forms.Padding(6);
+            this.add_location1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.add_location1.Name = "add_location1";
             this.add_location1.Size = new System.Drawing.Size(937, 619);
             this.add_location1.TabIndex = 5;
             // 
             // view_Location1
             // 
-            this.view_Location1.Location = new System.Drawing.Point(-18, 139);
-            this.view_Location1.Margin = new System.Windows.Forms.Padding(6);
+            this.view_Location1.Location = new System.Drawing.Point(-19, 139);
+            this.view_Location1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.view_Location1.Name = "view_Location1";
-            this.view_Location1.Size = new System.Drawing.Size(1258, 459);
+            this.view_Location1.Size = new System.Drawing.Size(1259, 459);
             this.view_Location1.TabIndex = 4;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.Locations);
             this.panel3.Location = new System.Drawing.Point(27, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(192, 106);
             this.panel3.TabIndex = 3;
@@ -118,11 +118,11 @@ namespace Time_table_Management_System
             // 
             this.Locations.AutoSize = true;
             this.Locations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Locations.Font = new System.Drawing.Font("Abhaya Libre ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Locations.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Locations.Location = new System.Drawing.Point(20, 36);
             this.Locations.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Locations.Name = "Locations";
-            this.Locations.Size = new System.Drawing.Size(155, 41);
+            this.Locations.Size = new System.Drawing.Size(172, 39);
             this.Locations.TabIndex = 2;
             this.Locations.Text = "Locations";
             this.Locations.Click += new System.EventHandler(this.label2_Click_3);
@@ -133,7 +133,7 @@ namespace Time_table_Management_System
             this.panel4.Controls.Add(this.button17);
             this.panel4.Controls.Add(this.oc_tabcontrol);
             this.panel4.Location = new System.Drawing.Point(227, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1025, 75);
             this.panel4.TabIndex = 1;
@@ -141,8 +141,8 @@ namespace Time_table_Management_System
             // loc_tabcontrol
             // 
             this.loc_tabcontrol.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.loc_tabcontrol.Location = new System.Drawing.Point(103, 45);
-            this.loc_tabcontrol.Margin = new System.Windows.Forms.Padding(4);
+            this.loc_tabcontrol.Location = new System.Drawing.Point(103, 46);
+            this.loc_tabcontrol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
             this.loc_tabcontrol.Size = new System.Drawing.Size(171, 32);
             this.loc_tabcontrol.TabIndex = 0;
@@ -155,7 +155,7 @@ namespace Time_table_Management_System
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button17.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button17.Location = new System.Drawing.Point(641, 43);
-            this.button17.Margin = new System.Windows.Forms.Padding(4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(225, 33);
             this.button17.TabIndex = 2;
@@ -168,7 +168,7 @@ namespace Time_table_Management_System
             this.oc_tabcontrol.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.oc_tabcontrol.ForeColor = System.Drawing.SystemColors.Desktop;
             this.oc_tabcontrol.Location = new System.Drawing.Point(368, 43);
-            this.oc_tabcontrol.Margin = new System.Windows.Forms.Padding(4);
+            this.oc_tabcontrol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.oc_tabcontrol.Name = "oc_tabcontrol";
             this.oc_tabcontrol.Size = new System.Drawing.Size(172, 32);
             this.oc_tabcontrol.TabIndex = 1;
@@ -181,7 +181,7 @@ namespace Time_table_Management_System
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(3, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(216, 118);
             this.panel2.TabIndex = 1;
@@ -203,7 +203,7 @@ namespace Time_table_Management_System
             // 
             this.pictureBox1.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_2341531;
             this.pictureBox1.Location = new System.Drawing.Point(45, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +217,7 @@ namespace Time_table_Management_System
             this.button8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button8.Location = new System.Drawing.Point(227, 37);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(131, 63);
             this.button8.TabIndex = 3;
@@ -231,7 +231,7 @@ namespace Time_table_Management_System
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button2.Location = new System.Drawing.Point(645, 39);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 63);
             this.button2.TabIndex = 5;
@@ -245,11 +245,11 @@ namespace Time_table_Management_System
             this.button3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button3.Location = new System.Drawing.Point(865, 42);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 62);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Advanced";
+            this.button3.Text = "Types";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.btn_advanced_header);
             // 
@@ -259,7 +259,7 @@ namespace Time_table_Management_System
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button4.Location = new System.Drawing.Point(1093, 42);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 59);
             this.button4.TabIndex = 7;
@@ -273,7 +273,7 @@ namespace Time_table_Management_System
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button1.Location = new System.Drawing.Point(424, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 62);
             this.button1.TabIndex = 10;
@@ -288,7 +288,7 @@ namespace Time_table_Management_System
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Image = global::Time_table_Management_System.Properties.Resources.oo;
             this.button14.Location = new System.Drawing.Point(1307, 11);
-            this.button14.Margin = new System.Windows.Forms.Padding(4);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(20, 21);
             this.button14.TabIndex = 0;
@@ -302,7 +302,7 @@ namespace Time_table_Management_System
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Image = global::Time_table_Management_System.Properties.Resources.uu__1_;
             this.button13.Location = new System.Drawing.Point(1335, 9);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(27, 25);
             this.button13.TabIndex = 0;
@@ -316,7 +316,7 @@ namespace Time_table_Management_System
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = global::Time_table_Management_System.Properties.Resources.ne__2___1_;
             this.button12.Location = new System.Drawing.Point(1369, 9);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(27, 25);
             this.button12.TabIndex = 0;
@@ -331,7 +331,7 @@ namespace Time_table_Management_System
             this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button11.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_1203275__2_;
             this.button11.Location = new System.Drawing.Point(15, 606);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(133, 102);
             this.button11.TabIndex = 13;
@@ -349,11 +349,11 @@ namespace Time_table_Management_System
             this.button10.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_511570__1_;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button10.Location = new System.Drawing.Point(11, 715);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(143, 96);
             this.button10.TabIndex = 0;
-            this.button10.Text = "Statics";
+            this.button10.Text = "Statistics";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.btn_statics_nav);
@@ -366,7 +366,7 @@ namespace Time_table_Management_System
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button9.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_1110775__1_;
             this.button9.Location = new System.Drawing.Point(11, 496);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(143, 82);
             this.button9.TabIndex = 12;
@@ -383,7 +383,7 @@ namespace Time_table_Management_System
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button7.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_1083954__1_;
             this.button7.Location = new System.Drawing.Point(11, 393);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(137, 96);
             this.button7.TabIndex = 11;
@@ -400,7 +400,7 @@ namespace Time_table_Management_System
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button6.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_58351__1_;
             this.button6.Location = new System.Drawing.Point(11, 311);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(137, 87);
             this.button6.TabIndex = 9;
@@ -417,7 +417,7 @@ namespace Time_table_Management_System
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button5.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_266447__1_;
             this.button5.Location = new System.Drawing.Point(3, 226);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(151, 90);
             this.button5.TabIndex = 8;
@@ -434,7 +434,7 @@ namespace Time_table_Management_System
             this.Hwbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.Hwbtn.Image = global::Time_table_Management_System.Properties.Resources.pngaaa_com_176187__1___1_;
             this.Hwbtn.Location = new System.Drawing.Point(3, 127);
-            this.Hwbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.Hwbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Hwbtn.Name = "Hwbtn";
             this.Hwbtn.Size = new System.Drawing.Size(151, 106);
             this.Hwbtn.TabIndex = 2;
@@ -468,7 +468,7 @@ namespace Time_table_Management_System
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Location";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

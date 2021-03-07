@@ -57,11 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Advanced\Advanced.cs">
+    <Compile Include="Types\Types.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Advanced\Advanced.Designer.cs">
-      <DependentUpon>Advanced.cs</DependentUpon>
+    <Compile Include="Types\Types.Designer.cs">
+      <DependentUpon>Types.cs</DependentUpon>
     </Compile>
     <Compile Include="DaysHours\DaysHours.cs">
       <SubType>Form</SubType>
@@ -155,8 +155,8 @@
     <Compile Include="tags\tags.Designer.cs">
       <DependentUpon>tags.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Advanced\Advanced.resx">
-      <DependentUpon>Advanced.cs</DependentUpon>
+    <EmbeddedResource Include="Types\Types.resx">
+      <DependentUpon>Types.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DaysHours\DaysHours.resx">
       <DependentUpon>DaysHours.cs</DependentUpon>
