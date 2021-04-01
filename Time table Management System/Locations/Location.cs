@@ -62,9 +62,9 @@ namespace Time_table_Management_System
         private void Form1_Load(object sender, EventArgs e)
         {
             //form
-           view_Location1.Hide();
+          /* view_Location1.Hide();
             add_location1.Hide();
-            edit_Delete_Location1.Hide();
+            edit_Delete_Location1.Hide(); */
         }
 
 
@@ -238,20 +238,20 @@ namespace Time_table_Management_System
 
         private void button16_Click_1(object sender, EventArgs e)
         {
-            view_Location1.Hide();
+             /*view_Location1.Hide();
             edit_Delete_Location1.Hide();
 
             add_location1.Show();
-           add_location1.BringToFront();
+           add_location1.BringToFront();*/
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-           add_location1.Hide();
+           /*add_location1.Hide();
            view_Location1.Hide();
 
            edit_Delete_Location1.Show();
-           edit_Delete_Location1.BringToFront();
+           edit_Delete_Location1.BringToFront();*/
         }
 
         private void label2_Click_2(object sender, EventArgs e)
@@ -286,11 +286,11 @@ namespace Time_table_Management_System
 
         private void loc_tabcontrol_Click(object sender, EventArgs e)
         {
-            add_location1.Hide();
+           /* add_location1.Hide();
             edit_Delete_Location1.Hide();
 
             view_Location1.Show();
-            view_Location1.BringToFront();
+            view_Location1.BringToFront(); */
         }
 
         private void edit_Delete_Location1_Load(object sender, EventArgs e)
@@ -309,6 +309,136 @@ namespace Time_table_Management_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void search_by_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loc_dgridv_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void search_txt_box_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void building_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void room_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void capacity_cmb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomtype_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addloc_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clr_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editroom_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void edit_building_txt_box_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editcap_cmb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void room_type_txt_box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editloc_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationview_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
