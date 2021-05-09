@@ -460,7 +460,7 @@ namespace Time_table_Management_System
         {
 
         }
-
+        //new
         private void metroGrid3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
