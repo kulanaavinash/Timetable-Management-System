@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Time_table_Management_System.DayTimeAdpt;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Time_table_Management_System
 {
@@ -33,7 +36,7 @@ namespace Time_table_Management_System
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
         }
 
-
+        NotAvailableTime a = new NotAvailableTime();
 
 
 
@@ -41,6 +44,17 @@ namespace Time_table_Management_System
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             //dashboard panel main
+            DataTable dt4 = a.Select();
+            NotAvialbleView.DataSource = dt4;
+
+            //Change  Column header in Not Availeble time
+            NotAvialbleView.Columns["NATno"].HeaderText = "NAT NO";
+            NotAvialbleView.Columns["stype"].HeaderText = "TYPE";
+            NotAvialbleView.Columns["sitems"].HeaderText = "ITEM";
+            NotAvialbleView.Columns["stime"].HeaderText = "Start Time";
+            NotAvialbleView.Columns["etime"].HeaderText = "End Time";
+            NotAvialbleView.Columns["date"].HeaderText = "DATE";
+
         }
 
 
@@ -91,7 +105,7 @@ namespace Time_table_Management_System
         private void btn_sessions_header(object sender, EventArgs e)
         {
             this.Hide();
-            Sessions f2 = new Sessions ();
+            Sessions f2 = new Sessions();
             f2.Show();
         }
 
@@ -99,7 +113,7 @@ namespace Time_table_Management_System
         {
             this.Hide();
             Room f2 = new Room();
-            f2.Show(); 
+            f2.Show();
         }
 
         private void btn_advanced_header(object sender, EventArgs e)
@@ -247,7 +261,7 @@ namespace Time_table_Management_System
             //consective sessions
         }
 
-       
+
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -358,7 +372,7 @@ namespace Time_table_Management_System
         // not overlap Sessions---Advanced//
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-             // not overlap Sessions-
+            // not overlap Sessions-
         }
 
         private void metroComboBox10_SelectedIndexChanged(object sender, EventArgs e)
@@ -433,10 +447,7 @@ namespace Time_table_Management_System
 
 
         //not avialble time tab
-        private void metroComboBox21_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //not avialble time
-        }
+
 
         private void metroComboBox16_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -481,16 +492,61 @@ namespace Time_table_Management_System
         private void button22_Click(object sender, EventArgs e)
         {
             //not avialble time
+            //get data from databse tab
+            a.NATno = Convert.ToInt32(NATno.Text);
+
+            bool success = a.Delete(a);
+            if (success == true)
+            {
+                MessageBox.Show("Success to delete this week");
+                //refreash
+                DataTable dt4 = a.Select();
+                NotAvialbleView.DataSource = dt4;
+            }
+            else
+            {
+                MessageBox.Show("Failed delete");
+            }
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
             //not avialble time
+            //get values from the input field
+            a.stype = stype.Text;
+            a.sitems = sitems.Text;
+            a.stime = stime.Text;
+            a.etime = etime.Text;
+            a.date = date.Text;
+
+
+            //insert into data in database using the method
+            bool success = a.Insert(a);
+            if (success == true)
+            {
+                //successfully insert
+                MessageBox.Show("Not Avialble Time added");
+            }
+            else
+            {
+                //faild to add session
+                MessageBox.Show("Failed to add Not Avialble Time try again");
+            }
+            DataTable dt5 = a.Select();
+            NotAvialbleView.DataSource = dt5;
         }
+
+        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            //not avialble time
+            string keyword = NATsearch.Text;
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM NAT WHERE NATno LIKE '%" + keyword + "%' OR stype LIKE '%" + keyword + "%' OR sitems LIKE '%" + keyword + "%'", conn);
+            DataTable dt5 = new DataTable();
+            sda.Fill(dt5);
+            NotAvialbleView.DataSource = dt5;
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -501,6 +557,29 @@ namespace Time_table_Management_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void NotAvialbleView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+
+            NATno.Text = NotAvialbleView.Rows[rowIndex].Cells[0].Value.ToString();
+            stype.Text = NotAvialbleView.Rows[rowIndex].Cells[1].Value.ToString();
+            sitems.Text = NotAvialbleView.Rows[rowIndex].Cells[2].Value.ToString();
+            stime.Text = NotAvialbleView.Rows[rowIndex].Cells[3].Value.ToString();
+            etime.Text = NotAvialbleView.Rows[rowIndex].Cells[4].Value.ToString();
+            date.Text = NotAvialbleView.Rows[rowIndex].Cells[5].Value.ToString();
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string keyword = selecter.Text;
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM stype LIKE '%" + keyword + "%'", conn);
+            DataTable dt5 = new DataTable();
+            sda.Fill(dt5);
+            NotAvialbleView.DataSource = dt5;
         }
     }
 }

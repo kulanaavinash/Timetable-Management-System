@@ -77,6 +77,7 @@
     <Compile Include="DayTimeAdpt\NbDays.cs" />
     <Compile Include="DayTimeAdpt\TimeDay.cs" />
     <Compile Include="DayTimeAdpt\TimeSlot.cs" />
+    <Compile Include="TypeAdpt\NotAvailableTime.cs" />
     <Compile Include="Types\Types.cs">
       <SubType>Form</SubType>
     </Compile>

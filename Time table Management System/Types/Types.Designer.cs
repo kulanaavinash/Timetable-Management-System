@@ -69,20 +69,14 @@ namespace Time_table_Management_System
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.metroComboBox21 = new MetroFramework.Controls.MetroComboBox();
+            this.etime = new System.Windows.Forms.TextBox();
+            this.stime = new System.Windows.Forms.TextBox();
+            this.NATno = new System.Windows.Forms.TextBox();
+            this.date = new System.Windows.Forms.DateTimePicker();
+            this.sitems = new System.Windows.Forms.ComboBox();
+            this.stype = new System.Windows.Forms.ComboBox();
+            this.NotAvialbleView = new System.Windows.Forms.DataGridView();
+            this.NATsearch = new System.Windows.Forms.TextBox();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -103,6 +97,7 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
+            this.selecter = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +105,7 @@ namespace Time_table_Management_System
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotAvialbleView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -154,7 +149,7 @@ namespace Time_table_Management_System
             this.tabPage1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(886, 512);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consective Sessions";
@@ -212,9 +207,9 @@ namespace Time_table_Management_System
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(100, 1);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(133, 1);
             this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox3.CustomButton.TabIndex = 1;
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -296,7 +291,7 @@ namespace Time_table_Management_System
             this.tabPage2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(886, 512);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Parallel Sessions";
@@ -460,7 +455,7 @@ namespace Time_table_Management_System
             this.tabPage3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(886, 512);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Not Overlap Sessions";
@@ -603,168 +598,104 @@ namespace Time_table_Management_System
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.comboBox5);
-            this.tabPage4.Controls.Add(this.comboBox4);
-            this.tabPage4.Controls.Add(this.comboBox3);
-            this.tabPage4.Controls.Add(this.comboBox2);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Controls.Add(this.textBox9);
-            this.tabPage4.Controls.Add(this.metroComboBox21);
+            this.tabPage4.Controls.Add(this.selecter);
+            this.tabPage4.Controls.Add(this.etime);
+            this.tabPage4.Controls.Add(this.stime);
+            this.tabPage4.Controls.Add(this.NATno);
+            this.tabPage4.Controls.Add(this.date);
+            this.tabPage4.Controls.Add(this.sitems);
+            this.tabPage4.Controls.Add(this.stype);
+            this.tabPage4.Controls.Add(this.NotAvialbleView);
+            this.tabPage4.Controls.Add(this.NATsearch);
             this.tabPage4.Controls.Add(this.button22);
             this.tabPage4.Controls.Add(this.button21);
             this.tabPage4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(886, 512);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Not Available Time";
             // 
-            // comboBox5
+            // etime
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"});
-            this.comboBox5.Location = new System.Drawing.Point(29, 430);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(181, 25);
-            this.comboBox5.TabIndex = 14;
-            this.comboBox5.Text = "Select Day";
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            this.etime.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etime.Location = new System.Drawing.Point(30, 326);
+            this.etime.Name = "etime";
+            this.etime.Size = new System.Drawing.Size(181, 25);
+            this.etime.TabIndex = 17;
+            this.etime.Text = "End time";
             // 
-            // comboBox4
+            // stime
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(30, 346);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(181, 25);
-            this.comboBox4.TabIndex = 13;
-            this.comboBox4.Text = "Select End Time";
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.stime.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stime.Location = new System.Drawing.Point(30, 247);
+            this.stime.Name = "stime";
+            this.stime.Size = new System.Drawing.Size(181, 25);
+            this.stime.TabIndex = 16;
+            this.stime.Text = "Start Time";
             // 
-            // comboBox3
+            // NATno
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(30, 257);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(181, 25);
-            this.comboBox3.TabIndex = 12;
-            this.comboBox3.Text = "Select Start Time";
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.NATno.Location = new System.Drawing.Point(441, 118);
+            this.NATno.Name = "NATno";
+            this.NATno.Size = new System.Drawing.Size(47, 29);
+            this.NATno.TabIndex = 15;
             // 
-            // comboBox2
+            // date
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(30, 175);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(181, 25);
-            this.comboBox2.TabIndex = 11;
-            this.comboBox2.Text = "Select Item";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.date.Location = new System.Drawing.Point(30, 413);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(200, 29);
+            this.date.TabIndex = 14;
             // 
-            // comboBox1
+            // sitems
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.sitems.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.sitems.FormattingEnabled = true;
+            this.sitems.Location = new System.Drawing.Point(30, 175);
+            this.sitems.Name = "sitems";
+            this.sitems.Size = new System.Drawing.Size(181, 25);
+            this.sitems.TabIndex = 11;
+            this.sitems.Text = "Select Item";
+            this.sitems.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // stype
+            // 
+            this.stype.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stype.FormattingEnabled = true;
+            this.stype.Items.AddRange(new object[] {
             "Lectures ",
             "Sessions",
             "Group",
             "Sub Groups"});
-            this.comboBox1.Location = new System.Drawing.Point(30, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 25);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "Select Type";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.stype.Location = new System.Drawing.Point(30, 97);
+            this.stype.Name = "stype";
+            this.stype.Size = new System.Drawing.Size(181, 25);
+            this.stype.TabIndex = 10;
+            this.stype.Text = "Select Type";
+            this.stype.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView2
+            // NotAvialbleView
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView2.Location = new System.Drawing.Point(238, 168);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(621, 313);
-            this.dataGridView2.TabIndex = 9;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.NotAvialbleView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.NotAvialbleView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NotAvialbleView.Location = new System.Drawing.Point(238, 168);
+            this.NotAvialbleView.Name = "NotAvialbleView";
+            this.NotAvialbleView.RowHeadersWidth = 51;
+            this.NotAvialbleView.Size = new System.Drawing.Size(621, 313);
+            this.NotAvialbleView.TabIndex = 9;
+            this.NotAvialbleView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.NotAvialbleView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NotAvialbleView_RowHeaderMouseClick);
             // 
-            // Column1
+            // NATsearch
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Selcted Type";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Item";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Day";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Start Time";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "End Time";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(691, 114);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(126, 29);
-            this.textBox9.TabIndex = 8;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            // 
-            // metroComboBox21
-            // 
-            this.metroComboBox21.FormattingEnabled = true;
-            this.metroComboBox21.ItemHeight = 23;
-            this.metroComboBox21.Location = new System.Drawing.Point(483, 114);
-            this.metroComboBox21.Name = "metroComboBox21";
-            this.metroComboBox21.Size = new System.Drawing.Size(141, 29);
-            this.metroComboBox21.TabIndex = 7;
-            this.metroComboBox21.UseSelectable = true;
-            this.metroComboBox21.SelectedIndexChanged += new System.EventHandler(this.metroComboBox21_SelectedIndexChanged);
+            this.NATsearch.Location = new System.Drawing.Point(691, 114);
+            this.NATsearch.Name = "NATsearch";
+            this.NATsearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.NATsearch.Size = new System.Drawing.Size(126, 29);
+            this.NATsearch.TabIndex = 8;
+            this.NATsearch.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // button22
             // 
@@ -1038,6 +969,20 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
+            // selecter
+            // 
+            this.selecter.FormattingEnabled = true;
+            this.selecter.Items.AddRange(new object[] {
+            "Lectures ",
+            "Sessions",
+            "Group",
+            "Sub Groups"});
+            this.selecter.Location = new System.Drawing.Point(564, 114);
+            this.selecter.Name = "selecter";
+            this.selecter.Size = new System.Drawing.Size(121, 29);
+            this.selecter.TabIndex = 18;
+            this.selecter.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
             // Advanced
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1078,7 +1023,7 @@ namespace Time_table_Management_System
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotAvialbleView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1144,24 +1089,19 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.TextBox textBox9;
-        private MetroFramework.Controls.MetroComboBox metroComboBox21;
+        private System.Windows.Forms.TextBox NATsearch;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox stype;
+        private System.Windows.Forms.ComboBox sitems;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.DateTimePicker date;
+        private System.Windows.Forms.TextBox NATno;
+        private System.Windows.Forms.TextBox etime;
+        private System.Windows.Forms.TextBox stime;
+        private System.Windows.Forms.DataGridView NotAvialbleView;
+        private System.Windows.Forms.ComboBox selecter;
     }
 }
 

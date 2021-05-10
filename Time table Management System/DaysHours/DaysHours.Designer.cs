@@ -54,6 +54,7 @@ namespace Time_table_Management_System
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.week = new System.Windows.Forms.TextBox();
             this.Nbsearch = new System.Windows.Forms.TextBox();
             this.button22 = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@ namespace Time_table_Management_System
             this.NDdays = new System.Windows.Forms.NumericUpDown();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.timeday = new System.Windows.Forms.TextBox();
-
             this.button24 = new System.Windows.Forms.Button();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
@@ -97,10 +97,12 @@ namespace Time_table_Management_System
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
             this.DayTimeSearch = new System.Windows.Forms.TextBox();
             this.daytimeview = new System.Windows.Forms.DataGridView();
             this.button23 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
             this.SlotSearch = new System.Windows.Forms.TextBox();
             this.end_time = new System.Windows.Forms.ComboBox();
             this.start_time = new System.Windows.Forms.ComboBox();
@@ -132,9 +134,6 @@ namespace Time_table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.working_day_hours.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -295,8 +294,8 @@ namespace Time_table_Management_System
             // 
             // button16
             // 
-            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button16.BackColor = System.Drawing.Color.Transparent;
             this.button16.Cursor = System.Windows.Forms.Cursors.Default;
@@ -312,8 +311,8 @@ namespace Time_table_Management_System
             // 
             // add
             // 
-            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.add.BackColor = System.Drawing.Color.Transparent;
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -503,6 +502,17 @@ namespace Time_table_Management_System
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Number of working days";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click_1);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(695, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Search";
+            this.label12.Click += new System.EventHandler(this.label12_Click_2);
             // 
             // week
             // 
@@ -1017,6 +1027,16 @@ namespace Time_table_Management_System
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Working Day & Time View";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(550, 33);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 20);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Search";
+            // 
             // DayTimeSearch
             // 
             this.DayTimeSearch.Location = new System.Drawing.Point(616, 26);
@@ -1033,6 +1053,7 @@ namespace Time_table_Management_System
             this.daytimeview.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.daytimeview.Size = new System.Drawing.Size(713, 381);
             this.daytimeview.TabIndex = 5;
+            this.daytimeview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.daytimeview_CellContentClick);
             this.daytimeview.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.daytimeview_RowHeaderMouseClick_1);
             // 
             // button23
@@ -1071,6 +1092,16 @@ namespace Time_table_Management_System
             this.tabPage5.Size = new System.Drawing.Size(887, 469);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Time slot   ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(313, 218);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 20);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Search";
             // 
             // SlotSearch
             // 
@@ -1456,37 +1487,6 @@ namespace Time_table_Management_System
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(695, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 18);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Search";
-            this.label12.Click += new System.EventHandler(this.label12_Click_2);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(550, 33);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "Search";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(313, 218);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 20);
-            this.label19.TabIndex = 17;
-            this.label19.Text = "Search";
-            // 
             // DaysHours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1623,7 +1623,6 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel13;

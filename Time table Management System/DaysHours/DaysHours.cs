@@ -918,5 +918,10 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void daytimeview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
