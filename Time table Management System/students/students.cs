@@ -20,6 +20,7 @@ namespace Time_table_Management_System
         //ID variable used in Updating and Deleting Record  
         int YearSemID = 0;
         int ProgrammeID = 0;
+        int GroupID = 0;
         
         
 
@@ -41,6 +42,7 @@ namespace Time_table_Management_System
             InitializeComponent();
             DisplayData();
             BindData();
+            ViewData();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -580,7 +582,57 @@ namespace Time_table_Management_System
         private void btn_add_groupnum(object sender, EventArgs e)
         {
             //btn_add group num
+
+            //btn add programme
+            if (addgroupnumtxt.Text != "")
+            {
+                cmd = new SqlCommand("insert into GroupNumber(Groupnumber) values(@groupnumber)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@groupnumber", addgroupnumtxt.Text);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                ViewData();
+                CloseData();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
         }
+
+        //Display Data in DataGridView  
+        private void ViewData()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from GroupNumber ", con);
+            adapt.Fill(dt);
+            dataGridView3.DataSource = dt;
+            con.Close();
+
+
+
+
+
+        }
+
+
+
+
+        //Clear Data  
+        private void CloseData()
+        {
+            addgroupnumtxt.Text = "";
+            GroupID = 0;
+
+
+
+        }
+    
 
         private void grp_num_btn_clear(object sender, EventArgs e)
         {
@@ -610,6 +662,25 @@ namespace Time_table_Management_System
         private void btn_g_num_editdetails(object sender, EventArgs e)
         {
             //btn edit details
+
+
+            if (addgroupnumtxt.Text != "")
+            {
+                cmd = new SqlCommand("update GroupNumber set Groupnumber=@groupnumber  where GroupID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", GroupID);
+                cmd.Parameters.AddWithValue("@groupnumber", addgroupnumtxt.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                ViewData();
+                CloseData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
         }
 
         private void metroTextBox8_Click(object sender, EventArgs e)
@@ -787,6 +858,13 @@ namespace Time_table_Management_System
             //cell click programme
             ProgrammeID = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
             programtxt.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cell click group numbers
+            GroupID = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString());
+            addgroupnumtxt.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
