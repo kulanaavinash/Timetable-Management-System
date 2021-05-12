@@ -1,19 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Time_table_Management_System
 {
 
     public partial class tags : Form
     {
+
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+
+
+
+        //ID variable used in Updating and Deleting Record  
+        int TagID = 0;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -29,6 +36,10 @@ namespace Time_table_Management_System
         public tags()
         {
             InitializeComponent();
+            DisplayData();
+
+
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
@@ -90,7 +101,7 @@ namespace Time_table_Management_System
         private void btn_home_header(object sender, EventArgs e)
         {
             this.Hide();
-            Homepage f2 = new Homepage ();
+            Homepage f2 = new Homepage();
             f2.Show();
         }
 
@@ -118,7 +129,7 @@ namespace Time_table_Management_System
         private void btn_genarate_header(object sender, EventArgs e)
         {
             this.Hide();
-            Generate  f2 = new Generate ();
+            Generate f2 = new Generate();
             f2.Show();
         }
 
@@ -214,8 +225,56 @@ namespace Time_table_Management_System
         private void btn_addtagname(object sender, EventArgs e)
         {
             //add tag name btn
+
+            if (addtagname.Text != "")
+            {
+                cmd = new SqlCommand("insert into Tag(Tagname) values(@tagname)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@tagname", addtagname.Text);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                DisplayData();
+                ClearData();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+
         }
 
+
+        private void DisplayData()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from Tag ", con);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+
+
+
+
+
+        }
+
+
+
+
+        //Clear Data  
+        private void ClearData()
+        {
+            addtagname.Text = "";
+            TagID = 0;
+
+
+        }
+    
         private void btn_clear(object sender, EventArgs e)
         {
             //clear btn
@@ -272,6 +331,11 @@ namespace Time_table_Management_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
