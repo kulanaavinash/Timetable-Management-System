@@ -1,19 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Time_table_Management_System
 {
 
     public partial class students : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+
+
+
+        //ID variable used in Updating and Deleting Record  
+        int YearSemID = 0;
+        
+        
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -29,6 +38,8 @@ namespace Time_table_Management_System
         public students()
         {
             InitializeComponent();
+            DisplayData();
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
@@ -276,11 +287,69 @@ namespace Time_table_Management_System
         private void y_sem_add_y_sem_btn(object sender, EventArgs e)
         {
             //btn add year semester
+
+            if (yeartxt.Text != "" && semtxt.Text != "")
+            {
+                cmd = new SqlCommand("insert into YearSemester(Year,Semester) values(@year,@semester)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@year", yeartxt.Text);
+                cmd.Parameters.AddWithValue("@semester", semtxt.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                DisplayData();
+                ClearData();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+
         }
 
-        private void y_sem_clear_btn(object sender, EventArgs e)
+
+
+        //Display Data in DataGridView  
+        private void DisplayData()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from YearSemester", con);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+
+
+
+
+
+        }
+
+
+
+
+        //Clear Data  
+        private void ClearData()
+        {
+            yeartxt.Text = "";
+            semtxt.Text = "";
+            YearSemID = 0;
+
+
+
+
+        }
+
+
+    
+
+    private void y_sem_clear_btn(object sender, EventArgs e)
         {
             //btn clear y-sem
+
+            ClearData();
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -296,16 +365,56 @@ namespace Time_table_Management_System
         private void y_sem_btn_Edit_details(object sender, EventArgs e)
         {
             //y_sem_nt edit details
+
+            if (yeartxt.Text != "" && semtxt.Text != "")
+            {
+                cmd = new SqlCommand("update YearSemester set Year=@year,Semester=@semester where YearSemID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", YearSemID);
+                cmd.Parameters.AddWithValue("@year", yeartxt.Text);
+                cmd.Parameters.AddWithValue("@semester", semtxt.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                DisplayData();
+                ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
+
         }
 
         private void y_sem_btn_delete(object sender, EventArgs e)
         {
             //y_sem_btn_delete
+
+
+            if (YearSemID != 0)
+            {
+                cmd = new SqlCommand("delete YearSemester where YearSemID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", YearSemID);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                DisplayData();
+                ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //y sem data grid view
+
+            DisplayData();
         }
 
 
@@ -567,6 +676,13 @@ namespace Time_table_Management_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            YearSemID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            yeartxt.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            semtxt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }
