@@ -662,6 +662,25 @@ namespace Time_table_Management_System
         private void btn_g_num_editdetails(object sender, EventArgs e)
         {
             //btn edit details
+
+
+            if (addgroupnumtxt.Text != "")
+            {
+                cmd = new SqlCommand("update GroupNumber set Groupnumber=@groupnumber  where GroupID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", GroupID);
+                cmd.Parameters.AddWithValue("@groupnumber", addgroupnumtxt.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                ViewData();
+                CloseData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
         }
 
         private void metroTextBox8_Click(object sender, EventArgs e)
@@ -839,6 +858,13 @@ namespace Time_table_Management_System
             //cell click programme
             ProgrammeID = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
             programtxt.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cell click group numbers
+            GroupID = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString());
+            addgroupnumtxt.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
