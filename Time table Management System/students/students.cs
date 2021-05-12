@@ -822,6 +822,23 @@ namespace Time_table_Management_System
         private void metroButton16_Click(object sender, EventArgs e)
         {
             //btn delete sub group
+
+
+            if (SubGroupID != 0)
+            {
+                cmd = new SqlCommand("delete SubGroupNumber where SubGroupID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", SubGroupID);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                SeeData();
+                FormatData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
         }
 
 
