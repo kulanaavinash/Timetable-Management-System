@@ -58,6 +58,7 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -72,6 +73,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DayTimeAdpt\DayTimeClass.cs" />
+    <Compile Include="DayTimeAdpt\NbDays.cs" />
+    <Compile Include="DayTimeAdpt\TimeDay.cs" />
+    <Compile Include="DayTimeAdpt\TimeSlot.cs" />
+    <Compile Include="TypeAdpt\NotAvailableTime.cs" />
     <Compile Include="Types\Types.cs">
       <SubType>Form</SubType>
     </Compile>
