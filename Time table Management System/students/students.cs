@@ -781,7 +781,27 @@ namespace Time_table_Management_System
 
         private void metroButton15_Click(object sender, EventArgs e)
         {
-           //  edit details sub group
+            //  edit details sub group
+
+
+            if (subgroupnum.Text != "")
+            {
+                cmd = new SqlCommand("update SubGroupNumber set SubGroupnumber=@subgroupnumber  where SubGroupID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", SubGroupID);
+                cmd.Parameters.AddWithValue("@subgroupnumber", subgroupnum.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                SeeData();
+                FormatData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
+
         }
 
         private void metroComboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -802,6 +822,23 @@ namespace Time_table_Management_System
         private void metroButton16_Click(object sender, EventArgs e)
         {
             //btn delete sub group
+
+
+            if (SubGroupID != 0)
+            {
+                cmd = new SqlCommand("delete SubGroupNumber where SubGroupID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", SubGroupID);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                SeeData();
+                FormatData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
         }
 
 
@@ -935,6 +972,13 @@ namespace Time_table_Management_System
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cell click sub group
+            SubGroupID = Convert.ToInt32(dataGridView4.Rows[e.RowIndex].Cells[0].Value.ToString());
+            subgroupnum.Text = dataGridView4.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
