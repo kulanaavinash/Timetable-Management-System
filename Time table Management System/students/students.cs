@@ -19,6 +19,7 @@ namespace Time_table_Management_System
 
         //ID variable used in Updating and Deleting Record  
         int YearSemID = 0;
+        int ProgrammeID = 0;
         
         
 
@@ -39,6 +40,7 @@ namespace Time_table_Management_System
         {
             InitializeComponent();
             DisplayData();
+            BindData();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -442,7 +444,63 @@ namespace Time_table_Management_System
         private void btn_addprogramme(object sender, EventArgs e)
         {
             //btn add programme
+            if (programtxt.Text != "")
+            {
+                cmd = new SqlCommand("insert into Programmestudent(Programme) values(@programme)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@programme", programtxt.Text);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                BindData();
+                ClearData();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+
+
         }
+
+
+
+
+        //Display Data in DataGridView  
+        private void BindData()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from Programmestudent ", con);
+            adapt.Fill(dt);
+            dataGridView2.DataSource = dt;
+            con.Close();
+
+
+
+
+
+        }
+
+
+
+
+        //Clear Data  
+        private void ResetData()
+        {
+            programtxt.Text = "";
+            ProgrammeID = 0;
+
+
+
+
+
+        }
+
+
 
         private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -524,7 +582,7 @@ namespace Time_table_Management_System
 
 
 
-
+       
 
 
 
@@ -680,9 +738,18 @@ namespace Time_table_Management_System
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //cell click yearsemester
             YearSemID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             yeartxt.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             semtxt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            //cell click programme
+            ProgrammeID = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
+            programtxt.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
