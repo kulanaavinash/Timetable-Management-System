@@ -315,6 +315,22 @@ namespace Time_table_Management_System
         private void btn_tag_delete(object sender, EventArgs e)
         {
             //delete btn
+
+            if (TagID != 0)
+            {
+                cmd = new SqlCommand("delete TagName where TagID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", TagID);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                DisplayData();
+                ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
         }
 
         
