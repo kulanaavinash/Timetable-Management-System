@@ -657,6 +657,23 @@ namespace Time_table_Management_System
         private void bt_g_num_delete(object sender, EventArgs e)
         {
             //btn delete
+            if (GroupID != 0)
+            {
+                cmd = new SqlCommand("delete GroupNumber where GroupID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", GroupID);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                ViewData();
+                CloseData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
+
+
         }
 
         private void btn_g_num_editdetails(object sender, EventArgs e)
