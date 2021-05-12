@@ -514,12 +514,49 @@ namespace Time_table_Management_System
 
         private void bt_programme_Editdetails(object sender, EventArgs e)
         {
+
             //programmee btn edit details
+
+
+            
+            
+                cmd = new SqlCommand("update programmestudent set Programme=@programme  where ProgrammeID=@id", con);
+               
+                cmd.Parameters.AddWithValue("@id", ProgrammeID);
+                cmd.Parameters.AddWithValue("@programme", programtxt.Text);
+                 con.Open();
+
+               cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                BindData();
+                ClearData();
+            
+            
+
         }
 
         private void btn_delete_btn(object sender, EventArgs e)
         {
             //btn_delete_btn
+
+            if (ProgrammeID != 0)
+            {
+                cmd = new SqlCommand("delete programmestudent where ProgrammeID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", ProgrammeID);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                BindData();
+                ResetData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
+
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
