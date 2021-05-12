@@ -21,6 +21,7 @@ namespace Time_table_Management_System
         int YearSemID = 0;
         int ProgrammeID = 0;
         int GroupID = 0;
+        int SubGroupID = 0;
         
         
 
@@ -43,6 +44,7 @@ namespace Time_table_Management_System
             DisplayData();
             BindData();
             ViewData();
+            SeeData();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -520,7 +522,7 @@ namespace Time_table_Management_System
             //programmee btn edit details
 
 
-            
+       
             
                 cmd = new SqlCommand("update programmestudent set Programme=@programme  where ProgrammeID=@id", con);
                
@@ -724,6 +726,52 @@ namespace Time_table_Management_System
         private void metroButton13_Click(object sender, EventArgs e)
         {
             //btn add sub group num
+
+            if (subgroupnum.Text != "")
+            {
+                cmd = new SqlCommand("insert into SubGroupNumber(SubGroupnumber) values(@subgroupnumber)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@subgroupnumber", subgroupnum.Text);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                SeeData();
+                FormatData();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+
+
+        }
+        //Display Data in DataGridView  
+        private void SeeData()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from SubGroupNumber ", con);
+            adapt.Fill(dt);
+            dataGridView4.DataSource = dt;
+            con.Close();
+
+
+        }
+
+
+
+
+        //Clear Data  
+        private void FormatData()
+        {
+            subgroupnum.Text = "";
+            SubGroupID = 0;
+
+
+
         }
 
         private void metroButton14_Click(object sender, EventArgs e)
@@ -882,6 +930,11 @@ namespace Time_table_Management_System
             //cell click group numbers
             GroupID = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString());
             addgroupnumtxt.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
