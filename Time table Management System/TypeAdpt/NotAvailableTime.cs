@@ -106,7 +106,7 @@ namespace Time_table_Management_System.DayTimeAdpt
             try
             {
                 //Sql query
-                string sql = "DELETE FROM NATime WHERE NATno=@NATno";
+                string sql = "DELETE FROM NAT WHERE NATno=@NATno";
 
                 //Create sql Command
                 SqlCommand cmd = new SqlCommand(sql, conn);

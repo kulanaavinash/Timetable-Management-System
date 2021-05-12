@@ -923,5 +923,10 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void NDdays_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -97,7 +97,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.selecter = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -598,7 +597,6 @@ namespace Time_table_Management_System
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage4.Controls.Add(this.selecter);
             this.tabPage4.Controls.Add(this.etime);
             this.tabPage4.Controls.Add(this.stime);
             this.tabPage4.Controls.Add(this.NATno);
@@ -637,14 +635,14 @@ namespace Time_table_Management_System
             // 
             // NATno
             // 
-            this.NATno.Location = new System.Drawing.Point(441, 118);
+            this.NATno.Location = new System.Drawing.Point(441, 117);
             this.NATno.Name = "NATno";
             this.NATno.Size = new System.Drawing.Size(47, 29);
             this.NATno.TabIndex = 15;
             // 
             // date
             // 
-            this.date.Location = new System.Drawing.Point(30, 413);
+            this.date.Location = new System.Drawing.Point(30, 407);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(200, 29);
             this.date.TabIndex = 14;
@@ -969,20 +967,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // selecter
-            // 
-            this.selecter.FormattingEnabled = true;
-            this.selecter.Items.AddRange(new object[] {
-            "Lectures ",
-            "Sessions",
-            "Group",
-            "Sub Groups"});
-            this.selecter.Location = new System.Drawing.Point(564, 114);
-            this.selecter.Name = "selecter";
-            this.selecter.Size = new System.Drawing.Size(121, 29);
-            this.selecter.TabIndex = 18;
-            this.selecter.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
-            // 
             // Advanced
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1101,7 +1085,6 @@ namespace Time_table_Management_System
         private System.Windows.Forms.TextBox etime;
         private System.Windows.Forms.TextBox stime;
         private System.Windows.Forms.DataGridView NotAvialbleView;
-        private System.Windows.Forms.ComboBox selecter;
     }
 }
 

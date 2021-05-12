@@ -500,13 +500,26 @@ namespace Time_table_Management_System
             {
                 MessageBox.Show("Success to delete this week");
                 //refreash
-                DataTable dt4 = a.Select();
-                NotAvialbleView.DataSource = dt4;
+                DataTable dt5 = a.Select();
+                NotAvialbleView.DataSource = dt5;
             }
             else
             {
                 MessageBox.Show("Failed delete");
             }
+        }
+
+
+        private void Clear()
+        {
+            
+            // After data clear not avialbe details tab
+
+            stype.Text = "Select type";
+            sitems.Text = "select Item";
+            stime.Text = "Start time";
+            etime.Text = "End time";
+            date.Text = "";
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -526,6 +539,8 @@ namespace Time_table_Management_System
             {
                 //successfully insert
                 MessageBox.Show("Not Avialble Time added");
+                Clear();
+
             }
             else
             {
@@ -564,22 +579,8 @@ namespace Time_table_Management_System
             int rowIndex = e.RowIndex;
 
             NATno.Text = NotAvialbleView.Rows[rowIndex].Cells[0].Value.ToString();
-            stype.Text = NotAvialbleView.Rows[rowIndex].Cells[1].Value.ToString();
-            sitems.Text = NotAvialbleView.Rows[rowIndex].Cells[2].Value.ToString();
-            stime.Text = NotAvialbleView.Rows[rowIndex].Cells[3].Value.ToString();
-            etime.Text = NotAvialbleView.Rows[rowIndex].Cells[4].Value.ToString();
-            date.Text = NotAvialbleView.Rows[rowIndex].Cells[5].Value.ToString();
+
         }
 
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            string keyword = selecter.Text;
-
-            SqlConnection conn = new SqlConnection(myconnstrng);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM stype LIKE '%" + keyword + "%'", conn);
-            DataTable dt5 = new DataTable();
-            sda.Fill(dt5);
-            NotAvialbleView.DataSource = dt5;
-        }
     }
 }

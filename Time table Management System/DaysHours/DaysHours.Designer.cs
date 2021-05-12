@@ -608,6 +608,7 @@ namespace Time_table_Management_System
             this.NDdays.Size = new System.Drawing.Size(120, 26);
             this.NDdays.TabIndex = 1;
             this.NDdays.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.NDdays.ValueChanged += new System.EventHandler(this.NDdays_ValueChanged_1);
             // 
             // tabPage3
             // 
