@@ -134,6 +134,8 @@ namespace Time_table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.working_day_hours.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -485,6 +487,7 @@ namespace Time_table_Management_System
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.week);
             this.tabPage2.Controls.Add(this.Nbsearch);
@@ -517,7 +520,7 @@ namespace Time_table_Management_System
             // week
             // 
             this.week.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.week.Location = new System.Drawing.Point(512, 38);
+            this.week.Location = new System.Drawing.Point(558, 38);
             this.week.Name = "week";
             this.week.ReadOnly = true;
             this.week.Size = new System.Drawing.Size(38, 26);
@@ -569,6 +572,7 @@ namespace Time_table_Management_System
             // 
             // NbWorkdayView
             // 
+            this.NbWorkdayView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.NbWorkdayView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.NbWorkdayView.Location = new System.Drawing.Point(612, 54);
             this.NbWorkdayView.Name = "NbWorkdayView";
@@ -613,6 +617,7 @@ namespace Time_table_Management_System
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Controls.Add(this.timeday);
             this.tabPage3.Controls.Add(this.button24);
             this.tabPage3.Controls.Add(this.metroLabel15);
@@ -1048,6 +1053,7 @@ namespace Time_table_Management_System
             // 
             // daytimeview
             // 
+            this.daytimeview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.daytimeview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.daytimeview.Location = new System.Drawing.Point(40, 59);
             this.daytimeview.Name = "daytimeview";
@@ -1115,6 +1121,29 @@ namespace Time_table_Management_System
             // end_time
             // 
             this.end_time.FormattingEnabled = true;
+            this.end_time.Items.AddRange(new object[] {
+            "08.00",
+            "08.30",
+            "09.00",
+            "09.30",
+            "10.00",
+            "10.30",
+            "11.00",
+            "11.30",
+            "12.00",
+            "12.30",
+            "01.00",
+            "01.30",
+            "02.00",
+            "02.30",
+            "03.00",
+            "03.30",
+            "04.00",
+            "04.30",
+            "05.00",
+            "05.30",
+            "06.00",
+            "06.30"});
             this.end_time.Location = new System.Drawing.Point(626, 100);
             this.end_time.Name = "end_time";
             this.end_time.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1124,6 +1153,29 @@ namespace Time_table_Management_System
             // start_time
             // 
             this.start_time.FormattingEnabled = true;
+            this.start_time.Items.AddRange(new object[] {
+            "08.00",
+            "08.30",
+            "09.00",
+            "09.30",
+            "10.00",
+            "10.30",
+            "11.00",
+            "11.30",
+            "12.00",
+            "12.30",
+            "01.00",
+            "01.30",
+            "02.00",
+            "02.30",
+            "03.00",
+            "03.30",
+            "04.00",
+            "04.30",
+            "05.00",
+            "05.30",
+            "06.00",
+            "06.30"});
             this.start_time.Location = new System.Drawing.Point(626, 51);
             this.start_time.Name = "start_time";
             this.start_time.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1150,6 +1202,7 @@ namespace Time_table_Management_System
             // 
             // timeslotview
             // 
+            this.timeslotview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.timeslotview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.timeslotview.Location = new System.Drawing.Point(90, 244);
             this.timeslotview.Name = "timeslotview";
@@ -1488,6 +1541,28 @@ namespace Time_table_Management_System
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Italic);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(507, 42);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 17);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Week";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Baskerville Old Face", 11.25F, System.Drawing.FontStyle.Italic);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(786, 17);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 17);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Week";
+            // 
             // DaysHours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1656,5 +1731,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }
