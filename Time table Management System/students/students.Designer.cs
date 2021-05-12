@@ -57,13 +57,11 @@ namespace Time_table_Management_System
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton10 = new MetroFramework.Controls.MetroButton();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.addgroupnumtxt = new MetroFramework.Controls.MetroTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.metroTextBox10 = new MetroFramework.Controls.MetroTextBox();
             this.metroButton16 = new MetroFramework.Controls.MetroButton();
@@ -125,6 +123,8 @@ namespace Time_table_Management_System
             this.Hwbtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -515,7 +515,7 @@ namespace Time_table_Management_System
             // 
             // 
             this.programtxt.CustomButton.Image = null;
-            this.programtxt.CustomButton.Location = new System.Drawing.Point(120, 1);
+            this.programtxt.CustomButton.Location = new System.Drawing.Point(155, 1);
             this.programtxt.CustomButton.Name = "";
             this.programtxt.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.programtxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -543,6 +543,8 @@ namespace Time_table_Management_System
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.metroButton12);
             this.tabPage3.Controls.Add(this.metroButton11);
             this.tabPage3.Controls.Add(this.dataGridView3);
@@ -550,7 +552,7 @@ namespace Time_table_Management_System
             this.tabPage3.Controls.Add(this.metroComboBox2);
             this.tabPage3.Controls.Add(this.metroButton10);
             this.tabPage3.Controls.Add(this.metroButton9);
-            this.tabPage3.Controls.Add(this.metroTextBox6);
+            this.tabPage3.Controls.Add(this.addgroupnumtxt);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -581,31 +583,15 @@ namespace Time_table_Management_System
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column7});
-            this.dataGridView3.Location = new System.Drawing.Point(345, 93);
+            this.dataGridView3.Location = new System.Drawing.Point(345, 79);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.Size = new System.Drawing.Size(491, 289);
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "ID";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Group Number";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
             // 
             // metroTextBox7
             // 
@@ -621,8 +607,7 @@ namespace Time_table_Management_System
             this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox7.CustomButton.UseSelectable = true;
             this.metroTextBox7.CustomButton.Visible = false;
-            this.metroTextBox7.Lines = new string[] {
-        "Search"};
+            this.metroTextBox7.Lines = new string[0];
             this.metroTextBox7.Location = new System.Drawing.Point(675, 41);
             this.metroTextBox7.MaxLength = 32767;
             this.metroTextBox7.Name = "metroTextBox7";
@@ -634,7 +619,6 @@ namespace Time_table_Management_System
             this.metroTextBox7.ShortcutsEnabled = true;
             this.metroTextBox7.Size = new System.Drawing.Size(161, 23);
             this.metroTextBox7.TabIndex = 4;
-            this.metroTextBox7.Text = "Search";
             this.metroTextBox7.UseSelectable = true;
             this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -658,7 +642,7 @@ namespace Time_table_Management_System
             // 
             this.metroButton10.Location = new System.Drawing.Point(86, 338);
             this.metroButton10.Name = "metroButton10";
-            this.metroButton10.Size = new System.Drawing.Size(153, 44);
+            this.metroButton10.Size = new System.Drawing.Size(188, 44);
             this.metroButton10.TabIndex = 2;
             this.metroButton10.Text = "Clear";
             this.metroButton10.UseSelectable = true;
@@ -668,44 +652,42 @@ namespace Time_table_Management_System
             // 
             this.metroButton9.Location = new System.Drawing.Point(86, 263);
             this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(153, 37);
+            this.metroButton9.Size = new System.Drawing.Size(188, 37);
             this.metroButton9.TabIndex = 1;
             this.metroButton9.Text = "Add Group number";
             this.metroButton9.UseSelectable = true;
             this.metroButton9.Click += new System.EventHandler(this.btn_add_groupnum);
             // 
-            // metroTextBox6
+            // addgroupnumtxt
             // 
             // 
             // 
             // 
-            this.metroTextBox6.CustomButton.Image = null;
-            this.metroTextBox6.CustomButton.Location = new System.Drawing.Point(131, 1);
-            this.metroTextBox6.CustomButton.Name = "";
-            this.metroTextBox6.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox6.CustomButton.TabIndex = 1;
-            this.metroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox6.CustomButton.UseSelectable = true;
-            this.metroTextBox6.CustomButton.Visible = false;
-            this.metroTextBox6.Lines = new string[] {
-        "Add Group Number"};
-            this.metroTextBox6.Location = new System.Drawing.Point(86, 126);
-            this.metroTextBox6.MaxLength = 32767;
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.PasswordChar = '\0';
-            this.metroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox6.SelectedText = "";
-            this.metroTextBox6.SelectionLength = 0;
-            this.metroTextBox6.SelectionStart = 0;
-            this.metroTextBox6.ShortcutsEnabled = true;
-            this.metroTextBox6.Size = new System.Drawing.Size(153, 23);
-            this.metroTextBox6.TabIndex = 0;
-            this.metroTextBox6.Text = "Add Group Number";
-            this.metroTextBox6.UseSelectable = true;
-            this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox6.Click += new System.EventHandler(this.g_mem_group_member);
+            this.addgroupnumtxt.CustomButton.Image = null;
+            this.addgroupnumtxt.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.addgroupnumtxt.CustomButton.Name = "";
+            this.addgroupnumtxt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.addgroupnumtxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.addgroupnumtxt.CustomButton.TabIndex = 1;
+            this.addgroupnumtxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.addgroupnumtxt.CustomButton.UseSelectable = true;
+            this.addgroupnumtxt.CustomButton.Visible = false;
+            this.addgroupnumtxt.Lines = new string[0];
+            this.addgroupnumtxt.Location = new System.Drawing.Point(86, 143);
+            this.addgroupnumtxt.MaxLength = 32767;
+            this.addgroupnumtxt.Name = "addgroupnumtxt";
+            this.addgroupnumtxt.PasswordChar = '\0';
+            this.addgroupnumtxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.addgroupnumtxt.SelectedText = "";
+            this.addgroupnumtxt.SelectionLength = 0;
+            this.addgroupnumtxt.SelectionStart = 0;
+            this.addgroupnumtxt.ShortcutsEnabled = true;
+            this.addgroupnumtxt.Size = new System.Drawing.Size(188, 23);
+            this.addgroupnumtxt.TabIndex = 0;
+            this.addgroupnumtxt.UseSelectable = true;
+            this.addgroupnumtxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.addgroupnumtxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.addgroupnumtxt.Click += new System.EventHandler(this.g_mem_group_member);
             // 
             // tabPage4
             // 
@@ -1529,6 +1511,26 @@ namespace Time_table_Management_System
             this.label6.TabIndex = 10;
             this.label6.Text = "Search :";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Coral;
+            this.label7.Location = new System.Drawing.Point(82, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(167, 21);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Add Group Number :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Coral;
+            this.label8.Location = new System.Drawing.Point(580, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 21);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Search :";
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1567,6 +1569,7 @@ namespace Time_table_Management_System
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -1631,7 +1634,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.DataGridView dataGridView2;
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroButton metroButton8;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
+        private MetroFramework.Controls.MetroTextBox addgroupnumtxt;
         private MetroFramework.Controls.MetroButton metroButton10;
         private MetroFramework.Controls.MetroButton metroButton9;
         private MetroFramework.Controls.MetroComboBox metroComboBox2;
@@ -1663,8 +1666,6 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroTextBox metroTextBox12;
         private MetroFramework.Controls.MetroComboBox metroComboBox5;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
@@ -1683,6 +1684,8 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
 
