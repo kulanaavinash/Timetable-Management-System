@@ -290,6 +290,26 @@ namespace Time_table_Management_System
         private void btn_tag_editdetails(object sender, EventArgs e)
         {
             //edit details btn
+
+            if (addtagname.Text != "")
+            {
+                cmd = new SqlCommand("update Tag set Tagname=@tagname  where TagID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", TagID);
+                cmd.Parameters.AddWithValue("@tagname", addtagname.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                DisplayData();
+                ClearData();
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
+
+
         }
 
         private void btn_tag_delete(object sender, EventArgs e)
@@ -336,6 +356,13 @@ namespace Time_table_Management_System
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        { 
+            //cell click tag
+            TagID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            addtagname.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
