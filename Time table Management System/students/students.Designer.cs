@@ -36,7 +36,6 @@ namespace Time_table_Management_System
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.y_sem_search_by = new MetroFramework.Controls.MetroComboBox();
@@ -180,7 +179,6 @@ namespace Time_table_Management_System
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.metroButton4);
-            this.tabPage1.Controls.Add(this.metroButton3);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.metroTextBox3);
             this.tabPage1.Controls.Add(this.y_sem_search_by);
@@ -228,23 +226,13 @@ namespace Time_table_Management_System
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(674, 401);
+            this.metroButton4.Location = new System.Drawing.Point(665, 401);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(112, 35);
+            this.metroButton4.Size = new System.Drawing.Size(121, 35);
             this.metroButton4.TabIndex = 8;
-            this.metroButton4.Text = "Delete";
+            this.metroButton4.Text = "Refresh";
             this.metroButton4.UseSelectable = true;
-            this.metroButton4.Click += new System.EventHandler(this.y_sem_btn_delete);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(333, 401);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(118, 35);
-            this.metroButton3.TabIndex = 7;
-            this.metroButton3.Text = "Edit Details";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.y_sem_btn_Edit_details);
+            this.metroButton4.Click += new System.EventHandler(this.y_sem_btn_refresh);
             // 
             // dataGridView1
             // 
@@ -254,7 +242,7 @@ namespace Time_table_Management_System
             this.dataGridView1.Location = new System.Drawing.Point(321, 119);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 276);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 232);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -317,9 +305,9 @@ namespace Time_table_Management_System
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(62, 261);
+            this.metroButton1.Location = new System.Drawing.Point(317, 401);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(168, 52);
+            this.metroButton1.Size = new System.Drawing.Size(168, 35);
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Add year Semester";
             this.metroButton1.UseSelectable = true;
@@ -1597,7 +1585,6 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroComboBox y_sem_search_by;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroTextBox programtxt;
