@@ -397,29 +397,20 @@ namespace Time_table_Management_System
 
         }
 
-        private void y_sem_btn_delete(object sender, EventArgs e)
+
+
+
+        private void y_sem_btn_refresh(object sender, EventArgs e)
         {
             //y_sem_btn_delete
-
-
-            if (YearSemID != 0)
-            {
-                cmd = new SqlCommand("delete YearSemester where YearSemID=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", YearSemID);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record Deleted Successfully!");
-                DisplayData();
-                ClearData();
-            }
-            else
-            {
-                MessageBox.Show("Please Select Record to Delete");
-            }
-
-
+            string sqlstm = "Select Sid,Year,Semester from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView1.DataSource = DS.Tables[0];
         }
+
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -993,5 +984,6 @@ namespace Time_table_Management_System
             SDA.Fill(DS, "Student");
             dataGridView2.DataSource = DS.Tables[0];
         }
+
     }
 }
