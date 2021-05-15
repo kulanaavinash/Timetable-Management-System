@@ -45,6 +45,7 @@ namespace Time_table_Management_System
             this.semtxt = new MetroFramework.Controls.MetroTextBox();
             this.yeartxt = new MetroFramework.Controls.MetroTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
@@ -62,7 +63,6 @@ namespace Time_table_Management_System
             this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton10 = new MetroFramework.Controls.MetroButton();
-            this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.addgroupnumtxt = new MetroFramework.Controls.MetroTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
@@ -122,7 +122,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -408,6 +407,18 @@ namespace Time_table_Management_System
             this.tabPage2.Text = "Programmes";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // metroButton5
+            // 
+            this.metroButton5.BackColor = System.Drawing.Color.Blue;
+            this.metroButton5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.metroButton5.Location = new System.Drawing.Point(698, 390);
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.Size = new System.Drawing.Size(135, 38);
+            this.metroButton5.TabIndex = 11;
+            this.metroButton5.Text = "Refresh";
+            this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -549,7 +560,6 @@ namespace Time_table_Management_System
             this.tabPage3.Controls.Add(this.metroTextBox7);
             this.tabPage3.Controls.Add(this.metroComboBox2);
             this.tabPage3.Controls.Add(this.metroButton10);
-            this.tabPage3.Controls.Add(this.metroButton9);
             this.tabPage3.Controls.Add(this.addgroupnumtxt);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
@@ -604,10 +614,10 @@ namespace Time_table_Management_System
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(345, 79);
+            this.dataGridView3.Location = new System.Drawing.Point(345, 80);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(491, 289);
+            this.dataGridView3.Size = new System.Drawing.Size(501, 289);
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
@@ -666,16 +676,6 @@ namespace Time_table_Management_System
             this.metroButton10.Text = "Clear";
             this.metroButton10.UseSelectable = true;
             this.metroButton10.Click += new System.EventHandler(this.grp_num_btn_clear);
-            // 
-            // metroButton9
-            // 
-            this.metroButton9.Location = new System.Drawing.Point(86, 263);
-            this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(188, 37);
-            this.metroButton9.TabIndex = 1;
-            this.metroButton9.Text = "Add Group number";
-            this.metroButton9.UseSelectable = true;
-            this.metroButton9.Click += new System.EventHandler(this.btn_add_groupnum);
             // 
             // addgroupnumtxt
             // 
@@ -1504,18 +1504,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // metroButton5
-            // 
-            this.metroButton5.BackColor = System.Drawing.Color.Blue;
-            this.metroButton5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.metroButton5.Location = new System.Drawing.Point(698, 390);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(135, 38);
-            this.metroButton5.TabIndex = 11;
-            this.metroButton5.Text = "Refresh";
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
-            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1620,7 +1608,6 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroTextBox addgroupnumtxt;
         private MetroFramework.Controls.MetroButton metroButton10;
-        private MetroFramework.Controls.MetroButton metroButton9;
         private MetroFramework.Controls.MetroComboBox metroComboBox2;
         private MetroFramework.Controls.MetroTextBox metroTextBox7;
         private System.Windows.Forms.DataGridView dataGridView3;
