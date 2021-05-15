@@ -22,6 +22,7 @@ namespace Time_table_Management_System
         int ProgrammeID = 0;
         int GroupID = 0;
         int SubGroupID = 0;
+        int Sid = 0;
         
         
 
@@ -296,7 +297,7 @@ namespace Time_table_Management_System
 
             if (yeartxt.Text != "" && semtxt.Text != "")
             {
-                cmd = new SqlCommand("insert into YearSemester(Year,Semester) values(@year,@semester)", con);
+                cmd = new SqlCommand("insert into Student(Year,Semester) values(@year,@semester)", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("@year", yeartxt.Text);
                 cmd.Parameters.AddWithValue("@semester", semtxt.Text);
@@ -322,7 +323,7 @@ namespace Time_table_Management_System
         {
             con.Open();
             DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from YearSemester", con);
+            adapt = new SqlDataAdapter("select Sid,Year,Semester from Student", con);
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
@@ -374,9 +375,9 @@ namespace Time_table_Management_System
 
             if (yeartxt.Text != "" && semtxt.Text != "")
             {
-                cmd = new SqlCommand("update YearSemester set Year=@year,Semester=@semester where YearSemID=@id", con);
+                cmd = new SqlCommand("update Student set Year=@year,Semester=@semester where Sid=@id", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@id", YearSemID);
+                cmd.Parameters.AddWithValue("@id", Sid);
                 cmd.Parameters.AddWithValue("@year", yeartxt.Text);
                 cmd.Parameters.AddWithValue("@semester", semtxt.Text);
                 cmd.ExecuteNonQuery();
@@ -447,38 +448,38 @@ namespace Time_table_Management_System
 
         private void btn_addprogramme(object sender, EventArgs e)
         {
-            //btn add programme
-            if (programtxt.Text != "")
-            {
-                cmd = new SqlCommand("insert into Programmestudent(Programme) values(@programme)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@programme", programtxt.Text);
+            /* //btn add programme
+             if (programtxt.Text != "")
+             {
+                 cmd = new SqlCommand("insert into Programmestudent(Programme) values(@programme)", con);
+                 con.Open();
+                 cmd.Parameters.AddWithValue("@programme", programtxt.Text);
 
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record Inserted Successfully");
-                BindData();
-                ClearData();
+                 cmd.ExecuteNonQuery();
+                 con.Close();
+                 MessageBox.Show("Record Inserted Successfully");
+                 BindData();
+                 ClearData();
 
 
-            }
-            else
-            {
-                MessageBox.Show("Please Provide Details!");
-            }
+             }
+             else
+             {
+                 MessageBox.Show("Please Provide Details!");
+             }
 
+
+         */
 
         }
 
 
-
-
-        //Display Data in DataGridView  
+        //Display Data in DataGridView  programme
         private void BindData()
         {
             con.Open();
             DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from Programmestudent ", con);
+            adapt = new SqlDataAdapter("select Sid,Programme from Student ", con);
             adapt.Fill(dt);
             dataGridView2.DataSource = dt;
             con.Close();
@@ -524,14 +525,14 @@ namespace Time_table_Management_System
 
        
             
-                cmd = new SqlCommand("update programmestudent set Programme=@programme  where ProgrammeID=@id", con);
+                cmd = new SqlCommand("update Student set Programme=@programme  where Sid=@id", con);
                
-                cmd.Parameters.AddWithValue("@id", ProgrammeID);
+                cmd.Parameters.AddWithValue("@id", Sid);
                 cmd.Parameters.AddWithValue("@programme", programtxt.Text);
                  con.Open();
 
-               cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Updated Successfully");
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Programme Details Added Successfully");
                 con.Close();
                 BindData();
                 ClearData();
@@ -543,7 +544,7 @@ namespace Time_table_Management_System
         private void btn_delete_btn(object sender, EventArgs e)
         {
             //btn_delete_btn
-
+/*
             if (ProgrammeID != 0)
             {
                 cmd = new SqlCommand("delete programmestudent where ProgrammeID=@id", con);
@@ -559,7 +560,7 @@ namespace Time_table_Management_System
             {
                 MessageBox.Show("Please Select Record to Delete");
             }
-
+*/
 
         }
 
@@ -949,7 +950,7 @@ namespace Time_table_Management_System
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //cell click yearsemester
-            YearSemID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Sid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             yeartxt.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             semtxt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
@@ -958,7 +959,7 @@ namespace Time_table_Management_System
         {
 
             //cell click programme
-            ProgrammeID = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Sid = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
             programtxt.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
@@ -979,6 +980,16 @@ namespace Time_table_Management_System
             //cell click sub group
             SubGroupID = Convert.ToInt32(dataGridView4.Rows[e.RowIndex].Cells[0].Value.ToString());
             subgroupnum.Text = dataGridView4.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        //refresh btn to  load programme data
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            string sqlstm = "Select Sid,Programme from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView2.DataSource = DS.Tables[0];
         }
     }
 }
