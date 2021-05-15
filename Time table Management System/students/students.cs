@@ -342,7 +342,10 @@ namespace Time_table_Management_System
         {
             yeartxt.Text = "";
             semtxt.Text = "";
-            YearSemID = 0;
+            programtxt.Text = "";
+
+
+
 
 
 
@@ -444,6 +447,7 @@ namespace Time_table_Management_System
         private void btn_programme_clean(object sender, EventArgs e)
         {
             //btn clean
+            ClearData();
         }
 
         private void btn_addprogramme(object sender, EventArgs e)
@@ -587,7 +591,7 @@ namespace Time_table_Management_System
             //btn_add group num
 
             //btn add programme
-            if (addgroupnumtxt.Text != "")
+           /* if (addgroupnumtxt.Text != "")
             {
                 cmd = new SqlCommand("insert into GroupNumber(Groupnumber) values(@groupnumber)", con);
                 con.Open();
@@ -604,7 +608,7 @@ namespace Time_table_Management_System
             else
             {
                 MessageBox.Show("Please Provide Details!");
-            }
+            }*/
         }
 
         //Display Data in DataGridView  
@@ -702,6 +706,10 @@ namespace Time_table_Management_System
                 MessageBox.Show("Please Select Record to Update");
             }
         }
+
+
+
+
 
         private void metroTextBox8_Click(object sender, EventArgs e)
         {
