@@ -591,21 +591,21 @@ namespace Time_table_Management_System
             // 
             // metroButton12
             // 
-            this.metroButton12.Location = new System.Drawing.Point(719, 388);
+            this.metroButton12.Location = new System.Drawing.Point(704, 388);
             this.metroButton12.Name = "metroButton12";
-            this.metroButton12.Size = new System.Drawing.Size(117, 40);
+            this.metroButton12.Size = new System.Drawing.Size(132, 40);
             this.metroButton12.TabIndex = 7;
-            this.metroButton12.Text = "Delete";
+            this.metroButton12.Text = "Refresh";
             this.metroButton12.UseSelectable = true;
             this.metroButton12.Click += new System.EventHandler(this.bt_g_num_delete);
             // 
             // metroButton11
             // 
-            this.metroButton11.Location = new System.Drawing.Point(345, 388);
+            this.metroButton11.Location = new System.Drawing.Point(345, 390);
             this.metroButton11.Name = "metroButton11";
             this.metroButton11.Size = new System.Drawing.Size(135, 40);
             this.metroButton11.TabIndex = 6;
-            this.metroButton11.Text = "Edit Details";
+            this.metroButton11.Text = "Add Group Number";
             this.metroButton11.UseSelectable = true;
             this.metroButton11.Click += new System.EventHandler(this.btn_g_num_editdetails);
             // 
@@ -669,9 +669,9 @@ namespace Time_table_Management_System
             // 
             // metroButton10
             // 
-            this.metroButton10.Location = new System.Drawing.Point(86, 338);
+            this.metroButton10.Location = new System.Drawing.Point(86, 190);
             this.metroButton10.Name = "metroButton10";
-            this.metroButton10.Size = new System.Drawing.Size(188, 44);
+            this.metroButton10.Size = new System.Drawing.Size(89, 25);
             this.metroButton10.TabIndex = 2;
             this.metroButton10.Text = "Clear";
             this.metroButton10.UseSelectable = true;

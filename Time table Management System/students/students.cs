@@ -343,6 +343,7 @@ namespace Time_table_Management_System
             yeartxt.Text = "";
             semtxt.Text = "";
             programtxt.Text = "";
+            addgroupnumtxt.Text = "";
 
 
 
@@ -539,6 +540,7 @@ namespace Time_table_Management_System
                 MessageBox.Show("Programme Details Added Successfully");
                 con.Close();
                 BindData();
+                DisplayData();
                 ClearData();
             
             
@@ -616,7 +618,7 @@ namespace Time_table_Management_System
         {
             con.Open();
             DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from GroupNumber ", con);
+            adapt = new SqlDataAdapter("select Sid,GrpNumber from Student ", con);
             adapt.Fill(dt);
             dataGridView3.DataSource = dt;
             con.Close();
@@ -644,6 +646,7 @@ namespace Time_table_Management_System
         private void grp_num_btn_clear(object sender, EventArgs e)
         {
             //btn_clear 
+            ClearData();
         }
 
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -664,21 +667,11 @@ namespace Time_table_Management_System
         private void bt_g_num_delete(object sender, EventArgs e)
         {
             //btn delete
-            if (GroupID != 0)
-            {
-                cmd = new SqlCommand("delete GroupNumber where GroupID=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", GroupID);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record Deleted Successfully!");
-                ViewData();
-                CloseData();
-            }
-            else
-            {
-                MessageBox.Show("Please Select Record to Delete");
-            }
+            string sqlstm = "Select Sid,GrpNumber from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView3.DataSource = DS.Tables[0];
 
 
         }
@@ -690,20 +683,21 @@ namespace Time_table_Management_System
 
             if (addgroupnumtxt.Text != "")
             {
-                cmd = new SqlCommand("update GroupNumber set Groupnumber=@groupnumber  where GroupID=@id", con);
+                cmd = new SqlCommand("update Student set GrpNumber=@groupnumber  where Sid=@id", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@id", GroupID);
+                cmd.Parameters.AddWithValue("@id", Sid);
                 cmd.Parameters.AddWithValue("@groupnumber", addgroupnumtxt.Text);
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Updated Successfully");
+                MessageBox.Show("Group Number Inserted Successfully");
                 con.Close();
                 ViewData();
-                CloseData();
+                
+                //CloseData();
             }
             else
             {
-                MessageBox.Show("Please Select Record to Update");
+                MessageBox.Show("Please Select Record to Insert Group number");
             }
         }
 
@@ -974,7 +968,7 @@ namespace Time_table_Management_System
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //cell click group numbers
-            GroupID = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Sid = Convert.ToInt32(dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString());
             addgroupnumtxt.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
