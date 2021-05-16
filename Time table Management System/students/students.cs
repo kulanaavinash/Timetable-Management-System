@@ -854,6 +854,10 @@ namespace Time_table_Management_System
         private void metroButton17_Click(object sender, EventArgs e)
         {
             //generate group id btn
+
+            Gengrpid.Text = "";
+
+            Gengrpid.Text = yeartxt.Text + '.' + semtxt.Text + '.' + programtxt.Text + '.' + addgroupnumtxt.Text;
         }
 
         private void metroButton18_Click(object sender, EventArgs e)
@@ -978,5 +982,9 @@ namespace Time_table_Management_System
             dataGridView2.DataSource = DS.Tables[0];
         }
 
+        private void Gengrpid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

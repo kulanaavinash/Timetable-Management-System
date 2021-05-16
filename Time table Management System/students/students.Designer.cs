@@ -76,13 +76,10 @@ namespace Time_table_Management_System
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.metroButton19 = new MetroFramework.Controls.MetroButton();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
             this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton18 = new MetroFramework.Controls.MetroButton();
             this.gen_groupid = new MetroFramework.Controls.MetroButton();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.metroButton21 = new MetroFramework.Controls.MetroButton();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
@@ -121,6 +118,7 @@ namespace Time_table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.Gengrpid = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -133,7 +131,6 @@ namespace Time_table_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
@@ -165,10 +162,10 @@ namespace Time_table_Management_System
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(33, 55);
+            this.tabControl1.Location = new System.Drawing.Point(33, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(893, 501);
+            this.tabControl1.Size = new System.Drawing.Size(893, 499);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -192,7 +189,7 @@ namespace Time_table_Management_System
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(885, 464);
+            this.tabPage1.Size = new System.Drawing.Size(885, 462);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Year Semester";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -390,7 +387,7 @@ namespace Time_table_Management_System
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(885, 464);
+            this.tabPage2.Size = new System.Drawing.Size(885, 462);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Programmes";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -552,7 +549,7 @@ namespace Time_table_Management_System
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(885, 464);
+            this.tabPage3.Size = new System.Drawing.Size(885, 462);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Group Numbers";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -712,7 +709,7 @@ namespace Time_table_Management_System
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(885, 464);
+            this.tabPage4.Size = new System.Drawing.Size(885, 462);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Sub Group Numbers";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -787,7 +784,7 @@ namespace Time_table_Management_System
             this.dataGridView4.Location = new System.Drawing.Point(335, 126);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.Size = new System.Drawing.Size(474, 256);
+            this.dataGridView4.Size = new System.Drawing.Size(474, 230);
             this.dataGridView4.TabIndex = 5;
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
@@ -882,26 +879,26 @@ namespace Time_table_Management_System
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage5.Controls.Add(this.Gengrpid);
             this.tabPage5.Controls.Add(this.metroButton19);
             this.tabPage5.Controls.Add(this.dataGridView6);
             this.tabPage5.Controls.Add(this.metroTextBox11);
             this.tabPage5.Controls.Add(this.metroComboBox4);
             this.tabPage5.Controls.Add(this.metroButton18);
             this.tabPage5.Controls.Add(this.gen_groupid);
-            this.tabPage5.Controls.Add(this.dataGridView5);
             this.tabPage5.Location = new System.Drawing.Point(4, 33);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(885, 464);
+            this.tabPage5.Size = new System.Drawing.Size(885, 462);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Genarate Group IDS";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // metroButton19
             // 
-            this.metroButton19.Location = new System.Drawing.Point(490, 388);
+            this.metroButton19.Location = new System.Drawing.Point(727, 388);
             this.metroButton19.Name = "metroButton19";
-            this.metroButton19.Size = new System.Drawing.Size(250, 48);
+            this.metroButton19.Size = new System.Drawing.Size(119, 30);
             this.metroButton19.TabIndex = 6;
             this.metroButton19.Text = "Delete";
             this.metroButton19.UseSelectable = true;
@@ -911,29 +908,12 @@ namespace Time_table_Management_System
             // 
             this.dataGridView6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column10,
-            this.Column11});
             this.dataGridView6.Location = new System.Drawing.Point(356, 106);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersWidth = 51;
             this.dataGridView6.Size = new System.Drawing.Size(490, 258);
             this.dataGridView6.TabIndex = 5;
             this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column10.HeaderText = "ID";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column11.HeaderText = "generate Group Number";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
             // 
             // metroTextBox11
             // 
@@ -984,9 +964,9 @@ namespace Time_table_Management_System
             // 
             // metroButton18
             // 
-            this.metroButton18.Location = new System.Drawing.Point(92, 317);
+            this.metroButton18.Location = new System.Drawing.Point(533, 388);
             this.metroButton18.Name = "metroButton18";
-            this.metroButton18.Size = new System.Drawing.Size(170, 47);
+            this.metroButton18.Size = new System.Drawing.Size(170, 35);
             this.metroButton18.TabIndex = 2;
             this.metroButton18.Text = "Confirm and Add";
             this.metroButton18.UseSelectable = true;
@@ -994,24 +974,13 @@ namespace Time_table_Management_System
             // 
             // gen_groupid
             // 
-            this.gen_groupid.Location = new System.Drawing.Point(92, 255);
+            this.gen_groupid.Location = new System.Drawing.Point(102, 401);
             this.gen_groupid.Name = "gen_groupid";
-            this.gen_groupid.Size = new System.Drawing.Size(170, 42);
+            this.gen_groupid.Size = new System.Drawing.Size(96, 17);
             this.gen_groupid.TabIndex = 1;
             this.gen_groupid.Text = "Generate Group ID";
             this.gen_groupid.UseSelectable = true;
             this.gen_groupid.Click += new System.EventHandler(this.metroButton17_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(65, 54);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.Size = new System.Drawing.Size(231, 175);
-            this.dataGridView5.TabIndex = 0;
-            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // tabPage6
             // 
@@ -1024,7 +993,7 @@ namespace Time_table_Management_System
             this.tabPage6.Location = new System.Drawing.Point(4, 33);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(885, 464);
+            this.tabPage6.Size = new System.Drawing.Size(885, 462);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Genarate Sub Group IDS";
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
@@ -1107,7 +1076,7 @@ namespace Time_table_Management_System
             this.tabPage7.Location = new System.Drawing.Point(4, 33);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(885, 464);
+            this.tabPage7.Size = new System.Drawing.Size(885, 462);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "View Deatils";
             this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
@@ -1492,6 +1461,14 @@ namespace Time_table_Management_System
             this.label10.TabIndex = 12;
             this.label10.Text = "Search :";
             // 
+            // Gengrpid
+            // 
+            this.Gengrpid.Location = new System.Drawing.Point(102, 353);
+            this.Gengrpid.Name = "Gengrpid";
+            this.Gengrpid.Size = new System.Drawing.Size(163, 29);
+            this.Gengrpid.TabIndex = 7;
+            this.Gengrpid.TextChanged += new System.EventHandler(this.Gengrpid_TextChanged);
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1536,8 +1513,8 @@ namespace Time_table_Management_System
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
@@ -1614,7 +1591,6 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroComboBox metroComboBox4;
         private MetroFramework.Controls.MetroButton metroButton18;
         private MetroFramework.Controls.MetroButton gen_groupid;
-        private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView7;
         private MetroFramework.Controls.MetroButton metroButton21;
         private System.Windows.Forms.DataGridView dataGridView8;
@@ -1623,8 +1599,6 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroTextBox metroTextBox12;
         private MetroFramework.Controls.MetroComboBox metroComboBox5;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
@@ -1644,6 +1618,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroButton metroButton5;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox Gengrpid;
     }
 }
 
