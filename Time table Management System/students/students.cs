@@ -344,6 +344,7 @@ namespace Time_table_Management_System
             semtxt.Text = "";
             programtxt.Text = "";
             addgroupnumtxt.Text = "";
+            subgroupnum.Text = "";
 
 
 
@@ -720,7 +721,7 @@ namespace Time_table_Management_System
         private void metroButton13_Click(object sender, EventArgs e)
         {
             //btn add sub group num
-
+            /*
             if (subgroupnum.Text != "")
             {
                 cmd = new SqlCommand("insert into SubGroupNumber(SubGroupnumber) values(@subgroupnumber)", con);
@@ -739,7 +740,7 @@ namespace Time_table_Management_System
             {
                 MessageBox.Show("Please Provide Details!");
             }
-
+            */
 
         }
         //Display Data in DataGridView  
@@ -747,7 +748,7 @@ namespace Time_table_Management_System
         {
             con.Open();
             DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from SubGroupNumber ", con);
+            adapt = new SqlDataAdapter("select Sid,SubGrpNum from Student ", con);
             adapt.Fill(dt);
             dataGridView4.DataSource = dt;
             con.Close();
@@ -771,19 +772,20 @@ namespace Time_table_Management_System
         private void metroButton14_Click(object sender, EventArgs e)
         {
             //btn clear sub group
+            ClearData();
         }
 
         private void metroButton15_Click(object sender, EventArgs e)
         {
-            //  edit details sub group
+            // add  details sub group
 
 
             if (subgroupnum.Text != "")
             {
-                cmd = new SqlCommand("update SubGroupNumber set SubGroupnumber=@subgroupnumber  where SubGroupID=@id", con);
+                cmd = new SqlCommand("update Student set SubGrpNum=@subgrpnum  where Sid=@id", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@id", SubGroupID);
-                cmd.Parameters.AddWithValue("@subgroupnumber", subgroupnum.Text);
+                cmd.Parameters.AddWithValue("@id", Sid);
+                cmd.Parameters.AddWithValue("@subgrpnum", subgroupnum.Text);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated Successfully");
@@ -815,24 +817,15 @@ namespace Time_table_Management_System
 
         private void metroButton16_Click(object sender, EventArgs e)
         {
-            //btn delete sub group
+            //btn refresh sub group
 
 
-            if (SubGroupID != 0)
-            {
-                cmd = new SqlCommand("delete SubGroupNumber where SubGroupID=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", SubGroupID);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record Deleted Successfully!");
-                SeeData();
-                FormatData();
-            }
-            else
-            {
-                MessageBox.Show("Please Select Record to Delete");
-            }
+            //y_sem_btn_delete
+            string sqlstm = "Select Sid,SubGrpNum from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView4.DataSource = DS.Tables[0];
         }
 
 
@@ -861,6 +854,10 @@ namespace Time_table_Management_System
         private void metroButton17_Click(object sender, EventArgs e)
         {
             //generate group id btn
+
+            Gengrpid.Text = "";
+
+            Gengrpid.Text = yeartxt.Text + '.' + semtxt.Text + '.' + programtxt.Text + '.' + addgroupnumtxt.Text;
         }
 
         private void metroButton18_Click(object sender, EventArgs e)
@@ -971,7 +968,7 @@ namespace Time_table_Management_System
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //cell click sub group
-            SubGroupID = Convert.ToInt32(dataGridView4.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Sid = Convert.ToInt32(dataGridView4.Rows[e.RowIndex].Cells[0].Value.ToString());
             subgroupnum.Text = dataGridView4.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
@@ -985,5 +982,9 @@ namespace Time_table_Management_System
             dataGridView2.DataSource = DS.Tables[0];
         }
 
+        private void Gengrpid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
