@@ -351,6 +351,11 @@ namespace Time_table_Management_System
             gen_semtxt.Text = "";
             gen_programme_txt.Text = "";
             gen_grpnumtxt.Text = "";
+            sub_year.Text = "";
+            sub_sem.Text = "";
+            sub_program.Text = "";
+            Sub_sub_grpnum.Text = "";
+            Sub_Grpnum.Text = "";
 
 
 
@@ -1108,7 +1113,7 @@ namespace Time_table_Management_System
 
         private void metroButton8_Click(object sender, EventArgs e)
         {
-
+            ClearData();
         }
 
         private void label15_Click(object sender, EventArgs e)
