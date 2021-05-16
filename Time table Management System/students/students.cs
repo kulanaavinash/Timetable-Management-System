@@ -346,6 +346,10 @@ namespace Time_table_Management_System
             programtxt.Text = "";
             addgroupnumtxt.Text = "";
             subgroupnum.Text = "";
+            gen_yeartxt.Text = "";
+            gen_semtxt.Text = "";
+            gen_programme_txt.Text = "";
+            gen_grpnumtxt.Text = "";
 
 
 
@@ -864,6 +868,21 @@ namespace Time_table_Management_System
         private void metroButton18_Click(object sender, EventArgs e)
         {
             //confirm and add btn
+
+
+            cmd = new SqlCommand("update Student set GenGrpNum=@gengrpnum  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@gengrpnum", Gengrpid.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Generated Group Number Saved Successfully");
+            con.Close();
+            save();
+            ClearData();
+
+
         }
 
 
@@ -1024,6 +1043,11 @@ namespace Time_table_Management_System
             gen_semtxt.Text = dataGridView6.Rows[e.RowIndex].Cells[2].Value.ToString();
             gen_programme_txt.Text = dataGridView6.Rows[e.RowIndex].Cells[3].Value.ToString();
             gen_grpnumtxt.Text = dataGridView6.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
     }
 }

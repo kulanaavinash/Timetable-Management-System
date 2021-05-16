@@ -127,6 +127,7 @@ namespace Time_table_Management_System
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -897,6 +898,7 @@ namespace Time_table_Management_System
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage5.Controls.Add(this.metroButton3);
             this.tabPage5.Controls.Add(this.label14);
             this.tabPage5.Controls.Add(this.label13);
             this.tabPage5.Controls.Add(this.label12);
@@ -930,9 +932,9 @@ namespace Time_table_Management_System
             // 
             // metroButton19
             // 
-            this.metroButton19.Location = new System.Drawing.Point(727, 388);
+            this.metroButton19.Location = new System.Drawing.Point(722, 388);
             this.metroButton19.Name = "metroButton19";
-            this.metroButton19.Size = new System.Drawing.Size(119, 30);
+            this.metroButton19.Size = new System.Drawing.Size(124, 35);
             this.metroButton19.TabIndex = 6;
             this.metroButton19.Text = "Delete";
             this.metroButton19.UseSelectable = true;
@@ -997,7 +999,7 @@ namespace Time_table_Management_System
             // 
             // metroButton18
             // 
-            this.metroButton18.Location = new System.Drawing.Point(533, 388);
+            this.metroButton18.Location = new System.Drawing.Point(524, 388);
             this.metroButton18.Name = "metroButton18";
             this.metroButton18.Size = new System.Drawing.Size(170, 35);
             this.metroButton18.TabIndex = 2;
@@ -1646,6 +1648,16 @@ namespace Time_table_Management_System
             this.label14.TabIndex = 15;
             this.label14.Text = "Semester :";
             // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(160, 262);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(60, 15);
+            this.metroButton3.TabIndex = 16;
+            this.metroButton3.Text = "Clear";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1804,6 +1816,7 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroTextBox gen_programme_txt;
         private MetroFramework.Controls.MetroTextBox gen_semtxt;
         private MetroFramework.Controls.MetroTextBox gen_yeartxt;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
 
