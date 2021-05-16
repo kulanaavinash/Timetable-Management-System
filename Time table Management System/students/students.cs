@@ -47,6 +47,7 @@ namespace Time_table_Management_System
             ViewData();
             SeeData();
             save();
+            add();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -937,9 +938,29 @@ namespace Time_table_Management_System
             //confirm and add btn
         }
 
+
+
+        private void add()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select Sid,Year,Semester,Programme, GrpNumber,SubGrpNum,GenSubGrpNum from Student ", con);
+            adapt.Fill(dt);
+            dataGridView8.DataSource = dt;
+            con.Close();
+
+
+
+
+
+        }
+
         private void metroButton17_Click_1(object sender, EventArgs e)
         {
             //gen sub group id btn
+            subgenid.Text = "";
+
+            subgenid.Text = sub_year.Text + '.' + sub_sem.Text + '.' + sub_program.Text + '.' + Sub_Grpnum.Text+ '.' + Sub_sub_grpnum.Text;
         }
 
 
@@ -1048,6 +1069,56 @@ namespace Time_table_Management_System
         private void metroButton3_Click(object sender, EventArgs e)
         {
             ClearData();
+        }
+
+        private void metroTextBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sub_sem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cell click sub grp gen id
+
+
+            Sid = Convert.ToInt32(dataGridView8.Rows[e.RowIndex].Cells[0].Value.ToString());
+            sub_year.Text = dataGridView8.Rows[e.RowIndex].Cells[1].Value.ToString();
+            sub_sem.Text = dataGridView8.Rows[e.RowIndex].Cells[2].Value.ToString();
+            sub_program.Text = dataGridView8.Rows[e.RowIndex].Cells[3].Value.ToString();
+            Sub_Grpnum.Text = dataGridView8.Rows[e.RowIndex].Cells[4].Value.ToString();
+            Sub_sub_grpnum.Text = dataGridView8.Rows[e.RowIndex].Cells[5].Value.ToString();
+            
+
+        }
+
+        private void metroButton8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
