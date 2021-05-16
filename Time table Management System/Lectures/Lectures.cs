@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace Time_table_Management_System
 {
@@ -345,10 +346,25 @@ namespace Time_table_Management_System
 
         private void button15_Click(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-29TVN88;Initial Catalog=time_table_management;Integrated Security=True");
+            con.Open();
+            SqlCommand command = new SqlCommand("insert into lecturesDB values('"+ int.Parse(metroTextBox1.Text)+ "','"+ metroTextBox51.Text+ "','" + metroComboBox3.Text + "','" + metroComboBox4.Text + "','" + metroComboBox5.Text + "','" + metroComboBox6.Text + "','" + metroComboBox7.Text + "')",con);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Successfully Updated");
+            con.Close();
         }
 
         private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
         {
 
         }
