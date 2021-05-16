@@ -46,6 +46,7 @@ namespace Time_table_Management_System
             BindData();
             ViewData();
             SeeData();
+            save();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -857,12 +858,29 @@ namespace Time_table_Management_System
 
             Gengrpid.Text = "";
 
-            Gengrpid.Text = yeartxt.Text + '.' + semtxt.Text + '.' + programtxt.Text + '.' + addgroupnumtxt.Text;
+            Gengrpid.Text = gen_yeartxt.Text + '.' + gen_semtxt.Text + '.' + gen_programme_txt.Text + '.' + gen_grpnumtxt.Text;
         }
 
         private void metroButton18_Click(object sender, EventArgs e)
         {
             //confirm and add btn
+        }
+
+
+        //data grid view method for grp id gen
+        private void save()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select Sid,Year,Semester,Programme, GrpNumber,GenGrpNum from Student ", con);
+            adapt.Fill(dt);
+            dataGridView6.DataSource = dt;
+            con.Close();
+
+
+
+
+
         }
 
         private void metroTextBox11_Click(object sender, EventArgs e)
@@ -985,6 +1003,27 @@ namespace Time_table_Management_System
         private void Gengrpid_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTextBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView6_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cell click gen grp id
+
+            Sid = Convert.ToInt32(dataGridView6.Rows[e.RowIndex].Cells[0].Value.ToString());
+            gen_yeartxt.Text = dataGridView6.Rows[e.RowIndex].Cells[1].Value.ToString();
+            gen_semtxt.Text = dataGridView6.Rows[e.RowIndex].Cells[2].Value.ToString();
+            gen_programme_txt.Text = dataGridView6.Rows[e.RowIndex].Cells[3].Value.ToString();
+            gen_grpnumtxt.Text = dataGridView6.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

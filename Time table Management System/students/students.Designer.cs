@@ -64,6 +64,7 @@ namespace Time_table_Management_System
             this.metroButton10 = new MetroFramework.Controls.MetroButton();
             this.addgroupnumtxt = new MetroFramework.Controls.MetroTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.subgroupnum = new MetroFramework.Controls.MetroTextBox();
             this.metroButton16 = new MetroFramework.Controls.MetroButton();
@@ -74,6 +75,7 @@ namespace Time_table_Management_System
             this.metroButton14 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Gengrpid = new System.Windows.Forms.TextBox();
             this.metroButton19 = new MetroFramework.Controls.MetroButton();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
@@ -117,8 +119,14 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Gengrpid = new System.Windows.Forms.TextBox();
+            this.gen_yeartxt = new MetroFramework.Controls.MetroTextBox();
+            this.gen_semtxt = new MetroFramework.Controls.MetroTextBox();
+            this.gen_programme_txt = new MetroFramework.Controls.MetroTextBox();
+            this.gen_grpnumtxt = new MetroFramework.Controls.MetroTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -714,6 +722,16 @@ namespace Time_table_Management_System
             this.tabPage4.Text = "Sub Group Numbers";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Coral;
+            this.label10.Location = new System.Drawing.Point(568, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 21);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Search :";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -879,6 +897,14 @@ namespace Time_table_Management_System
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage5.Controls.Add(this.label14);
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.gen_grpnumtxt);
+            this.tabPage5.Controls.Add(this.gen_programme_txt);
+            this.tabPage5.Controls.Add(this.gen_semtxt);
+            this.tabPage5.Controls.Add(this.gen_yeartxt);
             this.tabPage5.Controls.Add(this.Gengrpid);
             this.tabPage5.Controls.Add(this.metroButton19);
             this.tabPage5.Controls.Add(this.dataGridView6);
@@ -893,6 +919,14 @@ namespace Time_table_Management_System
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Genarate Group IDS";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
+            // 
+            // Gengrpid
+            // 
+            this.Gengrpid.Location = new System.Drawing.Point(137, 316);
+            this.Gengrpid.Name = "Gengrpid";
+            this.Gengrpid.Size = new System.Drawing.Size(198, 29);
+            this.Gengrpid.TabIndex = 7;
+            this.Gengrpid.TextChanged += new System.EventHandler(this.Gengrpid_TextChanged);
             // 
             // metroButton19
             // 
@@ -913,6 +947,7 @@ namespace Time_table_Management_System
             this.dataGridView6.RowHeadersWidth = 51;
             this.dataGridView6.Size = new System.Drawing.Size(490, 258);
             this.dataGridView6.TabIndex = 5;
+            this.dataGridView6.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellClick);
             this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
             // 
             // metroTextBox11
@@ -929,8 +964,7 @@ namespace Time_table_Management_System
             this.metroTextBox11.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox11.CustomButton.UseSelectable = true;
             this.metroTextBox11.CustomButton.Visible = false;
-            this.metroTextBox11.Lines = new string[] {
-        "Search"};
+            this.metroTextBox11.Lines = new string[0];
             this.metroTextBox11.Location = new System.Drawing.Point(713, 60);
             this.metroTextBox11.MaxLength = 32767;
             this.metroTextBox11.Name = "metroTextBox11";
@@ -942,7 +976,6 @@ namespace Time_table_Management_System
             this.metroTextBox11.ShortcutsEnabled = true;
             this.metroTextBox11.Size = new System.Drawing.Size(133, 23);
             this.metroTextBox11.TabIndex = 4;
-            this.metroTextBox11.Text = "Search";
             this.metroTextBox11.UseSelectable = true;
             this.metroTextBox11.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox11.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -974,9 +1007,9 @@ namespace Time_table_Management_System
             // 
             // gen_groupid
             // 
-            this.gen_groupid.Location = new System.Drawing.Point(102, 401);
+            this.gen_groupid.Location = new System.Drawing.Point(137, 360);
             this.gen_groupid.Name = "gen_groupid";
-            this.gen_groupid.Size = new System.Drawing.Size(96, 17);
+            this.gen_groupid.Size = new System.Drawing.Size(125, 22);
             this.gen_groupid.TabIndex = 1;
             this.gen_groupid.Text = "Generate Group ID";
             this.gen_groupid.UseSelectable = true;
@@ -1451,23 +1484,167 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // label10
+            // gen_yeartxt
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Coral;
-            this.label10.Location = new System.Drawing.Point(568, 88);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 21);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Search :";
             // 
-            // Gengrpid
             // 
-            this.Gengrpid.Location = new System.Drawing.Point(102, 353);
-            this.Gengrpid.Name = "Gengrpid";
-            this.Gengrpid.Size = new System.Drawing.Size(163, 29);
-            this.Gengrpid.TabIndex = 7;
-            this.Gengrpid.TextChanged += new System.EventHandler(this.Gengrpid_TextChanged);
+            // 
+            this.gen_yeartxt.CustomButton.Image = null;
+            this.gen_yeartxt.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.gen_yeartxt.CustomButton.Name = "";
+            this.gen_yeartxt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.gen_yeartxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.gen_yeartxt.CustomButton.TabIndex = 1;
+            this.gen_yeartxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.gen_yeartxt.CustomButton.UseSelectable = true;
+            this.gen_yeartxt.CustomButton.Visible = false;
+            this.gen_yeartxt.Lines = new string[0];
+            this.gen_yeartxt.Location = new System.Drawing.Point(160, 106);
+            this.gen_yeartxt.MaxLength = 32767;
+            this.gen_yeartxt.Name = "gen_yeartxt";
+            this.gen_yeartxt.PasswordChar = '\0';
+            this.gen_yeartxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gen_yeartxt.SelectedText = "";
+            this.gen_yeartxt.SelectionLength = 0;
+            this.gen_yeartxt.SelectionStart = 0;
+            this.gen_yeartxt.ShortcutsEnabled = true;
+            this.gen_yeartxt.Size = new System.Drawing.Size(175, 23);
+            this.gen_yeartxt.TabIndex = 8;
+            this.gen_yeartxt.UseSelectable = true;
+            this.gen_yeartxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.gen_yeartxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // gen_semtxt
+            // 
+            // 
+            // 
+            // 
+            this.gen_semtxt.CustomButton.Image = null;
+            this.gen_semtxt.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.gen_semtxt.CustomButton.Name = "";
+            this.gen_semtxt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.gen_semtxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.gen_semtxt.CustomButton.TabIndex = 1;
+            this.gen_semtxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.gen_semtxt.CustomButton.UseSelectable = true;
+            this.gen_semtxt.CustomButton.Visible = false;
+            this.gen_semtxt.Lines = new string[0];
+            this.gen_semtxt.Location = new System.Drawing.Point(160, 145);
+            this.gen_semtxt.MaxLength = 32767;
+            this.gen_semtxt.Name = "gen_semtxt";
+            this.gen_semtxt.PasswordChar = '\0';
+            this.gen_semtxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gen_semtxt.SelectedText = "";
+            this.gen_semtxt.SelectionLength = 0;
+            this.gen_semtxt.SelectionStart = 0;
+            this.gen_semtxt.ShortcutsEnabled = true;
+            this.gen_semtxt.Size = new System.Drawing.Size(175, 23);
+            this.gen_semtxt.TabIndex = 9;
+            this.gen_semtxt.UseSelectable = true;
+            this.gen_semtxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.gen_semtxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // gen_programme_txt
+            // 
+            // 
+            // 
+            // 
+            this.gen_programme_txt.CustomButton.Image = null;
+            this.gen_programme_txt.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.gen_programme_txt.CustomButton.Name = "";
+            this.gen_programme_txt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.gen_programme_txt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.gen_programme_txt.CustomButton.TabIndex = 1;
+            this.gen_programme_txt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.gen_programme_txt.CustomButton.UseSelectable = true;
+            this.gen_programme_txt.CustomButton.Visible = false;
+            this.gen_programme_txt.Lines = new string[0];
+            this.gen_programme_txt.Location = new System.Drawing.Point(160, 181);
+            this.gen_programme_txt.MaxLength = 32767;
+            this.gen_programme_txt.Name = "gen_programme_txt";
+            this.gen_programme_txt.PasswordChar = '\0';
+            this.gen_programme_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gen_programme_txt.SelectedText = "";
+            this.gen_programme_txt.SelectionLength = 0;
+            this.gen_programme_txt.SelectionStart = 0;
+            this.gen_programme_txt.ShortcutsEnabled = true;
+            this.gen_programme_txt.Size = new System.Drawing.Size(175, 23);
+            this.gen_programme_txt.TabIndex = 10;
+            this.gen_programme_txt.UseSelectable = true;
+            this.gen_programme_txt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.gen_programme_txt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.gen_programme_txt.Click += new System.EventHandler(this.metroTextBox4_Click);
+            // 
+            // gen_grpnumtxt
+            // 
+            // 
+            // 
+            // 
+            this.gen_grpnumtxt.CustomButton.Image = null;
+            this.gen_grpnumtxt.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.gen_grpnumtxt.CustomButton.Name = "";
+            this.gen_grpnumtxt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.gen_grpnumtxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.gen_grpnumtxt.CustomButton.TabIndex = 1;
+            this.gen_grpnumtxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.gen_grpnumtxt.CustomButton.UseSelectable = true;
+            this.gen_grpnumtxt.CustomButton.Visible = false;
+            this.gen_grpnumtxt.Lines = new string[0];
+            this.gen_grpnumtxt.Location = new System.Drawing.Point(160, 219);
+            this.gen_grpnumtxt.MaxLength = 32767;
+            this.gen_grpnumtxt.Name = "gen_grpnumtxt";
+            this.gen_grpnumtxt.PasswordChar = '\0';
+            this.gen_grpnumtxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gen_grpnumtxt.SelectedText = "";
+            this.gen_grpnumtxt.SelectionLength = 0;
+            this.gen_grpnumtxt.SelectionStart = 0;
+            this.gen_grpnumtxt.ShortcutsEnabled = true;
+            this.gen_grpnumtxt.Size = new System.Drawing.Size(175, 23);
+            this.gen_grpnumtxt.TabIndex = 11;
+            this.gen_grpnumtxt.UseSelectable = true;
+            this.gen_grpnumtxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.gen_grpnumtxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Coral;
+            this.label11.Location = new System.Drawing.Point(85, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 21);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Year :";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Coral;
+            this.label12.Location = new System.Drawing.Point(8, 219);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(128, 21);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "GroupNumber :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Coral;
+            this.label13.Location = new System.Drawing.Point(28, 181);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 21);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Programme :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Coral;
+            this.label14.Location = new System.Drawing.Point(48, 145);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 21);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Semester :";
             // 
             // students
             // 
@@ -1619,6 +1796,14 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Gengrpid;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private MetroFramework.Controls.MetroTextBox gen_grpnumtxt;
+        private MetroFramework.Controls.MetroTextBox gen_programme_txt;
+        private MetroFramework.Controls.MetroTextBox gen_semtxt;
+        private MetroFramework.Controls.MetroTextBox gen_yeartxt;
     }
 }
 
