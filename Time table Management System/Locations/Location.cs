@@ -1,21 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Data;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-
 
 
 namespace Time_table_Management_System
@@ -417,8 +410,8 @@ namespace Time_table_Management_System
                 con.Close();
 
                LoadLocations();
-             // ClearLocationData();
-             // ClearUpdateLocDetails();
+             ClearLocationData();
+             ClearUpdateLocDetails();
               loc_tabcontrol.SelectedTab = viewloc_tab;
 
             }
@@ -429,10 +422,68 @@ namespace Time_table_Management_System
 
         }
 
+
+        //fill combo box with database data
+        
+
+        private void building_cmb_DropDown(object sender, EventArgs e)
+        {
+            building_cmb.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT Building_Name FROM buildings";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                building_cmb.Items.Add(dr["Building_Name"].ToString());
+            }
+
+            con.Close();
+        }
+
+        private void room_cmb_DropDown(object sender, EventArgs e)
+        {
+
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT room_num from rooms where building_name ='" + building_cmb.Text + "'", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            room_cmb.Items.Clear();
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                room_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        private void ClearLocationData()
+        {
+            building_cmb.SelectedIndex = -1;
+            room_cmb.SelectedIndex = -1;
+            capacity_cmb.Value = 0;
+            roomtype_cmb.SelectedIndex = -1;
+
+        }
+
         private void clr_btn_Click(object sender, EventArgs e)
         {
 
+            ClearLocationData();
+
         }
+
+        private void ClearUpdateLocDetails()
+        {
+            editroom_cmb.SelectedIndex = -1;
+            edit_building_txt_box.Clear();
+            editcap_cmb.Value = 0;
+            room_type_txt_box.SelectedIndex = -1;
+        }
+
 
         private void metroLabel8_Click(object sender, EventArgs e)
         {
