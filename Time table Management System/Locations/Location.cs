@@ -5,6 +5,18 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Data;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+
 
 namespace Time_table_Management_System
 {
@@ -404,9 +416,9 @@ namespace Time_table_Management_System
                 MessageBox.Show("Location Added!");
                 con.Close();
 
-               // LoadLocations();
-              // ClearLocationData();
-              // ClearUpdateLocDetails();
+               LoadLocations();
+             // ClearLocationData();
+             // ClearUpdateLocDetails();
               loc_tabcontrol.SelectedTab = viewloc_tab;
 
             }
@@ -424,7 +436,28 @@ namespace Time_table_Management_System
 
         private void metroLabel8_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM locations WHERE room = '" + editroom_cmb.Text + "'";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
 
+            while (dr.Read())
+            {
+                string r_building = (string)dr["building"].ToString();
+                edit_building_txt_box.Text = r_building;
+                //editbuil_cmb.Text= r_building;
+
+                string r_capacity = (string)dr["capacity"].ToString();
+                editcap_cmb.Text = r_capacity;
+
+                string r_type = (string)dr["room_type"].ToString();
+                room_type_txt_box.Text = r_type;
+                //editbuil_cmb.Text = r_type;
+            }
+            con.Close();
         }
 
         private void editroom_cmb_SelectedIndexChanged(object sender, EventArgs e)
@@ -464,12 +497,31 @@ namespace Time_table_Management_System
 
         private void editloc_btn_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE locations SET capacity ='" + editcap_cmb.Text + "',room_type = '" + room_type_txt_box.Text + "' WHERE room ='" + editroom_cmb.Text + "'";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Location Updated!");
+            con.Close();
 
+            LoadLocations();
+           // ClearUpdateLocDetails();
+            loc_tabcontrol.SelectedTab = viewloc_tab;
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "DELETE FROM locations WHERE room = '" + editroom_cmb.Text + "'";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Location Deleted!");
+            con.Close();
 
+            LoadLocations();
+            loc_tabcontrol.SelectedTab = viewloc_tab;
         }
 
         private void metroLabel9_Click(object sender, EventArgs e)
