@@ -130,6 +130,7 @@ namespace Time_table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.button15 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1485,6 +1486,7 @@ namespace Time_table_Management_System
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage7.Controls.Add(this.button15);
             this.tabPage7.Controls.Add(this.dataGridView9);
             this.tabPage7.Controls.Add(this.metroTextBox12);
             this.tabPage7.Controls.Add(this.metroComboBox5);
@@ -1800,11 +1802,24 @@ namespace Time_table_Management_System
             // 
             this.dataGridView9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(32, 71);
+            this.dataGridView9.Location = new System.Drawing.Point(32, 79);
             this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(831, 338);
+            this.dataGridView9.Size = new System.Drawing.Size(831, 318);
             this.dataGridView9.TabIndex = 3;
             this.dataGridView9.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView9_CellContentClick_1);
+            // 
+            // button15
+            // 
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button15.Location = new System.Drawing.Point(742, 410);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(109, 32);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "Refresh";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // students
             // 
@@ -1967,6 +1982,7 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton8;
         private System.Windows.Forms.TextBox subgenid;
         private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.Button button15;
     }
 }
 

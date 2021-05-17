@@ -1171,5 +1171,16 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            //btn refresh for view 
+            string sqlstm = "Select Sid,Year,Semester,Programme,GrpNumber,SubGrpNum,GenGrpNum,GenSubGrpNum from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView9.DataSource = DS.Tables[0];
+
+        }
     }
 }
