@@ -1018,6 +1018,7 @@ namespace Time_table_Management_System
         private void metroTextBox12_Click(object sender, EventArgs e)
         {
             //search
+            viewtext_search.Text = "";
         }
 
 
@@ -1419,6 +1420,94 @@ namespace Time_table_Management_System
 
         private void y_sem_search_by_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void viewtext_search_TextChanged(object sender, EventArgs e)
+        {
+            if (view_drop.Text == "ID")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE Sid LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+            else if (view_drop.Text == "Year")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE Year LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+            else if (view_drop.Text == "Semester")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE Semester LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+            else if (view_drop.Text == "Programme")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE Programme LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+            else if (view_drop.Text == "Group No")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE GrpNumber LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+
+            else if (view_drop.Text == "Generate Group No")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE GenGrpNum LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+
+            else if (view_drop.Text == "Sub Group No")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE SubGrpNum LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
+
+            else if (view_drop.Text == "Generated Sub Group")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student WHERE GenSubGrpNum LIKE '%" + viewtext_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView9.DataSource = dt;
+                con.Close();
+            }
 
         }
     }
