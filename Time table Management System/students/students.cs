@@ -577,6 +577,10 @@ namespace Time_table_Management_System
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //programme grid view
+            BindData();
+            DisplayData();
+            //ClearData();
+            SeeData();
         }
 
 
@@ -916,7 +920,15 @@ namespace Time_table_Management_System
 
         private void metroButton19_Click(object sender, EventArgs e)
         {
-            //delete
+            //refresh btn
+
+            
+            string sqlstm = "Select Sid,Year,Semester,Programme, GrpNumber,GenGrpNum from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView6.DataSource = DS.Tables[0];
+
         }
 
 
@@ -1280,6 +1292,18 @@ namespace Time_table_Management_System
         private void metroButton24_Click(object sender, EventArgs e)
         {
             //update genm grp num
+
+            cmd = new SqlCommand("update Student set GenGrpNum=@gengrpnum  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@gengrpnum", Gengrpid.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Generated Group Number Saved Successfully");
+            con.Close();
+            save();
+            ClearData();
 
         }
 
