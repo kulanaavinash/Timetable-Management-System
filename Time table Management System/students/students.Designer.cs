@@ -30,7 +30,7 @@ namespace Time_table_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.search_pro = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@ namespace Time_table_Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.search_pr_text = new MetroFramework.Controls.MetroTextBox();
+            this.pro_drop = new MetroFramework.Controls.MetroComboBox();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.programtxt = new MetroFramework.Controls.MetroTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -139,8 +139,9 @@ namespace Time_table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.search_pro.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -162,7 +163,7 @@ namespace Time_table_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Controls.Add(this.search_pro);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(121, 103);
             this.panel1.Name = "panel1";
@@ -170,22 +171,22 @@ namespace Time_table_Management_System
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // tabControl1
+            // search_pro
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(33, 57);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(893, 499);
-            this.tabControl1.TabIndex = 0;
+            this.search_pro.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.search_pro.Controls.Add(this.tabPage1);
+            this.search_pro.Controls.Add(this.tabPage2);
+            this.search_pro.Controls.Add(this.tabPage3);
+            this.search_pro.Controls.Add(this.tabPage4);
+            this.search_pro.Controls.Add(this.tabPage5);
+            this.search_pro.Controls.Add(this.tabPage6);
+            this.search_pro.Controls.Add(this.tabPage7);
+            this.search_pro.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_pro.Location = new System.Drawing.Point(33, 57);
+            this.search_pro.Name = "search_pro";
+            this.search_pro.SelectedIndex = 0;
+            this.search_pro.Size = new System.Drawing.Size(893, 499);
+            this.search_pro.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -321,6 +322,7 @@ namespace Time_table_Management_System
             this.y_sem_search_by.TabIndex = 4;
             this.y_sem_search_by.UseSelectable = true;
             this.y_sem_search_by.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            this.y_sem_search_by.TextChanged += new System.EventHandler(this.y_sem_search_by_TextChanged);
             // 
             // metroButton2
             // 
@@ -407,14 +409,15 @@ namespace Time_table_Management_System
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.metroButton13);
             this.tabPage2.Controls.Add(this.metroButton5);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.metroButton7);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.metroTextBox5);
-            this.tabPage2.Controls.Add(this.metroComboBox1);
+            this.tabPage2.Controls.Add(this.search_pr_text);
+            this.tabPage2.Controls.Add(this.pro_drop);
             this.tabPage2.Controls.Add(this.metroButton6);
             this.tabPage2.Controls.Add(this.programtxt);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
@@ -451,7 +454,7 @@ namespace Time_table_Management_System
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Coral;
-            this.label6.Location = new System.Drawing.Point(592, 64);
+            this.label6.Location = new System.Drawing.Point(592, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 21);
             this.label6.TabIndex = 10;
@@ -491,50 +494,51 @@ namespace Time_table_Management_System
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // metroTextBox5
+            // search_pr_text
             // 
             // 
             // 
             // 
-            this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(144, 1);
-            this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox5.CustomButton.TabIndex = 1;
-            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox5.CustomButton.UseSelectable = true;
-            this.metroTextBox5.CustomButton.Visible = false;
-            this.metroTextBox5.Lines = new string[0];
-            this.metroTextBox5.Location = new System.Drawing.Point(667, 62);
-            this.metroTextBox5.MaxLength = 32767;
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.PasswordChar = '\0';
-            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox5.SelectedText = "";
-            this.metroTextBox5.SelectionLength = 0;
-            this.metroTextBox5.SelectionStart = 0;
-            this.metroTextBox5.ShortcutsEnabled = true;
-            this.metroTextBox5.Size = new System.Drawing.Size(166, 23);
-            this.metroTextBox5.TabIndex = 4;
-            this.metroTextBox5.UseSelectable = true;
-            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox5.Click += new System.EventHandler(this.programme_search);
+            this.search_pr_text.CustomButton.Image = null;
+            this.search_pr_text.CustomButton.Location = new System.Drawing.Point(144, 1);
+            this.search_pr_text.CustomButton.Name = "";
+            this.search_pr_text.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.search_pr_text.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.search_pr_text.CustomButton.TabIndex = 1;
+            this.search_pr_text.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.search_pr_text.CustomButton.UseSelectable = true;
+            this.search_pr_text.CustomButton.Visible = false;
+            this.search_pr_text.Lines = new string[0];
+            this.search_pr_text.Location = new System.Drawing.Point(667, 70);
+            this.search_pr_text.MaxLength = 32767;
+            this.search_pr_text.Name = "search_pr_text";
+            this.search_pr_text.PasswordChar = '\0';
+            this.search_pr_text.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.search_pr_text.SelectedText = "";
+            this.search_pr_text.SelectionLength = 0;
+            this.search_pr_text.SelectionStart = 0;
+            this.search_pr_text.ShortcutsEnabled = true;
+            this.search_pr_text.Size = new System.Drawing.Size(166, 23);
+            this.search_pr_text.TabIndex = 4;
+            this.search_pr_text.UseSelectable = true;
+            this.search_pr_text.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.search_pr_text.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.search_pr_text.TextChanged += new System.EventHandler(this.metroTextBox5_TextChanged);
+            this.search_pr_text.Click += new System.EventHandler(this.programme_search);
             // 
-            // metroComboBox1
+            // pro_drop
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
+            this.pro_drop.FormattingEnabled = true;
+            this.pro_drop.ItemHeight = 23;
+            this.pro_drop.Items.AddRange(new object[] {
             "Programme",
             "ID"});
-            this.metroComboBox1.Location = new System.Drawing.Point(311, 64);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(137, 29);
-            this.metroComboBox1.TabIndex = 3;
-            this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+            this.pro_drop.Location = new System.Drawing.Point(401, 64);
+            this.pro_drop.Name = "pro_drop";
+            this.pro_drop.Size = new System.Drawing.Size(137, 29);
+            this.pro_drop.TabIndex = 3;
+            this.pro_drop.UseSelectable = true;
+            this.pro_drop.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
             // 
             // metroButton6
             // 
@@ -1921,6 +1925,16 @@ namespace Time_table_Management_System
             this.label15.TabIndex = 14;
             this.label15.Text = "Search By :";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.Coral;
+            this.label20.Location = new System.Drawing.Point(307, 72);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(88, 21);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Search By:";
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1951,7 +1965,7 @@ namespace Time_table_Management_System
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.students_MouseDown);
             this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.search_pro.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -2000,7 +2014,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl search_pro;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -2018,8 +2032,8 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroTextBox programtxt;
         private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroTextBox search_pr_text;
+        private MetroFramework.Controls.MetroComboBox pro_drop;
         private System.Windows.Forms.DataGridView dataGridView2;
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroTextBox addgroupnumtxt;
@@ -2091,6 +2105,7 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton24;
         private MetroFramework.Controls.MetroButton metroButton25;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label20;
     }
 }
 

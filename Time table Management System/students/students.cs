@@ -527,6 +527,8 @@ namespace Time_table_Management_System
         private void programme_search(object sender, EventArgs e)
         {
             //programe search
+            search_pr_text.Text = "";
+
         }
 
         private void bt_programme_Editdetails(object sender, EventArgs e)
@@ -1389,6 +1391,35 @@ namespace Time_table_Management_System
                 dataGridView1.DataSource = dt;
                 con.Close();
             }
+        }
+
+        private void metroTextBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (pro_drop.Text == "ID")
+            {
+               // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,Programme FROM Student WHERE Sid LIKE '%" + search_pr_text.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView2.DataSource = dt;
+                con.Close();
+            }
+            else if (pro_drop.Text == "Programme")
+            {
+                //SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,Programme FROM Student WHERE Programme LIKE '%" + search_pr_text.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView2.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void y_sem_search_by_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
