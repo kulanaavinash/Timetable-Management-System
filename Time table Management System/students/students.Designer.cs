@@ -62,8 +62,8 @@ namespace Time_table_Management_System
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.g_numsearch = new MetroFramework.Controls.MetroTextBox();
+            this.g_num_drop = new MetroFramework.Controls.MetroComboBox();
             this.metroButton10 = new MetroFramework.Controls.MetroButton();
             this.addgroupnumtxt = new MetroFramework.Controls.MetroTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -600,8 +600,8 @@ namespace Time_table_Management_System
             this.tabPage3.Controls.Add(this.metroButton12);
             this.tabPage3.Controls.Add(this.metroButton11);
             this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Controls.Add(this.metroTextBox7);
-            this.tabPage3.Controls.Add(this.metroComboBox2);
+            this.tabPage3.Controls.Add(this.g_numsearch);
+            this.tabPage3.Controls.Add(this.g_num_drop);
             this.tabPage3.Controls.Add(this.metroButton10);
             this.tabPage3.Controls.Add(this.addgroupnumtxt);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
@@ -675,50 +675,51 @@ namespace Time_table_Management_System
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // metroTextBox7
+            // g_numsearch
             // 
             // 
             // 
             // 
-            this.metroTextBox7.CustomButton.Image = null;
-            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(139, 1);
-            this.metroTextBox7.CustomButton.Name = "";
-            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox7.CustomButton.TabIndex = 1;
-            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox7.CustomButton.UseSelectable = true;
-            this.metroTextBox7.CustomButton.Visible = false;
-            this.metroTextBox7.Lines = new string[0];
-            this.metroTextBox7.Location = new System.Drawing.Point(685, 82);
-            this.metroTextBox7.MaxLength = 32767;
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.PasswordChar = '\0';
-            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox7.SelectedText = "";
-            this.metroTextBox7.SelectionLength = 0;
-            this.metroTextBox7.SelectionStart = 0;
-            this.metroTextBox7.ShortcutsEnabled = true;
-            this.metroTextBox7.Size = new System.Drawing.Size(161, 23);
-            this.metroTextBox7.TabIndex = 4;
-            this.metroTextBox7.UseSelectable = true;
-            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox7.Click += new System.EventHandler(this.searcg_g_num);
+            this.g_numsearch.CustomButton.Image = null;
+            this.g_numsearch.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.g_numsearch.CustomButton.Name = "";
+            this.g_numsearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.g_numsearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.g_numsearch.CustomButton.TabIndex = 1;
+            this.g_numsearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.g_numsearch.CustomButton.UseSelectable = true;
+            this.g_numsearch.CustomButton.Visible = false;
+            this.g_numsearch.Lines = new string[0];
+            this.g_numsearch.Location = new System.Drawing.Point(685, 82);
+            this.g_numsearch.MaxLength = 32767;
+            this.g_numsearch.Name = "g_numsearch";
+            this.g_numsearch.PasswordChar = '\0';
+            this.g_numsearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.g_numsearch.SelectedText = "";
+            this.g_numsearch.SelectionLength = 0;
+            this.g_numsearch.SelectionStart = 0;
+            this.g_numsearch.ShortcutsEnabled = true;
+            this.g_numsearch.Size = new System.Drawing.Size(161, 23);
+            this.g_numsearch.TabIndex = 4;
+            this.g_numsearch.UseSelectable = true;
+            this.g_numsearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.g_numsearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.g_numsearch.TextChanged += new System.EventHandler(this.g_numsearch_TextChanged);
+            this.g_numsearch.Click += new System.EventHandler(this.searcg_g_num);
             // 
-            // metroComboBox2
+            // g_num_drop
             // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Items.AddRange(new object[] {
+            this.g_num_drop.FormattingEnabled = true;
+            this.g_num_drop.ItemHeight = 23;
+            this.g_num_drop.Items.AddRange(new object[] {
             "Group Number",
             "ID"});
-            this.metroComboBox2.Location = new System.Drawing.Point(438, 79);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(154, 29);
-            this.metroComboBox2.TabIndex = 3;
-            this.metroComboBox2.UseSelectable = true;
-            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            this.g_num_drop.Location = new System.Drawing.Point(438, 79);
+            this.g_num_drop.Name = "g_num_drop";
+            this.g_num_drop.Size = new System.Drawing.Size(154, 29);
+            this.g_num_drop.TabIndex = 3;
+            this.g_num_drop.UseSelectable = true;
+            this.g_num_drop.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
             // 
             // metroButton10
             // 
@@ -2117,8 +2118,8 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroTextBox addgroupnumtxt;
         private MetroFramework.Controls.MetroButton metroButton10;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox7;
+        private MetroFramework.Controls.MetroComboBox g_num_drop;
+        private MetroFramework.Controls.MetroTextBox g_numsearch;
         private System.Windows.Forms.DataGridView dataGridView3;
         private MetroFramework.Controls.MetroButton metroButton12;
         private MetroFramework.Controls.MetroButton metroButton11;

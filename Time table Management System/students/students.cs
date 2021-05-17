@@ -670,6 +670,8 @@ namespace Time_table_Management_System
         private void searcg_g_num(object sender, EventArgs e)
         {
             //search g num
+            g_numsearch.Text = "";
+
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1509,6 +1511,30 @@ namespace Time_table_Management_System
                 con.Close();
             }
 
+        }
+
+        private void g_numsearch_TextChanged(object sender, EventArgs e)
+        {
+            if (g_num_drop.Text == "ID")
+            {
+               // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,GrpNumber FROM Student WHERE Sid LIKE '%" + g_numsearch.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView3.DataSource = dt;
+                con.Close();
+            }
+            else if (g_num_drop.Text == "Group Number")
+            {
+               // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,GrpNumber FROM Student WHERE GrpNumber LIKE '%" + g_numsearch.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView3.DataSource = dt;
+                con.Close();
+            }
         }
     }
 }
