@@ -48,6 +48,7 @@ namespace Time_table_Management_System
             SeeData();
             save();
             add();
+            retrive();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -941,6 +942,20 @@ namespace Time_table_Management_System
         private void metroButton20_Click(object sender, EventArgs e)
         {
             //confirm and add btn
+
+            cmd = new SqlCommand("update Student set GenSubGrpNum=@gensubgrpnum  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@gensubgrpnum", subgenid.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Generated Sub Group Number Saved Successfully");
+            con.Close();
+            add();
+            ClearData();
+
+
         }
 
 
@@ -982,6 +997,27 @@ namespace Time_table_Management_System
         {
             //search
         }
+
+
+
+        //Display method for view details 
+        private void retrive()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select Sid,Year,Semester,Programme,GrpNumber,SubGrpNum,GenGrpNum,GenSubGrpNum from Student ", con);
+            adapt.Fill(dt);
+            dataGridView9.DataSource = dt;
+            con.Close();
+
+
+
+
+
+        }
+
+
+
 
         private void dataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1122,6 +1158,16 @@ namespace Time_table_Management_System
         }
 
         private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView9_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
