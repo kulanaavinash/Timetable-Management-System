@@ -12,10 +12,15 @@ namespace Time_table_Management_System
     public partial class Location : Form
 
     {
+
+
+
         SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
+
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -27,6 +32,23 @@ namespace Time_table_Management_System
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
+
+        private void LoadLocations()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select * from locations", con);
+            DataTable dt = new DataTable();
+
+
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+
+            loc_dgridv.AutoGenerateColumns = true;
+            loc_dgridv.DataSource = dt;
+            con.Close();
+        }
 
 
         public Location()
@@ -371,6 +393,27 @@ namespace Time_table_Management_System
 
         private void addloc_btn_Click(object sender, EventArgs e)
         {
+            if ((building_cmb.Text != string.Empty) && (room_cmb.Text != string.Empty) && (capacity_cmb.Text != string.Empty)
+               && (roomtype_cmb.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO [dbo].[Locations] ([building],[room],[capacity],[room_type]) VALUES ('" + building_cmb.Text + "','" + room_cmb.Text + "'," + capacity_cmb.Value + ",'" + roomtype_cmb.Text + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Location Added!");
+                con.Close();
+
+               // LoadLocations();
+              // ClearLocationData();
+              // ClearUpdateLocDetails();
+              loc_tabcontrol.SelectedTab = viewloc_tab;
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
