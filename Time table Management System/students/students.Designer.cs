@@ -134,6 +134,8 @@ namespace Time_table_Management_System
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.button16 = new System.Windows.Forms.Button();
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
+            this.metroButton22 = new MetroFramework.Controls.MetroButton();
+            this.metroButton23 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -553,6 +555,7 @@ namespace Time_table_Management_System
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage3.Controls.Add(this.metroButton22);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.metroButton12);
@@ -712,6 +715,7 @@ namespace Time_table_Management_System
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage4.Controls.Add(this.metroButton23);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.subgroupnum);
@@ -1861,6 +1865,24 @@ namespace Time_table_Management_System
             this.metroButton13.UseSelectable = true;
             this.metroButton13.Click += new System.EventHandler(this.metroButton13_Click_2);
             // 
+            // metroButton22
+            // 
+            this.metroButton22.Location = new System.Drawing.Point(519, 388);
+            this.metroButton22.Name = "metroButton22";
+            this.metroButton22.Size = new System.Drawing.Size(135, 40);
+            this.metroButton22.TabIndex = 11;
+            this.metroButton22.Text = "Update Group Number";
+            this.metroButton22.UseSelectable = true;
+            // 
+            // metroButton23
+            // 
+            this.metroButton23.Location = new System.Drawing.Point(507, 391);
+            this.metroButton23.Name = "metroButton23";
+            this.metroButton23.Size = new System.Drawing.Size(130, 39);
+            this.metroButton23.TabIndex = 13;
+            this.metroButton23.Text = "Add Sub Group Number";
+            this.metroButton23.UseSelectable = true;
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2026,6 +2048,8 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton9;
         private System.Windows.Forms.Button button16;
         private MetroFramework.Controls.MetroButton metroButton13;
+        private MetroFramework.Controls.MetroButton metroButton22;
+        private MetroFramework.Controls.MetroButton metroButton23;
     }
 }
 
