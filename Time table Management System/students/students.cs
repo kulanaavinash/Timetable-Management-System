@@ -1255,19 +1255,26 @@ namespace Time_table_Management_System
 
         private void metroButton13_Click_2(object sender, EventArgs e)
         {
-            //update query to programme
-            cmd = new SqlCommand("update Student set Programme=@programme  where Sid=@id", con);
+            
+        }
+
+        private void metroButton23_Click(object sender, EventArgs e)
+        {
+            //update query to subgrp
+            cmd = new SqlCommand("update Student set SubGrpnum=@subgrpnum  where Sid=@id", con);
 
             cmd.Parameters.AddWithValue("@id", Sid);
-            cmd.Parameters.AddWithValue("@programme", programtxt.Text);
+            cmd.Parameters.AddWithValue("@subgrpnum", subgroupnum.Text);
             con.Open();
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Year Semester Details Updated Successfully");
+            MessageBox.Show("Sub Group Number  Details Updated Successfully");
             con.Close();
             BindData();
             DisplayData();
             ClearData();
+            SeeData();
+            FormatData();
         }
     }
 }

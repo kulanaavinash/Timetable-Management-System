@@ -811,7 +811,7 @@ namespace Time_table_Management_System
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(335, 126);
+            this.dataGridView4.Location = new System.Drawing.Point(335, 138);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.Size = new System.Drawing.Size(474, 230);
@@ -1876,12 +1876,13 @@ namespace Time_table_Management_System
             // 
             // metroButton23
             // 
-            this.metroButton23.Location = new System.Drawing.Point(507, 391);
+            this.metroButton23.Location = new System.Drawing.Point(491, 391);
             this.metroButton23.Name = "metroButton23";
-            this.metroButton23.Size = new System.Drawing.Size(130, 39);
+            this.metroButton23.Size = new System.Drawing.Size(158, 39);
             this.metroButton23.TabIndex = 13;
-            this.metroButton23.Text = "Add Sub Group Number";
+            this.metroButton23.Text = "Update Sub Group Number";
             this.metroButton23.UseSelectable = true;
+            this.metroButton23.Click += new System.EventHandler(this.metroButton23_Click);
             // 
             // students
             // 
