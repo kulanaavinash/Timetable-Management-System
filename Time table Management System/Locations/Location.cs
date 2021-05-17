@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Data;
 using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 
 namespace Time_table_Management_System
@@ -391,6 +387,13 @@ namespace Time_table_Management_System
 
 
         }
+        private void loc_dgridv_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            loc_dgridv.Sort(loc_dgridv.Columns[0], ListSortDirection.Ascending);
+            loc_dgridv.Sort(loc_dgridv.Columns[1], ListSortDirection.Ascending);
+            loc_dgridv.Sort(loc_dgridv.Columns[2], ListSortDirection.Descending);
+            loc_dgridv.Sort(loc_dgridv.Columns[3], ListSortDirection.Ascending);
+        }
 
         private void loc_dgridv_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -533,28 +536,7 @@ namespace Time_table_Management_System
 
         private void metroLabel8_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM locations WHERE room = '" + editroom_cmb.Text + "'";
-            cmd.ExecuteNonQuery();
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                string r_building = (string)dr["building"].ToString();
-                edit_building_txt_box.Text = r_building;
-                //editbuil_cmb.Text= r_building;
-
-                string r_capacity = (string)dr["capacity"].ToString();
-                editcap_cmb.Text = r_capacity;
-
-                string r_type = (string)dr["room_type"].ToString();
-                room_type_txt_box.Text = r_type;
-                //editbuil_cmb.Text = r_type;
-            }
-            con.Close();
+           
         }
 
         private void editroom_cmb_SelectedIndexChanged(object sender, EventArgs e)
@@ -628,6 +610,12 @@ namespace Time_table_Management_System
             loc_tabcontrol.SelectedTab = viewloc_tab;
         }
 
+        private void Location_Load(object sender, EventArgs e)
+        {
+            LoadLocations();
+
+        }
+
         private void delete_btn_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -657,15 +645,30 @@ namespace Time_table_Management_System
 
         }
 
-        private void loc_dgridv_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        
+
+        private void editroom_cmb_DropDown(object sender, EventArgs e)
         {
-            loc_dgridv.Sort(loc_dgridv.Columns[0], ListSortDirection.Ascending);
-            loc_dgridv.Sort(loc_dgridv.Columns[1], ListSortDirection.Ascending);
-            loc_dgridv.Sort(loc_dgridv.Columns[2], ListSortDirection.Descending);
-            loc_dgridv.Sort(loc_dgridv.Columns[3], ListSortDirection.Ascending);
+
+            editroom_cmb.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT room FROM locations";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                editroom_cmb.Items.Add(dr["room"].ToString());
+            }
+
+            con.Close();
+
         }
-
-
 
     }
 }
