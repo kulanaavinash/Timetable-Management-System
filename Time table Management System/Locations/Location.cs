@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Data;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace Time_table_Management_System
 {
@@ -12,10 +17,15 @@ namespace Time_table_Management_System
     public partial class Location : Form
 
     {
+
+
+
         SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
+
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -27,6 +37,23 @@ namespace Time_table_Management_System
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
+
+        private void LoadLocations()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select * from locations", con);
+            DataTable dt = new DataTable();
+
+
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+
+            loc_dgridv.AutoGenerateColumns = true;
+            loc_dgridv.DataSource = dt;
+            con.Close();
+        }
 
 
         public Location()
@@ -371,17 +398,117 @@ namespace Time_table_Management_System
 
         private void addloc_btn_Click(object sender, EventArgs e)
         {
+            if ((building_cmb.Text != string.Empty) && (room_cmb.Text != string.Empty) && (capacity_cmb.Text != string.Empty)
+               && (roomtype_cmb.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO [dbo].[Locations] ([building],[room],[capacity],[room_type]) VALUES ('" + building_cmb.Text + "','" + room_cmb.Text + "'," + capacity_cmb.Value + ",'" + roomtype_cmb.Text + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Location Added!");
+                con.Close();
+
+               LoadLocations();
+             ClearLocationData();
+             ClearUpdateLocDetails();
+              loc_tabcontrol.SelectedTab = viewloc_tab;
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+        //fill combo box with database data
+        
+
+        private void building_cmb_DropDown(object sender, EventArgs e)
+        {
+            building_cmb.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT Building_Name FROM buildings";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                building_cmb.Items.Add(dr["Building_Name"].ToString());
+            }
+
+            con.Close();
+        }
+
+        private void room_cmb_DropDown(object sender, EventArgs e)
+        {
+
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT room_num from rooms where building_name ='" + building_cmb.Text + "'", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            room_cmb.Items.Clear();
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                room_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        private void ClearLocationData()
+        {
+            building_cmb.SelectedIndex = -1;
+            room_cmb.SelectedIndex = -1;
+            capacity_cmb.Value = 0;
+            roomtype_cmb.SelectedIndex = -1;
 
         }
 
         private void clr_btn_Click(object sender, EventArgs e)
         {
 
+            ClearLocationData();
+
         }
+
+        private void ClearUpdateLocDetails()
+        {
+            editroom_cmb.SelectedIndex = -1;
+            edit_building_txt_box.Clear();
+            editcap_cmb.Value = 0;
+            room_type_txt_box.SelectedIndex = -1;
+        }
+
 
         private void metroLabel8_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM locations WHERE room = '" + editroom_cmb.Text + "'";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
 
+            while (dr.Read())
+            {
+                string r_building = (string)dr["building"].ToString();
+                edit_building_txt_box.Text = r_building;
+                //editbuil_cmb.Text= r_building;
+
+                string r_capacity = (string)dr["capacity"].ToString();
+                editcap_cmb.Text = r_capacity;
+
+                string r_type = (string)dr["room_type"].ToString();
+                room_type_txt_box.Text = r_type;
+                //editbuil_cmb.Text = r_type;
+            }
+            con.Close();
         }
 
         private void editroom_cmb_SelectedIndexChanged(object sender, EventArgs e)
@@ -421,12 +548,31 @@ namespace Time_table_Management_System
 
         private void editloc_btn_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE locations SET capacity ='" + editcap_cmb.Text + "',room_type = '" + room_type_txt_box.Text + "' WHERE room ='" + editroom_cmb.Text + "'";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Location Updated!");
+            con.Close();
 
+            LoadLocations();
+           // ClearUpdateLocDetails();
+            loc_tabcontrol.SelectedTab = viewloc_tab;
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "DELETE FROM locations WHERE room = '" + editroom_cmb.Text + "'";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Location Deleted!");
+            con.Close();
 
+            LoadLocations();
+            loc_tabcontrol.SelectedTab = viewloc_tab;
         }
 
         private void metroLabel9_Click(object sender, EventArgs e)
