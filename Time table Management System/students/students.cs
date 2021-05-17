@@ -1252,5 +1252,22 @@ namespace Time_table_Management_System
 
 
         }
+
+        private void metroButton13_Click_2(object sender, EventArgs e)
+        {
+            //update query to programme
+            cmd = new SqlCommand("update Student set Programme=@programme  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@programme", programtxt.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Year Semester Details Updated Successfully");
+            con.Close();
+            BindData();
+            DisplayData();
+            ClearData();
+        }
     }
 }

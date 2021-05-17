@@ -133,6 +133,7 @@ namespace Time_table_Management_System
             this.button15 = new System.Windows.Forms.Button();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.button16 = new System.Windows.Forms.Button();
+            this.metroButton13 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -389,6 +390,7 @@ namespace Time_table_Management_System
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage2.Controls.Add(this.metroButton13);
             this.tabPage2.Controls.Add(this.metroButton5);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label4);
@@ -1832,7 +1834,7 @@ namespace Time_table_Management_System
             this.metroButton9.Name = "metroButton9";
             this.metroButton9.Size = new System.Drawing.Size(150, 35);
             this.metroButton9.TabIndex = 13;
-            this.metroButton9.Text = "Update ";
+            this.metroButton9.Text = "Update Year Semester";
             this.metroButton9.UseSelectable = true;
             this.metroButton9.Click += new System.EventHandler(this.metroButton9_Click);
             // 
@@ -1848,6 +1850,16 @@ namespace Time_table_Management_System
             this.button16.Text = "Delete";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // metroButton13
+            // 
+            this.metroButton13.Location = new System.Drawing.Point(506, 388);
+            this.metroButton13.Name = "metroButton13";
+            this.metroButton13.Size = new System.Drawing.Size(155, 38);
+            this.metroButton13.TabIndex = 12;
+            this.metroButton13.Text = "Update Programme";
+            this.metroButton13.UseSelectable = true;
+            this.metroButton13.Click += new System.EventHandler(this.metroButton13_Click_2);
             // 
             // students
             // 
@@ -2013,6 +2025,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Button button15;
         private MetroFramework.Controls.MetroButton metroButton9;
         private System.Windows.Forms.Button button16;
+        private MetroFramework.Controls.MetroButton metroButton13;
     }
 }
 
