@@ -16,7 +16,7 @@ namespace Time_table_Management_System
 
 
 
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
@@ -55,6 +55,8 @@ namespace Time_table_Management_System
         public Location()
         {
             InitializeComponent();
+            LoadLocations();
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
 
@@ -340,50 +342,7 @@ namespace Time_table_Management_System
         private void search_by_cmb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (search_by_cmb.Text == "Building")
-            {
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE building LIKE '%" + search_txt_box.Text + "%'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                loc_dgridv.DataSource = dt;
-                con.Close();
-
-            }
-
-
-            if (search_by_cmb.Text == "Room")
-            {
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE room LIKE '%" + search_txt_box.Text + "%'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                loc_dgridv.DataSource = dt;
-                con.Close();
-
-            }
-
-            if (search_by_cmb.Text == "Capacity")
-            {
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE capacity LIKE '%" + search_txt_box.Text + "%'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                loc_dgridv.DataSource = dt;
-                con.Close();
-
-            }
-
-            if (search_by_cmb.Text == "Room Type")
-            {
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE room_type LIKE '%" + search_txt_box.Text + "%'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                loc_dgridv.DataSource = dt;
-                con.Close();
-
-            }
+            
 
 
         }
@@ -471,9 +430,11 @@ namespace Time_table_Management_System
 
         }
 
+       
+
 
         //fill combo box with database data
-        
+
 
         private void building_cmb_DropDown(object sender, EventArgs e)
         {
@@ -553,14 +514,14 @@ namespace Time_table_Management_System
             {
                 string r_building = (string)dr["building"].ToString();
                 edit_building_txt_box.Text = r_building;
-                //editbuil_cmb.Text= r_building;
+                
 
                 string r_capacity = (string)dr["capacity"].ToString();
                 editcap_cmb.Text = r_capacity;
 
                 string r_type = (string)dr["room_type"].ToString();
                 room_type_txt_box.Text = r_type;
-                //editbuil_cmb.Text = r_type;
+                
             }
             con.Close();
         }
@@ -670,5 +631,51 @@ namespace Time_table_Management_System
 
         }
 
+        private void search_txt_box_TextChanged(object sender, EventArgs e)
+        {
+            //text change loaction search
+
+            if(search_by_cmb.Text == "Room")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT room,building,capacity,room_type FROM Locations WHERE room LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+            }
+            else if (search_by_cmb.Text == "Building")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT room,building,capacity,room_type FROM Locations WHERE building LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+            }
+            else if (search_by_cmb.Text == "Capacity")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT room,building,capacity,room_type FROM Locations WHERE capacity LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+            }
+            else if (search_by_cmb.Text == "Room Type")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT room,building,capacity,room_type FROM Locations WHERE room_type LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+            }
+
+        }
     }
 }
