@@ -132,6 +132,7 @@ namespace Time_table_Management_System
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.button15 = new System.Windows.Forms.Button();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
+            this.button16 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -236,9 +237,9 @@ namespace Time_table_Management_System
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(665, 401);
+            this.metroButton4.Location = new System.Drawing.Point(651, 401);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(121, 35);
+            this.metroButton4.Size = new System.Drawing.Size(137, 35);
             this.metroButton4.TabIndex = 8;
             this.metroButton4.Text = "Refresh";
             this.metroButton4.UseSelectable = true;
@@ -252,7 +253,7 @@ namespace Time_table_Management_System
             this.dataGridView1.Location = new System.Drawing.Point(321, 119);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 247);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -315,9 +316,9 @@ namespace Time_table_Management_System
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(62, 297);
+            this.metroButton1.Location = new System.Drawing.Point(321, 401);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(168, 35);
+            this.metroButton1.Size = new System.Drawing.Size(155, 35);
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Add year Semester";
             this.metroButton1.UseSelectable = true;
@@ -1488,6 +1489,7 @@ namespace Time_table_Management_System
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage7.Controls.Add(this.button16);
             this.tabPage7.Controls.Add(this.button15);
             this.tabPage7.Controls.Add(this.dataGridView9);
             this.tabPage7.Controls.Add(this.metroTextBox12);
@@ -1808,6 +1810,7 @@ namespace Time_table_Management_System
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.Size = new System.Drawing.Size(831, 318);
             this.dataGridView9.TabIndex = 3;
+            this.dataGridView9.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView9_CellClick);
             this.dataGridView9.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView9_CellContentClick_1);
             // 
             // button15
@@ -1825,13 +1828,26 @@ namespace Time_table_Management_System
             // 
             // metroButton9
             // 
-            this.metroButton9.Location = new System.Drawing.Point(324, 401);
+            this.metroButton9.Location = new System.Drawing.Point(489, 401);
             this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(168, 35);
+            this.metroButton9.Size = new System.Drawing.Size(150, 35);
             this.metroButton9.TabIndex = 13;
             this.metroButton9.Text = "Update ";
             this.metroButton9.UseSelectable = true;
             this.metroButton9.Click += new System.EventHandler(this.metroButton9_Click);
+            // 
+            // button16
+            // 
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button16.Location = new System.Drawing.Point(595, 410);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(109, 32);
+            this.button16.TabIndex = 15;
+            this.button16.Text = "Delete";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // students
             // 
@@ -1996,6 +2012,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.Button button15;
         private MetroFramework.Controls.MetroButton metroButton9;
+        private System.Windows.Forms.Button button16;
     }
 }
 

@@ -1200,5 +1200,57 @@ namespace Time_table_Management_System
             DisplayData();
             ClearData();
         }
+
+        private void metroButton13_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+
+        private void dataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Sid = Convert.ToInt32(dataGridView9.Rows[e.RowIndex].Cells[0].Value.ToString());
+           
+
+
+            //cell click event for view details
+            //view details data deleted
+            /*
+            if(MessageBox.Show("Are you sure to delete this??","Delete record" ,MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(dataGridView9.Rows[e.RowIndex].Cells["Sid"].FormattedValue.ToString());
+                con.Open();
+                SqlCommand com = new SqlCommand("Delete Student where Sid ='"+id+"'", con);
+                com.ExecuteNonQuery();
+                MessageBox.Show("Successfully deleted ");
+                con.Close();
+                retrive();
+               }*/
+        }
+
+        //Delete function to view details with pop up message
+        private void button16_Click(object sender, EventArgs e)
+        {
+             if (MessageBox.Show("Are you sure to delete this, This Process cannot be undone??", "Delete record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            
+            {
+                cmd = new SqlCommand("delete Student where Sid=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", Sid);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                retrive();
+
+                }
+            else
+            {
+                MessageBox.Show("Rcord Details not deleted");
+            }
+
+
+        }
     }
 }
