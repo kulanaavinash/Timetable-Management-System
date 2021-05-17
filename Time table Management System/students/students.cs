@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Time_table_Management_System
 {
@@ -384,6 +386,7 @@ namespace Time_table_Management_System
         private void y_sem_search(object sender, EventArgs e)
         {
             //search y_sem
+            searchboxy_sem.Text = "";
         }
 
         private void y_sem_btn_Edit_details(object sender, EventArgs e)
@@ -1351,6 +1354,41 @@ namespace Time_table_Management_System
             con.Close();
             add();
             ClearData();
+        }
+
+        private void metroTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            //TEXT CHANGED EVENT FOR SEARCH
+            if (y_sem_search_by.Text == "Year")
+            {
+               // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,Year,Semester FROM Student WHERE Year LIKE '%" + searchboxy_sem.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+            else if (y_sem_search_by.Text == "Semester")
+            {
+               // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,Year,semester FROM Student WHERE Semester LIKE '%" + searchboxy_sem.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+            else if (y_sem_search_by.Text == "ID")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,Year,semester FROM Student WHERE Sid LIKE '%" + searchboxy_sem.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
         }
     }
 }
