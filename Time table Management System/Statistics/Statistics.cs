@@ -14,6 +14,10 @@ namespace Time_table_Management_System
 
     public partial class Statistics : Form
     {
+
+
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -292,6 +296,16 @@ namespace Time_table_Management_System
         }
 
         private void chart4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void metroButton2_Click_1(object sender, EventArgs e)
         {
 
         }

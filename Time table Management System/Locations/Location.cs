@@ -553,14 +553,14 @@ namespace Time_table_Management_System
             {
                 string r_building = (string)dr["building"].ToString();
                 edit_building_txt_box.Text = r_building;
-                //editbuil_cmb.Text= r_building;
+                
 
                 string r_capacity = (string)dr["capacity"].ToString();
                 editcap_cmb.Text = r_capacity;
 
                 string r_type = (string)dr["room_type"].ToString();
                 room_type_txt_box.Text = r_type;
-                //editbuil_cmb.Text = r_type;
+                
             }
             con.Close();
         }
