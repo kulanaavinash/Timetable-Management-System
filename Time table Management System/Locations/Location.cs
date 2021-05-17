@@ -410,9 +410,9 @@ namespace Time_table_Management_System
                 con.Close();
 
                LoadLocations();
-             ClearLocationData();
-             ClearUpdateLocDetails();
-              loc_tabcontrol.SelectedTab = viewloc_tab;
+               ClearLocationData();
+               ClearUpdateLocDetails();
+               loc_tabcontrol.SelectedTab = viewloc_tab;
 
             }
             else
@@ -557,7 +557,7 @@ namespace Time_table_Management_System
             con.Close();
 
             LoadLocations();
-           // ClearUpdateLocDetails();
+            ClearUpdateLocDetails();
             loc_tabcontrol.SelectedTab = viewloc_tab;
         }
 
