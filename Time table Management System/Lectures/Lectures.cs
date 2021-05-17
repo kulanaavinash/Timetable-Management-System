@@ -41,7 +41,8 @@ namespace Time_table_Management_System
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            //dashboard panel main
+            BindData();//dashboard panel main
+
         }
 
 
@@ -101,7 +102,7 @@ namespace Time_table_Management_System
         {
             this.Hide();
             Room f2 = new Room();
-            f2.Show(); 
+            f2.Show();
         }
 
         private void btn_advanced_header(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace Time_table_Management_System
         private void btn_genarate_header(object sender, EventArgs e)
         {
             this.Hide();
-            Generate f2 = new Generate ();
+            Generate f2 = new Generate();
             f2.Show();
         }
 
@@ -343,15 +344,33 @@ namespace Time_table_Management_System
         {
 
         }
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-29TVN88;Initial Catalog=time_table_management;Integrated Security=True");
 
         private void button15_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-29TVN88;Initial Catalog=time_table_management;Integrated Security=True");
-            con.Open();
-            SqlCommand command = new SqlCommand("insert into lecturesDB values('"+ int.Parse(metroTextBox1.Text)+ "','"+ metroTextBox51.Text+ "','" + metroComboBox3.Text + "','" + metroComboBox4.Text + "','" + metroComboBox5.Text + "','" + metroComboBox6.Text + "','" + metroComboBox7.Text + "')",con);
+            if (metroTextBox2.Text != "")
+            {
+                con.Open();
+            SqlCommand command = new SqlCommand("insert into lecturesDB values('" + int.Parse(metroTextBox1.Text) + "','" + metroTextBox51.Text + "','" + metroComboBox3.Text + "','" + metroComboBox4.Text + "','" + metroComboBox5.Text + "','" + metroComboBox6.Text + "','" + metroComboBox7.Text + "')", con);
             command.ExecuteNonQuery();
             MessageBox.Show("Successfully Updated");
             con.Close();
+            BindData();
+            }
+            else
+            {
+                MessageBox.Show("Put Lectures details");
+            }
+        }
+        void BindData()
+        {
+            SqlCommand command = new SqlCommand("select * from lecturesDB", con);
+            SqlDataAdapter sd = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView2.DataSource = dt;
+            dataGridView3.DataSource = dt;
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -367,6 +386,108 @@ namespace Time_table_Management_System
         private void label19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            BindData();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox2.Text != "")
+            {
+                con.Open();
+            SqlCommand command = new SqlCommand("update lecturesDB set Lname ='"+ metroTextBox52.Text+ "',Lfaculty ='" + metroComboBox12.Text + "',Ldep ='" + metroComboBox11.Text + "',Lcenter ='" + metroComboBox10.Text + "',lbuild ='" + metroComboBox9.Text + "', Llevel='" + metroComboBox8.Text + "' where LID = '"+int.Parse(metroTextBox2.Text) +"'", con);
+            command.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Successful Updated");
+            BindData();
+            }
+            else
+            {
+                MessageBox.Show("Put Lectures ID [LID]");
+            }
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox2.Text != "")
+            {
+                if (MessageBox.Show("Are you sure to Delete?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand("Delete lecturesDB where LID = '" + metroTextBox2.Text + "' ", con);
+                    command.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Successful Deleted");
+                    BindData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Put Lectures ID [LID]");
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox2.Text != "")
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("select Lname,Lfaculty,Ldep,Lcenter,lbuild,Llevel from lecturesDB where LID = '"+int.Parse(metroTextBox2.Text) +"'", con);
+                SqlDataReader srd = command.ExecuteReader();
+                while(srd.Read())
+                {
+                    metroTextBox52.Text = srd.GetValue(0).ToString();
+                    metroComboBox12.Text = srd.GetValue(1).ToString();
+                    metroComboBox11.Text = srd.GetValue(2).ToString();
+                    metroComboBox10.Text = srd.GetValue(3).ToString();
+                    metroComboBox9.Text = srd.GetValue(4).ToString();
+                    metroComboBox8.Text = srd.GetValue(5).ToString();
+                   
+                }
+                con.Close();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Put Lectures ID [LID]");
+            }
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            if (metroComboBox2.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from lecturesDB where LID = '" + int.Parse(metroComboBox2.Text) + "' ", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Put Lectures level");
+            }
         }
     }
 }

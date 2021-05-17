@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace Time_table_Management_System.Subjects
 {
@@ -40,7 +41,7 @@ namespace Time_table_Management_System.Subjects
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            //dashboard panel main
+            BindData();//dashboard panel main
         }
 
 
@@ -220,6 +221,141 @@ namespace Time_table_Management_System.Subjects
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-29TVN88;Initial Catalog=time_table_management;Integrated Security=True");
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox2.Text != "")
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("insert into subjectsDB values('" + int.Parse(metroTextBox2.Text) + "','" + metroTextBox1.Text + "','" + int.Parse(metroComboBox3.Text) + "','" + metroComboBox4.Text + "','" + int.Parse(metroComboBox5.Text) + "','" + int.Parse(metroComboBox6.Text) + "','" + int.Parse(metroComboBox7.Text) + "','" + int.Parse(metroComboBox8.Text) + "')", con);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Updated");
+                con.Close();
+                BindData();
+            }
+            else
+            {
+                MessageBox.Show("Put Lectures details");
+            }
+        }
+        void BindData()
+        {
+            SqlCommand command = new SqlCommand("select * from subjectsDB", con);
+            SqlDataAdapter sd = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView2.DataSource = dt;
+            dataGridView3.DataSource = dt;
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        private void button100_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox3.Text != "")
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("update subjectsDB set subname ='" + metroTextBox4.Text + "',ofdyear ='" + metroComboBox14.Text + "',ofdsemester ='" + metroComboBox13.Text + "',nooflectures ='" + metroComboBox12.Text + "',nooftutorial ='" + metroComboBox11.Text + "', noofhours='" + metroComboBox10.Text + "', noofeve='" + metroComboBox9.Text + "' where subcode = '" + int.Parse(metroTextBox3.Text) + "'", con);
+                command.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Successful Updated");
+                BindData();
+            }
+            else
+            {
+                MessageBox.Show("Put students code [LID]");
+            }
+        }
+
+        private void button101_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox3.Text != "")
+            {
+                if (MessageBox.Show("Are you sure to Delete?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand("Delete subjectsDB where subcode = '" + metroTextBox3.Text + "' ", con);
+                    command.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Successful Deleted");
+                    BindData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Put subjects code [subcode]");
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (metroTextBox3.Text != "")
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("select subname,ofdyear,ofdsemester,nooflectures,nooftutorial,noofhours,noofeve from subjectsDB where subcode = '" + int.Parse(metroTextBox3.Text) + "'", con);
+                SqlDataReader srd = command.ExecuteReader();
+                while (srd.Read())
+                {
+                    metroTextBox4.Text = srd.GetValue(0).ToString();
+                    metroComboBox14.Text = srd.GetValue(1).ToString();
+                    metroComboBox13.Text = srd.GetValue(2).ToString();
+                    metroComboBox12.Text = srd.GetValue(3).ToString();
+                    metroComboBox11.Text = srd.GetValue(4).ToString();
+                    metroComboBox10.Text = srd.GetValue(5).ToString();
+                    metroComboBox9.Text = srd.GetValue(6).ToString();
+
+                }
+                con.Close();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Put Enter the subjectcode [subjectcode]");
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (metroComboBox1.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from subjectsDB where ofdyear = '" + int.Parse(metroComboBox1.Text) + "' ", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Put offered year [ofdyear]");
+            }
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
