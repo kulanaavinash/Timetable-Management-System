@@ -136,6 +136,7 @@ namespace Time_table_Management_System
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
             this.metroButton22 = new MetroFramework.Controls.MetroButton();
             this.metroButton23 = new MetroFramework.Controls.MetroButton();
+            this.metroButton24 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -909,6 +910,7 @@ namespace Time_table_Management_System
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage5.Controls.Add(this.metroButton24);
             this.tabPage5.Controls.Add(this.metroButton3);
             this.tabPage5.Controls.Add(this.label14);
             this.tabPage5.Controls.Add(this.label13);
@@ -1119,7 +1121,7 @@ namespace Time_table_Management_System
             this.metroButton19.Name = "metroButton19";
             this.metroButton19.Size = new System.Drawing.Size(124, 35);
             this.metroButton19.TabIndex = 6;
-            this.metroButton19.Text = "Delete";
+            this.metroButton19.Text = "Refresh";
             this.metroButton19.UseSelectable = true;
             this.metroButton19.Click += new System.EventHandler(this.metroButton19_Click);
             // 
@@ -1182,7 +1184,7 @@ namespace Time_table_Management_System
             // 
             // metroButton18
             // 
-            this.metroButton18.Location = new System.Drawing.Point(524, 388);
+            this.metroButton18.Location = new System.Drawing.Point(370, 388);
             this.metroButton18.Name = "metroButton18";
             this.metroButton18.Size = new System.Drawing.Size(170, 35);
             this.metroButton18.TabIndex = 2;
@@ -1873,6 +1875,7 @@ namespace Time_table_Management_System
             this.metroButton22.TabIndex = 11;
             this.metroButton22.Text = "Update Group Number";
             this.metroButton22.UseSelectable = true;
+            this.metroButton22.Click += new System.EventHandler(this.metroButton22_Click);
             // 
             // metroButton23
             // 
@@ -1883,6 +1886,16 @@ namespace Time_table_Management_System
             this.metroButton23.Text = "Update Sub Group Number";
             this.metroButton23.UseSelectable = true;
             this.metroButton23.Click += new System.EventHandler(this.metroButton23_Click);
+            // 
+            // metroButton24
+            // 
+            this.metroButton24.Location = new System.Drawing.Point(546, 388);
+            this.metroButton24.Name = "metroButton24";
+            this.metroButton24.Size = new System.Drawing.Size(170, 35);
+            this.metroButton24.TabIndex = 17;
+            this.metroButton24.Text = "Update Gen Grp Number";
+            this.metroButton24.UseSelectable = true;
+            this.metroButton24.Click += new System.EventHandler(this.metroButton24_Click);
             // 
             // students
             // 
@@ -2051,6 +2064,7 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton13;
         private MetroFramework.Controls.MetroButton metroButton22;
         private MetroFramework.Controls.MetroButton metroButton23;
+        private MetroFramework.Controls.MetroButton metroButton24;
     }
 }
 

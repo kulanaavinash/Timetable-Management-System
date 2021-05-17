@@ -1261,7 +1261,7 @@ namespace Time_table_Management_System
         private void metroButton23_Click(object sender, EventArgs e)
         {
             //update query to subgrp
-            cmd = new SqlCommand("update Student set SubGrpnum=@subgrpnum  where Sid=@id", con);
+            cmd = new SqlCommand("update Student set SubGrpNum=@subgrpnum  where Sid=@id", con);
 
             cmd.Parameters.AddWithValue("@id", Sid);
             cmd.Parameters.AddWithValue("@subgrpnum", subgroupnum.Text);
@@ -1272,9 +1272,30 @@ namespace Time_table_Management_System
             con.Close();
             BindData();
             DisplayData();
-            ClearData();
-            SeeData();
-            FormatData();
+            //ClearData();
+           SeeData();
+           
+        }
+
+        private void metroButton24_Click(object sender, EventArgs e)
+        {
+            //update genm grp num
+
+        }
+
+        private void metroButton22_Click(object sender, EventArgs e)
+        {
+            //update query to grp num
+            cmd = new SqlCommand("update Student set GrpNumber=@grpnumber  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@grpnumber", addgroupnumtxt.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show(" Group Number  Details Updated Successfully");
+            con.Close();
+            ViewData();
         }
     }
 }
