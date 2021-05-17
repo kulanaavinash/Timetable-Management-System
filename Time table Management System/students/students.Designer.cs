@@ -140,6 +140,8 @@ namespace Time_table_Management_System
             this.Hwbtn = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.search_pro.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -229,6 +231,7 @@ namespace Time_table_Management_System
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label5.Location = new System.Drawing.Point(590, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 21);
@@ -238,6 +241,7 @@ namespace Time_table_Management_System
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label3.Location = new System.Drawing.Point(58, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 21);
@@ -247,6 +251,7 @@ namespace Time_table_Management_System
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label2.Location = new System.Drawing.Point(58, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 21);
@@ -453,7 +458,7 @@ namespace Time_table_Management_System
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Coral;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label6.Location = new System.Drawing.Point(592, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 21);
@@ -464,7 +469,7 @@ namespace Time_table_Management_System
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label4.ForeColor = System.Drawing.Color.Coral;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label4.Location = new System.Drawing.Point(63, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 21);
@@ -615,7 +620,7 @@ namespace Time_table_Management_System
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Coral;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label8.Location = new System.Drawing.Point(598, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 21);
@@ -625,7 +630,7 @@ namespace Time_table_Management_System
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Coral;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label7.Location = new System.Drawing.Point(58, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 21);
@@ -786,7 +791,7 @@ namespace Time_table_Management_System
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Coral;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label10.Location = new System.Drawing.Point(568, 88);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 21);
@@ -796,7 +801,7 @@ namespace Time_table_Management_System
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Coral;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label9.Location = new System.Drawing.Point(73, 156);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(165, 21);
@@ -1006,7 +1011,7 @@ namespace Time_table_Management_System
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.Coral;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label14.Location = new System.Drawing.Point(48, 145);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 21);
@@ -1016,7 +1021,7 @@ namespace Time_table_Management_System
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Coral;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label13.Location = new System.Drawing.Point(28, 181);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 21);
@@ -1026,7 +1031,7 @@ namespace Time_table_Management_System
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Coral;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label12.Location = new System.Drawing.Point(8, 219);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(128, 21);
@@ -1036,7 +1041,7 @@ namespace Time_table_Management_System
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Coral;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label11.Location = new System.Drawing.Point(85, 106);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 21);
@@ -1319,7 +1324,7 @@ namespace Time_table_Management_System
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Coral;
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label19.Location = new System.Drawing.Point(177, 43);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(88, 21);
@@ -1329,7 +1334,7 @@ namespace Time_table_Management_System
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Coral;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label18.Location = new System.Drawing.Point(41, 110);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(108, 21);
@@ -1340,7 +1345,7 @@ namespace Time_table_Management_System
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Coral;
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label17.Location = new System.Drawing.Point(41, 154);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 21);
@@ -1351,7 +1356,7 @@ namespace Time_table_Management_System
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Coral;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label16.Location = new System.Drawing.Point(36, 200);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(108, 21);
@@ -1361,7 +1366,7 @@ namespace Time_table_Management_System
             // sub_genyear
             // 
             this.sub_genyear.AutoSize = true;
-            this.sub_genyear.ForeColor = System.Drawing.Color.Coral;
+            this.sub_genyear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.sub_genyear.Location = new System.Drawing.Point(41, 41);
             this.sub_genyear.Name = "sub_genyear";
             this.sub_genyear.Size = new System.Drawing.Size(51, 21);
@@ -1566,6 +1571,8 @@ namespace Time_table_Management_System
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage7.Controls.Add(this.label22);
+            this.tabPage7.Controls.Add(this.label21);
             this.tabPage7.Controls.Add(this.button16);
             this.tabPage7.Controls.Add(this.button15);
             this.tabPage7.Controls.Add(this.dataGridView9);
@@ -1631,7 +1638,7 @@ namespace Time_table_Management_System
             this.metroTextBox12.CustomButton.UseSelectable = true;
             this.metroTextBox12.CustomButton.Visible = false;
             this.metroTextBox12.Lines = new string[0];
-            this.metroTextBox12.Location = new System.Drawing.Point(742, 25);
+            this.metroTextBox12.Location = new System.Drawing.Point(730, 31);
             this.metroTextBox12.MaxLength = 32767;
             this.metroTextBox12.Name = "metroTextBox12";
             this.metroTextBox12.PasswordChar = '\0';
@@ -1659,7 +1666,7 @@ namespace Time_table_Management_System
             "Generate Group No",
             "Sub Group No",
             "Generated Sub Group"});
-            this.metroComboBox5.Location = new System.Drawing.Point(458, 25);
+            this.metroComboBox5.Location = new System.Drawing.Point(442, 23);
             this.metroComboBox5.Name = "metroComboBox5";
             this.metroComboBox5.Size = new System.Drawing.Size(138, 29);
             this.metroComboBox5.TabIndex = 1;
@@ -1919,6 +1926,7 @@ namespace Time_table_Management_System
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label15.Location = new System.Drawing.Point(317, 81);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(92, 21);
@@ -1928,12 +1936,32 @@ namespace Time_table_Management_System
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.Coral;
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label20.Location = new System.Drawing.Point(307, 72);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(88, 21);
             this.label20.TabIndex = 13;
             this.label20.Text = "Search By:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label21.Location = new System.Drawing.Point(348, 31);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(88, 21);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Search By:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label22.Location = new System.Drawing.Point(638, 33);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(69, 21);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "Search :";
             // 
             // students
             // 
@@ -1985,6 +2013,7 @@ namespace Time_table_Management_System
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -2106,6 +2135,8 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroButton metroButton25;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }
 
