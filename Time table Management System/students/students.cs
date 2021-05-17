@@ -925,6 +925,7 @@ namespace Time_table_Management_System
         private void metroTextBox11_Click(object sender, EventArgs e)
         {
             //search 
+            search_genid.Text = "";
         }
 
         private void metroButton19_Click(object sender, EventArgs e)
@@ -1559,6 +1560,30 @@ namespace Time_table_Management_System
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 dataGridView4.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void search_genid_TextChanged(object sender, EventArgs e)
+        {
+            if (dop_genid.Text == "ID")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,GenGrpNum FROM Student WHERE Sid LIKE '%" + search_genid.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView6.DataSource = dt;
+                con.Close();
+            }
+            else if (dop_genid.Text == "Gen Group Number")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,GenGrpNum FROM Student WHERE GenGrpNum LIKE '%" + search_genid.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView6.DataSource = dt;
                 con.Close();
             }
         }
