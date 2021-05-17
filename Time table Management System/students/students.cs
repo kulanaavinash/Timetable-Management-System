@@ -948,7 +948,12 @@ namespace Time_table_Management_System
 
         private void metroButton21_Click(object sender, EventArgs e)
         {
-            //delete btn
+            // refresh button
+            string sqlstm = "Select  Sid,Year,Semester,Programme,GrpNumber,SubGrpNum,GenSubGrpNum from Student";
+            SqlDataAdapter SDA = new SqlDataAdapter(sqlstm, con);
+            DataSet DS = new System.Data.DataSet();
+            SDA.Fill(DS, "Student");
+            dataGridView8.DataSource = DS.Tables[0];
         }
 
         private void metroButton20_Click(object sender, EventArgs e)
@@ -1267,7 +1272,18 @@ namespace Time_table_Management_System
 
         private void metroButton13_Click_2(object sender, EventArgs e)
         {
-            
+            cmd = new SqlCommand("update Student set Programme=@programme  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@programme", programtxt.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Programme Details Added Successfully");
+            con.Close();
+            BindData();
+            DisplayData();
+            ClearData();
         }
 
         private void metroButton23_Click(object sender, EventArgs e)
@@ -1320,6 +1336,21 @@ namespace Time_table_Management_System
             MessageBox.Show(" Group Number  Details Updated Successfully");
             con.Close();
             ViewData();
+        }
+
+        private void metroButton25_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("update Student set GenSubGrpNum=@gensubgrpnum  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@gensubgrpnum", subgenid.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Generated Sub Group Number Saved Successfully");
+            con.Close();
+            add();
+            ClearData();
         }
     }
 }
