@@ -144,6 +144,10 @@ namespace Time_table_Management_System
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.searchbox_gensub = new MetroFramework.Controls.MetroTextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dropdown_gensub = new MetroFramework.Controls.MetroComboBox();
             this.panel1.SuspendLayout();
             this.search_pro.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1264,6 +1268,10 @@ namespace Time_table_Management_System
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage6.Controls.Add(this.dropdown_gensub);
+            this.tabPage6.Controls.Add(this.label28);
+            this.tabPage6.Controls.Add(this.label27);
+            this.tabPage6.Controls.Add(this.searchbox_gensub);
             this.tabPage6.Controls.Add(this.metroButton8);
             this.tabPage6.Controls.Add(this.subgenid);
             this.tabPage6.Controls.Add(this.label19);
@@ -1525,7 +1533,7 @@ namespace Time_table_Management_System
             // 
             this.dataGridView8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(326, 60);
+            this.dataGridView8.Location = new System.Drawing.Point(326, 86);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.RowHeadersWidth = 51;
             this.dataGridView8.Size = new System.Drawing.Size(523, 287);
@@ -1990,6 +1998,71 @@ namespace Time_table_Management_System
             this.label26.TabIndex = 19;
             this.label26.Text = "Search By :";
             // 
+            // searchbox_gensub
+            // 
+            // 
+            // 
+            // 
+            this.searchbox_gensub.CustomButton.Image = null;
+            this.searchbox_gensub.CustomButton.Location = new System.Drawing.Point(101, 1);
+            this.searchbox_gensub.CustomButton.Name = "";
+            this.searchbox_gensub.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.searchbox_gensub.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.searchbox_gensub.CustomButton.TabIndex = 1;
+            this.searchbox_gensub.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.searchbox_gensub.CustomButton.UseSelectable = true;
+            this.searchbox_gensub.CustomButton.Visible = false;
+            this.searchbox_gensub.Lines = new string[0];
+            this.searchbox_gensub.Location = new System.Drawing.Point(722, 48);
+            this.searchbox_gensub.MaxLength = 32767;
+            this.searchbox_gensub.Name = "searchbox_gensub";
+            this.searchbox_gensub.PasswordChar = '\0';
+            this.searchbox_gensub.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.searchbox_gensub.SelectedText = "";
+            this.searchbox_gensub.SelectionLength = 0;
+            this.searchbox_gensub.SelectionStart = 0;
+            this.searchbox_gensub.ShortcutsEnabled = true;
+            this.searchbox_gensub.Size = new System.Drawing.Size(123, 23);
+            this.searchbox_gensub.TabIndex = 17;
+            this.searchbox_gensub.UseSelectable = true;
+            this.searchbox_gensub.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.searchbox_gensub.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.searchbox_gensub.TextChanged += new System.EventHandler(this.searchbox_gensub_TextChanged);
+            this.searchbox_gensub.Click += new System.EventHandler(this.searchbox_gensub_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label27.Location = new System.Drawing.Point(647, 50);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 21);
+            this.label27.TabIndex = 18;
+            this.label27.Text = "Search :";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label28.Location = new System.Drawing.Point(341, 48);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(92, 21);
+            this.label28.TabIndex = 19;
+            this.label28.Text = "Search by :";
+            // 
+            // dropdown_gensub
+            // 
+            this.dropdown_gensub.FormattingEnabled = true;
+            this.dropdown_gensub.ItemHeight = 23;
+            this.dropdown_gensub.Items.AddRange(new object[] {
+            "ID",
+            "Gen Sub Grp Num"});
+            this.dropdown_gensub.Location = new System.Drawing.Point(439, 45);
+            this.dropdown_gensub.Name = "dropdown_gensub";
+            this.dropdown_gensub.Size = new System.Drawing.Size(121, 29);
+            this.dropdown_gensub.TabIndex = 20;
+            this.dropdown_gensub.UseSelectable = true;
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2166,6 +2239,10 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
+        private MetroFramework.Controls.MetroComboBox dropdown_gensub;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private MetroFramework.Controls.MetroTextBox searchbox_gensub;
     }
 }
 

@@ -1587,5 +1587,34 @@ namespace Time_table_Management_System
                 con.Close();
             }
         }
+
+        private void searchbox_gensub_TextChanged(object sender, EventArgs e)
+        {
+            if (dropdown_gensub.Text == "ID")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,GenSubGrpNum FROM Student WHERE Sid LIKE '%" + searchbox_gensub.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView8.DataSource = dt;
+                con.Close();
+            }
+            else if (dropdown_gensub.Text == "Gen Sub Grp Num")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,GenSubGrpNum FROM Student WHERE GenSubGrpNum LIKE '%" + searchbox_gensub.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView8.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void searchbox_gensub_Click(object sender, EventArgs e)
+        {
+            searchbox_gensub.Text = "";
+        }
     }
 }
