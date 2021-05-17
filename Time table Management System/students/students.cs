@@ -831,6 +831,8 @@ namespace Time_table_Management_System
         private void metroTextBox9_Click(object sender, EventArgs e)
         {
             //search btn sub group
+            subgrp_search.Text = "";
+
         }
 
         private void metroTextBox10_Click(object sender, EventArgs e)
@@ -1533,6 +1535,30 @@ namespace Time_table_Management_System
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 dataGridView3.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void subgrp_search_TextChanged(object sender, EventArgs e)
+        {
+            if (drop_sub.Text == "ID")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,SubGrpNum FROM Student WHERE Sid LIKE '%" + subgrp_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView4.DataSource = dt;
+                con.Close();
+            }
+            else if (drop_sub.Text == "Sub Group Number")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT Sid,SubGrpNum FROM Student WHERE SubGrpNum LIKE '%" + subgrp_search.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView4.DataSource = dt;
                 con.Close();
             }
         }
