@@ -1182,5 +1182,23 @@ namespace Time_table_Management_System
             dataGridView9.DataSource = DS.Tables[0];
 
         }
+
+        private void metroButton9_Click(object sender, EventArgs e)
+        {
+
+
+            cmd = new SqlCommand("update Student set Year=@year,Semester=@semester  where Sid=@id", con);
+
+            cmd.Parameters.AddWithValue("@id", Sid);
+            cmd.Parameters.AddWithValue("@year", yeartxt.Text);
+            cmd.Parameters.AddWithValue("@semester", semtxt.Text);
+            con.Open();
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Year Semester Details Updated Successfully");
+            con.Close();
+            DisplayData();
+            ClearData();
+        }
     }
 }

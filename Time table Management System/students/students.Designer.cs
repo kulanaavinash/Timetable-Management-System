@@ -131,6 +131,7 @@ namespace Time_table_Management_System
             this.Hwbtn = new System.Windows.Forms.Button();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.button15 = new System.Windows.Forms.Button();
+            this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -183,6 +184,7 @@ namespace Time_table_Management_System
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.metroButton9);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -313,7 +315,7 @@ namespace Time_table_Management_System
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(317, 401);
+            this.metroButton1.Location = new System.Drawing.Point(62, 297);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(168, 35);
             this.metroButton1.TabIndex = 2;
@@ -1821,6 +1823,16 @@ namespace Time_table_Management_System
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // metroButton9
+            // 
+            this.metroButton9.Location = new System.Drawing.Point(324, 401);
+            this.metroButton9.Name = "metroButton9";
+            this.metroButton9.Size = new System.Drawing.Size(168, 35);
+            this.metroButton9.TabIndex = 13;
+            this.metroButton9.Text = "Update ";
+            this.metroButton9.UseSelectable = true;
+            this.metroButton9.Click += new System.EventHandler(this.metroButton9_Click);
+            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1983,6 +1995,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.TextBox subgenid;
         private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.Button button15;
+        private MetroFramework.Controls.MetroButton metroButton9;
     }
 }
 
