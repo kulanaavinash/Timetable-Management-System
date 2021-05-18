@@ -32,6 +32,8 @@ namespace Time_table_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -104,8 +106,8 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -146,6 +148,8 @@ namespace Time_table_Management_System
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.comboBox7);
@@ -164,6 +168,26 @@ namespace Time_table_Management_System
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consective Sessions";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label13.Location = new System.Drawing.Point(45, 237);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(143, 21);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Select Session 02:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label12.Location = new System.Drawing.Point(45, 135);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(143, 21);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Select Session 01:";
             // 
             // comboBox7
             // 
@@ -200,6 +224,7 @@ namespace Time_table_Management_System
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(326, 168);
@@ -215,7 +240,7 @@ namespace Time_table_Management_System
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(133, 1);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(121, 1);
             this.metroTextBox3.CustomButton.Name = "";
             this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -225,7 +250,7 @@ namespace Time_table_Management_System
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[] {
         "Search"};
-            this.metroTextBox3.Location = new System.Drawing.Point(662, 101);
+            this.metroTextBox3.Location = new System.Drawing.Point(674, 133);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -234,7 +259,7 @@ namespace Time_table_Management_System
             this.metroTextBox3.SelectionLength = 0;
             this.metroTextBox3.SelectionStart = 0;
             this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(155, 23);
+            this.metroTextBox3.Size = new System.Drawing.Size(143, 23);
             this.metroTextBox3.TabIndex = 5;
             this.metroTextBox3.Text = "Search";
             this.metroTextBox3.UseSelectable = true;
@@ -250,9 +275,9 @@ namespace Time_table_Management_System
             "ID",
             "Session 01",
             "Session 02"});
-            this.metroComboBox1.Location = new System.Drawing.Point(326, 95);
+            this.metroComboBox1.Location = new System.Drawing.Point(428, 127);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(175, 29);
+            this.metroComboBox1.Size = new System.Drawing.Size(123, 29);
             this.metroComboBox1.TabIndex = 4;
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
@@ -1088,25 +1113,25 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // label12
+            // label14
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label12.Location = new System.Drawing.Point(45, 135);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 21);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Select Session 01:";
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label14.Location = new System.Drawing.Point(334, 135);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 21);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Search By:";
             // 
-            // label13
+            // label15
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label13.Location = new System.Drawing.Point(45, 237);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 21);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Select Session 02:";
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label15.Location = new System.Drawing.Point(590, 135);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 21);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Search :";
             // 
             // Advanced
             // 
@@ -1235,6 +1260,8 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }
 

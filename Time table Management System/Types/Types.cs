@@ -39,6 +39,8 @@ namespace Time_table_Management_System
         {
             InitializeComponent();
             DisplayData();
+            BindData();
+            SaveData();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -257,9 +259,49 @@ namespace Time_table_Management_System
         private void button15_Click(object sender, EventArgs e)
         {
             //consective sessions
+            if ((comboBox6.Text != string.Empty) && (comboBox7.Text != string.Empty))
+            {
+                cmd = new SqlCommand("insert into Consecutive(Session01,Session02) values(@session01,@session02)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@session01", comboBox6.Text);
+                cmd.Parameters.AddWithValue("@session02", comboBox7.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Consecutive Session Record Successfully");
+                BindData();
+                ClearData();
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void DisplayData()
+            private void BindData()
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("select Session01,Session02 from Consecutive ", con);
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+
+
+
+
+
+            }
+
+
+        private void ClearData()
+        {
+            comboBox6.Text = "";
+            comboBox7.Text = "";
+
+        }
+
+            private void DisplayData()
         {
             SqlCommand sqlComm = new SqlCommand("select subject,lectures,tag from [dbo].[sessionsDB]", con);
             con.Open();
@@ -376,6 +418,25 @@ namespace Time_table_Management_System
         private void button17_Click(object sender, EventArgs e)
         {
             //Parellel Sessions
+        }
+
+
+
+        //parallel sessions
+        private void SaveData()
+        {
+            SqlCommand sqlComm = new SqlCommand("select subject,lectures,tag from [dbo].[sessionsDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                metroComboBox4.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+                metroComboBox5.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+            }
+
         }
 
         private void button18_Click(object sender, EventArgs e)
