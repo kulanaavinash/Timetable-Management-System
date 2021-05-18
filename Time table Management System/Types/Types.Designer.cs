@@ -388,6 +388,12 @@ namespace Time_table_Management_System
             // 
             this.metroComboBox7.FormattingEnabled = true;
             this.metroComboBox7.ItemHeight = 23;
+            this.metroComboBox7.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
             this.metroComboBox7.Location = new System.Drawing.Point(274, 353);
             this.metroComboBox7.Name = "metroComboBox7";
             this.metroComboBox7.Size = new System.Drawing.Size(162, 29);
@@ -399,6 +405,13 @@ namespace Time_table_Management_System
             // 
             this.metroComboBox6.FormattingEnabled = true;
             this.metroComboBox6.ItemHeight = 23;
+            this.metroComboBox6.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.metroComboBox6.Location = new System.Drawing.Point(274, 267);
             this.metroComboBox6.Name = "metroComboBox6";
             this.metroComboBox6.Size = new System.Drawing.Size(162, 29);

@@ -41,6 +41,8 @@ namespace Time_table_Management_System
             DisplayData();
             BindData();
             SaveData();
+            Catch();
+            Catch2();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -418,6 +420,29 @@ namespace Time_table_Management_System
         private void button17_Click(object sender, EventArgs e)
         {
             //Parellel Sessions
+            //consective sessions
+            if ((metroComboBox4.Text != string.Empty) && ( metroComboBox5.Text != string.Empty) && (metroComboBox6.Text != string.Empty) && (metroComboBox7.Text != string.Empty) && (metroComboBox8.Text != string.Empty) && (metroComboBox9.Text != string.Empty))
+            {
+                cmd = new SqlCommand("insert into Parallel(Session01,Session02,Duration,Day,Stime,Etime) values(@session01,@session02,@duration,@day,@stime,@etime)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@session01", metroComboBox4.Text);
+                cmd.Parameters.AddWithValue("@session02", metroComboBox5.Text);
+                cmd.Parameters.AddWithValue("@duration", metroComboBox6.Text);
+                cmd.Parameters.AddWithValue("@day", metroComboBox7.Text);
+                cmd.Parameters.AddWithValue("@stime", metroComboBox8.Text);
+                cmd.Parameters.AddWithValue("@etime", metroComboBox9.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Consecutive Session Record Successfully");
+              
+                ClearData();
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
 
@@ -435,6 +460,39 @@ namespace Time_table_Management_System
             {
                 metroComboBox4.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
                 metroComboBox5.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+            }
+
+        }
+
+        private void Catch()
+        {
+            SqlCommand sqlComm = new SqlCommand("select stime from [dbo].[NAT]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                metroComboBox8.Items.Add(ds.Tables[0].Rows[i][0]  );
+                
+            }
+
+        }
+
+
+        private void Catch2()
+        {
+            SqlCommand sqlComm = new SqlCommand("select etime from [dbo].[NAT]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                metroComboBox9.Items.Add(ds.Tables[0].Rows[i][0]);
+
             }
 
         }
