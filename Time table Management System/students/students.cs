@@ -11,8 +11,8 @@ namespace Time_table_Management_System
 
     public partial class students : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
-        string cs = "Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True";
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
