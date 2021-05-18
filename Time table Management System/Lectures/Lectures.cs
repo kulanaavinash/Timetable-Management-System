@@ -348,7 +348,7 @@ namespace Time_table_Management_System
 
         private void button15_Click(object sender, EventArgs e)
         {
-            if (metroTextBox2.Text != "")
+            if (metroTextBox1.Text != "")
             {
                 con.Open();
             SqlCommand command = new SqlCommand("insert into lecturesDB values('" + int.Parse(metroTextBox1.Text) + "','" + metroTextBox51.Text + "','" + metroComboBox3.Text + "','" + metroComboBox4.Text + "','" + metroComboBox5.Text + "','" + metroComboBox6.Text + "','" + metroComboBox7.Text + "')", con);
