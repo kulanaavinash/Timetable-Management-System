@@ -46,12 +46,6 @@ namespace Time_table_Management_System
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,12 +54,6 @@ namespace Time_table_Management_System
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.metroComboBox15 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox14 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox13 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox12 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox11 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox10 = new MetroFramework.Controls.MetroComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -108,6 +96,18 @@ namespace Time_table_Management_System
             this.Hwbtn = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -284,39 +284,41 @@ namespace Time_table_Management_System
             // 
             // button16
             // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button16.Location = new System.Drawing.Point(49, 407);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(206, 42);
             this.button16.TabIndex = 3;
             this.button16.Text = "Clear";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button15.Location = new System.Drawing.Point(49, 340);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(206, 39);
             this.button15.TabIndex = 2;
             this.button15.Text = "Add Consective Sessions";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.comboBox8);
+            this.tabPage2.Controls.Add(this.comboBox5);
+            this.tabPage2.Controls.Add(this.comboBox4);
+            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.comboBox2);
+            this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.button18);
             this.tabPage2.Controls.Add(this.button17);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.metroComboBox9);
-            this.tabPage2.Controls.Add(this.metroComboBox8);
-            this.tabPage2.Controls.Add(this.metroComboBox7);
-            this.tabPage2.Controls.Add(this.metroComboBox6);
-            this.tabPage2.Controls.Add(this.metroComboBox5);
-            this.tabPage2.Controls.Add(this.metroComboBox4);
             this.tabPage2.Controls.Add(this.textBox4);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.textBox2);
@@ -331,24 +333,26 @@ namespace Time_table_Management_System
             // 
             // button18
             // 
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button18.Location = new System.Drawing.Point(409, 417);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(192, 51);
             this.button18.TabIndex = 14;
             this.button18.Text = "Clear";
-            this.button18.UseVisualStyleBackColor = true;
+            this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button17.Location = new System.Drawing.Point(181, 417);
+            this.button17.Location = new System.Drawing.Point(172, 417);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(200, 51);
             this.button17.TabIndex = 13;
             this.button17.Text = "Add Parallel Sessions";
-            this.button17.UseVisualStyleBackColor = true;
+            this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // label3
@@ -362,89 +366,13 @@ namespace Time_table_Management_System
             this.label3.TabIndex = 12;
             this.label3.Text = "Add Parallel Sessions";
             // 
-            // metroComboBox9
-            // 
-            this.metroComboBox9.FormattingEnabled = true;
-            this.metroComboBox9.ItemHeight = 23;
-            this.metroComboBox9.Location = new System.Drawing.Point(662, 353);
-            this.metroComboBox9.Name = "metroComboBox9";
-            this.metroComboBox9.Size = new System.Drawing.Size(139, 29);
-            this.metroComboBox9.TabIndex = 9;
-            this.metroComboBox9.UseSelectable = true;
-            this.metroComboBox9.SelectedIndexChanged += new System.EventHandler(this.metroComboBox9_SelectedIndexChanged);
-            // 
-            // metroComboBox8
-            // 
-            this.metroComboBox8.FormattingEnabled = true;
-            this.metroComboBox8.ItemHeight = 23;
-            this.metroComboBox8.Location = new System.Drawing.Point(468, 353);
-            this.metroComboBox8.Name = "metroComboBox8";
-            this.metroComboBox8.Size = new System.Drawing.Size(147, 29);
-            this.metroComboBox8.TabIndex = 8;
-            this.metroComboBox8.UseSelectable = true;
-            this.metroComboBox8.SelectedIndexChanged += new System.EventHandler(this.metroComboBox8_SelectedIndexChanged);
-            // 
-            // metroComboBox7
-            // 
-            this.metroComboBox7.FormattingEnabled = true;
-            this.metroComboBox7.ItemHeight = 23;
-            this.metroComboBox7.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"});
-            this.metroComboBox7.Location = new System.Drawing.Point(274, 353);
-            this.metroComboBox7.Name = "metroComboBox7";
-            this.metroComboBox7.Size = new System.Drawing.Size(162, 29);
-            this.metroComboBox7.TabIndex = 7;
-            this.metroComboBox7.UseSelectable = true;
-            this.metroComboBox7.SelectedIndexChanged += new System.EventHandler(this.metroComboBox7_SelectedIndexChanged);
-            // 
-            // metroComboBox6
-            // 
-            this.metroComboBox6.FormattingEnabled = true;
-            this.metroComboBox6.ItemHeight = 23;
-            this.metroComboBox6.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.metroComboBox6.Location = new System.Drawing.Point(274, 267);
-            this.metroComboBox6.Name = "metroComboBox6";
-            this.metroComboBox6.Size = new System.Drawing.Size(162, 29);
-            this.metroComboBox6.TabIndex = 6;
-            this.metroComboBox6.UseSelectable = true;
-            this.metroComboBox6.SelectedIndexChanged += new System.EventHandler(this.metroComboBox6_SelectedIndexChanged);
-            // 
-            // metroComboBox5
-            // 
-            this.metroComboBox5.FormattingEnabled = true;
-            this.metroComboBox5.ItemHeight = 23;
-            this.metroComboBox5.Location = new System.Drawing.Point(274, 182);
-            this.metroComboBox5.Name = "metroComboBox5";
-            this.metroComboBox5.Size = new System.Drawing.Size(162, 29);
-            this.metroComboBox5.TabIndex = 5;
-            this.metroComboBox5.UseSelectable = true;
-            this.metroComboBox5.SelectedIndexChanged += new System.EventHandler(this.metroComboBox5_SelectedIndexChanged);
-            // 
-            // metroComboBox4
-            // 
-            this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 23;
-            this.metroComboBox4.Location = new System.Drawing.Point(274, 100);
-            this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(162, 29);
-            this.metroComboBox4.TabIndex = 4;
-            this.metroComboBox4.UseSelectable = true;
-            this.metroComboBox4.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
-            // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.textBox4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(52, 356);
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.textBox4.Location = new System.Drawing.Point(52, 353);
+            this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(180, 29);
             this.textBox4.TabIndex = 3;
@@ -453,8 +381,11 @@ namespace Time_table_Management_System
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(52, 270);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.textBox3.Location = new System.Drawing.Point(52, 267);
+            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(180, 29);
             this.textBox3.TabIndex = 2;
@@ -463,8 +394,11 @@ namespace Time_table_Management_System
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(52, 185);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.textBox2.Location = new System.Drawing.Point(52, 182);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 29);
             this.textBox2.TabIndex = 1;
@@ -473,8 +407,11 @@ namespace Time_table_Management_System
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.textBox1.Location = new System.Drawing.Point(52, 100);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 29);
             this.textBox1.TabIndex = 0;
@@ -485,15 +422,15 @@ namespace Time_table_Management_System
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage3.Controls.Add(this.comboBox14);
+            this.tabPage3.Controls.Add(this.comboBox13);
+            this.tabPage3.Controls.Add(this.comboBox12);
+            this.tabPage3.Controls.Add(this.comboBox11);
+            this.tabPage3.Controls.Add(this.comboBox10);
+            this.tabPage3.Controls.Add(this.comboBox9);
             this.tabPage3.Controls.Add(this.button20);
             this.tabPage3.Controls.Add(this.button19);
             this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.metroComboBox15);
-            this.tabPage3.Controls.Add(this.metroComboBox14);
-            this.tabPage3.Controls.Add(this.metroComboBox13);
-            this.tabPage3.Controls.Add(this.metroComboBox12);
-            this.tabPage3.Controls.Add(this.metroComboBox11);
-            this.tabPage3.Controls.Add(this.metroComboBox10);
             this.tabPage3.Controls.Add(this.textBox8);
             this.tabPage3.Controls.Add(this.textBox7);
             this.tabPage3.Controls.Add(this.textBox6);
@@ -509,23 +446,28 @@ namespace Time_table_Management_System
             // 
             // button20
             // 
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button20.Location = new System.Drawing.Point(442, 419);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(163, 46);
             this.button20.TabIndex = 14;
             this.button20.Text = "Clear";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button19.Location = new System.Drawing.Point(205, 419);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(197, 46);
             this.button19.TabIndex = 13;
-            this.button19.Text = "Add Parallel Sessions";
-            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Text = "Add NotOverlap Sessions";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // label4
             // 
@@ -538,75 +480,12 @@ namespace Time_table_Management_System
             this.label4.TabIndex = 12;
             this.label4.Text = "Add Not Overlap Sessions";
             // 
-            // metroComboBox15
-            // 
-            this.metroComboBox15.FormattingEnabled = true;
-            this.metroComboBox15.ItemHeight = 23;
-            this.metroComboBox15.Location = new System.Drawing.Point(672, 345);
-            this.metroComboBox15.Name = "metroComboBox15";
-            this.metroComboBox15.Size = new System.Drawing.Size(140, 29);
-            this.metroComboBox15.TabIndex = 9;
-            this.metroComboBox15.UseSelectable = true;
-            this.metroComboBox15.SelectedIndexChanged += new System.EventHandler(this.metroComboBox15_SelectedIndexChanged);
-            // 
-            // metroComboBox14
-            // 
-            this.metroComboBox14.FormattingEnabled = true;
-            this.metroComboBox14.ItemHeight = 23;
-            this.metroComboBox14.Location = new System.Drawing.Point(477, 345);
-            this.metroComboBox14.Name = "metroComboBox14";
-            this.metroComboBox14.Size = new System.Drawing.Size(157, 29);
-            this.metroComboBox14.TabIndex = 8;
-            this.metroComboBox14.UseSelectable = true;
-            this.metroComboBox14.SelectedIndexChanged += new System.EventHandler(this.metroComboBox14_SelectedIndexChanged);
-            // 
-            // metroComboBox13
-            // 
-            this.metroComboBox13.FormattingEnabled = true;
-            this.metroComboBox13.ItemHeight = 23;
-            this.metroComboBox13.Location = new System.Drawing.Point(288, 345);
-            this.metroComboBox13.Name = "metroComboBox13";
-            this.metroComboBox13.Size = new System.Drawing.Size(148, 29);
-            this.metroComboBox13.TabIndex = 7;
-            this.metroComboBox13.UseSelectable = true;
-            this.metroComboBox13.SelectedIndexChanged += new System.EventHandler(this.metroComboBox13_SelectedIndexChanged);
-            // 
-            // metroComboBox12
-            // 
-            this.metroComboBox12.FormattingEnabled = true;
-            this.metroComboBox12.ItemHeight = 23;
-            this.metroComboBox12.Location = new System.Drawing.Point(288, 267);
-            this.metroComboBox12.Name = "metroComboBox12";
-            this.metroComboBox12.Size = new System.Drawing.Size(148, 29);
-            this.metroComboBox12.TabIndex = 6;
-            this.metroComboBox12.UseSelectable = true;
-            this.metroComboBox12.SelectedIndexChanged += new System.EventHandler(this.metroComboBox12_SelectedIndexChanged);
-            // 
-            // metroComboBox11
-            // 
-            this.metroComboBox11.FormattingEnabled = true;
-            this.metroComboBox11.ItemHeight = 23;
-            this.metroComboBox11.Location = new System.Drawing.Point(288, 182);
-            this.metroComboBox11.Name = "metroComboBox11";
-            this.metroComboBox11.Size = new System.Drawing.Size(148, 29);
-            this.metroComboBox11.TabIndex = 5;
-            this.metroComboBox11.UseSelectable = true;
-            this.metroComboBox11.SelectedIndexChanged += new System.EventHandler(this.metroComboBox11_SelectedIndexChanged);
-            // 
-            // metroComboBox10
-            // 
-            this.metroComboBox10.FormattingEnabled = true;
-            this.metroComboBox10.ItemHeight = 23;
-            this.metroComboBox10.Location = new System.Drawing.Point(288, 99);
-            this.metroComboBox10.Name = "metroComboBox10";
-            this.metroComboBox10.Size = new System.Drawing.Size(148, 29);
-            this.metroComboBox10.TabIndex = 4;
-            this.metroComboBox10.UseSelectable = true;
-            this.metroComboBox10.SelectedIndexChanged += new System.EventHandler(this.metroComboBox10_SelectedIndexChanged);
-            // 
             // textBox8
             // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.textBox8.Location = new System.Drawing.Point(61, 345);
+            this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(159, 29);
             this.textBox8.TabIndex = 3;
@@ -615,7 +494,10 @@ namespace Time_table_Management_System
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.textBox7.Location = new System.Drawing.Point(61, 267);
+            this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(159, 29);
             this.textBox7.TabIndex = 2;
@@ -624,7 +506,10 @@ namespace Time_table_Management_System
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.textBox6.Location = new System.Drawing.Point(61, 182);
+            this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(159, 29);
             this.textBox6.TabIndex = 1;
@@ -633,6 +518,8 @@ namespace Time_table_Management_System
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.textBox5.Location = new System.Drawing.Point(61, 99);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(159, 29);
@@ -1146,6 +1033,129 @@ namespace Time_table_Management_System
             this.label15.TabIndex = 15;
             this.label15.Text = "Search :";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(274, 100);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(162, 29);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(274, 182);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(162, 29);
+            this.comboBox2.TabIndex = 16;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.comboBox3.Location = new System.Drawing.Point(274, 267);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(162, 29);
+            this.comboBox3.TabIndex = 17;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.comboBox4.Location = new System.Drawing.Point(274, 353);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(162, 29);
+            this.comboBox4.TabIndex = 18;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(465, 353);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(162, 29);
+            this.comboBox5.TabIndex = 19;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(657, 353);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(162, 29);
+            this.comboBox8.TabIndex = 20;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(288, 97);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(148, 29);
+            this.comboBox9.TabIndex = 15;
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(288, 182);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(148, 29);
+            this.comboBox10.TabIndex = 16;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.comboBox11.Location = new System.Drawing.Point(288, 267);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(148, 29);
+            this.comboBox11.TabIndex = 17;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.comboBox12.Location = new System.Drawing.Point(288, 345);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(148, 29);
+            this.comboBox12.TabIndex = 18;
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Location = new System.Drawing.Point(479, 345);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(148, 29);
+            this.comboBox13.TabIndex = 19;
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Location = new System.Drawing.Point(665, 345);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(148, 29);
+            this.comboBox14.TabIndex = 20;
+            // 
             // Advanced
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1225,27 +1235,15 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
-        private MetroFramework.Controls.MetroComboBox metroComboBox9;
-        private MetroFramework.Controls.MetroComboBox metroComboBox8;
-        private MetroFramework.Controls.MetroComboBox metroComboBox7;
-        private MetroFramework.Controls.MetroComboBox metroComboBox6;
-        private MetroFramework.Controls.MetroComboBox metroComboBox5;
-        private MetroFramework.Controls.MetroComboBox metroComboBox4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox13;
-        private MetroFramework.Controls.MetroComboBox metroComboBox12;
-        private MetroFramework.Controls.MetroComboBox metroComboBox11;
-        private MetroFramework.Controls.MetroComboBox metroComboBox10;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox15;
-        private MetroFramework.Controls.MetroComboBox metroComboBox14;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button18;
@@ -1275,6 +1273,18 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.ComboBox comboBox13;
     }
 }
 

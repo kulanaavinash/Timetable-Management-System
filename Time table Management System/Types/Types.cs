@@ -23,6 +23,11 @@ namespace Time_table_Management_System
         SqlDataAdapter adapt;
         DataTable dt;
 
+
+
+       
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -43,6 +48,9 @@ namespace Time_table_Management_System
             SaveData();
             Catch();
             Catch2();
+            ShowData();
+            Show1();
+            Show2();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -256,6 +264,7 @@ namespace Time_table_Management_System
         private void button16_Click(object sender, EventArgs e)
         {
             //consective sessions
+            ClearData();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -301,7 +310,25 @@ namespace Time_table_Management_System
             comboBox6.Text = "";
             comboBox7.Text = "";
 
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            comboBox3.Text = "";
+            comboBox4.Text = "";
+            comboBox5.Text = "";
+            comboBox8.Text = "";
+
+
+            comboBox9.Text = "";
+            comboBox10.Text = "";
+            comboBox11.Text = "";
+            comboBox12.Text = "";
+            comboBox13.Text = "";
+            comboBox14.Text = "";
+
+
         }
+
+        
 
             private void DisplayData()
         {
@@ -421,21 +448,21 @@ namespace Time_table_Management_System
         {
             //Parellel Sessions
             //consective sessions
-            if ((metroComboBox4.Text != string.Empty) && ( metroComboBox5.Text != string.Empty) && (metroComboBox6.Text != string.Empty) && (metroComboBox7.Text != string.Empty) && (metroComboBox8.Text != string.Empty) && (metroComboBox9.Text != string.Empty))
+            if ((comboBox1.Text != string.Empty) && (comboBox2.Text != string.Empty) && (comboBox3.Text != string.Empty) && (comboBox4.Text != string.Empty) && (comboBox5.Text != string.Empty) && (comboBox8.Text != string.Empty))
             {
                 cmd = new SqlCommand("insert into Parallel(Session01,Session02,Duration,Day,Stime,Etime) values(@session01,@session02,@duration,@day,@stime,@etime)", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@session01", metroComboBox4.Text);
-                cmd.Parameters.AddWithValue("@session02", metroComboBox5.Text);
-                cmd.Parameters.AddWithValue("@duration", metroComboBox6.Text);
-                cmd.Parameters.AddWithValue("@day", metroComboBox7.Text);
-                cmd.Parameters.AddWithValue("@stime", metroComboBox8.Text);
-                cmd.Parameters.AddWithValue("@etime", metroComboBox9.Text);
+                cmd.Parameters.AddWithValue("@session01", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@session02", comboBox2.Text);
+                cmd.Parameters.AddWithValue("@duration", comboBox3.Text);
+                cmd.Parameters.AddWithValue("@day", comboBox4.Text);
+                cmd.Parameters.AddWithValue("@stime", comboBox5.Text);
+                cmd.Parameters.AddWithValue("@etime", comboBox8.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Consecutive Session Record Successfully");
-              
                 ClearData();
+
 
             }
             else
@@ -458,8 +485,9 @@ namespace Time_table_Management_System
             con.Close();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                metroComboBox4.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
-                metroComboBox5.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+                comboBox1.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+                comboBox2.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+
             }
 
         }
@@ -474,7 +502,7 @@ namespace Time_table_Management_System
             con.Close();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                metroComboBox8.Items.Add(ds.Tables[0].Rows[i][0]  );
+                comboBox5.Items.Add(ds.Tables[0].Rows[i][0]  );
                 
             }
 
@@ -491,7 +519,7 @@ namespace Time_table_Management_System
             con.Close();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                metroComboBox9.Items.Add(ds.Tables[0].Rows[i][0]);
+                comboBox8.Items.Add(ds.Tables[0].Rows[i][0]);
 
             }
 
@@ -500,6 +528,9 @@ namespace Time_table_Management_System
         private void button18_Click(object sender, EventArgs e)
         {
             //Parellel Sessions
+
+            ClearData();
+           
 
         }
 
@@ -741,6 +772,89 @@ namespace Time_table_Management_System
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            //add not overlap sessions
+
+            if ((comboBox9.Text != string.Empty) && (comboBox10.Text != string.Empty) && (comboBox11.Text != string.Empty) && (comboBox12.Text != string.Empty) && (comboBox13.Text != string.Empty) && (comboBox14.Text != string.Empty))
+            {
+                cmd = new SqlCommand("insert into Overlap(Session01,Session02,Duration,Day,Stime,Etime) values(@session01,@session02,@duration,@day,@stime,@etime)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@session01", comboBox9.Text);
+                cmd.Parameters.AddWithValue("@session02", comboBox10.Text);
+                cmd.Parameters.AddWithValue("@duration", comboBox11.Text);
+                cmd.Parameters.AddWithValue("@day", comboBox12.Text);
+                cmd.Parameters.AddWithValue("@stime", comboBox13.Text);
+                cmd.Parameters.AddWithValue("@etime", comboBox14.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Consecutive Session Record Successfully");
+                ClearData();
+
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        
+    }
+
+        private void ShowData()
+        {
+            SqlCommand sqlComm = new SqlCommand("select subject,lectures,tag from [dbo].[sessionsDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                comboBox9.Items.Add(ds.Tables[0].Rows[i][0] + " | " + ds.Tables[0].Rows[i][1] + " | " + ds.Tables[0].Rows[i][2]);
+                comboBox10.Items.Add(ds.Tables[0].Rows[i][0] + " | " + ds.Tables[0].Rows[i][1] + " | " + ds.Tables[0].Rows[i][2]);
+            }
+
+        }
+
+        private void Show1()
+        {
+            SqlCommand sqlComm = new SqlCommand("select stime from [dbo].[NAT]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                comboBox13.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+        private void Show2()
+        {
+            SqlCommand sqlComm = new SqlCommand("select etime from [dbo].[NAT]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                comboBox14.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
     }
 }
