@@ -39,7 +39,6 @@ namespace Time_table_Management_System
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addtagname = new System.Windows.Forms.TextBox();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,6 +59,7 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
+            this.tag_combo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +69,7 @@ namespace Time_table_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panel1.Controls.Add(this.tag_combo);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -78,7 +79,6 @@ namespace Time_table_Management_System
             this.panel1.Controls.Add(this.button18);
             this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.addtagname);
             this.panel1.Controls.Add(this.button16);
             this.panel1.Controls.Add(this.button15);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,14 +187,6 @@ namespace Time_table_Management_System
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // addtagname
-            // 
-            this.addtagname.Location = new System.Drawing.Point(76, 185);
-            this.addtagname.Name = "addtagname";
-            this.addtagname.Size = new System.Drawing.Size(186, 26);
-            this.addtagname.TabIndex = 11;
-            this.addtagname.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // button16
             // 
@@ -468,6 +460,18 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
+            // tag_combo
+            // 
+            this.tag_combo.FormattingEnabled = true;
+            this.tag_combo.Items.AddRange(new object[] {
+            "Lecture",
+            "Tutorial",
+            "Practical"});
+            this.tag_combo.Location = new System.Drawing.Point(76, 184);
+            this.tag_combo.Name = "tag_combo";
+            this.tag_combo.Size = new System.Drawing.Size(186, 28);
+            this.tag_combo.TabIndex = 18;
+            // 
             // tags
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,7 +534,6 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox addtagname;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
@@ -540,6 +543,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox tag_combo;
     }
 }
 

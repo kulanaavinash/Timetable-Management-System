@@ -226,11 +226,11 @@ namespace Time_table_Management_System
         {
             //add tag name btn
 
-            if (addtagname.Text != "")
+            if (tag_combo.Text != "")
             {
                 cmd = new SqlCommand("insert into Tag(Tagname) values(@tagname)", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@tagname", addtagname.Text);
+                cmd.Parameters.AddWithValue("@tagname", tag_combo.Text);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -269,7 +269,7 @@ namespace Time_table_Management_System
         //Clear Data  
         private void ClearData()
         {
-            addtagname.Text = "";
+            tag_combo.Text = "";
             TagID = 0;
 
 
@@ -278,6 +278,7 @@ namespace Time_table_Management_System
         private void btn_clear(object sender, EventArgs e)
         {
             //clear btn
+            ClearData();
         }
 
        
@@ -291,12 +292,12 @@ namespace Time_table_Management_System
         {
             //edit details btn
 
-            if (addtagname.Text != "")
+            if (tag_combo.Text != "")
             {
                 cmd = new SqlCommand("update Tag set Tagname=@tagname  where TagID=@id", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("@id", TagID);
-                cmd.Parameters.AddWithValue("@tagname", addtagname.Text);
+                cmd.Parameters.AddWithValue("@tagname", tag_combo.Text);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated Successfully");
@@ -378,7 +379,7 @@ namespace Time_table_Management_System
         { 
             //cell click tag
             TagID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            addtagname.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tag_combo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
