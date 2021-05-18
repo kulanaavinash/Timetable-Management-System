@@ -15,7 +15,7 @@ namespace Time_table_Management_System
 
     public partial class Sessions : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-29TVN88;Initial Catalog=time_table_management;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn

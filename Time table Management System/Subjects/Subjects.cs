@@ -227,7 +227,7 @@ namespace Time_table_Management_System.Subjects
         {
 
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-29TVN88;Initial Catalog=time_table_management;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
 
         private void button19_Click(object sender, EventArgs e)
         {
