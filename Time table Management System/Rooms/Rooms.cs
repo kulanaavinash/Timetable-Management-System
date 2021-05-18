@@ -8,12 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Time_table_Management_System.DayTimeAdpt;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Time_table_Management_System
 {
 
     public partial class Room : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -29,6 +39,8 @@ namespace Time_table_Management_System
         public Room()
         {
             InitializeComponent();
+            ShowData();
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
         }
@@ -469,6 +481,24 @@ namespace Time_table_Management_System
         {
 
         }
+
+        //load lecture method
+        private void ShowData()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Lname from [dbo].[lecturesDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                lecturer_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+                
+            }
+
+        }
+
 
         private void clrLecturerroom_btn_Click_1(object sender, EventArgs e)
         {
