@@ -18,10 +18,10 @@ namespace Time_table_Management_System
 
     public partial class Statistics : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
-        SqlCommand cmd;
-        SqlDataAdapter adapt;
-        DataTable dt;
+       // SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
+        //SqlCommand cmd;
+       // SqlDataAdapter adapt;
+       // DataTable dt;
 
 
 
@@ -40,14 +40,14 @@ namespace Time_table_Management_System
 
         public Statistics ()
         {
-            InitializeComponent();
+            /*InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; */
 
         }
 
@@ -331,7 +331,7 @@ namespace Time_table_Management_System
          private void LoadLecFacChart()
         {
 
-            SqlCommand command = new SqlCommand();
+           /* SqlCommand command = new SqlCommand();
             command.Connection = con;
 
             DataSet ds = new DataSet();
@@ -342,11 +342,11 @@ namespace Time_table_Management_System
 
             faclec_chart.Series["Faculty"].XValueMember = "LecFaculty";
             faclec_chart.Series["Faculty"].YValueMembers = "c";
-            //faclec_chart.Series["Faculty"].ChartType = SeriesChartType.Bar;
+            //faclec_chart.Series["Faculty"].ChartType = SeriesChartType.Bar; */
 
 
-            faclec_chart.DataBind();
-            con.Close();
+            /*faclec_chart.DataBind();
+            con.Close(); */
 
         }
 
@@ -363,7 +363,7 @@ namespace Time_table_Management_System
         private void totalStdGrpCount()
         {
 
-            con.Open();
+          /*  con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT count(GenGrpNum) as grpcount from GenGroupNumber group by ProgrammeRef ";
@@ -378,12 +378,12 @@ namespace Time_table_Management_System
 
 
             }
-            con.Close();
+            con.Close(); */
 
         }
         private void LoadLecDeptChart()
         {
-            SqlCommand command = new SqlCommand();
+           /* SqlCommand command = new SqlCommand();
             command.Connection = con;
 
             DataSet ds = new DataSet();
@@ -399,13 +399,13 @@ namespace Time_table_Management_System
 
 
             deptLec_chart.DataBind();
-            con.Close();
+            con.Close();   */
         }
         //Calculating total lecturer count
         private void totalLecturerCount()
         {
 
-            con.Open();
+           /* con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT COUNT(LecturerID) as lecCount FROM Lecturers";
@@ -420,13 +420,13 @@ namespace Time_table_Management_System
 
 
             }
-            con.Close();
+            con.Close(); */
 
         }
 
         private void LoadProgrammeStdGroupChart()
         {
-            SqlCommand command = new SqlCommand();
+           /* SqlCommand command = new SqlCommand();
             command.Connection = con;
 
             DataSet ds = new DataSet();
@@ -442,12 +442,12 @@ namespace Time_table_Management_System
 
 
             progrpcount_chart.DataBind();
-            con.Close();
+            con.Close(); */
         }
 
         private void LoadSubjectYearChart()
         {
-            SqlCommand command = new SqlCommand();
+          /*  SqlCommand command = new SqlCommand();
             command.Connection = con;
 
             DataSet ds = new DataSet();
@@ -463,7 +463,7 @@ namespace Time_table_Management_System
 
 
             subyear_chart.DataBind();
-            con.Close();
+            con.Close(); */
         }
 
 
@@ -471,7 +471,7 @@ namespace Time_table_Management_System
         private void totalSubjectCount()
         {
 
-            con.Open();
+          /*  con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT COUNT(SubCode) as subCount FROM Subjects";
@@ -486,7 +486,7 @@ namespace Time_table_Management_System
 
 
             }
-            con.Close();
+            con.Close();*/
 
         }
 

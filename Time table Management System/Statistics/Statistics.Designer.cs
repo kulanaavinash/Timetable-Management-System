@@ -336,9 +336,9 @@ namespace Time_table_Management_System
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 159);
+            this.textBox1.Location = new System.Drawing.Point(174, 99);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 30);
+            this.textBox1.Size = new System.Drawing.Size(179, 30);
             this.textBox1.TabIndex = 0;
             // 
             // Statistics
