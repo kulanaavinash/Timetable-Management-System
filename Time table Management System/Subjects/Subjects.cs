@@ -236,7 +236,7 @@ namespace Time_table_Management_System.Subjects
                 con.Open();
                 SqlCommand command = new SqlCommand("insert into subjectsDB values('" + int.Parse(metroTextBox2.Text) + "','" + metroTextBox1.Text + "','" + int.Parse(metroComboBox3.Text) + "','" + metroComboBox4.Text + "','" + int.Parse(metroComboBox5.Text) + "','" + int.Parse(metroComboBox6.Text) + "','" + int.Parse(metroComboBox7.Text) + "','" + int.Parse(metroComboBox8.Text) + "')", con);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Updated");
+                MessageBox.Show("Successfully inserted");
                 con.Close();
                 BindData();
             }

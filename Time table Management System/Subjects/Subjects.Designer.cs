@@ -32,11 +32,14 @@ namespace Time_table_Management_System.Subjects
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button21 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
@@ -58,6 +61,8 @@ namespace Time_table_Management_System.Subjects
             this.label102 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button17 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button101 = new System.Windows.Forms.Button();
             this.button100 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -95,11 +100,6 @@ namespace Time_table_Management_System.Subjects
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,9 +107,9 @@ namespace Time_table_Management_System.Subjects
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,6 +152,20 @@ namespace Time_table_Management_System.Subjects
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Subjects";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button21
+            // 
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button21.Location = new System.Drawing.Point(525, 90);
+            this.button21.Margin = new System.Windows.Forms.Padding(4);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(97, 43);
+            this.button21.TabIndex = 52;
+            this.button21.Text = "Search";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // dataGridView1
             // 
@@ -245,6 +259,33 @@ namespace Time_table_Management_System.Subjects
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ADD Subjects";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button18
+            // 
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button18.Location = new System.Drawing.Point(384, 464);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(103, 47);
+            this.button18.TabIndex = 79;
+            this.button18.Text = "CLEAR";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button19.Location = new System.Drawing.Point(161, 464);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(109, 47);
+            this.button19.TabIndex = 80;
+            this.button19.Text = "ADD";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // label24
             // 
@@ -625,6 +666,35 @@ namespace Time_table_Management_System.Subjects
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Edit Subjects";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // button17
+            // 
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button17.Location = new System.Drawing.Point(522, 69);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(121, 47);
+            this.button17.TabIndex = 79;
+            this.button17.Text = "GET DATA";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.dataGridView3.ColumnHeadersHeight = 29;
+            this.dataGridView3.Location = new System.Drawing.Point(510, 164);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(644, 296);
+            this.dataGridView3.TabIndex = 78;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // button101
             // 
@@ -1232,76 +1302,6 @@ namespace Time_table_Management_System.Subjects
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // button21
-            // 
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button21.Location = new System.Drawing.Point(525, 90);
-            this.button21.Margin = new System.Windows.Forms.Padding(4);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(97, 43);
-            this.button21.TabIndex = 52;
-            this.button21.Text = "Search";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.dataGridView3.ColumnHeadersHeight = 29;
-            this.dataGridView3.Location = new System.Drawing.Point(510, 164);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(644, 296);
-            this.dataGridView3.TabIndex = 78;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // button17
-            // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button17.Location = new System.Drawing.Point(522, 69);
-            this.button17.Margin = new System.Windows.Forms.Padding(4);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(109, 47);
-            this.button17.TabIndex = 79;
-            this.button17.Text = "Search";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button18
-            // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button18.Location = new System.Drawing.Point(384, 464);
-            this.button18.Margin = new System.Windows.Forms.Padding(4);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(103, 47);
-            this.button18.TabIndex = 79;
-            this.button18.Text = "CLEAR";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button19.Location = new System.Drawing.Point(161, 464);
-            this.button19.Margin = new System.Windows.Forms.Padding(4);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(109, 47);
-            this.button19.TabIndex = 80;
-            this.button19.Text = "ADD";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
             // Subjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1342,10 +1342,10 @@ namespace Time_table_Management_System.Subjects
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
