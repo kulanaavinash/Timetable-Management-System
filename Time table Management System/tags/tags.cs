@@ -341,6 +341,7 @@ namespace Time_table_Management_System
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //search by combo box
+            tag_combo.Text = "";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -381,5 +382,33 @@ namespace Time_table_Management_System
             TagID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             tag_combo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox1.Text != "")
+            {
+                SqlCommand command = new SqlCommand("select * from Tag where Tagname = '" + comboBox1.Text + "' ", con);
+                SqlDataAdapter sd = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Put subject");
+            }
+        }
     }
-}
+ }
+
