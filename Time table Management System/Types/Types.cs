@@ -17,6 +17,12 @@ namespace Time_table_Management_System
 
     public partial class Advanced : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -32,6 +38,8 @@ namespace Time_table_Management_System
         public Advanced()
         {
             InitializeComponent();
+            DisplayData();
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
         }
@@ -249,6 +257,21 @@ namespace Time_table_Management_System
         private void button15_Click(object sender, EventArgs e)
         {
             //consective sessions
+        }
+
+        private void DisplayData()
+        {
+            SqlCommand sqlComm = new SqlCommand("select subject,lectures,tag from [dbo].[sessionsDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                comboBox6.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+            }
+
         }
 
         private void metroTextBox3_Click(object sender, EventArgs e)
