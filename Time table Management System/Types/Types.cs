@@ -270,9 +270,13 @@ namespace Time_table_Management_System
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 comboBox6.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
+                comboBox7.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2]);
             }
 
         }
+
+        
+
 
         private void metroTextBox3_Click(object sender, EventArgs e)
         {
