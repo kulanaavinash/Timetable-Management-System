@@ -8,24 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.Data.SqlClient;
-
-
-
 
 namespace Time_table_Management_System
 {
 
     public partial class Statistics : Form
     {
-       // SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
-        //SqlCommand cmd;
-       // SqlDataAdapter adapt;
-       // DataTable dt;
-
-
-
-
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -40,31 +28,25 @@ namespace Time_table_Management_System
 
         public Statistics ()
         {
-            /*InitializeComponent();
+            InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; */
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            /*chart1.Series["Faculty"].Points.AddXY("Ajay", "10000");
+            chart1.Series["Faculty"].Points.AddXY("Ramesh", "8000");
+            chart1.Series["Faculty"].Points.AddXY("Ankit", "7000");
+            chart1.Series["Faculty"].Points.AddXY("Gurmeet", "10000");
+            chart1.Series["Faculty"].Points.AddXY("Suresh", "8500"); */
 
         }
 
 
-        private void Statistics_Load(object sender, EventArgs e)
-        {
-
-            totalLecturerCount();
-            totalSubjectCount();
-            LoadLecFacChart();
-            LoadLecDeptChart();
-            LoadSubjectYearChart();
-            LoadProgrammeStdGroupChart();
-            totalStdGrpCount();
-            //LoadLecCentreChart();
-        }
-
+       
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -296,11 +278,22 @@ namespace Time_table_Management_System
 
         private void chart1_Click_1(object sender, EventArgs e)
         {
+            chart1.Series["Faculty"].Points.AddXY("Humanaties and Science", "05");
+            chart1.Series["Faculty"].Points.AddXY("Engineering", "10");
+            chart1.Series["Faculty"].Points.AddXY("Computing", "15");
+            chart1.Series["Faculty"].Points.AddXY("Business", "20");
+          
 
         }
 
         private void chart2_Click_1(object sender, EventArgs e)
         {
+            chart2.Series["Faculty"].Points.AddXY("SE", "10000");
+            chart2.Series["Faculty"].Points.AddXY("IT", "8000");
+            chart2.Series["Faculty"].Points.AddXY("CSNE", "7000");
+            chart2.Series["Faculty"].Points.AddXY("BM", "10000");
+            chart2.Series["Faculty"].Points.AddXY("DS", "10000");
+            chart2.Series["Faculty"].Points.AddXY("MU", "10000");
 
         }
 
@@ -311,185 +304,30 @@ namespace Time_table_Management_System
 
         private void chart3_Click_1(object sender, EventArgs e)
         {
-
+            chart3.Series["Faculty"].Points.AddXY("SE", "200");
+            chart3.Series["Faculty"].Points.AddXY("MC", "400");
+            chart3.Series["Faculty"].Points.AddXY("IT", "800");
+            chart3.Series["Faculty"].Points.AddXY("EN", "1000");
+            chart3.Series["Faculty"].Points.AddXY("DS", "100");
         }
 
         private void chart4_Click(object sender, EventArgs e)
         {
+            chart4.Series["Faculty"].Points.AddXY("1", "4");
+            chart4.Series["Faculty"].Points.AddXY("2", "10");
+            chart4.Series["Faculty"].Points.AddXY("3", "8");
+            chart4.Series["Faculty"].Points.AddXY("4", "2");
 
         }
 
-        private void metroPanel4_Paint(object sender, PaintEventArgs e)
+        private void total_lecturers_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void metroButton2_Click_1(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
-         private void LoadLecFacChart()
-        {
-
-           /* SqlCommand command = new SqlCommand();
-            command.Connection = con;
-
-            DataSet ds = new DataSet();
-            con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("Select LecFaculty,COUNT(LecturerID) as c from Lecturers GROUP BY LecFaculty", con);
-            adapt.Fill(ds, "LecFaculty");
-            faclec_chart.DataSource = ds.Tables["LecFaculty"];
-
-            faclec_chart.Series["Faculty"].XValueMember = "LecFaculty";
-            faclec_chart.Series["Faculty"].YValueMembers = "c";
-            //faclec_chart.Series["Faculty"].ChartType = SeriesChartType.Bar; */
-
-
-            /*faclec_chart.DataBind();
-            con.Close(); */
-
-        }
-
-        private void faclec_chart_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void deptLec_chart_Click(object sender, EventArgs e)
-        {
-
-        }
-        //Calculating total subject count
-        private void totalStdGrpCount()
-        {
-
-          /*  con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT count(GenGrpNum) as grpcount from GenGroupNumber group by ProgrammeRef ";
-            cmd.ExecuteNonQuery();
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                string grp_count = (string)dr["grpcount"].ToString();
-                stdgrpcount_txt.Text = grp_count;
-
-
-            }
-            con.Close(); */
-
-        }
-        private void LoadLecDeptChart()
-        {
-           /* SqlCommand command = new SqlCommand();
-            command.Connection = con;
-
-            DataSet ds = new DataSet();
-            con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("Select LecDepartment,COUNT(LecturerID) as countlec from Lecturers GROUP BY LecDepartment", con);
-            adapt.Fill(ds, "countlec");
-            deptLec_chart.DataSource = ds.Tables["countlec"];
-
-
-            deptLec_chart.Series["Series1"].XValueMember = "LecDepartment";
-            deptLec_chart.Series["Series1"].YValueMembers = "countlec";
-            //deptLec_chart.Series["Series1"].ChartType = SeriesChartType.Pie;
-
-
-            deptLec_chart.DataBind();
-            con.Close();   */
-        }
-        //Calculating total lecturer count
-        private void totalLecturerCount()
-        {
-
-           /* con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT COUNT(LecturerID) as lecCount FROM Lecturers";
-            cmd.ExecuteNonQuery();
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                string lec_count = (string)dr["lecCount"].ToString();
-                total_lecturers.Text = lec_count;
-
-
-            }
-            con.Close(); */
-
-        }
-
-        private void LoadProgrammeStdGroupChart()
-        {
-           /* SqlCommand command = new SqlCommand();
-            command.Connection = con;
-
-            DataSet ds = new DataSet();
-            con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("select p.Programme as Programme, count(g.GenGrpNum) as Grpcount  from Programme p, GenGroupNumber g where p.id = g.programmeRef group by p.Programme", con);
-            adapt.Fill(ds, "Grpcount");
-            progrpcount_chart.DataSource = ds.Tables["Grpcount"];
-
-
-            progrpcount_chart.Series["Programme"].XValueMember = "Programme";
-            progrpcount_chart.Series["Programme"].YValueMembers = "Grpcount";
-            //progrpcount_chart.Series["Programme"].ChartType = SeriesChartType.Bar;
-
-
-            progrpcount_chart.DataBind();
-            con.Close(); */
-        }
-
-        private void LoadSubjectYearChart()
-        {
-          /*  SqlCommand command = new SqlCommand();
-            command.Connection = con;
-
-            DataSet ds = new DataSet();
-            con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("Select SubYear,COUNT(SubCode) as subyrcount from Subjects GROUP BY SubYear", con);
-            adapt.Fill(ds, "subyrcount");
-            subyear_chart.DataSource = ds.Tables["subyrcount"];
-
-
-            subyear_chart.Series["Academic Year"].XValueMember = "SubYear";
-            subyear_chart.Series["Academic Year"].YValueMembers = "subyrcount";
-            //subyear_chart.Series["Academic Year"].ChartType = SeriesChartType.Bar;
-
-
-            subyear_chart.DataBind();
-            con.Close(); */
-        }
-
-
-        //Calculating total subject count
-        private void totalSubjectCount()
-        {
-
-          /*  con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT COUNT(SubCode) as subCount FROM Subjects";
-            cmd.ExecuteNonQuery();
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                string sub_count = (string)dr["subCount"].ToString();
-                subject_count_txt.Text = sub_count;
-
-
-            }
-            con.Close();*/
-
-        }
-
-
     }
 }

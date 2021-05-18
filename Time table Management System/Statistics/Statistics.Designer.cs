@@ -29,7 +29,39 @@ namespace Time_table_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Lecturers = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbldept = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.total_lecturers = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.stdgrpcount_txt = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton6 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.subject_count_txt = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton9 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,8 +80,16 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.Lecturers.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +97,7 @@ namespace Time_table_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(161, 127);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -65,6 +105,364 @@ namespace Time_table_Management_System
             this.panel1.Size = new System.Drawing.Size(1252, 729);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Lecturers);
+            this.panel3.Location = new System.Drawing.Point(117, 54);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1017, 615);
+            this.panel3.TabIndex = 0;
+            // 
+            // Lecturers
+            // 
+            this.Lecturers.Controls.Add(this.tabPage1);
+            this.Lecturers.Controls.Add(this.tabPage2);
+            this.Lecturers.Controls.Add(this.tabPage3);
+            this.Lecturers.Location = new System.Drawing.Point(28, 20);
+            this.Lecturers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Lecturers.Name = "Lecturers";
+            this.Lecturers.Padding = new System.Drawing.Point(10, 5);
+            this.Lecturers.SelectedIndex = 0;
+            this.Lecturers.Size = new System.Drawing.Size(965, 575);
+            this.Lecturers.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.lbldept);
+            this.tabPage1.Controls.Add(this.metroLabel11);
+            this.tabPage1.Controls.Add(this.total_lecturers);
+            this.tabPage1.Controls.Add(this.metroButton2);
+            this.tabPage1.Controls.Add(this.chart2);
+            this.tabPage1.Controls.Add(this.chart1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 38);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(957, 533);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Lecturers  ";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // lbldept
+            // 
+            this.lbldept.AutoSize = true;
+            this.lbldept.BackColor = System.Drawing.Color.Transparent;
+            this.lbldept.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbldept.Location = new System.Drawing.Point(575, 57);
+            this.lbldept.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldept.Name = "lbldept";
+            this.lbldept.Size = new System.Drawing.Size(221, 20);
+            this.lbldept.TabIndex = 47;
+            this.lbldept.Text = "Department vs Lecturer Count";
+            this.lbldept.UseCustomBackColor = true;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel11.Location = new System.Drawing.Point(99, 69);
+            this.metroLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(186, 20);
+            this.metroLabel11.TabIndex = 46;
+            this.metroLabel11.Text = "Faculty vs Lecturer Count";
+            this.metroLabel11.UseCustomBackColor = true;
+            // 
+            // total_lecturers
+            // 
+            // 
+            // 
+            // 
+            this.total_lecturers.CustomButton.Image = null;
+            this.total_lecturers.CustomButton.Location = new System.Drawing.Point(47, 1);
+            this.total_lecturers.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.total_lecturers.CustomButton.Name = "";
+            this.total_lecturers.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.total_lecturers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.total_lecturers.CustomButton.TabIndex = 1;
+            this.total_lecturers.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.total_lecturers.CustomButton.UseSelectable = true;
+            this.total_lecturers.CustomButton.Visible = false;
+            this.total_lecturers.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.total_lecturers.Lines = new string[] {
+        "41"};
+            this.total_lecturers.Location = new System.Drawing.Point(864, 462);
+            this.total_lecturers.Margin = new System.Windows.Forms.Padding(4);
+            this.total_lecturers.MaxLength = 32767;
+            this.total_lecturers.Name = "total_lecturers";
+            this.total_lecturers.PasswordChar = '\0';
+            this.total_lecturers.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.total_lecturers.SelectedText = "";
+            this.total_lecturers.SelectionLength = 0;
+            this.total_lecturers.SelectionStart = 0;
+            this.total_lecturers.ShortcutsEnabled = true;
+            this.total_lecturers.Size = new System.Drawing.Size(79, 33);
+            this.total_lecturers.TabIndex = 45;
+            this.total_lecturers.Text = "41";
+            this.total_lecturers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.total_lecturers.UseSelectable = true;
+            this.total_lecturers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.total_lecturers.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.total_lecturers.Click += new System.EventHandler(this.total_lecturers_Click_1);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton2.Location = new System.Drawing.Point(645, 458);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(196, 37);
+            this.metroButton2.TabIndex = 40;
+            this.metroButton2.Text = "Total Lecturer Count";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseCustomForeColor = true;
+            this.metroButton2.UseSelectable = true;
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.Transparent;
+            chartArea9.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart2.Legends.Add(legend9);
+            this.chart2.Location = new System.Drawing.Point(516, 92);
+            this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart2.Name = "chart2";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series9.Legend = "Legend1";
+            series9.Name = "Faculty";
+            this.chart2.Series.Add(series9);
+            this.chart2.Size = new System.Drawing.Size(405, 342);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
+            this.chart2.Click += new System.EventHandler(this.chart2_Click_1);
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea10.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart1.Legends.Add(legend10);
+            this.chart1.Location = new System.Drawing.Point(27, 92);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart1.Name = "chart1";
+            series10.BorderColor = System.Drawing.Color.Black;
+            series10.ChartArea = "ChartArea1";
+            series10.Color = System.Drawing.Color.Black;
+            series10.Legend = "Legend1";
+            series10.Name = "Faculty";
+            this.chart1.Series.Add(series10);
+            this.chart1.Size = new System.Drawing.Size(483, 342);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title3.Name = "Lec";
+            this.chart1.Titles.Add(title3);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click_1);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.stdgrpcount_txt);
+            this.tabPage2.Controls.Add(this.metroButton6);
+            this.tabPage2.Controls.Add(this.metroLabel2);
+            this.tabPage2.Controls.Add(this.chart3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(957, 533);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Student Groups";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // stdgrpcount_txt
+            // 
+            // 
+            // 
+            // 
+            this.stdgrpcount_txt.CustomButton.Image = null;
+            this.stdgrpcount_txt.CustomButton.Location = new System.Drawing.Point(50, 1);
+            this.stdgrpcount_txt.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stdgrpcount_txt.CustomButton.Name = "";
+            this.stdgrpcount_txt.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.stdgrpcount_txt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.stdgrpcount_txt.CustomButton.TabIndex = 1;
+            this.stdgrpcount_txt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.stdgrpcount_txt.CustomButton.UseSelectable = true;
+            this.stdgrpcount_txt.CustomButton.Visible = false;
+            this.stdgrpcount_txt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.stdgrpcount_txt.Lines = new string[] {
+        "149"};
+            this.stdgrpcount_txt.Location = new System.Drawing.Point(845, 482);
+            this.stdgrpcount_txt.Margin = new System.Windows.Forms.Padding(4);
+            this.stdgrpcount_txt.MaxLength = 32767;
+            this.stdgrpcount_txt.Name = "stdgrpcount_txt";
+            this.stdgrpcount_txt.PasswordChar = '\0';
+            this.stdgrpcount_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.stdgrpcount_txt.SelectedText = "";
+            this.stdgrpcount_txt.SelectionLength = 0;
+            this.stdgrpcount_txt.SelectionStart = 0;
+            this.stdgrpcount_txt.ShortcutsEnabled = true;
+            this.stdgrpcount_txt.Size = new System.Drawing.Size(80, 31);
+            this.stdgrpcount_txt.TabIndex = 43;
+            this.stdgrpcount_txt.Text = "149";
+            this.stdgrpcount_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.stdgrpcount_txt.UseSelectable = true;
+            this.stdgrpcount_txt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.stdgrpcount_txt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton6.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton6.Location = new System.Drawing.Point(587, 476);
+            this.metroButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(244, 37);
+            this.metroButton6.TabIndex = 40;
+            this.metroButton6.Text = "Total Student Group Count";
+            this.metroButton6.UseCustomBackColor = true;
+            this.metroButton6.UseCustomForeColor = true;
+            this.metroButton6.UseSelectable = true;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(371, 14);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(264, 20);
+            this.metroLabel2.TabIndex = 31;
+            this.metroLabel2.Text = "Programme vs Student Group Count";
+            this.metroLabel2.UseCustomBackColor = true;
+            // 
+            // chart3
+            // 
+            chartArea11.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart3.Legends.Add(legend11);
+            this.chart3.Location = new System.Drawing.Point(292, 50);
+            this.chart3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart3.Name = "chart3";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series11.Legend = "Legend1";
+            series11.Name = "Faculty";
+            this.chart3.Series.Add(series11);
+            this.chart3.Size = new System.Drawing.Size(443, 391);
+            this.chart3.TabIndex = 0;
+            this.chart3.Text = "chart3";
+            this.chart3.Click += new System.EventHandler(this.chart3_Click_1);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.subject_count_txt);
+            this.tabPage3.Controls.Add(this.metroButton9);
+            this.tabPage3.Controls.Add(this.metroLabel4);
+            this.tabPage3.Controls.Add(this.chart4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 38);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(957, 533);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Subjects";
+            // 
+            // subject_count_txt
+            // 
+            // 
+            // 
+            // 
+            this.subject_count_txt.CustomButton.Image = null;
+            this.subject_count_txt.CustomButton.Location = new System.Drawing.Point(47, 1);
+            this.subject_count_txt.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.subject_count_txt.CustomButton.Name = "";
+            this.subject_count_txt.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.subject_count_txt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.subject_count_txt.CustomButton.TabIndex = 1;
+            this.subject_count_txt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.subject_count_txt.CustomButton.UseSelectable = true;
+            this.subject_count_txt.CustomButton.Visible = false;
+            this.subject_count_txt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.subject_count_txt.Lines = new string[] {
+        "13"};
+            this.subject_count_txt.Location = new System.Drawing.Point(851, 480);
+            this.subject_count_txt.Margin = new System.Windows.Forms.Padding(4);
+            this.subject_count_txt.MaxLength = 32767;
+            this.subject_count_txt.Name = "subject_count_txt";
+            this.subject_count_txt.PasswordChar = '\0';
+            this.subject_count_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.subject_count_txt.SelectedText = "";
+            this.subject_count_txt.SelectionLength = 0;
+            this.subject_count_txt.SelectionStart = 0;
+            this.subject_count_txt.ShortcutsEnabled = true;
+            this.subject_count_txt.Size = new System.Drawing.Size(79, 33);
+            this.subject_count_txt.TabIndex = 46;
+            this.subject_count_txt.Text = "13";
+            this.subject_count_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.subject_count_txt.UseSelectable = true;
+            this.subject_count_txt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.subject_count_txt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroButton9
+            // 
+            this.metroButton9.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton9.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton9.Location = new System.Drawing.Point(633, 476);
+            this.metroButton9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton9.Name = "metroButton9";
+            this.metroButton9.Size = new System.Drawing.Size(200, 37);
+            this.metroButton9.TabIndex = 40;
+            this.metroButton9.Text = "Total Subject Count";
+            this.metroButton9.UseCustomBackColor = true;
+            this.metroButton9.UseCustomForeColor = true;
+            this.metroButton9.UseSelectable = true;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(357, 22);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(159, 20);
+            this.metroLabel4.TabIndex = 31;
+            this.metroLabel4.Text = "Year vs Subject Count";
+            this.metroLabel4.UseCustomBackColor = true;
+            // 
+            // chart4
+            // 
+            chartArea12.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart4.Legends.Add(legend12);
+            this.chart4.Location = new System.Drawing.Point(155, 59);
+            this.chart4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart4.Name = "chart4";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.Name = "Faculty";
+            this.chart4.Series.Add(series12);
+            this.chart4.Size = new System.Drawing.Size(652, 398);
+            this.chart4.TabIndex = 0;
+            this.chart4.Text = "chart4";
+            this.chart4.Click += new System.EventHandler(this.chart4_Click);
             // 
             // panel2
             // 
@@ -334,13 +732,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(174, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 30);
-            this.textBox1.TabIndex = 0;
-            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,7 +763,18 @@ namespace Time_table_Management_System
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Statistics_MouseDown);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.Lecturers.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -401,7 +803,25 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TabControl Lecturers;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private MetroFramework.Controls.MetroTextBox total_lecturers;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private MetroFramework.Controls.MetroLabel lbldept;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroTextBox stdgrpcount_txt;
+        private MetroFramework.Controls.MetroButton metroButton6;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox subject_count_txt;
+        private MetroFramework.Controls.MetroButton metroButton9;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }
 
