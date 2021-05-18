@@ -141,7 +141,7 @@ namespace Time_table_Management_System
             this.b.Controls.Add(this.tabPage2);
             this.b.Controls.Add(this.tabPage3);
             this.b.Location = new System.Drawing.Point(20, 64);
-            this.b.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.b.Margin = new System.Windows.Forms.Padding(2);
             this.b.Name = "b";
             this.b.SelectedIndex = 0;
             this.b.Size = new System.Drawing.Size(906, 483);
@@ -159,9 +159,9 @@ namespace Time_table_Management_System
             this.tabPage1.Controls.Add(this.cmbSesFilterSubject);
             this.tabPage1.Controls.Add(this.metroLabel18);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(898, 450);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Session";
@@ -199,7 +199,7 @@ namespace Time_table_Management_System
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Location = new System.Drawing.Point(39, 124);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -287,9 +287,9 @@ namespace Time_table_Management_System
             this.tabPage2.Controls.Add(this.cmbSessionLecturer);
             this.tabPage2.Controls.Add(this.metroLabel8);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(898, 450);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Session";
@@ -301,7 +301,7 @@ namespace Time_table_Management_System
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.dataGridView2.ColumnHeadersHeight = 29;
             this.dataGridView2.Location = new System.Drawing.Point(572, 297);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
@@ -315,10 +315,10 @@ namespace Time_table_Management_System
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(106, 1);
-            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(142, 1);
+            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -326,7 +326,7 @@ namespace Time_table_Management_System
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
             this.metroTextBox1.Location = new System.Drawing.Point(324, 76);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -429,7 +429,7 @@ namespace Time_table_Management_System
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(593, 232);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 57);
@@ -441,7 +441,7 @@ namespace Time_table_Management_System
             this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.metroButton3.ForeColor = System.Drawing.SystemColors.Control;
             this.metroButton3.Location = new System.Drawing.Point(636, 176);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton3.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(81, 25);
             this.metroButton3.TabIndex = 89;
@@ -504,7 +504,7 @@ namespace Time_table_Management_System
             // nmudSessionDuration
             // 
             this.nmudSessionDuration.Location = new System.Drawing.Point(324, 349);
-            this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionDuration.Name = "nmudSessionDuration";
             this.nmudSessionDuration.Size = new System.Drawing.Size(112, 26);
             this.nmudSessionDuration.TabIndex = 80;
@@ -514,7 +514,7 @@ namespace Time_table_Management_System
             // nmudSessionNoStudents
             // 
             this.nmudSessionNoStudents.Location = new System.Drawing.Point(324, 305);
-            this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionNoStudents.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -546,7 +546,7 @@ namespace Time_table_Management_System
             this.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClear.Location = new System.Drawing.Point(340, 409);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 40);
             this.btnClear.TabIndex = 76;
@@ -562,7 +562,7 @@ namespace Time_table_Management_System
             this.btnSessionSave.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSessionSave.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSessionSave.Location = new System.Drawing.Point(156, 409);
-            this.btnSessionSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSessionSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSessionSave.Name = "btnSessionSave";
             this.btnSessionSave.Size = new System.Drawing.Size(150, 40);
             this.btnSessionSave.TabIndex = 69;
@@ -657,9 +657,9 @@ namespace Time_table_Management_System
             this.tabPage3.Controls.Add(this.metroButton2);
             this.tabPage3.Controls.Add(this.metroButton1);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(898, 450);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Manage Session";
@@ -684,7 +684,7 @@ namespace Time_table_Management_System
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.dataGridView3.ColumnHeadersHeight = 29;
             this.dataGridView3.Location = new System.Drawing.Point(538, 288);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidth = 51;
@@ -779,7 +779,7 @@ namespace Time_table_Management_System
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(578, 228);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(194, 57);
@@ -792,7 +792,7 @@ namespace Time_table_Management_System
             this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.metroButton4.ForeColor = System.Drawing.SystemColors.Control;
             this.metroButton4.Location = new System.Drawing.Point(620, 172);
-            this.metroButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton4.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(81, 25);
             this.metroButton4.TabIndex = 107;
@@ -820,10 +820,10 @@ namespace Time_table_Management_System
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(106, 1);
-            this.metroTextBox2.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(142, 1);
+            this.metroTextBox2.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox2.CustomButton.TabIndex = 1;
             this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -831,7 +831,7 @@ namespace Time_table_Management_System
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
             this.metroTextBox2.Location = new System.Drawing.Point(323, 100);
-            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -851,11 +851,11 @@ namespace Time_table_Management_System
             this.metroComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.ItemHeight = 23;
             this.metroComboBox1.Location = new System.Drawing.Point(682, 139);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.PromptText = "Select Lecturer";
-            this.metroComboBox1.Size = new System.Drawing.Size(112, 30);
+            this.metroComboBox1.Size = new System.Drawing.Size(112, 29);
             this.metroComboBox1.TabIndex = 103;
             this.metroComboBox1.UseSelectable = true;
             // 
@@ -864,11 +864,11 @@ namespace Time_table_Management_System
             this.metroComboBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroComboBox8.FormattingEnabled = true;
-            this.metroComboBox8.ItemHeight = 24;
+            this.metroComboBox8.ItemHeight = 23;
             this.metroComboBox8.Location = new System.Drawing.Point(565, 139);
             this.metroComboBox8.Name = "metroComboBox8";
             this.metroComboBox8.PromptText = "Select Lecturer";
-            this.metroComboBox8.Size = new System.Drawing.Size(112, 30);
+            this.metroComboBox8.Size = new System.Drawing.Size(112, 29);
             this.metroComboBox8.TabIndex = 102;
             this.metroComboBox8.UseSelectable = true;
             // 
@@ -877,11 +877,11 @@ namespace Time_table_Management_System
             this.metroComboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroComboBox9.FormattingEnabled = true;
-            this.metroComboBox9.ItemHeight = 24;
+            this.metroComboBox9.ItemHeight = 23;
             this.metroComboBox9.Location = new System.Drawing.Point(448, 139);
             this.metroComboBox9.Name = "metroComboBox9";
             this.metroComboBox9.PromptText = "Select Lecturer";
-            this.metroComboBox9.Size = new System.Drawing.Size(112, 30);
+            this.metroComboBox9.Size = new System.Drawing.Size(112, 29);
             this.metroComboBox9.TabIndex = 101;
             this.metroComboBox9.UseSelectable = true;
             // 
@@ -890,18 +890,18 @@ namespace Time_table_Management_System
             this.metroComboBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroComboBox10.FormattingEnabled = true;
-            this.metroComboBox10.ItemHeight = 24;
+            this.metroComboBox10.ItemHeight = 23;
             this.metroComboBox10.Location = new System.Drawing.Point(323, 139);
             this.metroComboBox10.Name = "metroComboBox10";
             this.metroComboBox10.PromptText = "Select Lecturer";
-            this.metroComboBox10.Size = new System.Drawing.Size(112, 30);
+            this.metroComboBox10.Size = new System.Drawing.Size(112, 29);
             this.metroComboBox10.TabIndex = 100;
             this.metroComboBox10.UseSelectable = true;
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(323, 371);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(97, 26);
             this.numericUpDown2.TabIndex = 99;
@@ -910,7 +910,7 @@ namespace Time_table_Management_System
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(323, 327);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(97, 26);
             this.numericUpDown1.TabIndex = 98;
@@ -919,11 +919,11 @@ namespace Time_table_Management_System
             // metroComboBox4
             // 
             this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 24;
+            this.metroComboBox4.ItemHeight = 23;
             this.metroComboBox4.Location = new System.Drawing.Point(323, 282);
-            this.metroComboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.Size = new System.Drawing.Size(146, 30);
+            this.metroComboBox4.Size = new System.Drawing.Size(146, 29);
             this.metroComboBox4.TabIndex = 97;
             this.metroComboBox4.UseSelectable = true;
             this.metroComboBox4.SelectedIndexChanged += new System.EventHandler(this.metroComboBox4_SelectedIndexChanged);
@@ -931,11 +931,11 @@ namespace Time_table_Management_System
             // metroComboBox3
             // 
             this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 24;
+            this.metroComboBox3.ItemHeight = 23;
             this.metroComboBox3.Location = new System.Drawing.Point(323, 235);
-            this.metroComboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(146, 30);
+            this.metroComboBox3.Size = new System.Drawing.Size(146, 29);
             this.metroComboBox3.TabIndex = 96;
             this.metroComboBox3.UseSelectable = true;
             this.metroComboBox3.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
@@ -943,11 +943,11 @@ namespace Time_table_Management_System
             // metroComboBox2
             // 
             this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 24;
+            this.metroComboBox2.ItemHeight = 23;
             this.metroComboBox2.Location = new System.Drawing.Point(323, 186);
-            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(146, 30);
+            this.metroComboBox2.Size = new System.Drawing.Size(146, 29);
             this.metroComboBox2.TabIndex = 95;
             this.metroComboBox2.UseSelectable = true;
             this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
@@ -973,7 +973,7 @@ namespace Time_table_Management_System
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
             this.metroButton2.Location = new System.Drawing.Point(370, 409);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(150, 40);
             this.metroButton2.TabIndex = 86;
@@ -989,7 +989,7 @@ namespace Time_table_Management_System
             this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
             this.metroButton1.Location = new System.Drawing.Point(166, 409);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(150, 40);
             this.metroButton1.TabIndex = 85;

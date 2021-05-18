@@ -23,6 +23,10 @@ namespace Time_table_Management_System
         SqlDataAdapter adapt;
         DataTable dt;
 
+       
+
+        
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -40,6 +44,12 @@ namespace Time_table_Management_System
         {
             InitializeComponent();
             ShowData();
+            Data();
+            View();
+            See();
+            See1();
+            Data1();
+            ShowData1();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -395,7 +405,70 @@ namespace Time_table_Management_System
         private void allocate_tag_btn_Click_1(object sender, EventArgs e)
         {
 
+            if ((tag_cmb.Text != string.Empty) && (tagroom_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select tagname, roomid from room_tag where tagname = '" + tag_cmb.Text + "' and  roomid = '" + tagroom_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected lecturer");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[room_tag] ([tagname],[roomid]) VALUES ('" + tag_cmb.Text + "','" + tagroom_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void ShowData1()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Tagname from [dbo].[Tag]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                tag_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+        private void Data1()
+        {
+            SqlCommand sqlComm = new SqlCommand("select room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                tagroom_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+
 
         private void clear_tag_btn_Click_1(object sender, EventArgs e)
         {
@@ -478,7 +551,34 @@ namespace Time_table_Management_System
         }
 
         private void allocatelecturer_room_btn_Click_1(object sender, EventArgs e)
-        {
+        {   
+            if ((lecturer_cmb.Text != string.Empty) && (lecroom_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select Lecturer, roomid from room_lec where Lecturer = '" + lecturer_cmb.Text + "' and  roomid = '" + lecroom_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected lecturer");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[room_lec] ([Lecturer],[roomid]) VALUES ('" + lecturer_cmb.Text + "','" + lecroom_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+                    
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -495,6 +595,23 @@ namespace Time_table_Management_System
             {
                 lecturer_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
                 
+            }
+
+        }
+
+
+        private void Data()
+        {
+            SqlCommand sqlComm = new SqlCommand("select room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                lecroom_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
             }
 
         }
@@ -542,8 +659,90 @@ namespace Time_table_Management_System
 
         private void grpallocateroom_btn_Click_1(object sender, EventArgs e)
         {
+            if ((grp_cmb.Text != string.Empty) && (subgrp_cmb.Text != string.Empty) && (grproom_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select groupnum, subgroup, roomid from room_group" +
+                    " where groupnum = '" + grp_cmb.Text + "' and  subgroup = '" + subgrp_cmb.Text + "'and  roomid = '" + grproom_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected group and sub group!");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[room_group] ([groupnum],[subgroup],[roomid]) " +
+                        "VALUES ('" + grp_cmb.Text + "','" + subgrp_cmb.Text + "','" + grproom_cmb.Text + "'  )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated Successfully!");
+                    con.Close();
+                   
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
+
+        private void View()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                grproom_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+
+        private void See()
+        {
+            SqlCommand sqlComm = new SqlCommand("select GenSubGrpNum from [dbo].[Student]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                subgrp_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+        private void See1()
+        {
+            SqlCommand sqlComm = new SqlCommand("select GenGrpNum from [dbo].[Student]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                grp_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
 
         private void clr_grp_btn_Click_1(object sender, EventArgs e)
         {
