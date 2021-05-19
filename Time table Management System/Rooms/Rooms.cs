@@ -56,6 +56,9 @@ namespace Time_table_Management_System
             Data4();
             Data12();
             View12();
+            Data5();
+            add();
+            Data6();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -1042,8 +1045,92 @@ namespace Time_table_Management_System
 
         private void non_reserv_room_time_btn_Click_1(object sender, EventArgs e)
         {
+            if ((non_res_room_cmb.Text != string.Empty) && (day_cmb.Text != string.Empty) && (starttime_cmb.Text != string.Empty) && (endtime_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select roomid, day,start_time,end_time from room_non where roomid = '" + non_res_room_cmb.Text + "' " +
+                    "and  day = '" + day_cmb.Text + "' and start_time = '" + starttime_cmb.Text + "' and end_time = '" + endtime_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("Time is already allocated as non reservable!");
+
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[room_non] ([roomid],[day],[start_time],[end_time]) VALUES ('" + non_res_room_cmb.Text + "','" + day_cmb.Text + "','" + starttime_cmb.Text + "','" + endtime_cmb.Text + "'   )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Time is allocated as non reservable for the selected room !");
+                    con.Close();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        private void Data5()
+        {
+            SqlCommand sqlComm = new SqlCommand("select start_time from [dbo].[Time_slots]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                starttime_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
 
         }
+
+
+
+        private void Data6()
+        {
+            SqlCommand sqlComm = new SqlCommand("select end_time from [dbo].[Time_slots]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                endtime_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+
+        private void add()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                non_res_room_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
 
         private void clrnonreserve_btn_Click_1(object sender, EventArgs e)
         {

@@ -16,7 +16,7 @@ namespace Time_table_Management_System
 
 
 
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-PNIURK2S;Initial Catalog=AddLocationDB;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
