@@ -32,16 +32,16 @@ namespace Time_table_Management_System
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Lecturers = new System.Windows.Forms.TabControl();
@@ -51,7 +51,6 @@ namespace Time_table_Management_System
             this.total_lecturers = new MetroFramework.Controls.MetroTextBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.stdgrpcount_txt = new MetroFramework.Controls.MetroTextBox();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
@@ -80,18 +79,19 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Lecturers.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,10 +109,10 @@ namespace Time_table_Management_System
             // panel3
             // 
             this.panel3.Controls.Add(this.Lecturers);
-            this.panel3.Location = new System.Drawing.Point(117, 54);
+            this.panel3.Location = new System.Drawing.Point(122, 17);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1017, 615);
+            this.panel3.Size = new System.Drawing.Size(1017, 667);
             this.panel3.TabIndex = 0;
             // 
             // Lecturers
@@ -120,12 +120,12 @@ namespace Time_table_Management_System
             this.Lecturers.Controls.Add(this.tabPage1);
             this.Lecturers.Controls.Add(this.tabPage2);
             this.Lecturers.Controls.Add(this.tabPage3);
-            this.Lecturers.Location = new System.Drawing.Point(28, 20);
+            this.Lecturers.Location = new System.Drawing.Point(3, 52);
             this.Lecturers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Lecturers.Name = "Lecturers";
             this.Lecturers.Padding = new System.Drawing.Point(10, 5);
             this.Lecturers.SelectedIndex = 0;
-            this.Lecturers.Size = new System.Drawing.Size(965, 575);
+            this.Lecturers.Size = new System.Drawing.Size(1011, 573);
             this.Lecturers.TabIndex = 0;
             // 
             // tabPage1
@@ -141,7 +141,7 @@ namespace Time_table_Management_System
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(957, 533);
+            this.tabPage1.Size = new System.Drawing.Size(1003, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Lecturers  ";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -244,30 +244,6 @@ namespace Time_table_Management_System
             this.chart2.Text = "chart2";
             this.chart2.Click += new System.EventHandler(this.chart2_Click_1);
             // 
-            // chart1
-            // 
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart1.Legends.Add(legend10);
-            this.chart1.Location = new System.Drawing.Point(27, 92);
-            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart1.Name = "chart1";
-            series10.BorderColor = System.Drawing.Color.Black;
-            series10.ChartArea = "ChartArea1";
-            series10.Color = System.Drawing.Color.Black;
-            series10.Legend = "Legend1";
-            series10.Name = "Faculty";
-            this.chart1.Series.Add(series10);
-            this.chart1.Size = new System.Drawing.Size(483, 342);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            title3.Name = "Lec";
-            this.chart1.Titles.Add(title3);
-            this.chart1.Click += new System.EventHandler(this.chart1_Click_1);
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -279,7 +255,7 @@ namespace Time_table_Management_System
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(957, 533);
+            this.tabPage2.Size = new System.Drawing.Size(1003, 531);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Student Groups";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -378,7 +354,7 @@ namespace Time_table_Management_System
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(957, 533);
+            this.tabPage3.Size = new System.Drawing.Size(1003, 531);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Subjects";
             // 
@@ -732,6 +708,30 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea10.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart1.Legends.Add(legend10);
+            this.chart1.Location = new System.Drawing.Point(27, 92);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart1.Name = "chart1";
+            series10.BorderColor = System.Drawing.Color.Black;
+            series10.ChartArea = "ChartArea1";
+            series10.Color = System.Drawing.Color.Black;
+            series10.Legend = "Legend1";
+            series10.Name = "Faculty";
+            this.chart1.Series.Add(series10);
+            this.chart1.Size = new System.Drawing.Size(483, 342);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title3.Name = "Lec";
+            this.chart1.Titles.Add(title3);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click_1);
+            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -768,7 +768,6 @@ namespace Time_table_Management_System
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
@@ -778,6 +777,7 @@ namespace Time_table_Management_System
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -809,7 +809,6 @@ namespace Time_table_Management_System
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private MetroFramework.Controls.MetroTextBox total_lecturers;
         private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
@@ -822,6 +821,7 @@ namespace Time_table_Management_System
         private MetroFramework.Controls.MetroTextBox subject_count_txt;
         private MetroFramework.Controls.MetroButton metroButton9;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
