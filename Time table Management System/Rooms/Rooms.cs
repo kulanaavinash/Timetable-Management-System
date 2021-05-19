@@ -52,7 +52,9 @@ namespace Time_table_Management_System
             ShowData1();
             See2();
             Data3();
-           
+            View3();
+            Data4();
+
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -520,6 +522,70 @@ namespace Time_table_Management_System
 
         private void allocatetagsub_btn_Click_1(object sender, EventArgs e)
         {
+            if ((sub_cmb.Text != string.Empty) && (tagsub_room_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select sub_tag, roomid from room_subtag where sub_tag = '" + sub_cmb.Text + "' and  roomid = '" + tagsub_room_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected lecturer");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[room_subtag] ([sub_tag],[roomid]) VALUES ('" + sub_cmb.Text + "','" + tagsub_room_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+        private void View3()
+        {
+            SqlCommand sqlComm = new SqlCommand("select tag,subject from [dbo].[sessionsDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                sub_cmb.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1]);
+
+            }
+
+        }
+
+
+
+
+        private void Data4()
+        {
+            SqlCommand sqlComm = new SqlCommand("select room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                tagsub_room_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
 
         }
 
