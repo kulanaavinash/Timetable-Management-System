@@ -52,6 +52,7 @@ namespace Time_table_Management_System
             ShowData1();
             See2();
             Data3();
+            See3();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -832,6 +833,23 @@ namespace Time_table_Management_System
             {
                 session_room_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
 
+            }
+
+        }
+
+
+        private void See3()
+        {
+            SqlCommand sqlComm = new SqlCommand("select lectures,tag,Sgroup,subject,noofstudent,durations from [dbo].[sessionsDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+
+                session_cmb.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] + " |" + ds.Tables[0].Rows[i][2] + " |" + ds.Tables[0].Rows[i][3] + " |" + ds.Tables[0].Rows[i][4] + " |" + ds.Tables[0].Rows[i][5]);
             }
 
         }
