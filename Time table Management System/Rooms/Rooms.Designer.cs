@@ -195,7 +195,7 @@ namespace Time_table_Management_System
             this.loc_tabcontrol.Location = new System.Drawing.Point(101, 117);
             this.loc_tabcontrol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 4;
+            this.loc_tabcontrol.SelectedIndex = 5;
             this.loc_tabcontrol.Size = new System.Drawing.Size(1051, 567);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Black;
             this.loc_tabcontrol.TabIndex = 14;
@@ -1052,13 +1052,13 @@ namespace Time_table_Management_System
             this.consec_room_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.consec_room_cmb.FormattingEnabled = true;
-            this.consec_room_cmb.ItemHeight = 23;
+            this.consec_room_cmb.ItemHeight = 24;
             this.consec_room_cmb.Location = new System.Drawing.Point(381, 151);
             this.consec_room_cmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.consec_room_cmb.MaxDropDownItems = 10;
             this.consec_room_cmb.Name = "consec_room_cmb";
             this.consec_room_cmb.PromptText = "Select Room";
-            this.consec_room_cmb.Size = new System.Drawing.Size(265, 29);
+            this.consec_room_cmb.Size = new System.Drawing.Size(265, 30);
             this.consec_room_cmb.TabIndex = 62;
             this.consec_room_cmb.UseSelectable = true;
             this.consec_room_cmb.SelectedIndexChanged += new System.EventHandler(this.consec_room_cmb_SelectedIndexChanged);
@@ -1081,13 +1081,13 @@ namespace Time_table_Management_System
             this.session1_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.session1_cmb.FormattingEnabled = true;
-            this.session1_cmb.ItemHeight = 23;
+            this.session1_cmb.ItemHeight = 24;
             this.session1_cmb.Location = new System.Drawing.Point(381, 207);
             this.session1_cmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.session1_cmb.MaxDropDownItems = 100;
             this.session1_cmb.Name = "session1_cmb";
             this.session1_cmb.PromptText = "Select Consecutive Session";
-            this.session1_cmb.Size = new System.Drawing.Size(593, 29);
+            this.session1_cmb.Size = new System.Drawing.Size(593, 30);
             this.session1_cmb.TabIndex = 63;
             this.session1_cmb.UseSelectable = true;
             this.session1_cmb.SelectedIndexChanged += new System.EventHandler(this.session1_cmb_SelectedIndexChanged);

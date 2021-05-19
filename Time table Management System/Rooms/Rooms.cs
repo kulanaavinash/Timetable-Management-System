@@ -54,7 +54,8 @@ namespace Time_table_Management_System
             Data3();
             View3();
             Data4();
-
+            Data12();
+            View12();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -934,6 +935,68 @@ namespace Time_table_Management_System
 
         private void allocateroomconsecsession_btn_Click_1(object sender, EventArgs e)
         {
+            if ((session1_cmb.Text != string.Empty) && (consec_room_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select consecutive, roomid from room_consecutive where consecutive = '" + session1_cmb.Text + "' and  roomid = '" + consec_room_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected lecturer");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[room_consecutive] ([consecutive],[roomid]) VALUES ('" + session1_cmb.Text + "','" + consec_room_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+        private void View12()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Session01,Session02 from [dbo].[Consecutive]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                session1_cmb.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1]);
+
+            }
+
+        }
+
+
+        private void Data12()
+        {
+            SqlCommand sqlComm = new SqlCommand("select room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                consec_room_cmb.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
 
         }
 
