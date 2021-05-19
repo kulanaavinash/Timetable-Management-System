@@ -8,12 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Time_table_Management_System.DayTimeAdpt;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Time_table_Management_System
 {
 
     public partial class Statistics : Form
     {
+
+       
+
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -29,6 +38,10 @@ namespace Time_table_Management_System
         public Statistics ()
         {
             InitializeComponent();
+
+           
+
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
@@ -271,6 +284,9 @@ namespace Time_table_Management_System
 
         }
 
+       
+
+
         private void metroLabel4_Click(object sender, EventArgs e)
         {
 
@@ -278,24 +294,19 @@ namespace Time_table_Management_System
 
         private void chart1_Click_1(object sender, EventArgs e)
         {
-            chart1.Series["Faculty"].Points.AddXY("Humanaties and Science", "05");
-            chart1.Series["Faculty"].Points.AddXY("Engineering", "10");
-            chart1.Series["Faculty"].Points.AddXY("Computing", "15");
-            chart1.Series["Faculty"].Points.AddXY("Business", "20");
+           
           
 
         }
 
         private void chart2_Click_1(object sender, EventArgs e)
         {
-            chart2.Series["Faculty"].Points.AddXY("SE", "10000");
-            chart2.Series["Faculty"].Points.AddXY("IT", "8000");
-            chart2.Series["Faculty"].Points.AddXY("CSNE", "7000");
-            chart2.Series["Faculty"].Points.AddXY("BM", "10000");
-            chart2.Series["Faculty"].Points.AddXY("DS", "10000");
-            chart2.Series["Faculty"].Points.AddXY("MU", "10000");
+            
 
         }
+
+
+        
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -304,19 +315,12 @@ namespace Time_table_Management_System
 
         private void chart3_Click_1(object sender, EventArgs e)
         {
-            chart3.Series["Faculty"].Points.AddXY("SE", "200");
-            chart3.Series["Faculty"].Points.AddXY("MC", "400");
-            chart3.Series["Faculty"].Points.AddXY("IT", "800");
-            chart3.Series["Faculty"].Points.AddXY("EN", "1000");
-            chart3.Series["Faculty"].Points.AddXY("DS", "100");
+            
         }
 
         private void chart4_Click(object sender, EventArgs e)
         {
-            chart4.Series["Faculty"].Points.AddXY("1", "4");
-            chart4.Series["Faculty"].Points.AddXY("2", "10");
-            chart4.Series["Faculty"].Points.AddXY("3", "8");
-            chart4.Series["Faculty"].Points.AddXY("4", "2");
+           
 
         }
 
@@ -326,6 +330,19 @@ namespace Time_table_Management_System
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+      
+
+        private void stdgrpcount_txt_Click(object sender, EventArgs e)
         {
 
         }
