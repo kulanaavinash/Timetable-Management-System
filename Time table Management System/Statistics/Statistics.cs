@@ -19,7 +19,11 @@ namespace Time_table_Management_System
     public partial class Statistics : Form
     {
 
-       
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
 
 
 
@@ -39,7 +43,13 @@ namespace Time_table_Management_System
         {
             InitializeComponent();
 
-           
+            totalLecturerCount();
+            totalStdGrpCount();
+            totalSubjectCount();
+            LoadLecFacChart();
+            LoadLecDeptChart();
+
+
 
 
             this.FormBorderStyle = FormBorderStyle.None;
@@ -299,14 +309,57 @@ namespace Time_table_Management_System
 
         }
 
+
+        private void LoadLecFacChart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select Lfaculty,COUNT(LID) as c from lecturesDB GROUP BY Lfaculty", con);
+            adapt.Fill(ds, "LecFaculty");
+            chart1.DataSource = ds.Tables["LecFaculty"];
+
+            chart1.Series["Faculty"].XValueMember = "Lfaculty";
+            chart1.Series["Faculty"].YValueMembers = "c";
+            chart1.Series["Faculty"].ChartType = SeriesChartType.Bar;
+
+
+            chart1.DataBind();
+            con.Close();
+
+        }
+
         private void chart2_Click_1(object sender, EventArgs e)
         {
             
 
         }
 
+        //Deparetment vs Lec count
+        private void LoadLecDeptChart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
 
-        
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select Ldep,COUNT(LID) as countlec from lecturesDB GROUP BY Ldep", con);
+            adapt.Fill(ds, "countlec");
+            chart2.DataSource = ds.Tables["countlec"];
+
+
+            chart2.Series["Faculty"].XValueMember = "Ldep";
+            chart2.Series["Faculty"].YValueMembers = "countlec";
+            chart2.Series["Faculty"].ChartType = SeriesChartType.Pie;
+
+
+            chart2.DataBind();
+            con.Close();
+        }
+
+
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -344,6 +397,77 @@ namespace Time_table_Management_System
 
         private void stdgrpcount_txt_Click(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void totalLecturerCount()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(LID) as lecCount FROM lecturesDB";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string lec_count = (string)dr["lecCount"].ToString();
+                total_lecturers.Text = lec_count;
+
+
+            }
+            con.Close();
+
+        }
+
+
+
+        private void totalStdGrpCount()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(Sid) as grpcount FROM Student";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string grp_count = (string)dr["grpcount"].ToString();
+                stdgrpcount_txt.Text = grp_count;
+
+
+            }
+            con.Close();
+
+        }
+
+
+
+        private void totalSubjectCount()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(subcode) as subCount FROM subjectsDB";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string sub_count = (string)dr["subCount"].ToString();
+                subject_count_txt.Text = sub_count;
+
+
+            }
+            con.Close();
 
         }
     }
