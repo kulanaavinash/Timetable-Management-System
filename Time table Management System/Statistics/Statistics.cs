@@ -364,6 +364,8 @@ namespace Time_table_Management_System
 
         private void LoadSgroup_programmeChart()
         {
+            //Retrive chart Analyze to Programmes
+
             SqlCommand command = new SqlCommand();
             command.Connection = con;
 
@@ -372,6 +374,8 @@ namespace Time_table_Management_System
             SqlDataAdapter adapt = new SqlDataAdapter("Select Programme,COUNT(SID) as countgrp from Student GROUP BY Programme", con);
             adapt.Fill(ds, "countgrp");
             chart3.DataSource = ds.Tables["countgrp"];
+
+
 
 
             chart3.Series["Faculty"].XValueMember = "Programme";
@@ -404,6 +408,8 @@ namespace Time_table_Management_System
 
         private void Loadyear_subChart()
         {
+            //bar chart Retrive 
+
             SqlCommand command = new SqlCommand();
             command.Connection = con;
 
@@ -412,6 +418,8 @@ namespace Time_table_Management_System
             SqlDataAdapter adapt = new SqlDataAdapter("Select subname,COUNT(subcode) as countsub from subjectsDB GROUP BY subname", con);
             adapt.Fill(ds, "countsub");
             chart4.DataSource = ds.Tables["countsub"];
+
+
 
 
             chart4.Series["Faculty"].XValueMember = "subname";
@@ -450,6 +458,8 @@ namespace Time_table_Management_System
         private void totalLecturerCount()
         {
 
+
+
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -473,6 +483,8 @@ namespace Time_table_Management_System
 
         private void totalStdGrpCount()
         {
+
+
 
             con.Open();
             SqlCommand cmd = con.CreateCommand();
