@@ -48,7 +48,8 @@ namespace Time_table_Management_System
             totalSubjectCount();
             LoadLecFacChart();
             LoadLecDeptChart();
-
+            LoadSgroup_programmeChart();
+            Loadyear_subChart();
 
 
 
@@ -361,6 +362,29 @@ namespace Time_table_Management_System
 
 
 
+        private void LoadSgroup_programmeChart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select Programme,COUNT(SID) as countgrp from Student GROUP BY Programme", con);
+            adapt.Fill(ds, "countgrp");
+            chart3.DataSource = ds.Tables["countgrp"];
+
+
+            chart3.Series["Faculty"].XValueMember = "Programme";
+            chart3.Series["Faculty"].YValueMembers = "countgrp";
+            chart3.Series["Faculty"].ChartType = SeriesChartType.Bar;
+
+
+            chart3.DataBind();
+            con.Close();
+        }
+
+
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -375,6 +399,28 @@ namespace Time_table_Management_System
         {
            
 
+        }
+
+
+        private void Loadyear_subChart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select subname,COUNT(subcode) as countsub from subjectsDB GROUP BY subname", con);
+            adapt.Fill(ds, "countsub");
+            chart4.DataSource = ds.Tables["countsub"];
+
+
+            chart4.Series["Faculty"].XValueMember = "subname";
+            chart4.Series["Faculty"].YValueMembers = "countsub";
+            chart4.Series["Faculty"].ChartType = SeriesChartType.Pie;
+
+
+            chart4.DataBind();
+            con.Close();
         }
 
         private void total_lecturers_Click_1(object sender, EventArgs e)
