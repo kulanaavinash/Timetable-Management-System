@@ -1102,7 +1102,11 @@ namespace Time_table_Management_System
             // 
             this.datepicker.FormattingEnabled = true;
             this.datepicker.Items.AddRange(new object[] {
-            "Monday"});
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
             this.datepicker.Location = new System.Drawing.Point(138, 55);
             this.datepicker.Name = "datepicker";
             this.datepicker.RightToLeft = System.Windows.Forms.RightToLeft.No;

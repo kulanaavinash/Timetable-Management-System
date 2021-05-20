@@ -73,8 +73,14 @@ namespace Time_table_Management_System
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.etime = new System.Windows.Forms.TextBox();
-            this.stime = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.NATno = new System.Windows.Forms.TextBox();
             this.sitems = new System.Windows.Forms.ComboBox();
             this.stype = new System.Windows.Forms.ComboBox();
@@ -100,14 +106,8 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.stime = new System.Windows.Forms.ComboBox();
+            this.etime = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -674,6 +674,8 @@ namespace Time_table_Management_System
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.etime);
+            this.tabPage4.Controls.Add(this.stime);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.date);
@@ -682,8 +684,6 @@ namespace Time_table_Management_System
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.etime);
-            this.tabPage4.Controls.Add(this.stime);
             this.tabPage4.Controls.Add(this.NATno);
             this.tabPage4.Controls.Add(this.sitems);
             this.tabPage4.Controls.Add(this.stype);
@@ -699,21 +699,97 @@ namespace Time_table_Management_System
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Not Available Time";
             // 
-            // etime
+            // label10
             // 
-            this.etime.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etime.Location = new System.Drawing.Point(30, 326);
-            this.etime.Name = "etime";
-            this.etime.Size = new System.Drawing.Size(181, 25);
-            this.etime.TabIndex = 17;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label10.Location = new System.Drawing.Point(662, 134);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 21);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Search:";
             // 
-            // stime
+            // label9
             // 
-            this.stime.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stime.Location = new System.Drawing.Point(30, 247);
-            this.stime.Name = "stime";
-            this.stime.Size = new System.Drawing.Size(181, 25);
-            this.stime.TabIndex = 16;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label9.Location = new System.Drawing.Point(441, 126);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 21);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "No :";
+            // 
+            // date
+            // 
+            this.date.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.date.FormattingEnabled = true;
+            this.date.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.date.Location = new System.Drawing.Point(30, 402);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(181, 25);
+            this.date.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label8.Location = new System.Drawing.Point(29, 378);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 21);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Select Days :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label7.Location = new System.Drawing.Point(29, 302);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 21);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Select End Time :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.Location = new System.Drawing.Point(29, 223);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 21);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Select Start Time :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label16.Location = new System.Drawing.Point(29, 151);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(137, 21);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Select Sub Type :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(29, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 21);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Select Type :";
             // 
             // NATno
             // 
@@ -726,33 +802,6 @@ namespace Time_table_Management_System
             // 
             this.sitems.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
             this.sitems.FormattingEnabled = true;
-            this.sitems.Items.AddRange(new object[] {
-            "Y1S1",
-            "Y1S2",
-            "Y2S1",
-            "Y2S2",
-            "Y3S1",
-            "Y3S2",
-            "Y4S1",
-            "Y4S2",
-            "01.01",
-            "01.02",
-            "01.03",
-            "02.01",
-            "02.02",
-            "03.01",
-            "04.01",
-            "NDM",
-            "IT",
-            "SE",
-            "NM",
-            "CS",
-            "OOP",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
             this.sitems.Location = new System.Drawing.Point(30, 175);
             this.sitems.Name = "sitems";
             this.sitems.Size = new System.Drawing.Size(181, 25);
@@ -764,10 +813,10 @@ namespace Time_table_Management_System
             this.stype.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stype.FormattingEnabled = true;
             this.stype.Items.AddRange(new object[] {
-            "Lectures ",
+            "Lecturers",
             "Sessions",
-            "Group",
-            "Sub Groups"});
+            "Groups",
+            "Sub-Groups"});
             this.stype.Location = new System.Drawing.Point(30, 97);
             this.stype.Name = "stype";
             this.stype.Size = new System.Drawing.Size(181, 25);
@@ -1067,93 +1116,23 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // label5
+            // stime
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(29, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 21);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Select Type :";
+            this.stime.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.stime.FormattingEnabled = true;
+            this.stime.Location = new System.Drawing.Point(30, 247);
+            this.stime.Name = "stime";
+            this.stime.Size = new System.Drawing.Size(181, 25);
+            this.stime.TabIndex = 34;
             // 
-            // label16
+            // etime
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label16.Location = new System.Drawing.Point(29, 151);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(137, 21);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "Select Sub Type :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label6.Location = new System.Drawing.Point(29, 223);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 21);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Select Start Time :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(29, 302);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 21);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Select End Time :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label8.Location = new System.Drawing.Point(29, 378);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 21);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Select Days :";
-            // 
-            // date
-            // 
-            this.date.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.date.FormattingEnabled = true;
-            this.date.Items.AddRange(new object[] {
-            "Monday"});
-            this.date.Location = new System.Drawing.Point(30, 402);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(181, 25);
-            this.date.TabIndex = 31;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label9.Location = new System.Drawing.Point(441, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 21);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "No :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label10.Location = new System.Drawing.Point(662, 134);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 21);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Search:";
+            this.etime.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.etime.FormattingEnabled = true;
+            this.etime.Location = new System.Drawing.Point(30, 326);
+            this.etime.Name = "etime";
+            this.etime.Size = new System.Drawing.Size(181, 25);
+            this.etime.TabIndex = 35;
             // 
             // Advanced
             // 
@@ -1257,8 +1236,6 @@ namespace Time_table_Management_System
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.TextBox NATno;
-        private System.Windows.Forms.TextBox etime;
-        private System.Windows.Forms.TextBox stime;
         private System.Windows.Forms.DataGridView NotAvialbleView;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1284,6 +1261,8 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox date;
+        private System.Windows.Forms.ComboBox etime;
+        private System.Windows.Forms.ComboBox stime;
     }
 }
 

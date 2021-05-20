@@ -51,6 +51,12 @@ namespace Time_table_Management_System
             ShowData();
             Show1();
             Show2();
+            Catch4();
+            Catch5();
+            Catch6();
+            Catch7();
+            Catch8();
+            Catch9();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -726,7 +732,112 @@ namespace Time_table_Management_System
             }
             DataTable dt5 = a.Select();
             NotAvialbleView.DataSource = dt5;
+
+
+/*
+            if ((stype.Text != string.Empty) && (sitems.Text != string.Empty) && (stime.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+
+                if (stype.Text == "Lecturers")
+                {
+                    String ID = "";
+
+                    if (sitems.SelectedItem != null)
+                    {
+                        DataRowView drv = sitems.SelectedItem as DataRowView;
+                        ID = drv.Row["LID"].ToString();
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[Day],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + stype.Text + "','" + sitems.Text + "','" + stime.Text + "','" + etime.Text + "','" + date.Text + "',null,null," + ID + ",null)";
+                }
+                else if (stype.Text == "Sessions")
+                {
+                    String ID = "";
+
+                    if (sitems.SelectedItem != null)
+                    {
+                        DataRowView drv = sitems.SelectedItem as DataRowView;
+                        ID = drv.Row["SeID"].ToString();
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[Day],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + stype.Text + "','" + sitems.Text + "','" + stime.Text + "','" + etime.Text + "','" + date.Text + "',null,null,null," + ID + ")";
+                }
+                else if (stype.Text == "Groups")
+                {
+                    String ID = "";
+
+                    if (sitems.SelectedItem != null)
+                    {
+                        SqlCommand sqlComm = new SqlCommand("select GenGrpNum from [dbo].[Student]", con);
+                        con.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+                        DataSet ds = new DataSet();
+                        sda.Fill(ds);
+                        con.Close();
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            sitems.Items.Add(ds.Tables[0].Rows[i][0]);
+
+                        }
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[Day],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + stype.Text + "','" + sitems.Text + "','" + stime.Text + "','" + etime.Text + "','" + date.Text + "'," + ID + ",null,null,null)";
+                }
+                else if (stype.Text == "Sub-Groups")
+                {
+                    String ID = "";
+
+                    if (sitems.SelectedItem != null)
+                    {
+                        SqlCommand sqlComm = new SqlCommand("select GenSubGrpNum from [dbo].[Student]", con);
+                        con.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+                        DataSet ds = new DataSet();
+                        sda.Fill(ds);
+                        con.Close();
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            sitems.Items.Add(ds.Tables[0].Rows[i][0]);
+
+                        }
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + stype.Text + "','" + sitems.Text + "','" + stime.Text + "','" + etime.Text + "',null," + ID + ",null,null)";
+                }
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Not Available Time Added");
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            String query1 = "select id,SelectedType,Item,Day,StartTime,EndTime from NotAvailableTime";
+
+            SqlCommand cmd2 = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd2.ExecuteReader();
+            dt.Load(sdr);
+
+            NotAvialbleView.AutoGenerateColumns = true;
+            NotAvialbleView.DataSource = dt;
+
+            con.Close();
+
+
+                */
+
+
         }
+
+
+
+
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
@@ -856,5 +967,112 @@ namespace Time_table_Management_System
         {
             ClearData();
         }
+
+
+        //load data 
+
+        private void Catch4()
+        {
+            SqlCommand sqlComm = new SqlCommand("select GenGrpNum from [dbo].[Student]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                sitems.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+        private void Catch5()
+        {
+            SqlCommand sqlComm = new SqlCommand("select GenSubGrpNum from [dbo].[Student]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                sitems.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+        private void Catch6()
+        {
+            SqlCommand sqlComm = new SqlCommand("select sessions from [dbo].[room_sessions]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                sitems.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+        private void Catch7()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Lname from [dbo].[lecturesDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                sitems.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+        private void Catch8()
+        {
+            SqlCommand sqlComm = new SqlCommand("select start_time from [dbo].[Time_slots]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                stime.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+        private void Catch9()
+        {
+            SqlCommand sqlComm = new SqlCommand("select end_time from [dbo].[Time_slots]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                etime.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
     }
+
+
+
+
 }
