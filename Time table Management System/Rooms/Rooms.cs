@@ -59,6 +59,7 @@ namespace Time_table_Management_System
             Data5();
             add();
             Data6();
+            FormatData();
 
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
@@ -481,7 +482,7 @@ namespace Time_table_Management_System
 
         private void clear_tag_btn_Click_1(object sender, EventArgs e)
         {
-
+            FormatData();
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
@@ -595,7 +596,7 @@ namespace Time_table_Management_System
 
         private void clrtagsub_btn_Click_1(object sender, EventArgs e)
         {
-
+            FormatData();
         }
 
         private void lec_lbl_Click(object sender, EventArgs e)
@@ -692,7 +693,7 @@ namespace Time_table_Management_System
 
         private void clrLecturerroom_btn_Click_1(object sender, EventArgs e)
         {
-
+            FormatData();
         }
 
         private void grpsubgrp_lbl_Click(object sender, EventArgs e)
@@ -819,7 +820,7 @@ namespace Time_table_Management_System
 
         private void clr_grp_btn_Click_1(object sender, EventArgs e)
         {
-
+            FormatData();
         }
 
         private void session_lbl_Click(object sender, EventArgs e)
@@ -913,7 +914,7 @@ namespace Time_table_Management_System
 
         private void clr_session_btn_Click_1(object sender, EventArgs e)
         {
-
+            FormatData();
         }
 
         private void con_session_room_lbl_Click(object sender, EventArgs e)
@@ -1005,7 +1006,7 @@ namespace Time_table_Management_System
 
         private void clr_consec_btn_Click_1(object sender, EventArgs e)
         {
-
+            FormatData();
         }
 
         private void non_reservable_lbl_Click(object sender, EventArgs e)
@@ -1134,8 +1135,36 @@ namespace Time_table_Management_System
 
         private void clrnonreserve_btn_Click_1(object sender, EventArgs e)
         {
+            FormatData();
+        }
+
+
+        private void FormatData()
+        {
+            consec_room_cmb.Text = "";
+            session1_cmb.Text = "";
+            session_cmb.Text = "";
+            session_room_cmb.Text = "";
+            lecturer_cmb.Text = "";
+            lecroom_cmb.Text = "";
+            tag_cmb.Text = "";
+            tagroom_cmb.Text = "";
+            grp_cmb.Text = "";
+            subgrp_cmb.Text = "";
+            grproom_cmb.Text = "";
+            sub_cmb.Text = "";
+            tagsub_room_cmb.Text = "";
+            non_res_room_cmb.Text = "";
+            day_cmb.Text = "";
+            starttime_cmb.Text = "";
+            endtime_cmb.Text = "";
+
+
+
+
 
         }
+
 
         private void metroPanel8_Paint(object sender, PaintEventArgs e)
         {
@@ -1186,6 +1215,11 @@ namespace Time_table_Management_System
         }
 
         private void sessionheading_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sub_cmb_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
