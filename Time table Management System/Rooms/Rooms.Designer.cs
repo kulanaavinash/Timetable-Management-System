@@ -164,7 +164,7 @@ namespace Time_table_Management_System
             this.panel3.Location = new System.Drawing.Point(250, 8);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(369, 81);
+            this.panel3.Size = new System.Drawing.Size(441, 81);
             this.panel3.TabIndex = 15;
             // 
             // label2
@@ -172,7 +172,8 @@ namespace Time_table_Management_System
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 30);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(139, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 20);
@@ -194,7 +195,7 @@ namespace Time_table_Management_System
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(76, 95);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 0;
+            this.loc_tabcontrol.SelectedIndex = 6;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 450);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Black;
             this.loc_tabcontrol.TabIndex = 14;
@@ -1371,6 +1372,12 @@ namespace Time_table_Management_System
             // 
             this.day_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.day_cmb.FormattingEnabled = true;
+            this.day_cmb.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
             this.day_cmb.Location = new System.Drawing.Point(401, 188);
             this.day_cmb.Name = "day_cmb";
             this.day_cmb.Size = new System.Drawing.Size(171, 24);

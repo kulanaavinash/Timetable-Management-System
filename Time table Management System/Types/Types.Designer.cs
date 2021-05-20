@@ -108,6 +108,7 @@ namespace Time_table_Management_System
             this.Hwbtn = new System.Windows.Forms.Button();
             this.stime = new System.Windows.Forms.ComboBox();
             this.etime = new System.Windows.Forms.ComboBox();
+            this.button23 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -268,8 +269,7 @@ namespace Time_table_Management_System
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox3.CustomButton.UseSelectable = true;
             this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[] {
-        "Search"};
+            this.metroTextBox3.Lines = new string[0];
             this.metroTextBox3.Location = new System.Drawing.Point(674, 133);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
@@ -281,10 +281,10 @@ namespace Time_table_Management_System
             this.metroTextBox3.ShortcutsEnabled = true;
             this.metroTextBox3.Size = new System.Drawing.Size(143, 23);
             this.metroTextBox3.TabIndex = 5;
-            this.metroTextBox3.Text = "Search";
             this.metroTextBox3.UseSelectable = true;
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox3.TextChanged += new System.EventHandler(this.metroTextBox3_TextChanged);
             this.metroTextBox3.Click += new System.EventHandler(this.metroTextBox3_Click);
             // 
             // metroComboBox1
@@ -674,6 +674,7 @@ namespace Time_table_Management_System
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.button23);
             this.tabPage4.Controls.Add(this.etime);
             this.tabPage4.Controls.Add(this.stime);
             this.tabPage4.Controls.Add(this.label10);
@@ -704,18 +705,19 @@ namespace Time_table_Management_System
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label10.Location = new System.Drawing.Point(662, 134);
+            this.label10.Location = new System.Drawing.Point(670, 54);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 21);
             this.label10.TabIndex = 33;
             this.label10.Text = "Search:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label9.Location = new System.Drawing.Point(441, 126);
+            this.label9.Location = new System.Drawing.Point(446, 49);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 21);
             this.label9.TabIndex = 32;
@@ -793,7 +795,7 @@ namespace Time_table_Management_System
             // 
             // NATno
             // 
-            this.NATno.Location = new System.Drawing.Point(482, 118);
+            this.NATno.Location = new System.Drawing.Point(503, 41);
             this.NATno.Name = "NATno";
             this.NATno.Size = new System.Drawing.Size(47, 29);
             this.NATno.TabIndex = 15;
@@ -827,17 +829,17 @@ namespace Time_table_Management_System
             // 
             this.NotAvialbleView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.NotAvialbleView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NotAvialbleView.Location = new System.Drawing.Point(228, 175);
+            this.NotAvialbleView.Location = new System.Drawing.Point(245, 91);
             this.NotAvialbleView.Name = "NotAvialbleView";
             this.NotAvialbleView.RowHeadersWidth = 51;
-            this.NotAvialbleView.Size = new System.Drawing.Size(621, 313);
+            this.NotAvialbleView.Size = new System.Drawing.Size(621, 308);
             this.NotAvialbleView.TabIndex = 9;
             this.NotAvialbleView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.NotAvialbleView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NotAvialbleView_RowHeaderMouseClick);
             // 
             // NATsearch
             // 
-            this.NATsearch.Location = new System.Drawing.Point(733, 126);
+            this.NATsearch.Location = new System.Drawing.Point(740, 46);
             this.NATsearch.Name = "NATsearch";
             this.NATsearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NATsearch.Size = new System.Drawing.Size(126, 29);
@@ -847,20 +849,20 @@ namespace Time_table_Management_System
             // button22
             // 
             this.button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button22.Location = new System.Drawing.Point(239, 109);
+            this.button22.Location = new System.Drawing.Point(751, 425);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(196, 38);
+            this.button22.Size = new System.Drawing.Size(115, 38);
             this.button22.TabIndex = 6;
-            this.button22.Text = "Clear";
+            this.button22.Text = "Delete";
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
-            this.button21.ForeColor = System.Drawing.Color.Black;
-            this.button21.Location = new System.Drawing.Point(239, 46);
+            this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button21.Location = new System.Drawing.Point(245, 425);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(196, 34);
+            this.button21.Size = new System.Drawing.Size(214, 38);
             this.button21.TabIndex = 5;
             this.button21.Text = "Set Not Available Time";
             this.button21.UseVisualStyleBackColor = true;
@@ -1134,6 +1136,18 @@ namespace Time_table_Management_System
             this.etime.Size = new System.Drawing.Size(181, 25);
             this.etime.TabIndex = 35;
             // 
+            // button23
+            // 
+            this.button23.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.ForeColor = System.Drawing.Color.Black;
+            this.button23.Location = new System.Drawing.Point(30, 441);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(60, 22);
+            this.button23.TabIndex = 36;
+            this.button23.Text = "Clear ";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
             // Advanced
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1263,6 +1277,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.ComboBox date;
         private System.Windows.Forms.ComboBox etime;
         private System.Windows.Forms.ComboBox stime;
+        private System.Windows.Forms.Button button23;
     }
 }
 

@@ -489,5 +489,10 @@ namespace Time_table_Management_System
                 MessageBox.Show("Put Lectures level");
             }
         }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

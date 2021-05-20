@@ -160,7 +160,7 @@ namespace Time_table_Management_System
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button22.Location = new System.Drawing.Point(327, 77);
+            this.button22.Location = new System.Drawing.Point(354, 78);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(75, 29);
             this.button22.TabIndex = 52;
@@ -1156,12 +1156,13 @@ namespace Time_table_Management_System
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 123);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 128);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(766, 325);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 325);
             this.dataGridView1.TabIndex = 53;
             // 
             // Lectures

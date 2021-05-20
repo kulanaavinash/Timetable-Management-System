@@ -261,7 +261,7 @@ namespace Time_table_Management_System.Subjects
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button18.Location = new System.Drawing.Point(288, 377);
+            this.button18.Location = new System.Drawing.Point(231, 396);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(77, 38);
             this.button18.TabIndex = 79;
@@ -273,7 +273,7 @@ namespace Time_table_Management_System.Subjects
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button19.Location = new System.Drawing.Point(121, 377);
+            this.button19.Location = new System.Drawing.Point(107, 396);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(82, 38);
             this.button19.TabIndex = 80;

@@ -332,6 +332,15 @@ namespace Time_table_Management_System
             comboBox14.Text = "";
 
 
+
+            stype.Text = "";
+            sitems.Text = "";
+            stime.Text = "";
+            etime.Text = "";
+            date.Text = "";
+
+
+
         }
 
         
@@ -1069,8 +1078,52 @@ namespace Time_table_Management_System
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+
+        private void metroTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (metroComboBox1.Text == "ID")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT SessionID,Session01,Session02 FROM Consecutive WHERE SessionID LIKE '%" + metroTextBox3.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+            else if (metroComboBox1.Text == "Session 01")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT SessionID,Session01 FROM Consecutive WHERE Session01 LIKE '%" + metroTextBox3.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (metroComboBox1.Text == "Session 02")
+            {
+                // SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT SessionID,Session02 FROM Consecutive WHERE Session02 LIKE '%" + metroTextBox3.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+        }
     }
+    
 
 
 
