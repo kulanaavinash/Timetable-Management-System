@@ -16,8 +16,9 @@ namespace Time_table_Management_System.DayTimeAdpt
 
         public int sessionID { get; set; }
         public string faculty { get; set; }
-        public string lecture { get; set; }
-        public int session_type { get; set; }
+        public string lecturer { get; set; }
+        public string student { get; set; }
+        public string session_type { get; set; }
         public string date { get; set; }
         public string class_room { get; set; }
         public string department { get; set; }
@@ -66,12 +67,13 @@ namespace Time_table_Management_System.DayTimeAdpt
             try
             {
                 //create a query to insert data
-                string sql = "INSERT INTO add_session(faculty, lecture, session_type, date, class_room, department, session, center) VALUES (@faculty, @lecture, @session_type, @date, @class_room, @department, @session, @center)";
+                string sql = "INSERT INTO add_session(faculty, lecturer, student,session_type, date, class_room, department, session, center) VALUES (@faculty, @lecturer,@student, @session_type, @date, @class_room, @department, @session, @center)";
                 //creating sql command using sql and conn 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //create parameter to add data 
                 cmd.Parameters.AddWithValue("@faculty", c.faculty);
-                cmd.Parameters.AddWithValue("@lecture", c.lecture);
+                cmd.Parameters.AddWithValue("@lecturer", c.lecturer);
+                cmd.Parameters.AddWithValue("@student", c.student);
                 cmd.Parameters.AddWithValue("@session_type", c.session_type);
                 cmd.Parameters.AddWithValue("@date", c.date);
                 cmd.Parameters.AddWithValue("@class_room", c.class_room);
@@ -114,14 +116,15 @@ namespace Time_table_Management_System.DayTimeAdpt
             try
             {
                 //Sql to update data in databse
-                string sql = "UPDATE add_session SET faculty=@faculty, lecture=@lecture, session_type=@session_type, date=@date, class_room=@class_room, department=@department, session=@session, center=@center";
+                string sql = "UPDATE add_session SET faculty=@faculty, lecturer=@lecturer, student=@student, session_type=@session_type, date=@date, class_room=@class_room, department=@department, session=@session, center=@center";
 
                 //creating sql command
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 //create parameter to add values
                 cmd.Parameters.AddWithValue("@faculty", c.faculty);
-                cmd.Parameters.AddWithValue("@lecture", c.lecture);
+                cmd.Parameters.AddWithValue("@lecturer", c.lecturer);
+                cmd.Parameters.AddWithValue("@student", c.student);
                 cmd.Parameters.AddWithValue("@session_type", c.session_type);
                 cmd.Parameters.AddWithValue("@date", c.date);
                 cmd.Parameters.AddWithValue("@class_room", c.class_room);

@@ -17,6 +17,13 @@ namespace Time_table_Management_System
 
     public partial class DaysHours : Form
     {
+
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -32,6 +39,16 @@ namespace Time_table_Management_System
         public DaysHours()
         {
             InitializeComponent();
+            Catch();
+            Catch2();
+            Catch3();
+            Catch4();
+            Catch9();
+
+
+            DisplayData();
+
+
             this.FormBorderStyle = FormBorderStyle.None;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(10, 10, Width, Height, 40, 40));
             //Form
@@ -329,8 +346,9 @@ namespace Time_table_Management_System
         {
             //get values from the input field
             c.faculty = faculty.Text;
-            c.lecture = lecture.Text;
-            c.session_type = session_type.SelectedIndex;
+            c.lecturer = lecturer.Text;
+            c.student = student.Text;
+            c.session_type = session_type.Text;
             c.date = date.Text;
             c.class_room = class_room.Text;
             c.department = department.Text;
@@ -685,7 +703,8 @@ namespace Time_table_Management_System
             // After data clear add session tab
 
             faculty.Text = "";
-            lecture.Text = "";
+            lecturer.Text = "";
+            student.Text = "";
             session_type.Text = "";
             date.Text = "";
             class_room.Text = "";
@@ -928,5 +947,122 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //load combo data add session to time table
+
+        private void Catch()
+        {
+            SqlCommand sqlComm = new SqlCommand("select building from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                faculty.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+        private void Catch2()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Lname from [dbo].[lecturesDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                lecturer.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+        private void Catch3()
+        {
+            SqlCommand sqlComm = new SqlCommand("select GenGrpNum from [dbo].[Student]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                student.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+        private void Catch4()
+        {
+            SqlCommand sqlComm = new SqlCommand("select room from [dbo].[Locations]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                class_room.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+
+        private void Catch9()
+        {
+            SqlCommand sqlComm = new SqlCommand("select Lcenter from [dbo].[lecturesDB]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                center.Items.Add(ds.Tables[0].Rows[i][0]);
+
+            }
+
+        }
+
+
+
+
+
+        private void DisplayData()
+        {
+            SqlCommand sqlComm = new SqlCommand("select start_time,end_time from [dbo].[room_non]", con);
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            con.Close();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                session.Items.Add(ds.Tables[0].Rows[i][0] + " |" + ds.Tables[0].Rows[i][1] );
+                
+            }
+
+        }
+
+
+       
+
+
     }
 }
