@@ -494,5 +494,10 @@ namespace Time_table_Management_System
         {
 
         }
+
+        private void dataGridView1_CellContentClick_3(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

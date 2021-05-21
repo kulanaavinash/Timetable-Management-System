@@ -654,6 +654,9 @@ namespace Time_table_Management_System
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //not avialble time
+
+          
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -1013,10 +1016,10 @@ namespace Time_table_Management_System
 
         }
 
-
+        //-------------------------------------------
         private void Catch6()
         {
-            SqlCommand sqlComm = new SqlCommand("select sessions from [dbo].[room_sessions]", con);
+            SqlCommand sqlComm = new SqlCommand("select Programme from [dbo].[student]", con);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
             DataSet ds = new DataSet();
@@ -1054,6 +1057,7 @@ namespace Time_table_Management_System
             DataSet ds = new DataSet();
             sda.Fill(ds);
             con.Close();
+
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 stime.Items.Add(ds.Tables[0].Rows[i][0]);
