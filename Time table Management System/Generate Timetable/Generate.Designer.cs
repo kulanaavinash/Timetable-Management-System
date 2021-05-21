@@ -32,6 +32,7 @@ namespace Time_table_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.metroGrid1 = new System.Windows.Forms.DataGridView();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
@@ -66,17 +67,16 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.metroGrid1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +119,16 @@ namespace Time_table_Management_System
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Lecture";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // metroGrid1
+            // 
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGrid1.Location = new System.Drawing.Point(34, 110);
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.Size = new System.Drawing.Size(792, 337);
+            this.metroGrid1.TabIndex = 5;
+            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick_1);
             // 
             // button16
             // 
@@ -196,9 +206,9 @@ namespace Time_table_Management_System
             // button18
             // 
             this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button18.Location = new System.Drawing.Point(657, 30);
+            this.button18.Location = new System.Drawing.Point(657, 37);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(173, 41);
+            this.button18.Size = new System.Drawing.Size(173, 34);
             this.button18.TabIndex = 3;
             this.button18.Text = "Print Timetable";
             this.button18.UseVisualStyleBackColor = true;
@@ -207,9 +217,9 @@ namespace Time_table_Management_System
             // button17
             // 
             this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button17.Location = new System.Drawing.Point(460, 30);
+            this.button17.Location = new System.Drawing.Point(460, 37);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(191, 41);
+            this.button17.Size = new System.Drawing.Size(191, 34);
             this.button17.TabIndex = 2;
             this.button17.Text = "View Timetable";
             this.button17.UseVisualStyleBackColor = true;
@@ -259,19 +269,19 @@ namespace Time_table_Management_System
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(31, 74);
+            this.dataGridView3.Location = new System.Drawing.Point(31, 85);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(814, 385);
+            this.dataGridView3.Size = new System.Drawing.Size(814, 374);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // button20
             // 
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button20.Location = new System.Drawing.Point(648, 16);
+            this.button20.Location = new System.Drawing.Point(648, 26);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(197, 47);
+            this.button20.Size = new System.Drawing.Size(197, 37);
             this.button20.TabIndex = 3;
             this.button20.Text = "Print Timetable";
             this.button20.UseVisualStyleBackColor = true;
@@ -280,9 +290,9 @@ namespace Time_table_Management_System
             // button19
             // 
             this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button19.Location = new System.Drawing.Point(417, 16);
+            this.button19.Location = new System.Drawing.Point(417, 30);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(206, 47);
+            this.button19.Size = new System.Drawing.Size(206, 33);
             this.button19.TabIndex = 2;
             this.button19.Text = "View Timetable";
             this.button19.UseVisualStyleBackColor = true;
@@ -559,15 +569,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // metroGrid1
-            // 
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGrid1.Location = new System.Drawing.Point(34, 110);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.Size = new System.Drawing.Size(792, 337);
-            this.metroGrid1.TabIndex = 5;
-            // 
             // Generate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,6 +602,7 @@ namespace Time_table_Management_System
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -610,7 +612,6 @@ namespace Time_table_Management_System
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }

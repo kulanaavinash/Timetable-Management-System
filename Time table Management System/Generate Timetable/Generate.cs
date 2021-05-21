@@ -439,7 +439,7 @@ namespace Time_table_Management_System
             min = 30;
             sec = 0;
 
-            String query1 = "select Sgroup,Subject,durations,tag from sessionsDB where Seid LIKE '%" + metroComboBox2.Text + "%'";
+            String query1 = "select Sgroup,Subject,durations,tag from sessionsDB where Seid LIKE '%" + comboBox1.Text + "%'";
 
             SqlCommand cmd = new SqlCommand(query1, con);
             con.Open();
@@ -585,6 +585,131 @@ namespace Time_table_Management_System
         private void button19_Click(object sender, EventArgs e)
         {
             //view classroom  view timetable
+            hr = 8;
+            min = 30;
+            sec = 0;
+
+            String query1 = "select roomid,sub_tag from room_subtag where roomid LIKE '%" + comboBox1.Text + "%'";
+
+
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            con.Close();
+
+            dataGridView3.ColumnCount = 8;
+            dataGridView3.Columns[0].Name = "";
+            dataGridView3.Columns[1].Name = "Monday";
+            dataGridView3.Columns[2].Name = "Tuesday";
+            dataGridView3.Columns[3].Name = "Wednesday";
+            dataGridView3.Columns[4].Name = "Thursday";
+            dataGridView3.Columns[5].Name = "Friday";
+            dataGridView3.Columns[6].Name = "Saturday";
+            dataGridView3.Columns[7].Name = "Sunday";
+
+            System.IO.StringWriter sw;
+            string output;
+            int xCount = 1;
+            int yCount = 0;
+            string[,] Tablero = new string[5, 8];
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    Tablero[k, l] = " --- ";
+                }
+            }
+
+            // Loop through each row in the table.
+            foreach (DataRow row in dt.Rows)
+            {
+                sw = new System.IO.StringWriter();
+
+                // Loop through each column.
+                foreach (DataColumn col in dt.Columns)
+                {
+                    // Output the value of each column's data.
+                    sw.Write(row[col].ToString() + "\n");
+                }
+
+                output = sw.ToString();
+
+                // Trim off the trailing ", ", so the output looks correct.
+                if (output.Length > 2)
+                    output = output.Substring(0, output.Length - 2);
+
+
+                if (yCount == 5)
+                {
+                    yCount = 0;
+                    xCount++;
+                }
+                try
+                {
+
+                    Tablero[yCount, xCount] = output;
+                    yCount++;
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+            do
+            {
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+                    try
+                    {
+                        dataGridView3.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (dataGridView3.Rows.Count > 1);
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                var arlist1 = new ArrayList();
+
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    arlist1.Add(Tablero[k, l]);
+                }
+
+                string srrr = (string)arlist1[1];
+                string srrr2 = srrr.Substring(srrr.Length - 2);
+
+                string[] row = new string[] {
+                    hr + "." + min,
+                    (string) arlist1[1],
+                    (string) arlist1[2],
+                    (string) arlist1[3],
+                    (string) arlist1[4],
+                    (string) arlist1[5],
+                    (string) arlist1[6],
+                    (string) arlist1[7]
+                };
+
+                try
+                {
+                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
+                }
+                catch (Exception ex)
+                {
+                }
+
+                dataGridView3.Rows.Add(row);
+            }
+
+
+
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -609,6 +734,11 @@ namespace Time_table_Management_System
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroGrid1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
