@@ -15,6 +15,9 @@ namespace Time_table_Management_System
 
     public partial class Lectures : Form
     {
+
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -344,7 +347,7 @@ namespace Time_table_Management_System
         {
 
         }
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        
 
         private void button15_Click(object sender, EventArgs e)
         {
