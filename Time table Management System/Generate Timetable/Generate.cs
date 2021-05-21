@@ -8,12 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using System.Collections;
 
 namespace Time_table_Management_System
 {
 
     public partial class Generate : Form
     {
+
+        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+        public int hr = 8;
+        public int min = 30;
+        public int sec = 0;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -223,6 +233,29 @@ namespace Time_table_Management_System
 
 
 
+        private void timeCalc(int hr1, int min1, int sec1)
+        {
+
+            sec += sec1;
+
+            if (sec > 60)
+            {
+                min++;
+                sec -= 60;
+            }
+
+            min += min1;
+
+            if (min > 60)
+            {
+                hr++;
+                min -= 60;
+            }
+
+            hr += hr1;
+        }
+
+
 
 
 
@@ -246,6 +279,130 @@ namespace Time_table_Management_System
         private void button15_Click(object sender, EventArgs e)
         {
             // view lec ---view time table btn---//
+
+
+            hr = 8;
+            min = 30;
+            sec = 0;
+
+            String query1 = "select lectures,tag,Sgroup,noofstudent,durations from sessionsDB where lectures LIKE '%" + metroComboBox1.Text + "%'"; 
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            con.Close();
+
+            metroGrid1.ColumnCount = 8;
+            metroGrid1.Columns[0].Name = "";
+            metroGrid1.Columns[1].Name = "Monday";
+            metroGrid1.Columns[2].Name = "Tuesday";
+            metroGrid1.Columns[3].Name = "Wednesday";
+            metroGrid1.Columns[4].Name = "Thursday";
+            metroGrid1.Columns[5].Name = "Friday";
+            metroGrid1.Columns[6].Name = "Saturday";
+            metroGrid1.Columns[7].Name = "Sunday";
+
+            System.IO.StringWriter sw;
+            string output;
+            int xCount = 1;
+            int yCount = 0;
+            string[,] Tablero = new string[5, 8];
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    Tablero[k, l] = " --- ";
+                }
+            }
+
+            // Loop through each row in the table.
+            foreach (DataRow row in dt.Rows)
+            {
+                sw = new System.IO.StringWriter();
+
+                // Loop through each column.
+                foreach (DataColumn col in dt.Columns)
+                {
+                    // Output the value of each column's data.
+                    sw.Write(row[col].ToString() + "\n");
+                }
+
+                output = sw.ToString();
+
+                // Trim off the trailing ", ", so the output looks correct.
+                if (output.Length > 2)
+                    output = output.Substring(0, output.Length - 2);
+
+
+                if (yCount == 5)
+                {
+                    yCount = 0;
+                    xCount++;
+                }
+                try
+                {
+
+                    Tablero[yCount, xCount] = output;
+                    yCount++;
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+            do
+            {
+                foreach (DataGridViewRow row in metroGrid1.Rows)
+                {
+                    try
+                    {
+                        metroGrid1.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (metroGrid1.Rows.Count > 1);
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                var arlist1 = new ArrayList();
+
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    arlist1.Add(Tablero[k, l]);
+                }
+
+                string srrr = (string)arlist1[1];
+                string srrr2 = srrr.Substring(srrr.Length - 2);
+
+                string[] row = new string[] {
+                    hr + "." + min,
+                    (string) arlist1[1],
+                    (string) arlist1[2],
+                    (string) arlist1[3],
+                    (string) arlist1[4],
+                    (string) arlist1[5],
+                    (string) arlist1[6],
+                    (string) arlist1[7]
+                };
+
+                try
+                {
+                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+                metroGrid1.Rows.Add(row);
+            }
+
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -277,6 +434,128 @@ namespace Time_table_Management_System
         private void button17_Click(object sender, EventArgs e)
         {
             //student Group  view time table btn
+
+            hr = 8;
+            min = 30;
+            sec = 0;
+
+            String query1 = "select Sgroup,Subject,durations,tag from sessionsDB where Seid LIKE '%" + metroComboBox2.Text + "%'";
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            con.Close();
+
+            dataGridView2.ColumnCount = 8;
+            dataGridView2.Columns[0].Name = "";
+            dataGridView2.Columns[1].Name = "Monday";
+            dataGridView2.Columns[2].Name = "Tuesday";
+            dataGridView2.Columns[3].Name = "Wednesday";
+            dataGridView2.Columns[4].Name = "Thursday";
+            dataGridView2.Columns[5].Name = "Friday";
+            dataGridView2.Columns[6].Name = "Saturday";
+            dataGridView2.Columns[7].Name = "Sunday";
+
+            System.IO.StringWriter sw;
+            string output;
+            int xCount = 1;
+            int yCount = 0;
+            string[,] Tablero = new string[5, 8];
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    Tablero[k, l] = " --- ";
+                }
+            }
+
+            // Loop through each row in the table.
+            foreach (DataRow row in dt.Rows)
+            {
+                sw = new System.IO.StringWriter();
+
+                // Loop through each column.
+                foreach (DataColumn col in dt.Columns)
+                {
+                    // Output the value of each column's data.
+                    sw.Write(row[col].ToString() + "\n");
+                }
+
+                output = sw.ToString();
+
+                // Trim off the trailing ", ", so the output looks correct.
+                if (output.Length > 2)
+                    output = output.Substring(0, output.Length - 2);
+
+
+                if (yCount == 5)
+                {
+                    yCount = 0;
+                    xCount++;
+                }
+                try
+                {
+
+                    Tablero[yCount, xCount] = output;
+                    yCount++;
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+            do
+            {
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+                    try
+                    {
+                        dataGridView2.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (dataGridView2.Rows.Count > 1);
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                var arlist1 = new ArrayList();
+
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    arlist1.Add(Tablero[k, l]);
+                }
+
+                string srrr = (string)arlist1[1];
+                string srrr2 = srrr.Substring(srrr.Length - 2);
+
+                string[] row = new string[] {
+                    hr + "." + min,
+                    (string) arlist1[1],
+                    (string) arlist1[2],
+                    (string) arlist1[3],
+                    (string) arlist1[4],
+                    (string) arlist1[5],
+                    (string) arlist1[6],
+                    (string) arlist1[7]
+                };
+
+                try
+                {
+                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
+                }
+                catch (Exception ex)
+                {
+                }
+
+                dataGridView2.Rows.Add(row);
+            }
+
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -327,6 +606,11 @@ namespace Time_table_Management_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

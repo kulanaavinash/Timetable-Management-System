@@ -15,7 +15,9 @@ namespace Time_table_Management_System
 
     public partial class Sessions : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -712,6 +714,11 @@ namespace Time_table_Management_System
             {
                 MessageBox.Show("Put Group");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

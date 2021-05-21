@@ -258,9 +258,9 @@ namespace Time_table_Management_System
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(448, 80);
+            this.dataGridView2.Location = new System.Drawing.Point(455, 129);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(339, 204);
+            this.dataGridView2.Size = new System.Drawing.Size(339, 213);
             this.dataGridView2.TabIndex = 36;
             // 
             // metroTextBox1
@@ -279,7 +279,7 @@ namespace Time_table_Management_System
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(245, 57);
+            this.metroTextBox1.Location = new System.Drawing.Point(252, 115);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -301,7 +301,7 @@ namespace Time_table_Management_System
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(265, 15);
+            this.label4.Location = new System.Drawing.Point(351, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 24);
             this.label4.TabIndex = 14;
@@ -313,7 +313,7 @@ namespace Time_table_Management_System
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label19.Location = new System.Drawing.Point(45, 56);
+            this.label19.Location = new System.Drawing.Point(52, 114);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(112, 20);
             this.label19.TabIndex = 33;
@@ -330,7 +330,7 @@ namespace Time_table_Management_System
             "3",
             "4",
             "5"});
-            this.metroComboBox7.Location = new System.Drawing.Point(245, 278);
+            this.metroComboBox7.Location = new System.Drawing.Point(252, 336);
             this.metroComboBox7.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox7.Name = "metroComboBox7";
             this.metroComboBox7.Size = new System.Drawing.Size(166, 29);
@@ -343,7 +343,7 @@ namespace Time_table_Management_System
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(42, 83);
+            this.label5.Location = new System.Drawing.Point(49, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 20);
             this.label5.TabIndex = 15;
@@ -355,12 +355,11 @@ namespace Time_table_Management_System
             this.metroComboBox6.FormattingEnabled = true;
             this.metroComboBox6.ItemHeight = 23;
             this.metroComboBox6.Items.AddRange(new object[] {
-            "A12",
-            "A45",
-            "B01",
-            "B22",
-            "N22"});
-            this.metroComboBox6.Location = new System.Drawing.Point(245, 233);
+            "Main Building",
+            "New Building",
+            "Engineering Building",
+            "Business Building"});
+            this.metroComboBox6.Location = new System.Drawing.Point(252, 291);
             this.metroComboBox6.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox6.Name = "metroComboBox6";
             this.metroComboBox6.Size = new System.Drawing.Size(166, 29);
@@ -374,7 +373,7 @@ namespace Time_table_Management_System
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label6.Location = new System.Drawing.Point(42, 112);
+            this.label6.Location = new System.Drawing.Point(49, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(151, 20);
             this.label6.TabIndex = 16;
@@ -391,7 +390,7 @@ namespace Time_table_Management_System
             "Kandy",
             "Matara",
             "Kollupitiya"});
-            this.metroComboBox5.Location = new System.Drawing.Point(245, 189);
+            this.metroComboBox5.Location = new System.Drawing.Point(252, 247);
             this.metroComboBox5.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox5.Name = "metroComboBox5";
             this.metroComboBox5.Size = new System.Drawing.Size(166, 29);
@@ -405,7 +404,7 @@ namespace Time_table_Management_System
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(42, 144);
+            this.label7.Location = new System.Drawing.Point(49, 202);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(188, 20);
             this.label7.TabIndex = 17;
@@ -417,11 +416,11 @@ namespace Time_table_Management_System
             this.metroComboBox4.FormattingEnabled = true;
             this.metroComboBox4.ItemHeight = 23;
             this.metroComboBox4.Items.AddRange(new object[] {
-            "Mathamatic department",
-            "Computing department",
-            "Business department",
-            "Architecture department"});
-            this.metroComboBox4.Location = new System.Drawing.Point(245, 140);
+            "Engineering Department",
+            "Computing Department",
+            "Business Department",
+            "Architecture Department"});
+            this.metroComboBox4.Location = new System.Drawing.Point(252, 198);
             this.metroComboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox4.Name = "metroComboBox4";
             this.metroComboBox4.Size = new System.Drawing.Size(166, 29);
@@ -435,7 +434,7 @@ namespace Time_table_Management_System
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label8.Location = new System.Drawing.Point(42, 185);
+            this.label8.Location = new System.Drawing.Point(49, 243);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 20);
             this.label8.TabIndex = 18;
@@ -451,11 +450,8 @@ namespace Time_table_Management_System
             "Faculty of Business",
             "Faculty of Engineering",
             "Faculty of Humanities & Sciences",
-            "School of Architecture",
-            "Faculty of Graduate Studies and Research",
-            "SLIIT Academy",
-            "SLIIT International"});
-            this.metroComboBox3.Location = new System.Drawing.Point(245, 103);
+            "School of Architecture"});
+            this.metroComboBox3.Location = new System.Drawing.Point(252, 161);
             this.metroComboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox3.Name = "metroComboBox3";
             this.metroComboBox3.Size = new System.Drawing.Size(166, 29);
@@ -469,7 +465,7 @@ namespace Time_table_Management_System
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label10.Location = new System.Drawing.Point(42, 233);
+            this.label10.Location = new System.Drawing.Point(49, 291);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(157, 20);
             this.label10.TabIndex = 19;
@@ -492,7 +488,7 @@ namespace Time_table_Management_System
             this.metroTextBox51.CustomButton.UseSelectable = true;
             this.metroTextBox51.CustomButton.Visible = false;
             this.metroTextBox51.Lines = new string[0];
-            this.metroTextBox51.Location = new System.Drawing.Point(245, 80);
+            this.metroTextBox51.Location = new System.Drawing.Point(252, 138);
             this.metroTextBox51.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox51.MaxLength = 32767;
             this.metroTextBox51.Name = "metroTextBox51";
@@ -515,7 +511,7 @@ namespace Time_table_Management_System
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label11.Location = new System.Drawing.Point(42, 275);
+            this.label11.Location = new System.Drawing.Point(49, 333);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(135, 20);
             this.label11.TabIndex = 20;
@@ -527,7 +523,7 @@ namespace Time_table_Management_System
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button16.Location = new System.Drawing.Point(269, 353);
+            this.button16.Location = new System.Drawing.Point(717, 376);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(77, 38);
             this.button16.TabIndex = 14;
@@ -540,7 +536,7 @@ namespace Time_table_Management_System
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button15.Location = new System.Drawing.Point(102, 352);
+            this.button15.Location = new System.Drawing.Point(455, 376);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(82, 38);
             this.button15.TabIndex = 14;

@@ -15,6 +15,11 @@ namespace Time_table_Management_System.Subjects
 
     public partial class Subjects : Form
     {
+
+        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -227,7 +232,9 @@ namespace Time_table_Management_System.Subjects
         {
 
         }
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+
+       
+
 
         private void button19_Click(object sender, EventArgs e)
         {
@@ -276,7 +283,7 @@ namespace Time_table_Management_System.Subjects
             if (metroTextBox3.Text != "")
             {
                 con.Open();
-                SqlCommand command = new SqlCommand("update subjectsDB set subname ='" + metroTextBox4.Text + "',ofdyear ='" + metroComboBox14.Text + "',ofdsemester ='" + metroComboBox13.Text + "',nooflectures ='" + metroComboBox12.Text + "',nooftutorial ='" + metroComboBox11.Text + "', noofhours='" + metroComboBox10.Text + "', noofeve='" + metroComboBox9.Text + "' where subcode = '" + int.Parse(metroTextBox3.Text) + "'", con);
+                SqlCommand command = new SqlCommand("update subjectsDB set subname ='" + metroTextBox4.Text + "',ofdyear ='" + metroComboBox2.Text + "',ofdsemester ='" + metroComboBox13.Text + "',nooflectures ='" + metroComboBox12.Text + "',nooftutorial ='" + metroComboBox11.Text + "', noofhours='" + metroComboBox10.Text + "', noofeve='" + metroComboBox9.Text + "' where subcode = '" + int.Parse(metroTextBox3.Text) + "'", con);
                 command.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Successful Updated");
@@ -318,7 +325,7 @@ namespace Time_table_Management_System.Subjects
                 while (srd.Read())
                 {
                     metroTextBox4.Text = srd.GetValue(0).ToString();
-                    metroComboBox14.Text = srd.GetValue(1).ToString();
+                    metroComboBox2.Text = srd.GetValue(1).ToString();
                     metroComboBox13.Text = srd.GetValue(2).ToString();
                     metroComboBox12.Text = srd.GetValue(3).ToString();
                     metroComboBox11.Text = srd.GetValue(4).ToString();
@@ -332,7 +339,7 @@ namespace Time_table_Management_System.Subjects
             }
             else
             {
-                MessageBox.Show("Put Enter the subjectcode [subjectcode]");
+                MessageBox.Show(" Enter the subjectcode to doing changes.. [subjectcode]");
             }
         }
 
@@ -354,6 +361,21 @@ namespace Time_table_Management_System.Subjects
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroComboBox14_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

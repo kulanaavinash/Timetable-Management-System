@@ -17,8 +17,8 @@ namespace Time_table_Management_System
 
     public partial class Room : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
-        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
@@ -1220,6 +1220,11 @@ namespace Time_table_Management_System
         }
 
         private void sub_cmb_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

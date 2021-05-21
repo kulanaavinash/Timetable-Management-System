@@ -34,6 +34,7 @@ namespace Time_table_Management_System
             this.label9 = new System.Windows.Forms.Label();
             this.working_day_hours = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.class_room = new System.Windows.Forms.ComboBox();
             this.student = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.ComboBox();
@@ -136,7 +137,6 @@ namespace Time_table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.class_room = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.working_day_hours.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -236,6 +236,15 @@ namespace Time_table_Management_System
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add session to time table";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // class_room
+            // 
+            this.class_room.FormattingEnabled = true;
+            this.class_room.Location = new System.Drawing.Point(156, 245);
+            this.class_room.Name = "class_room";
+            this.class_room.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.class_room.Size = new System.Drawing.Size(394, 26);
+            this.class_room.TabIndex = 24;
             // 
             // student
             // 
@@ -339,6 +348,9 @@ namespace Time_table_Management_System
             // session
             // 
             this.session.FormattingEnabled = true;
+            this.session.Items.AddRange(new object[] {
+            "1 Hour Time Slot",
+            "2 Hour Time Slot"});
             this.session.Location = new System.Drawing.Point(156, 325);
             this.session.Name = "session";
             this.session.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1542,15 +1554,6 @@ namespace Time_table_Management_System
             this.Hwbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
-            // 
-            // class_room
-            // 
-            this.class_room.FormattingEnabled = true;
-            this.class_room.Location = new System.Drawing.Point(156, 245);
-            this.class_room.Name = "class_room";
-            this.class_room.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.class_room.Size = new System.Drawing.Size(394, 26);
-            this.class_room.TabIndex = 24;
             // 
             // DaysHours
             // 
