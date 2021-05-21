@@ -3,10 +3,10 @@ ABC is a leading non-state degree awarding institute. Assume your group is worki
 
 # Developers
 
-  - [Kulana Avinash](https://github.com/kulanaavinash)
-  - [Chethika Dithmal](https://github.com/chethika)
-  - [Nipuna Kaushan](https://github.com/nipunakaushan)
-  - [Pathum Wijerathne](https://github.com/PathumSrimal)
+  - [Kulana Avinash](https://github.com/kulanaavinash) : Member 1
+  - [Chethika Dithmal](https://github.com/chethika) : Member 4
+  - [Nipuna Kaushan](https://github.com/nipunakaushan) : Member 2
+  - [Pathum Wijerathne](https://github.com/PathumSrimal) : Member 3
 
 # Technologies
   * C#
