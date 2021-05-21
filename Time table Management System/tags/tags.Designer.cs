@@ -30,6 +30,8 @@ namespace Time_table_Management_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button19 = new System.Windows.Forms.Button();
+            this.tag_combo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +50,6 @@ namespace Time_table_Management_System
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -57,8 +58,6 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.tag_combo = new System.Windows.Forms.ComboBox();
-            this.button19 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +84,29 @@ namespace Time_table_Management_System
             this.panel1.Size = new System.Drawing.Size(939, 592);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button19
+            // 
+            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button19.Location = new System.Drawing.Point(728, 112);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(132, 34);
+            this.button19.TabIndex = 19;
+            this.button19.Text = "Search";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click_1);
+            // 
+            // tag_combo
+            // 
+            this.tag_combo.FormattingEnabled = true;
+            this.tag_combo.Items.AddRange(new object[] {
+            "Lecture",
+            "Tutorial",
+            "Practical"});
+            this.tag_combo.Location = new System.Drawing.Point(76, 184);
+            this.tag_combo.Name = "tag_combo";
+            this.tag_combo.Size = new System.Drawing.Size(186, 28);
+            this.tag_combo.TabIndex = 18;
             // 
             // label5
             // 
@@ -293,25 +315,12 @@ namespace Time_table_Management_System
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Image = global::Time_table_Management_System.Properties.Resources.oo;
-            this.button14.Location = new System.Drawing.Point(980, 9);
+            this.button14.Location = new System.Drawing.Point(996, 9);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(15, 17);
             this.button14.TabIndex = 0;
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button13
-            // 
-            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Image = global::Time_table_Management_System.Properties.Resources.uu__1_;
-            this.button13.Location = new System.Drawing.Point(1001, 7);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(20, 20);
-            this.button13.TabIndex = 0;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -440,29 +449,6 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // tag_combo
-            // 
-            this.tag_combo.FormattingEnabled = true;
-            this.tag_combo.Items.AddRange(new object[] {
-            "Lecture",
-            "Tutorial",
-            "Practical"});
-            this.tag_combo.Location = new System.Drawing.Point(76, 184);
-            this.tag_combo.Name = "tag_combo";
-            this.tag_combo.Size = new System.Drawing.Size(186, 28);
-            this.tag_combo.TabIndex = 18;
-            // 
-            // button19
-            // 
-            this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button19.Location = new System.Drawing.Point(728, 112);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(132, 34);
-            this.button19.TabIndex = 19;
-            this.button19.Text = "Search";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click_1);
-            // 
             // tags
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,7 +456,6 @@ namespace Time_table_Management_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1061, 695);
             this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -521,7 +506,6 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
