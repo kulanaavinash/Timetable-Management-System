@@ -374,7 +374,9 @@ namespace Time_table_Management_System
             "Tuesday",
             "Wednesday",
             "Thursday",
-            "Friday"});
+            "Friday",
+            "Saturday",
+            "Sunday"});
             this.comboBox4.Location = new System.Drawing.Point(274, 353);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(162, 29);
@@ -548,7 +550,9 @@ namespace Time_table_Management_System
             "Tuesday",
             "Wednesday",
             "Thursday",
-            "Friday"});
+            "Friday",
+            "Saturday",
+            "Sunday"});
             this.comboBox12.Location = new System.Drawing.Point(288, 345);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(148, 29);
@@ -761,7 +765,9 @@ namespace Time_table_Management_System
             "Tuesday",
             "Wednesday",
             "Thursday",
-            "Friday"});
+            "Friday",
+            "Saturday",
+            "Sunday"});
             this.date.Location = new System.Drawing.Point(30, 402);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(181, 25);

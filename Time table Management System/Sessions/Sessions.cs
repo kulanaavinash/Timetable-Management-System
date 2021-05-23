@@ -15,8 +15,8 @@ namespace Time_table_Management_System
 
     public partial class Sessions : Form
     {
-        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
 
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -269,7 +269,7 @@ namespace Time_table_Management_System
             if (textBox1.Text != "")
             {
                 con.Open();
-                SqlCommand command = new SqlCommand("insert into sessionsDB values('" + int.Parse(metroTextBox1.Text) + "','" + textBox1.Text + "','" + cmbSessionTag.Text + "','" + cmbSessionGroup.Text + "','" + cmbSessionSubject.Text + "','" + nmudSessionNoStudents.Text + "','" + nmudSessionDuration.Text + "')", con);
+                SqlCommand command = new SqlCommand("insert into sessionsDB values('" + int.Parse(metroTextBox1.Text) + "','" + textBox1.Text + "','" + cmbSessionTag.Text + "','" + cmbSessionGroup.Text + "','" + cmbSessionSubject.Text + "','" + nmudSessionNoStudents.Text + "','" + nmudSessionDuration.Text + "','" + day_ses.Text + "','" + time_ses.Text + "')", con);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Inserted");
                 con.Close();
@@ -418,7 +418,7 @@ namespace Time_table_Management_System
             if (textBox2.Text != "")
             {
                 con.Open();
-                SqlCommand command = new SqlCommand("update sessionsDB set lectures ='" + textBox2.Text + "',tag ='" + metroComboBox2.Text + "',Sgroup ='" + metroComboBox3.Text + "',subject ='" + metroComboBox4.Text + "',noofstudent ='" + numericUpDown1.Text + "', durations='" + numericUpDown2.Text + "' where SeID = '" + int.Parse(metroTextBox2.Text) + "'", con);
+                SqlCommand command = new SqlCommand("update sessionsDB set lectures ='" + textBox2.Text + "',tag ='" + metroComboBox2.Text + "',Sgroup ='" + metroComboBox3.Text + "',subject ='" + metroComboBox4.Text + "',noofstudent ='" + numericUpDown1.Text + "', durations='" + numericUpDown2.Text + "' ,day ='" + up_day.Text + "', time='" + up_time.Text + "'where SeID = '" + int.Parse(metroTextBox2.Text) + "'", con);
                 command.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Successful Updated");
@@ -717,6 +717,26 @@ namespace Time_table_Management_System
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroComboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void time_ses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

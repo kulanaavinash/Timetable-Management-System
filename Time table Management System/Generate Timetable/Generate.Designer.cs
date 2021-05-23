@@ -32,16 +32,19 @@ namespace Time_table_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.metroGrid1 = new System.Windows.Forms.DataGridView();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
@@ -63,9 +66,7 @@ namespace Time_table_Management_System
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Hwbtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -118,6 +119,16 @@ namespace Time_table_Management_System
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Lecture";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(47, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Lecturer :";
             // 
             // metroGrid1
             // 
@@ -179,6 +190,16 @@ namespace Time_table_Management_System
             this.tabPage2.Text = "Student Group";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(16, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 21);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Student Group :";
+            // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -239,6 +260,16 @@ namespace Time_table_Management_System
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "View Classroom";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(42, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 21);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "View Classroom :";
             // 
             // dataGridView3
             // 
@@ -519,35 +550,9 @@ namespace Time_table_Management_System
             this.Hwbtn.UseVisualStyleBackColor = true;
             this.Hwbtn.Click += new System.EventHandler(this.btn_days_nav);
             // 
-            // label2
+            // printDocument1
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(47, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Lecturer :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(16, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 21);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Student Group :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(42, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "View Classroom :";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // Generate
             // 
@@ -634,6 +639,7 @@ namespace Time_table_Management_System
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 

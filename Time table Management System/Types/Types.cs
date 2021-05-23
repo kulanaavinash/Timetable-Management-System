@@ -17,8 +17,12 @@ namespace Time_table_Management_System
 
     public partial class Advanced : Form
     {
-        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        // SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        // string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
 
         SqlCommand cmd;
         SqlDataAdapter adapt;
@@ -510,7 +514,8 @@ namespace Time_table_Management_System
 
         private void Catch()
         {
-            SqlCommand sqlComm = new SqlCommand("select stime from [dbo].[NAT]", con);
+            SqlCommand sqlComm = new SqlCommand("select start_time from [dbo].[Time_slots]", con);
+           // SqlCommand sqlComm = new SqlCommand("select stime from [dbo].[NAT]", con);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
             DataSet ds = new DataSet();
@@ -527,7 +532,9 @@ namespace Time_table_Management_System
 
         private void Catch2()
         {
-            SqlCommand sqlComm = new SqlCommand("select etime from [dbo].[NAT]", con);
+
+            SqlCommand sqlComm = new SqlCommand("select end_time from [dbo].[Time_slots]", con);
+            // SqlCommand sqlComm = new SqlCommand("select etime from [dbo].[NAT]", con);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
             DataSet ds = new DataSet();
@@ -945,7 +952,9 @@ namespace Time_table_Management_System
 
         private void Show1()
         {
-            SqlCommand sqlComm = new SqlCommand("select stime from [dbo].[NAT]", con);
+
+            SqlCommand sqlComm = new SqlCommand("select start_time from [dbo].[Time_slots]", con);
+            // SqlCommand sqlComm = new SqlCommand("select stime from [dbo].[NAT]", con);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
             DataSet ds = new DataSet();
@@ -962,7 +971,9 @@ namespace Time_table_Management_System
 
         private void Show2()
         {
-            SqlCommand sqlComm = new SqlCommand("select etime from [dbo].[NAT]", con);
+
+            SqlCommand sqlComm = new SqlCommand("select end_time from [dbo].[Time_slots]", con);
+            //SqlCommand sqlComm = new SqlCommand("select etime from [dbo].[NAT]", con);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(sqlComm);
             DataSet ds = new DataSet();

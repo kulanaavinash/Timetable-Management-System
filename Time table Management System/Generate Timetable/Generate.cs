@@ -17,8 +17,11 @@ namespace Time_table_Management_System
     public partial class Generate : Form
     {
 
-        SqlConnection con = new SqlConnection("Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        string cs = "Server=tcp:mysqlserveronline.database.windows.net,1433;Initial Catalog=TimetableManagementDB;Persist Security Info=False;User ID=user;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+
+
 
         public int hr = 8;
         public int min = 30;
@@ -281,11 +284,9 @@ namespace Time_table_Management_System
             // view lec ---view time table btn---//
 
 
-            hr = 8;
-            min = 30;
-            sec = 0;
+            
 
-            String query1 = "select lectures,tag,Sgroup,noofstudent,durations from sessionsDB where lectures LIKE '%" + metroComboBox1.Text + "%'"; 
+            String query1 = "select lectures,tag,Sgroup,subject,time,day from sessionsDB order by time";
 
             SqlCommand cmd = new SqlCommand(query1, con);
             con.Open();
@@ -295,119 +296,72 @@ namespace Time_table_Management_System
 
             con.Close();
 
-            metroGrid1.ColumnCount = 8;
-            metroGrid1.Columns[0].Name = "";
-            metroGrid1.Columns[1].Name = "Monday";
-            metroGrid1.Columns[2].Name = "Tuesday";
-            metroGrid1.Columns[3].Name = "Wednesday";
-            metroGrid1.Columns[4].Name = "Thursday";
-            metroGrid1.Columns[5].Name = "Friday";
-            metroGrid1.Columns[6].Name = "Saturday";
-            metroGrid1.Columns[7].Name = "Sunday";
+            DataTable newData = new DataTable();
 
-            System.IO.StringWriter sw;
-            string output;
-            int xCount = 1;
-            int yCount = 0;
-            string[,] Tablero = new string[5, 8];
+            newData.Columns.Add("Time", typeof(String));
+            newData.Columns.Add("Monday", typeof(String));
+            newData.Columns.Add("Tuesday", typeof(String));
+            newData.Columns.Add("Wednesday", typeof(String));
+            newData.Columns.Add("Thursday", typeof(String));
+            newData.Columns.Add("Friday", typeof(String));
+            newData.Columns.Add("Saturday", typeof(String));
+            newData.Columns.Add("Sunday", typeof(String));
 
+            String[] timeSlot = new String[] { "08.30-09.30", "09.30-10.30", "10.30-11.30", "11.30-12.30", "12.30-1.30", "01.30-02.30", "02.30-03.30", "03.30-04.30", "04.30-05.30" };
 
-            for (int k = 0; k < Tablero.GetLength(0); k++)
+            for (int i = 0; i < timeSlot.Length; i++)
             {
-                for (int l = 0; l < Tablero.GetLength(1); l++)
-                {
-                    Tablero[k, l] = " --- ";
-                }
+                newData.Rows.Add(new object[] { timeSlot[i], "--", "--", "--", "--", "--", "--", "--" });
             }
 
-            // Loop through each row in the table.
             foreach (DataRow row in dt.Rows)
             {
-                sw = new System.IO.StringWriter();
+                string ss = row[0] + ":" + row[1] + ":" + row[2] + ":" + row[3] + ":" + row[4] + ":" + row[5];
+                string col = null;
 
-                // Loop through each column.
-                foreach (DataColumn col in dt.Columns)
+                if (row[5].Equals("Monday"))
                 {
-                    // Output the value of each column's data.
-                    sw.Write(row[col].ToString() + "\n");
+                    col = "Monday";
+                }
+                else if (row[5].Equals("Tuesday"))
+                {
+                    col = "Tuesday";
+                }
+                else if (row[5].Equals("Wednesday"))
+                {
+                    col = "Wednesday";
+                }
+                else if (row[5].Equals("Thursday"))
+                {
+                    col = "Thursday";
+                }
+                else if (row[5].Equals("Friday"))
+                {
+                    col = "Friday";
                 }
 
-                output = sw.ToString();
-
-                // Trim off the trailing ", ", so the output looks correct.
-                if (output.Length > 2)
-                    output = output.Substring(0, output.Length - 2);
-
-
-                if (yCount == 5)
+                for (int i = 0; i < timeSlot.Length; i++)
                 {
-                    yCount = 0;
-                    xCount++;
-                }
-                try
-                {
-
-                    Tablero[yCount, xCount] = output;
-                    yCount++;
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-
-            do
-            {
-                foreach (DataGridViewRow row in metroGrid1.Rows)
-                {
-                    try
+                    if (row[4].Equals(timeSlot[i]))
                     {
-                        metroGrid1.Rows.Remove(row);
+                        newData.Rows[i][col] = ss;
+                        break;
                     }
-                    catch (Exception) { }
                 }
-            } while (metroGrid1.Rows.Count > 1);
-
-
-            for (int k = 0; k < Tablero.GetLength(0); k++)
-            {
-                var arlist1 = new ArrayList();
-
-                for (int l = 0; l < Tablero.GetLength(1); l++)
-                {
-                    arlist1.Add(Tablero[k, l]);
-                }
-
-                string srrr = (string)arlist1[1];
-                string srrr2 = srrr.Substring(srrr.Length - 2);
-
-                string[] row = new string[] {
-                    hr + "." + min,
-                    (string) arlist1[1],
-                    (string) arlist1[2],
-                    (string) arlist1[3],
-                    (string) arlist1[4],
-                    (string) arlist1[5],
-                    (string) arlist1[6],
-                    (string) arlist1[7]
-                };
-
-                try
-                {
-                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
-                }
-                catch (Exception ex)
-                {
-
-                }
-
-                metroGrid1.Rows.Add(row);
             }
+
+            metroGrid1.DataSource = newData;
 
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
             // view lec ---print timetable btn----//
+
+            printDocument1.Print();
+
+
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -741,6 +695,13 @@ namespace Time_table_Management_System
         private void metroGrid1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.metroGrid1.Width, this.metroGrid1.Height);
+            metroGrid1.DrawToBitmap(bm, new Rectangle(0, 0, this.metroGrid1.Width, this.metroGrid1.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
         }
     }
 }

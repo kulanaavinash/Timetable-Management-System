@@ -269,10 +269,18 @@ namespace Time_table_Management_System
             this.date.FormattingEnabled = true;
             this.date.Items.AddRange(new object[] {
             "Monday",
+            "",
             "Tuesday",
+            "",
             "Wednesday",
+            "",
             "Thursday",
-            "Friday"});
+            "",
+            "Friday",
+            "",
+            "Saturday",
+            "",
+            "Sunday"});
             this.date.Location = new System.Drawing.Point(156, 205);
             this.date.Name = "date";
             this.date.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -347,9 +355,6 @@ namespace Time_table_Management_System
             // session
             // 
             this.session.FormattingEnabled = true;
-            this.session.Items.AddRange(new object[] {
-            "1 Hour Time Slot",
-            "2 Hour Time Slot"});
             this.session.Location = new System.Drawing.Point(156, 325);
             this.session.Name = "session";
             this.session.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1117,7 +1122,9 @@ namespace Time_table_Management_System
             "Tuesday",
             "Wednesday",
             "Thursday",
-            "Friday"});
+            "Friday",
+            "Saturday",
+            "Sunday"});
             this.datepicker.Location = new System.Drawing.Point(138, 55);
             this.datepicker.Name = "datepicker";
             this.datepicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1146,28 +1153,23 @@ namespace Time_table_Management_System
             // 
             this.end_time.FormattingEnabled = true;
             this.end_time.Items.AddRange(new object[] {
-            "08.00",
-            "08.30",
-            "09.00",
             "09.30",
-            "10.00",
+            "",
             "10.30",
-            "11.00",
+            "",
             "11.30",
-            "12.00",
+            "",
             "12.30",
-            "01.00",
+            "",
             "01.30",
-            "02.00",
+            "",
             "02.30",
-            "03.00",
+            "",
             "03.30",
-            "04.00",
+            "",
             "04.30",
-            "05.00",
-            "05.30",
-            "06.00",
-            "06.30"});
+            "",
+            "05.30"});
             this.end_time.Location = new System.Drawing.Point(626, 100);
             this.end_time.Name = "end_time";
             this.end_time.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1178,28 +1180,16 @@ namespace Time_table_Management_System
             // 
             this.start_time.FormattingEnabled = true;
             this.start_time.Items.AddRange(new object[] {
-            "08.00",
             "08.30",
-            "09.00",
             "09.30",
-            "10.00",
             "10.30",
-            "11.00",
             "11.30",
-            "12.00",
             "12.30",
-            "01.00",
             "01.30",
-            "02.00",
             "02.30",
-            "03.00",
             "03.30",
-            "04.00",
             "04.30",
-            "05.00",
-            "05.30",
-            "06.00",
-            "06.30"});
+            "05.30"});
             this.start_time.Location = new System.Drawing.Point(626, 51);
             this.start_time.Name = "start_time";
             this.start_time.RightToLeft = System.Windows.Forms.RightToLeft.No;
