@@ -88,7 +88,7 @@ namespace Time_table_Management_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(89, 250);
+            this.label2.Location = new System.Drawing.Point(95, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 24);
             this.label2.TabIndex = 2;
@@ -116,7 +116,7 @@ namespace Time_table_Management_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(255, 378);
+            this.ClientSize = new System.Drawing.Size(258, 378);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

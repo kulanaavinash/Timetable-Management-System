@@ -411,7 +411,7 @@ namespace Time_table_Management_System
             }
             else
             {
-                MessageBox.Show("Put subject");
+                MessageBox.Show("Put Tag Details to Search");
             }
         }
     }

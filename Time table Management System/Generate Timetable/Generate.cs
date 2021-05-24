@@ -389,11 +389,7 @@ namespace Time_table_Management_System
         {
             //student Group  view time table btn
 
-            hr = 8;
-            min = 30;
-            sec = 0;
-
-            String query1 = "select Sgroup,Subject,durations,tag from sessionsDB where Seid LIKE '%" + comboBox1.Text + "%'";
+            String query1 = "select Sgroup,tag,durations,subject,time,day from sessionsDB order by time";
 
             SqlCommand cmd = new SqlCommand(query1, con);
             con.Open();
@@ -403,112 +399,61 @@ namespace Time_table_Management_System
 
             con.Close();
 
-            dataGridView2.ColumnCount = 8;
-            dataGridView2.Columns[0].Name = "";
-            dataGridView2.Columns[1].Name = "Monday";
-            dataGridView2.Columns[2].Name = "Tuesday";
-            dataGridView2.Columns[3].Name = "Wednesday";
-            dataGridView2.Columns[4].Name = "Thursday";
-            dataGridView2.Columns[5].Name = "Friday";
-            dataGridView2.Columns[6].Name = "Saturday";
-            dataGridView2.Columns[7].Name = "Sunday";
+            DataTable newData = new DataTable();
 
-            System.IO.StringWriter sw;
-            string output;
-            int xCount = 1;
-            int yCount = 0;
-            string[,] Tablero = new string[5, 8];
+            newData.Columns.Add("Time", typeof(String));
+            newData.Columns.Add("Monday", typeof(String));
+            newData.Columns.Add("Tuesday", typeof(String));
+            newData.Columns.Add("Wednesday", typeof(String));
+            newData.Columns.Add("Thursday", typeof(String));
+            newData.Columns.Add("Friday", typeof(String));
+            newData.Columns.Add("Saturday", typeof(String));
+            newData.Columns.Add("Sunday", typeof(String));
 
+            String[] timeSlot = new String[] { "08.30-09.30", "09.30-10.30", "10.30-11.30", "11.30-12.30", "12.30-1.30", "01.30-02.30", "02.30-03.30", "03.30-04.30", "04.30-05.30" };
 
-            for (int k = 0; k < Tablero.GetLength(0); k++)
+            for (int i = 0; i < timeSlot.Length; i++)
             {
-                for (int l = 0; l < Tablero.GetLength(1); l++)
-                {
-                    Tablero[k, l] = " --- ";
-                }
+                newData.Rows.Add(new object[] { timeSlot[i], "--", "--", "--", "--", "--", "--", "--" });
             }
 
-            // Loop through each row in the table.
             foreach (DataRow row in dt.Rows)
             {
-                sw = new System.IO.StringWriter();
+                string ss = row[0] + ":" + row[1] + ":" + row[2] + ":" + row[3] + ":" + row[4] + ":" + row[5];
+                string col = null;
 
-                // Loop through each column.
-                foreach (DataColumn col in dt.Columns)
+                if (row[5].Equals("Monday"))
                 {
-                    // Output the value of each column's data.
-                    sw.Write(row[col].ToString() + "\n");
+                    col = "Monday";
+                }
+                else if (row[5].Equals("Tuesday"))
+                {
+                    col = "Tuesday";
+                }
+                else if (row[5].Equals("Wednesday"))
+                {
+                    col = "Wednesday";
+                }
+                else if (row[5].Equals("Thursday"))
+                {
+                    col = "Thursday";
+                }
+                else if (row[5].Equals("Friday"))
+                {
+                    col = "Friday";
                 }
 
-                output = sw.ToString();
-
-                // Trim off the trailing ", ", so the output looks correct.
-                if (output.Length > 2)
-                    output = output.Substring(0, output.Length - 2);
-
-
-                if (yCount == 5)
+                for (int i = 0; i < timeSlot.Length; i++)
                 {
-                    yCount = 0;
-                    xCount++;
-                }
-                try
-                {
-
-                    Tablero[yCount, xCount] = output;
-                    yCount++;
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-
-            do
-            {
-                foreach (DataGridViewRow row in dataGridView2.Rows)
-                {
-                    try
+                    if (row[4].Equals(timeSlot[i]))
                     {
-                        dataGridView2.Rows.Remove(row);
+                        newData.Rows[i][col] = ss;
+                        break;
                     }
-                    catch (Exception) { }
                 }
-            } while (dataGridView2.Rows.Count > 1);
-
-
-            for (int k = 0; k < Tablero.GetLength(0); k++)
-            {
-                var arlist1 = new ArrayList();
-
-                for (int l = 0; l < Tablero.GetLength(1); l++)
-                {
-                    arlist1.Add(Tablero[k, l]);
-                }
-
-                string srrr = (string)arlist1[1];
-                string srrr2 = srrr.Substring(srrr.Length - 2);
-
-                string[] row = new string[] {
-                    hr + "." + min,
-                    (string) arlist1[1],
-                    (string) arlist1[2],
-                    (string) arlist1[3],
-                    (string) arlist1[4],
-                    (string) arlist1[5],
-                    (string) arlist1[6],
-                    (string) arlist1[7]
-                };
-
-                try
-                {
-                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
-                }
-                catch (Exception ex)
-                {
-                }
-
-                dataGridView2.Rows.Add(row);
             }
+
+            dataGridView2.DataSource = newData;
 
         }
 
@@ -702,6 +647,11 @@ namespace Time_table_Management_System
             Bitmap bm = new Bitmap(this.metroGrid1.Width, this.metroGrid1.Height);
             metroGrid1.DrawToBitmap(bm, new Rectangle(0, 0, this.metroGrid1.Width, this.metroGrid1.Height));
             e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
