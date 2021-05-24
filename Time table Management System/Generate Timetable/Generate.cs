@@ -460,6 +460,7 @@ namespace Time_table_Management_System
         private void button18_Click(object sender, EventArgs e)
         {
             //student Group --print timetable btn
+            printDocument2.Print();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -488,7 +489,7 @@ namespace Time_table_Management_System
             min = 30;
             sec = 0;
 
-            String query1 = "select roomid,sub_tag from room_subtag where roomid LIKE '%" + comboBox1.Text + "%'";
+            String query1 = "select roomid,sub_tag from room_subtag ";
 
 
 
@@ -614,6 +615,7 @@ namespace Time_table_Management_System
         private void button20_Click(object sender, EventArgs e)
         {
             //view classroom  print timetable 
+            printDocument3.Print();
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -652,6 +654,20 @@ namespace Time_table_Management_System
         private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridView2.Width, this.dataGridView2.Height);
+            dataGridView2.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView2.Width, this.dataGridView2.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void printDocument3_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridView3.Width, this.dataGridView3.Height);
+            dataGridView3.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView3.Width, this.dataGridView3.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
         }
     }
 }
