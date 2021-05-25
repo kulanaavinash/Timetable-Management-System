@@ -1,4 +1,4 @@
-# Timetabbllee Management System
+# Timetable Management System
 ABC is a leading non-state degree awarding institute. Assume Our group is working in the IT division of the ABC institute. They have been asked to develop a desktop application for managing the timetables of the ABC institute. 
 
 
