@@ -17,9 +17,12 @@ namespace Time_table_Management_System
     public partial class Generate : Form
     {
 
+        SqlConnection con = new SqlConnection("Server=tcp:acdemicmysql.database.windows.net,1433;Initial Catalog=Timetable;Persist Security Info=False;User ID=adminonline;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        string cs = "Server=tcp:acdemicmysql.database.windows.net,1433;Initial Catalog=Timetable;Persist Security Info=False;User ID=adminonline;Password=V41823*9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
-        string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
+
+       //  SqlConnection con = new SqlConnection("Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True");
+       // string cs = "Data Source=LAPTOP-DISMT73N;Initial Catalog=TimetableManagmentDB;Integrated Security=True";
 
 
 
