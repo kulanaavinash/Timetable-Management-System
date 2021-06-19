@@ -19,29 +19,11 @@ https://github.com/kulanaavinash/Timetable-Management-System/commit/9421efa84d76
 https://github.com/kulanaavinash/Timetable-Management-System/blob/38b090919ba672510c2e9832b9a622be2720c628/Project%20Specification/Project%20Specification.pdf
 
 
+# Sample Screenshot of the UI  
 
+<h1>Home</h1>
 
-# The distribution of the functions among the group members should be as follows
-
-- Member 1 –
-▪ Should implement all the features of Students and Tags mentioned in Section 1 above – S1.
-▪ Should implement all the features in Section 3 mentioned above - S2.
-
-- Member 2-
-▪ Should implement all the features of Lecturers and Subjects mentioned in Section 1 above – S1.
-▪ Should implement all the features in Section 2 mentioned above – S2.
-
-- Member 3-
-▪ Should implement all the features of Working Days and Hours mentioned in Section 1 above – S1.
-▪ Should implement all the features in Section 5 mentioned above – S2.
-
-- Member 4 –
-▪ Should implement all the features of Location and Statistics mentioned in Section 1 above- S1.
-▪ Should implement all the features in Section 4 mentioned above - S2.
-
-- Group Implementation
-▪ Should implement all the features in Section 6 mentioned above – S2.
-
+![](UI_SS/Home.png)
 
 
 
